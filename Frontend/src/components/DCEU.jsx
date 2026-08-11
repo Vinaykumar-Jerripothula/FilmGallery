@@ -4,7 +4,7 @@ import { dcExtendedUniverseData } from "../data/dcExtendedUniverseData";
 function DCEU() {
   return (
     <FranchiseAccordion
-      franchiseName="Detective Comics Extended Universe [ Completed Universe ]"
+      franchiseName="Detective Comics Extended Universe , Completed Universe"
       content={dcExtendedUniverseData}
     />
   );
