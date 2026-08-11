@@ -12,11 +12,11 @@ import Vikings from "../components/Vikings";
 function Home() {
   return (
     <div className="min-h-screen bg-[#0B0F14] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
 
         {/* Page Header */}
         <div className="mb-8 sm:mb-10">
-          <h1 className="text-2xl sm:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-lg sm:text-4xl font-extrabold tracking-tight">
             Film Gallery
           </h1>
 
@@ -26,11 +26,11 @@ function Home() {
         </div>
         {/* ================= FRANCHISES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Cinematic Universe
   </h2>
 
-  <div className="space-y-4">
+  <div className="space-y-4 ml-4">
     <MarvelCinematicUniverse
       franchiseName="Marvel Cinematic Universe"
       content={mcuData}
@@ -41,11 +41,11 @@ function Home() {
 </section>
         {/* ================= FRANCHISES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Franchises
   </h2>
 
-  <div className="space-y-4">
+  <div className="space-y-4 ml-4">
    
 
     <TheLordOfTheRings />
@@ -57,11 +57,11 @@ function Home() {
 
 {/* ================= TV / WEB SERIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     TV / Web Series
   </h2>
 
-  <div className="text-zinc-500 space-y-4">
+  <div className="text-zinc-500 ml-4 space-y-4">
     <BreakingBad />
     <GameOfThrones />
     <Vikings />
@@ -70,104 +70,104 @@ function Home() {
 
 {/* ================= STANDALONE MOVIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Standalone Movies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No movies added yet.
   </div>
 </section>
 
 {/* ================= DUOLOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Duologies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No duologies added yet.
   </div>
 </section>
 
 {/* ================= TRILOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Trilogies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No trilogies added yet.
   </div>
 </section>
 
 {/* ================= TETRALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Tetralogies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No Tetralogies added yet.
   </div>
 </section>
 {/* ================= PENTALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Pentalogies
   </h2>
 
-  <div className="text-zinc-500"  >
+  <div className="text-zinc-500 ml-4"  >
     No Pentalogies added yet.
   </div>
 </section>
 {/* ================= HEXALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Hexalogies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No Hexalogies added yet.
   </div>
 </section>
 {/* ================= HEPTALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Heptalogies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No Heptalogies added yet.
   </div>
 </section>
 {/* ================= OCTALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Octologies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No Octologies added yet.
   </div>
 </section>
 {/* ================= NONALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Nonalogies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No Nonalogies added yet.
   </div>
 </section>
 {/* ================= DOCALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Decalogies
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No Decalogies added yet.
   </div>
 </section>
@@ -176,11 +176,11 @@ function Home() {
 
 {/* ================= ANIME ================= */}
 <section className="mb-12">
-  <h2 className="text-xl sm:text-3xl font-bold mb-4 text-orange-400">
+  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
     Anime
   </h2>
 
-  <div className="text-zinc-500">
+  <div className="text-zinc-500 ml-4">
     No anime added yet.
   </div>
 </section>

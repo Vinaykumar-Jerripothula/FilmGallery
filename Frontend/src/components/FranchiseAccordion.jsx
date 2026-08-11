@@ -61,7 +61,7 @@ function FranchiseAccordion({
         bg-[#111827]
         border
         border-zinc-800
-        rounded-3xl
+        rounded-2xl
         overflow-hidden
         shadow-xl
         mx-2
@@ -72,7 +72,7 @@ function FranchiseAccordion({
         onClick={() => setOpen(!open)}
         className="
           w-full
-          p-4 sm:p-6
+          p-4 sm:p-5
           text-left
           hover:bg-[#172036]
           transition-all
@@ -95,7 +95,7 @@ function FranchiseAccordion({
 
 
             <div>
-              <h2 className="text-base sm:text-2xl font-extrabold tracking-tight text-white">
+              <h2 className="text-base sm:text-1xl text-xs font-bold tracking-tight text-white">
                 {franchiseName}
               </h2>
 
@@ -147,7 +147,7 @@ function FranchiseAccordion({
             {/* Header */}
             <div
               className="
-                min-w-[1400px]
+                min-w-[1100px]
                 grid
                 grid-cols-[70px_5fr_120px_90px_180px_180px_90px_140px]
                 gap-4
