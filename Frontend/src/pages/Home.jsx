@@ -8,6 +8,29 @@ import PiratesOfTheCaribbean from "../components/PiratesOfTheCaribbean";
 import BreakingBad from "../components/BreakingBad";
 import GameOfThrones from "../components/GameOfThrones";
 import Vikings from "../components/Vikings";
+import Dark from "../components/Dark";
+import From from "../components/From";
+import StrangerThings from "../components/StrangerThings";
+import PeakyBlinders from "../components/PeakyBlinders";
+import DCU from "../components/DCU";
+import StarWars from "../components/StarWars";
+import TheConjuring from "../components/TheConjuring";
+import MonsterVerse from "../components/MonsterVerse";
+import XMEN from "../components/XMEN";
+import { Plane } from "lucide-react";
+import PlanetOfTheApes from "../components/PlanetOfTheApes";
+import TheHungerGames from "../components/TheHungerGames";
+import JurassicPark from "../components/JurassicPark";
+import Alien from "../components/Alien";
+import MissionImpossible from "../components/MissionImpossible";
+import FastAndFurious from "../components/FastAndFurious";
+import JamesBond from "../components/JamesBond";
+import TransFormers from "../components/TransFormers";
+import Predator from "../components/Predator";
+import Terminator from "../components/Terminator";
+import StarTrek from "../components/StarTrek";
+import RockyCreed from "../components/RockyCreed";
+import MadMax from "../components/MadMax";
 
 function Home() {
   return (
@@ -36,7 +59,11 @@ function Home() {
       content={mcuData}
     />
     <DCEU />
-    
+    <DCU />
+    <StarWars />
+    <TheConjuring />
+    <MonsterVerse />
+    <XMEN />
   </div>
 </section>
         {/* ================= FRANCHISES ================= */}
@@ -52,6 +79,19 @@ function Home() {
     <JohnWick />
     <HarryPotter />
     <PiratesOfTheCaribbean />
+    <PlanetOfTheApes />
+    <TheHungerGames />
+    <JurassicPark />
+    <Alien />
+    <MissionImpossible />
+    <FastAndFurious />
+    <JamesBond />
+    <TransFormers />
+    <Predator />
+    <Terminator />
+    <StarTrek />
+    <RockyCreed />
+    <MadMax />
   </div>
 </section>
 
@@ -65,6 +105,10 @@ function Home() {
     <BreakingBad />
     <GameOfThrones />
     <Vikings />
+    <Dark />
+    <From />
+    <StrangerThings />
+    <PeakyBlinders />
   </div>
 </section>
 

@@ -1,0 +1,32 @@
+export const darkData = [
+  {
+    id: 1,
+    watchOrder: 1,
+    title: "Dark - Season 1 (10 Episodes)",
+    type: "Series",
+    year: 2017,
+    director: "Baran bo Odar",
+    actor: "Louis Hofmann",
+    country: "Germany",
+  },
+  {
+    id: 2,
+    watchOrder: 2,
+    title: "Dark - Season 2 (8 Episodes)",
+    type: "Series",
+    year: 2019,
+    director: "Baran bo Odar",
+    actor: "Louis Hofmann",
+    country: "Germany",
+  },
+  {
+    id: 3,
+    watchOrder: 3,
+    title: "Dark - Season 3 (8 Episodes)",
+    type: "Series",
+    year: 2020,
+    director: "Baran bo Odar",
+    actor: "Louis Hofmann",
+    country: "Germany",
+  },
+];

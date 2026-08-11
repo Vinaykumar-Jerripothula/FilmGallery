@@ -2,7 +2,7 @@ export const breakingBadUniverseData = [
   {
     id: 1,
     watchOrder: 1,
-    title: "Breaking Bad - Season 1",
+    title: "Breaking Bad - Season 1 (7 Episodes)",
     type: "Series",
     year: 2008,
     director: "Vince Gilligan",
@@ -12,7 +12,7 @@ export const breakingBadUniverseData = [
   {
     id: 2,
     watchOrder: 2,
-    title: "Breaking Bad - Season 2",
+    title: "Breaking Bad - Season 2 (13 Episodes)",
     type: "Series",
     year: 2009,
     director: "Vince Gilligan",
@@ -22,7 +22,7 @@ export const breakingBadUniverseData = [
   {
     id: 3,
     watchOrder: 3,
-    title: "Breaking Bad - Season 3",
+    title: "Breaking Bad - Season 3 (13 Episodes)",
     type: "Series",
     year: 2010,
     director: "Vince Gilligan",
@@ -32,7 +32,7 @@ export const breakingBadUniverseData = [
   {
     id: 4,
     watchOrder: 4,
-    title: "Breaking Bad - Season 4",
+    title: "Breaking Bad - Season 4 (13 Episodes)",
     type: "Series",
     year: 2011,
     director: "Vince Gilligan",
@@ -42,7 +42,7 @@ export const breakingBadUniverseData = [
   {
     id: 5,
     watchOrder: 5,
-    title: "Breaking Bad - Season 5",
+    title: "Breaking Bad - Season 5 (16 Episodes)",
     type: "Series",
     year: 2012,
     director: "Vince Gilligan",
@@ -62,7 +62,7 @@ export const breakingBadUniverseData = [
   {
     id: 7,
     watchOrder: 7,
-    title: "Better Call Saul - Season 1",
+    title: "Better Call Saul - Season 1 (10 Episodes)",
     type: "Series",
     year: 2015,
     director: "Vince Gilligan",
@@ -72,7 +72,7 @@ export const breakingBadUniverseData = [
   {
     id: 8,
     watchOrder: 8,
-    title: "Better Call Saul - Season 2",
+    title: "Better Call Saul - Season 2 (13 Episodes)",
     type: "Series",
     year: 2016,
     director: "Vince Gilligan",
@@ -82,7 +82,7 @@ export const breakingBadUniverseData = [
   {
     id: 9,
     watchOrder: 9,
-    title: "Better Call Saul - Season 3",
+    title: "Better Call Saul - Season 3 (10 Episodes)",
     type: "Series",
     year: 2017,
     director: "Vince Gilligan",
@@ -92,7 +92,7 @@ export const breakingBadUniverseData = [
   {
     id: 10,
     watchOrder: 10,
-    title: "Better Call Saul - Season 4",
+    title: "Better Call Saul - Season 4 (10 Episodes)",
     type: "Series",
     year: 2018,
     director: "Vince Gilligan",
@@ -102,7 +102,7 @@ export const breakingBadUniverseData = [
   {
     id: 11,
     watchOrder: 11,
-    title: "Better Call Saul - Season 5",
+    title: "Better Call Saul - Season 5 (10 Episodes)",
     type: "Series",
     year: 2020,
     director: "Vince Gilligan",
@@ -112,7 +112,7 @@ export const breakingBadUniverseData = [
   {
     id: 12,
     watchOrder: 12,
-    title: "Better Call Saul - Season 6",
+    title: "Better Call Saul - Season 6 (13 Episodes)",
     type: "Series",
     year: 2022,
     director: "Vince Gilligan",

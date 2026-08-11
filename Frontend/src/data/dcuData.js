@@ -1,0 +1,32 @@
+export const dcuData = [
+    {
+  id: 1,
+  watchOrder: 1,
+  title: "Creature Commandos - Season 1 (7 Episodes)",
+  type: "Series",
+  year: 2024,
+  director: "James Gunn",
+  actor: "Alan Tudyk",
+  country: "USA",
+},
+{
+  id: 2,
+  watchOrder: 2,
+  title: "Superman",
+  type: "Movie",
+  year: 2025,
+  director: "James Gunn",
+  actor: "David Corenswet",
+  country: "USA",
+},
+{
+  id: 3,
+  watchOrder: 3,
+  title: "Peacemaker - Season 2 (8 Episodes)",
+  type: "Series",
+  year: 2025,
+  director: "James Gunn",
+  actor: "John Cena",
+  country: "USA",
+}
+];

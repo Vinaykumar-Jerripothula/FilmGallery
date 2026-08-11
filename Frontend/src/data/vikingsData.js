@@ -2,7 +2,7 @@ export const vikingsData = [
   {
   id: 1,
   watchOrder: 1,
-  title: "Vikings - Season 1",
+  title: "Vikings - Season 1 (9 Episodes)",
   type: "Series",
   year: 2013,
   director: "Michael Hirst",
@@ -12,7 +12,7 @@ export const vikingsData = [
 {
   id: 2,
   watchOrder: 2,
-  title: "Vikings - Season 2",
+  title: "Vikings - Season 2 (10 Episodes)",
   type: "Series",
   year: 2014,
   director: "Michael Hirst",
@@ -22,7 +22,7 @@ export const vikingsData = [
 {
   id: 3,
   watchOrder: 3,
-  title: "Vikings - Season 3",
+  title: "Vikings - Season 3 (10 Episodes)",
   type: "Series",
   year: 2015,
   director: "Michael Hirst",
@@ -32,7 +32,7 @@ export const vikingsData = [
 {
   id: 4,
   watchOrder: 4,
-  title: "Vikings - Season 4",
+  title: "Vikings - Season 4 (20 Episodes)",
   type: "Series",
   year: 2016,
   director: "Michael Hirst",
@@ -42,7 +42,7 @@ export const vikingsData = [
 {
   id: 5,
   watchOrder: 5,
-  title: "Vikings - Season 5",
+  title: "Vikings - Season 5 (20 Episodes)",
   type: "Series",
   year: 2017,
   director: "Michael Hirst",
@@ -52,7 +52,7 @@ export const vikingsData = [
 {
   id: 6,
   watchOrder: 6,
-  title: "Vikings - Season 6",
+  title: "Vikings - Season 6 (20 Episodes)",
   type: "Series",
   year: 2019,
   director: "Michael Hirst",
@@ -62,7 +62,7 @@ export const vikingsData = [
 {
   id: 7,
   watchOrder: 7,
-  title: "Vikings: Valhalla - Season 1",
+  title: "Vikings: Valhalla - Season 1 (8 Episodes)",
   type: "Series",
   year: 2022,
   director: "Jeb Stuart",
@@ -72,7 +72,7 @@ export const vikingsData = [
 {
   id: 8,
   watchOrder: 8,
-  title: "Vikings: Valhalla - Season 2",
+  title: "Vikings: Valhalla - Season 2 (8 Episodes)",
   type: "Series",
   year: 2023,
   director: "Jeb Stuart",
@@ -82,7 +82,7 @@ export const vikingsData = [
 {
   id: 9,
   watchOrder: 9,
-  title: "Vikings: Valhalla - Season 3",
+  title: "Vikings: Valhalla - Season 3 (8 Episodes)",
   type: "Series",
   year: 2024,
   director: "Jeb Stuart",

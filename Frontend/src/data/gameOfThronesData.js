@@ -2,7 +2,7 @@ export const gameOfThronesData = [
   {
     id: 1,
     watchOrder: 1,
-    title: "Game of Thrones - Season 1",
+    title: "Game of Thrones - Season 1 (10 Episodes)",
     type: "Series",
     year: 2011,
     director: "Tim Van Patten",
@@ -12,7 +12,7 @@ export const gameOfThronesData = [
   {
     id: 2,
     watchOrder: 2,
-    title: "Game of Thrones - Season 2",
+    title: "Game of Thrones - Season 2 (10 Episodes)",
     type: "Series",
     year: 2012,
     director: "Various",
@@ -22,7 +22,7 @@ export const gameOfThronesData = [
   {
     id: 3,
     watchOrder: 3,
-    title: "Game of Thrones - Season 3",
+    title: "Game of Thrones - Season 3 (10 Episodes)",
     type: "Series",
     year: 2013,
     director: "Various",
@@ -32,7 +32,7 @@ export const gameOfThronesData = [
   {
     id: 4,
     watchOrder: 4,
-    title: "Game of Thrones - Season 4",
+    title: "Game of Thrones - Season 4 (10 Episodes)",
     type: "Series",
     year: 2014,
     director: "Various",
@@ -42,7 +42,7 @@ export const gameOfThronesData = [
   {
     id: 5,
     watchOrder: 5,
-    title: "Game of Thrones - Season 5",
+    title: "Game of Thrones - Season 5 (10 Episodes)",
     type: "Series",
     year: 2015,
     director: "Various",
@@ -52,7 +52,7 @@ export const gameOfThronesData = [
   {
     id: 6,
     watchOrder: 6,
-    title: "Game of Thrones - Season 6",
+    title: "Game of Thrones - Season 6 (10 Episodes)",
     type: "Series",
     year: 2016,
     director: "Various",
@@ -62,7 +62,7 @@ export const gameOfThronesData = [
   {
     id: 7,
     watchOrder: 7,
-    title: "Game of Thrones - Season 7",
+    title: "Game of Thrones - Season 7 (7 Episodes)",
     type: "Series",
     year: 2017,
     director: "Various",
@@ -72,7 +72,7 @@ export const gameOfThronesData = [
   {
     id: 8,
     watchOrder: 8,
-    title: "Game of Thrones - Season 8",
+    title: "Game of Thrones - Season 8 (6 Episodes)",
     type: "Series",
     year: 2019,
     director: "Various",
@@ -82,7 +82,7 @@ export const gameOfThronesData = [
   {
     id: 9,
     watchOrder: 9,
-    title: "House of the Dragon - Season 1",
+    title: "House of the Dragon - Season 1 (10 Episodes)",
     type: "Series",
     year: 2022,
     director: "Miguel Sapochnik",
@@ -92,7 +92,7 @@ export const gameOfThronesData = [
   {
     id: 10,
     watchOrder: 10,
-    title: "House of the Dragon - Season 2",
+    title: "House of the Dragon - Season 2 (8 Episodes)",
     type: "Series",
     year: 2024,
     director: "Various",
@@ -102,7 +102,7 @@ export const gameOfThronesData = [
   {
     id: 11,
     watchOrder: 11,
-    title: "A Knight of the Seven Kingdoms - Season 1",
+    title: "A Knight of the Seven Kingdoms - Season 1 (6 Episodes)",
     type: "Series",
     year: 2025,
     director: "Owen Harris",
