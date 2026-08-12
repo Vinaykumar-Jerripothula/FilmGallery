@@ -1,11 +1,13 @@
 import FranchiseAccordion from "./FranchiseAccordion";
 import { alienData } from "../data/alienData";
 
-function Alien() {
+function Alien({ progressMap }) {
   return (
     <FranchiseAccordion
       franchiseName="Alien"
       content={alienData}
+      contentId={"alien"}
+      completedCount={progressMap.mcu || 0}
     />
   );
 }

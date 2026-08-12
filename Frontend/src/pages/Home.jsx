@@ -1,5 +1,4 @@
-import MarvelCinematicUniverse from "../components/FranchiseAccordion";
-import { mcuData } from "../data/mcuData";
+import MCU from "../components/MCU";
 import JohnWick from "../components/JohnWick";
 import TheLordOfTheRings from "../components/TheLordOfTheRings";
 import DCEU from "../components/DCEU";
@@ -31,8 +30,41 @@ import Terminator from "../components/Terminator";
 import StarTrek from "../components/StarTrek";
 import RockyCreed from "../components/RockyCreed";
 import MadMax from "../components/MadMax";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Home() {
+
+  const [progressMap, setProgressMap] = useState({});
+
+  useEffect(() => {
+
+  const userId = localStorage.getItem("userId");
+
+  if (!userId) return;
+
+  axios
+    .get(`http://localhost:8081/api/progress/${userId}`)
+    .then((response) => {
+
+      const map = {};
+
+      response.data.forEach((item) => {
+        map[item.contentId] =
+          item.lastCompletedPosition;
+      });
+
+      setProgressMap(map);
+
+      console.log(map);
+
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
+}, []);
+
   return (
     <div className="min-h-screen bg-[#0B0F14] text-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
@@ -54,16 +86,13 @@ function Home() {
   </h2>
 
   <div className="space-y-4 ml-4">
-    <MarvelCinematicUniverse
-      franchiseName="Marvel Cinematic Universe"
-      content={mcuData}
-    />
-    <DCEU />
-    <DCU />
-    <StarWars />
-    <TheConjuring />
-    <MonsterVerse />
-    <XMEN />
+    <MCU progressMap={progressMap} />
+    <DCEU progressMap={progressMap}/>
+    <DCU progressMap={progressMap}/>
+    <StarWars progressMap={progressMap}/>
+    <TheConjuring progressMap={progressMap}/>
+    <MonsterVerse progressMap={progressMap}/>
+    <XMEN progressMap={progressMap}/>
   </div>
 </section>
         {/* ================= FRANCHISES ================= */}
@@ -75,23 +104,23 @@ function Home() {
   <div className="space-y-4 ml-4">
    
 
-    <TheLordOfTheRings />
-    <JohnWick />
-    <HarryPotter />
-    <PiratesOfTheCaribbean />
-    <PlanetOfTheApes />
-    <TheHungerGames />
-    <JurassicPark />
-    <Alien />
-    <MissionImpossible />
-    <FastAndFurious />
-    <JamesBond />
-    <TransFormers />
-    <Predator />
-    <Terminator />
-    <StarTrek />
-    <RockyCreed />
-    <MadMax />
+    <TheLordOfTheRings progressMap={progressMap}/>
+    <JohnWick progressMap={progressMap}/>
+    <HarryPotter progressMap={progressMap}/>
+    <PiratesOfTheCaribbean progressMap={progressMap}/>
+    <PlanetOfTheApes progressMap={progressMap}/>
+    <TheHungerGames progressMap={progressMap}/>
+    <JurassicPark progressMap={progressMap}/>
+    <Alien progressMap={progressMap}/>
+    <MissionImpossible progressMap={progressMap}/>
+    <FastAndFurious progressMap={progressMap}/>
+    <JamesBond progressMap={progressMap}/>
+    <TransFormers progressMap={progressMap}/>
+    <Predator progressMap={progressMap}/>
+    <Terminator progressMap={progressMap}/>
+    <StarTrek progressMap={progressMap}/>
+    <RockyCreed progressMap={progressMap}/>
+    <MadMax progressMap={progressMap}/>
   </div>
 </section>
 
@@ -102,13 +131,13 @@ function Home() {
   </h2>
 
   <div className="text-zinc-500 ml-4 space-y-4">
-    <BreakingBad />
-    <GameOfThrones />
-    <Vikings />
-    <Dark />
-    <From />
-    <StrangerThings />
-    <PeakyBlinders />
+    <BreakingBad progressMap={progressMap}/>
+    <GameOfThrones progressMap={progressMap}/>
+    <Vikings progressMap={progressMap}/>
+    <Dark progressMap={progressMap}/>
+    <From progressMap={progressMap}/>
+    <StrangerThings progressMap={progressMap}/>
+    <PeakyBlinders progressMap={progressMap}/>
   </div>
 </section>
 

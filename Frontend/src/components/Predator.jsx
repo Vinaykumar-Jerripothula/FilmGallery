@@ -1,11 +1,13 @@
 import FranchiseAccordion from "./FranchiseAccordion";
 import { predatorData } from "../data/predatorData";
 
-function Predator() {
+function Predator({ progressMap }) {
   return (
     <FranchiseAccordion
       franchiseName="Predator"
       content={predatorData}
+      contentId={"predator"}
+      completedCount={progressMap.predator}
     />
   );
 }

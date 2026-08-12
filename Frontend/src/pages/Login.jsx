@@ -1,21 +1,69 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import LoadingScreen from "./Loading";
 
 function Login() {
   const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  const handleLogin = async (e) => {
+  e.preventDefault();
+
+  try {
     setLoading(true);
 
-    setTimeout(() => {
-      navigate("/home");
-    }, 1800);
+    const response = await axios.post(
+      "http://localhost:8081/api/auth/login",
+      {
+        email,
+        password,
+      }
+    );
+    console.log(response.data);
 
-  };
+    if (response.data.message === "Login successful") {
+
+      localStorage.setItem(
+        "userId",
+        response.data.userId
+      );
+
+      localStorage.setItem(
+        "username",
+        response.data.username
+      );
+
+      localStorage.setItem(
+        "email",
+        response.data.email
+      );
+
+      setTimeout(() => {
+        navigate("/home");
+      }, 1800);
+
+    } else {
+
+      alert(response.data.message);
+      setLoading(false);
+
+    }
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("Login failed");
+
+    setLoading(false);
+  }
+};
 
   if (loading) {
     return <LoadingScreen />;
@@ -25,7 +73,6 @@ function Login() {
     <div className="min-h-screen bg-[#0B0F14] flex items-center justify-center px-4">
       <div className="w-full max-w-[300px] sm:max-w-[380px]">
 
-        {/* Header */}
         <div className="mb-5 text-center">
           <h1 className="text-2xl sm:text-4xl font-extrabold text-white">
             Film Gallery
@@ -36,7 +83,6 @@ function Login() {
           </p>
         </div>
 
-        {/* Login Card */}
         <div
           className="
             bg-[#111827]
@@ -53,7 +99,6 @@ function Login() {
 
           <form onSubmit={handleLogin} className="space-y-3">
 
-            {/* Email */}
             <div>
               <label className="block text-xs sm:text-sm text-zinc-300 mb-1.5">
                 Email
@@ -62,6 +107,10 @@ function Login() {
               <input
                 type="email"
                 placeholder="Enter email"
+                value={email}
+                onChange={(e) =>
+                  setEmail(e.target.value)
+                }
                 className="
                   w-full
                   px-3
@@ -79,7 +128,6 @@ function Login() {
               />
             </div>
 
-            {/* Password */}
             <div>
               <label className="block text-xs sm:text-sm text-zinc-300 mb-1.5">
                 Password
@@ -88,6 +136,10 @@ function Login() {
               <input
                 type="password"
                 placeholder="Enter password"
+                value={password}
+                onChange={(e) =>
+                  setPassword(e.target.value)
+                }
                 className="
                   w-full
                   px-3
@@ -105,7 +157,6 @@ function Login() {
               />
             </div>
 
-            {/* Remember Me */}
             <div className="flex items-center justify-between text-xs">
               <label className="flex items-center gap-2 text-zinc-400">
                 <input
@@ -123,7 +174,6 @@ function Login() {
               </button>
             </div>
 
-            {/* Login Button */}
             <button
               type="submit"
               className="
@@ -140,9 +190,9 @@ function Login() {
             >
               Login
             </button>
+
           </form>
 
-          {/* Signup Link */}
           <div className="mt-4 text-center">
             <span className="text-xs text-zinc-400">
               Don't have an account?{" "}
@@ -158,7 +208,6 @@ function Login() {
           </div>
         </div>
 
-        {/* Footer */}
         <p className="text-center text-[11px] text-zinc-500 mt-4">
           Track movies, franchises, universes and TV series in one place.
         </p>

@@ -1,11 +1,13 @@
 import FranchiseAccordion from "./FranchiseAccordion";
 import { rockyCreedData } from "../data/rockyCreedData";
 
-function RockyCreed() {
+function RockyCreed({ progressMap }) {
   return (
     <FranchiseAccordion
       franchiseName="Rocky / Creed"
       content={rockyCreedData}
+      contentId={"rockyandcreed"}
+      completedCount={progressMap.rockyandcreed || 0}
     />
   );
 }

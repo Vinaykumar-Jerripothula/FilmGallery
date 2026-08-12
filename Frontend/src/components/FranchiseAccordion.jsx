@@ -1,48 +1,49 @@
 import { useState } from "react";
-import {
-  ChevronRight,
-  Circle,
-  CheckCircle2,
-  Lock,
-} from "lucide-react";
+import axios from "axios";
+import { ChevronRight, Circle, CheckCircle2, Lock } from "lucide-react";
+import { useEffect } from "react";
 
 function FranchiseAccordion({
   franchiseName,
   content,
+  contentId,
+  completedCount = 0,
 }) {
   const [open, setOpen] = useState(false);
 
-  const [completedMovies, setCompletedMovies] =
-    useState([]);
+  const [completed, setCompleted] = useState(completedCount);
 
-  const handleToggle = (movieId, index) => {
-    const isCompleted =
-      completedMovies.includes(movieId);
+  useEffect(() => {
+    setCompleted(completedCount);
+  }, [completedCount]);
 
-    if (isCompleted) return;
+  const handleToggle = async (index) => {
+    if (index !== completed) {
+      return;
+    }
 
-    const canComplete =
-      completedMovies.length === index;
+    const newCompleted = completed + 1;
 
-    if (!canComplete) return;
+    setCompleted(newCompleted);
 
-    setCompletedMovies([
-      ...completedMovies,
-      movieId,
-    ]);
+    try {
+      const userId = localStorage.getItem("userId");
+
+      await axios.post("http://localhost:8081/api/progress/save", {
+        userId: Number(userId),
+        contentId,
+        lastCompletedPosition: newCompleted,
+      });
+
+      console.log("Progress saved");
+    } catch (error) {
+      console.error(error);
+    }
   };
-
-  const completed =
-    completedMovies.length;
 
   const total = content.length;
 
-  const progress =
-    total === 0
-      ? 0
-      : Math.round(
-          (completed / total) * 100
-        );
+  const progress = total === 0 ? 0 : Math.round((completed / total) * 100);
 
   /*
     IMPORTANT:
@@ -54,7 +55,7 @@ function FranchiseAccordion({
 
   return (
     <div
-  className="
+      className="
     bg-[#111827]
     border
     border-zinc-800
@@ -64,7 +65,7 @@ function FranchiseAccordion({
     w-[95%]
     mx-auto
   "
->
+    >
       {/* Franchise Header */}
       <button
         onClick={() => setOpen(!open)}
@@ -77,9 +78,7 @@ function FranchiseAccordion({
         "
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-
           <div className="flex items-center gap-4 min-w-0">
-
             <div
               className={`
                 flex-shrink-0
@@ -110,11 +109,9 @@ function FranchiseAccordion({
                 Franchise Progress
               </p>
             </div>
-
           </div>
 
           <div className="text-left sm:text-right flex-shrink-0">
-
             <div className="text-xl sm:text-1xl font-black text-orange-500">
               {progress}%
             </div>
@@ -122,14 +119,11 @@ function FranchiseAccordion({
             <div className="text-zinc-400 text-xs sm:text-sm">
               {completed} / {total}
             </div>
-
           </div>
-
         </div>
 
         {/* Progress Bar */}
-        <div className="mt-5 h-2 bg-zinc-800 rounded-full overflow-hidden">
-
+        <div className="mt-5 h-1 bg-zinc-800 rounded-full overflow-hidden">
           <div
             className="
               h-full
@@ -144,19 +138,15 @@ function FranchiseAccordion({
               width: `${progress}%`,
             }}
           />
-
         </div>
       </button>
 
       {/* Content */}
       {open && (
         <div className="border-t border-zinc-800">
-
           <div className="overflow-x-auto">
-
             {/* Table Container */}
             <div className="min-w-[1100px]">
-
               {/* Header */}
               <div
                 className={`
@@ -176,62 +166,33 @@ function FranchiseAccordion({
                   text-zinc-400
                 `}
               >
+                <div className="flex items-center">S.No</div>
 
-                <div className="flex items-center">
-                  S.No
-                </div>
+                <div className="flex items-center">Title</div>
 
-                <div className="flex items-center">
-                  Title
-                </div>
+                <div className="flex items-center">Type</div>
 
-                <div className="flex items-center">
-                  Type
-                </div>
+                <div className="flex items-center">Year</div>
 
-                <div className="flex items-center">
-                  Year
-                </div>
+                <div className="flex items-center">Director</div>
 
-                <div className="flex items-center">
-                  Director
-                </div>
+                <div className="flex items-center">Actor</div>
 
-                <div className="flex items-center">
-                  Actor
-                </div>
+                <div className="flex items-center">Country</div>
 
-                <div className="flex items-center">
-                  Country
-                </div>
-
-                <div className="flex items-center">
-                  Status
-                </div>
-
+                <div className="flex items-center">Status</div>
               </div>
 
               {/* Rows */}
               {content.map((movie, index) => {
+                const isCompleted = index < completed;
 
-                const isCompleted =
-                  completedMovies.includes(
-                    movie.id
-                  );
-
-                const isCurrent =
-                  completedMovies.length ===
-                  index;
+                const isCurrent = completed === index;
 
                 return (
                   <div
                     key={movie.id}
-                    onClick={() =>
-                      handleToggle(
-                        movie.id,
-                        index
-                      )
-                    }
+                    onClick={() => handleToggle(index)}
                     className={`
                       ${gridColumns}
                       grid
@@ -242,17 +203,11 @@ function FranchiseAccordion({
                       border-zinc-800
                       transition-all
                       duration-300
-                      ${
-                        isCurrent
-                          ? "hover:bg-[#1A2233] cursor-pointer"
-                          : ""
-                      }
+                      ${isCurrent ? "hover:bg-[#1A2233] cursor-pointer" : ""}
                     `}
                   >
-
                     {/* S.No */}
                     <div className="flex items-center gap-2 min-w-0">
-
                       {isCompleted ? (
                         <CheckCircle2
                           size={18}
@@ -282,7 +237,6 @@ function FranchiseAccordion({
                       <span className="text-xs sm:text-sm whitespace-nowrap">
                         {movie.watchOrder}
                       </span>
-
                     </div>
 
                     {/* Title */}
@@ -299,8 +253,8 @@ function FranchiseAccordion({
                           isCompleted
                             ? "text-green-400 line-through"
                             : isCurrent
-                            ? "text-orange-300"
-                            : "text-zinc-500"
+                              ? "text-orange-300"
+                              : "text-zinc-500"
                         }
                       `}
                     >
@@ -309,7 +263,6 @@ function FranchiseAccordion({
 
                     {/* Type */}
                     <div className="flex items-start min-w-0 pr-3">
-
                       <span
                         className="
                           px-2
@@ -325,7 +278,6 @@ function FranchiseAccordion({
                       >
                         {movie.type}
                       </span>
-
                     </div>
 
                     {/* Year */}
@@ -386,7 +338,6 @@ function FranchiseAccordion({
 
                     {/* Status */}
                     <div className="flex items-start">
-
                       {isCompleted ? (
                         <span
                           className="
@@ -445,13 +396,10 @@ function FranchiseAccordion({
                           LOCKED
                         </span>
                       )}
-
                     </div>
-
                   </div>
                 );
               })}
-
             </div>
           </div>
         </div>
