@@ -23,7 +23,13 @@ public class AuthService {
 
     public String signup(SignupRequest request) {
 
+        System.out.println("========== SIGNUP START ==========");
+
+        System.out.println("Username: " + request.getUsername());
+        System.out.println("Email: " + request.getEmail());
+
         if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            System.out.println("Email already exists");
             return "Email already exists";
         }
 
@@ -33,7 +39,17 @@ public class AuthService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .build();
 
-        userRepository.save(user);
+        System.out.println("Before save");
+        System.out.println("User ID before save: " + user.getId());
+
+        User savedUser = userRepository.save(user);
+
+        System.out.println("After save");
+        System.out.println("User ID after save: " + savedUser.getId());
+        System.out.println("Saved username: " + savedUser.getUsername());
+        System.out.println("Saved email: " + savedUser.getEmail());
+
+        System.out.println("========== SIGNUP END ==========");
 
         return "Signup successful";
     }

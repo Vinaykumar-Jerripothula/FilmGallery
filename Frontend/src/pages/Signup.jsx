@@ -13,11 +13,15 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const [error, setError] = useState("");
+
   const handleSignup = async (e) => {
     e.preventDefault();
 
+    setError("");
+
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      setError("Passwords do not match");
       return;
     }
 
@@ -32,16 +36,31 @@ function Signup() {
           password,
         }
       );
+      console.log("FULL RESPONSE:", response);
+console.log("STATUS:", response.status);
+console.log("DATA:", response.data);
 
-      alert(response.data);
+      console.log("Signup Response:", response.data);
 
-      setTimeout(() => {
+      if (response.data === "Signup successful") {
         navigate("/login");
-      }, 1000);
-
+      } else {
+        setError(response.data);
+        setLoading(false);
+      }
     } catch (error) {
-      console.error(error);
-      alert("Signup failed");
+      console.error("Signup Error:", error);
+
+      if (error.response) {
+        setError(
+          typeof error.response.data === "string"
+            ? error.response.data
+            : "Signup failed"
+        );
+      } else {
+        setError("Unable to connect to server");
+      }
+
       setLoading(false);
     }
   };
@@ -91,7 +110,10 @@ function Signup() {
               <input
                 type="text"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                  setError("");
+                }}
                 placeholder="Enter username"
                 className="
                   w-full
@@ -120,7 +142,10 @@ function Signup() {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setError("");
+                }}
                 placeholder="Enter email"
                 className="
                   w-full
@@ -149,7 +174,10 @@ function Signup() {
               <input
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setError("");
+                }}
                 placeholder="Enter password"
                 className="
                   w-full
@@ -178,9 +206,10 @@ function Signup() {
               <input
                 type="password"
                 value={confirmPassword}
-                onChange={(e) =>
-                  setConfirmPassword(e.target.value)
-                }
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value);
+                  setError("");
+                }}
                 placeholder="Confirm password"
                 className="
                   w-full
@@ -199,6 +228,13 @@ function Signup() {
                 required
               />
             </div>
+
+            {/* Error Message */}
+            {error && (
+              <p className="text-red-500 text-xs sm:text-sm text-center pt-1">
+                {error}
+              </p>
+            )}
 
             {/* Button */}
             <button
