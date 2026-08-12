@@ -29,7 +29,7 @@ function FranchiseAccordion({
     try {
       const userId = localStorage.getItem("userId");
 
-      await axios.post("http://localhost:8081/api/progress/save", {
+      await axios.post("https://filmgallery.onrender.com/api/progress/save", {
         userId: Number(userId),
         contentId,
         lastCompletedPosition: newCompleted,

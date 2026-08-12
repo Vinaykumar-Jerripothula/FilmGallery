@@ -1,26 +1,59 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import Loading from "./Loading";
 
 function Signup() {
   const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
-  const handleSignup = (e) => {
+
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSignup = async (e) => {
     e.preventDefault();
 
-    setLoading(true);
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
 
-    setTimeout(() => {
-      navigate("/home");
-    }, 1800);
+    try {
+      setLoading(true);
+
+      const response = await axios.post(
+        "https://filmgallery.onrender.com/api/auth/signup",
+        {
+          username,
+          email,
+          password,
+        }
+      );
+
+      alert(response.data);
+
+      setTimeout(() => {
+        navigate("/login");
+      }, 1000);
+
+    } catch (error) {
+      console.error(error);
+      alert("Signup failed");
+      setLoading(false);
+    }
   };
 
   if (loading) {
     return <Loading />;
   }
+
   return (
     <div className="min-h-screen bg-[#0B0F14] flex items-center justify-center px-4">
       <div className="w-full max-w-[300px] sm:max-w-[380px]">
+
         {/* Header */}
         <div className="mb-5 text-center">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -48,6 +81,7 @@ function Signup() {
           </h2>
 
           <form onSubmit={handleSignup} className="space-y-2">
+
             {/* Username */}
             <div>
               <label className="block text-xs sm:text-sm text-zinc-300 mb-1.5">
@@ -56,6 +90,8 @@ function Signup() {
 
               <input
                 type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter username"
                 className="
                   w-full
@@ -71,6 +107,7 @@ function Signup() {
                   focus:outline-none
                   focus:border-orange-500
                 "
+                required
               />
             </div>
 
@@ -82,6 +119,8 @@ function Signup() {
 
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter email"
                 className="
                   w-full
@@ -97,6 +136,7 @@ function Signup() {
                   focus:outline-none
                   focus:border-orange-500
                 "
+                required
               />
             </div>
 
@@ -108,6 +148,8 @@ function Signup() {
 
               <input
                 type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
                 className="
                   w-full
@@ -123,6 +165,7 @@ function Signup() {
                   focus:outline-none
                   focus:border-orange-500
                 "
+                required
               />
             </div>
 
@@ -134,6 +177,10 @@ function Signup() {
 
               <input
                 type="password"
+                value={confirmPassword}
+                onChange={(e) =>
+                  setConfirmPassword(e.target.value)
+                }
                 placeholder="Confirm password"
                 className="
                   w-full
@@ -149,6 +196,7 @@ function Signup() {
                   focus:outline-none
                   focus:border-orange-500
                 "
+                required
               />
             </div>
 
@@ -192,6 +240,7 @@ function Signup() {
         <p className="text-center text-[11px] text-zinc-500 mt-4">
           Track movies, franchises, universes and TV series in one place.
         </p>
+
       </div>
     </div>
   );
