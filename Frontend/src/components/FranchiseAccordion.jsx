@@ -54,23 +54,23 @@ function FranchiseAccordion({
 
   return (
     <div
-      className="
-        bg-[#111827]
-        border
-        border-zinc-800
-        rounded-2xl
-        overflow-hidden
-        shadow-xl
-        mx-2
-        sm:mx-0
-      "
-    >
+  className="
+    bg-[#111827]
+    border
+    border-zinc-800
+    rounded-2xl
+    overflow-hidden
+    shadow-xl
+    w-[95%]
+    mx-auto
+  "
+>
       {/* Franchise Header */}
       <button
         onClick={() => setOpen(!open)}
         className="
           w-full
-          p-4 sm:p-5
+          p-2 sm:p-1
           text-left
           hover:bg-[#172036]
           transition-all
@@ -115,7 +115,7 @@ function FranchiseAccordion({
 
           <div className="text-left sm:text-right flex-shrink-0">
 
-            <div className="text-xl sm:text-4xl font-black text-orange-500">
+            <div className="text-xl sm:text-1xl font-black text-orange-500">
               {progress}%
             </div>
 
@@ -128,7 +128,7 @@ function FranchiseAccordion({
         </div>
 
         {/* Progress Bar */}
-        <div className="mt-5 h-3 bg-zinc-800 rounded-full overflow-hidden">
+        <div className="mt-5 h-2 bg-zinc-800 rounded-full overflow-hidden">
 
           <div
             className="

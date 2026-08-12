@@ -39,17 +39,17 @@ function Home() {
 
         {/* Page Header */}
         <div className="mb-8 sm:mb-10">
-          <h1 className="text-lg sm:text-4xl font-extrabold tracking-tight">
+          <h1 className="text-lg sm:text-2xl font-extrabold tracking-tight ml-6">
             Film Gallery
           </h1>
 
-          <p className="mt-2 text-xs sm:text-base text-zinc-400">
+          <p className="mt-2 text-[10px] sm:text-base text-zinc-400 ml-6">
             Movies, Series & Franchises
           </p>
         </div>
         {/* ================= FRANCHISES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-7 mb-4 text-orange-400">
     Cinematic Universe
   </h2>
 
@@ -68,7 +68,7 @@ function Home() {
 </section>
         {/* ================= FRANCHISES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Franchises
   </h2>
 
@@ -97,7 +97,7 @@ function Home() {
 
 {/* ================= TV / WEB SERIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     TV / Web Series
   </h2>
 
@@ -114,7 +114,7 @@ function Home() {
 
 {/* ================= STANDALONE MOVIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Standalone Movies
   </h2>
 
@@ -125,7 +125,7 @@ function Home() {
 
 {/* ================= DUOLOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Duologies
   </h2>
 
@@ -136,7 +136,7 @@ function Home() {
 
 {/* ================= TRILOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Trilogies
   </h2>
 
@@ -147,7 +147,7 @@ function Home() {
 
 {/* ================= TETRALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Tetralogies
   </h2>
 
@@ -157,7 +157,7 @@ function Home() {
 </section>
 {/* ================= PENTALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Pentalogies
   </h2>
 
@@ -167,7 +167,7 @@ function Home() {
 </section>
 {/* ================= HEXALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Hexalogies
   </h2>
 
@@ -177,7 +177,7 @@ function Home() {
 </section>
 {/* ================= HEPTALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Heptalogies
   </h2>
 
@@ -187,7 +187,7 @@ function Home() {
 </section>
 {/* ================= OCTALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Octologies
   </h2>
 
@@ -197,7 +197,7 @@ function Home() {
 </section>
 {/* ================= NONALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Nonalogies
   </h2>
 
@@ -207,7 +207,7 @@ function Home() {
 </section>
 {/* ================= DOCALOGIES ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Decalogies
   </h2>
 
@@ -220,7 +220,7 @@ function Home() {
 
 {/* ================= ANIME ================= */}
 <section className="mb-12">
-  <h2 className="text-1xl sm:text-2xl font-bold ml-4 mb-4 text-orange-400">
+  <h2 className="text-sm sm:text-xl font-bold ml-4 mb-4 text-orange-400">
     Anime
   </h2>
 
