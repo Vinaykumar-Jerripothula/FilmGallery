@@ -14,11 +14,13 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleSignup = async (e) => {
     e.preventDefault();
 
     setError("");
+    setSuccess("");
 
     if (password !== confirmPassword) {
       setError("Passwords do not match");
@@ -28,7 +30,8 @@ function Signup() {
     try {
       setLoading(true);
 
-      const response = await axios.post(
+      // Step 1: Create account
+      const signupResponse = await axios.post(
         "https://filmgallery.onrender.com/api/auth/signup",
         {
           username,
@@ -36,16 +39,49 @@ function Signup() {
           password,
         }
       );
-      console.log("FULL RESPONSE:", response);
-console.log("STATUS:", response.status);
-console.log("DATA:", response.data);
 
-      console.log("Signup Response:", response.data);
+      console.log("Signup Response:", signupResponse.data);
 
-      if (response.data === "Signup successful") {
-        navigate("/login");
+      if (signupResponse.data !== "Signup successful") {
+        setError(signupResponse.data);
+        setLoading(false);
+        return;
+      }
+
+      // Step 2: Automatically login after successful signup
+      const loginResponse = await axios.post(
+        "https://filmgallery.onrender.com/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+
+      console.log("Login Response:", loginResponse.data);
+
+      if (loginResponse.data.message === "Login successful") {
+        // Step 3: Store logged-in user details
+        localStorage.setItem(
+          "userId",
+          loginResponse.data.userId
+        );
+
+        localStorage.setItem(
+          "username",
+          loginResponse.data.username
+        );
+
+        localStorage.setItem(
+          "email",
+          loginResponse.data.email
+        );
+
+        // Step 4: Go directly to Home
+        navigate("/home");
       } else {
-        setError(response.data);
+        setError(
+          loginResponse.data.message || "Automatic login failed"
+        );
         setLoading(false);
       }
     } catch (error) {
@@ -113,6 +149,7 @@ console.log("DATA:", response.data);
                 onChange={(e) => {
                   setUsername(e.target.value);
                   setError("");
+                  setSuccess("");
                 }}
                 placeholder="Enter username"
                 className="
@@ -145,6 +182,7 @@ console.log("DATA:", response.data);
                 onChange={(e) => {
                   setEmail(e.target.value);
                   setError("");
+                  setSuccess("");
                 }}
                 placeholder="Enter email"
                 className="
@@ -177,6 +215,7 @@ console.log("DATA:", response.data);
                 onChange={(e) => {
                   setPassword(e.target.value);
                   setError("");
+                  setSuccess("");
                 }}
                 placeholder="Enter password"
                 className="
@@ -209,6 +248,7 @@ console.log("DATA:", response.data);
                 onChange={(e) => {
                   setConfirmPassword(e.target.value);
                   setError("");
+                  setSuccess("");
                 }}
                 placeholder="Confirm password"
                 className="
@@ -228,6 +268,13 @@ console.log("DATA:", response.data);
                 required
               />
             </div>
+
+            {/* Success Message */}
+            {success && (
+              <p className="text-green-500 text-xs sm:text-sm text-center pt-1">
+                {success}
+              </p>
+            )}
 
             {/* Error Message */}
             {error && (

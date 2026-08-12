@@ -44,7 +44,7 @@ function Home() {
   if (!userId) return;
 
   axios
-    .get(`https://filmgallery.onrender.com/api/progres/${userId}`)
+    .get(`https://filmgallery.onrender.com/api/progress/${userId}`)
     .then((response) => {
 
       const map = {};
