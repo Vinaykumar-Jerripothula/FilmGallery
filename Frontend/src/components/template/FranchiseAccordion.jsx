@@ -153,8 +153,8 @@ function FranchiseAccordion({
                   ${gridColumns}
                   grid
                   gap-0
-                  px-4 sm:px-6
-                  py-4
+                  px-6 sm:px-6
+                  py-6
                   bg-[#0f172a]
                   border-b
                   border-zinc-700
@@ -166,21 +166,23 @@ function FranchiseAccordion({
                   text-zinc-400
                 `}
               >
-                <div className="flex items-center">S.No</div>
+                <div className="pr-4 flex items-center justify-center">S.No</div>
 
-                <div className="flex items-center">Title</div>
+                <div className="flex items-center justify-center">Title</div>
 
-                <div className="flex items-center">Type</div>
+                <div className="pr-3 flex items-center justify-center">Type</div>
 
-                <div className="flex items-center">Year</div>
+                <div className="pr-4 flex items-center justify-center">Year</div>
 
-                <div className="flex items-center">Director</div>
+                <div className="pr-3 flex items-center justify-center">Imdb</div>
 
-                <div className="flex items-center">Actor</div>
+                <div className="pr-3 flex items-center justify-center">Director</div>
 
-                <div className="flex items-center">Country</div>
+                <div className="pr-3 flex items-center justify-center">Actor</div>
 
-                <div className="flex items-center">Status</div>
+                {/* <div className="flex items-center">Country</div> */}
+
+                <div className="pr-4 flex items-center justify-center">Status</div>
               </div>
 
               {/* Rows */}
@@ -207,7 +209,7 @@ function FranchiseAccordion({
                     `}
                   >
                     {/* S.No */}
-                    <div className="flex items-center gap-2 min-w-0">
+                    <div className="flex items-center justify-center gap-2 min-w-0">
                       {isCompleted ? (
                         <CheckCircle2
                           size={18}
@@ -229,12 +231,13 @@ function FranchiseAccordion({
                           size={16}
                           className="
                             text-zinc-600
+                            justify-center
                             flex-shrink-0
                           "
                         />
                       )}
 
-                      <span className="text-xs sm:text-sm whitespace-nowrap">
+                      <span className="text-xs sm:text-sm justify-center whitespace-nowrap">
                         {movie.watchOrder}
                       </span>
                     </div>
@@ -243,10 +246,10 @@ function FranchiseAccordion({
                     <div
                       className={`
                         min-w-0
-                        pr-4
                         text-xs
                         sm:text-base
                         font-semibold
+                        justify-center
                         whitespace-normal
                         break-words
                         ${
@@ -262,7 +265,7 @@ function FranchiseAccordion({
                     </div>
 
                     {/* Type */}
-                    <div className="flex items-start min-w-0 pr-3">
+                    <div className="flex items-start justify-center min-w-0 ">
                       <span
                         className="
                           px-2
@@ -271,7 +274,7 @@ function FranchiseAccordion({
                           text-[9px]
                           sm:text-xs
                           bg-zinc-800
-                          border
+                          justify-center
                           border-zinc-700
                           whitespace-nowrap
                         "
@@ -283,6 +286,9 @@ function FranchiseAccordion({
                     {/* Year */}
                     <div
                       className="
+                        flex
+                        items-center
+                        justify-center
                         text-zinc-300
                         text-xs
                         sm:text-sm
@@ -292,16 +298,31 @@ function FranchiseAccordion({
                       {movie.year}
                     </div>
 
-                    {/* Director */}
+                    {/* Imdb */}
                     <div
                       className="
-                        min-w-0
-                        pr-4
+                        flex
+                        items-center
+                        justify-center
                         text-zinc-300
                         text-xs
                         sm:text-sm
-                        whitespace-normal
-                        break-words
+                        whitespace-nowrap
+                      "
+                    >
+                      {movie.imdb}
+                    </div>
+
+                    {/* Director */}
+                    <div
+                      className="
+                        flex
+                        items-center
+                        justify-center
+                        text-zinc-300
+                        text-xs
+                        sm:text-sm
+                        whitespace-nowrap
                       "
                     >
                       {movie.director}
@@ -310,20 +331,20 @@ function FranchiseAccordion({
                     {/* Actor */}
                     <div
                       className="
-                        min-w-0
-                        pr-4
+                        flex
+                        items-center
+                        justify-center
                         text-zinc-300
                         text-xs
                         sm:text-sm
-                        whitespace-normal
-                        break-words
+                        whitespace-nowrap
                       "
                     >
                       {movie.actor}
                     </div>
 
                     {/* Country */}
-                    <div
+                    {/* <div
                       className="
                         text-zinc-300
                         text-xs
@@ -334,15 +355,15 @@ function FranchiseAccordion({
                       "
                     >
                       {movie.country}
-                    </div>
+                    </div> */}
 
                     {/* Status */}
-                    <div className="flex items-start">
+                    <div className="flex items-center justify-center">
                       {isCompleted ? (
                         <span
                           className="
-                            text-[9px]
-                            sm:text-xs
+                            text-[6px]
+                            sm:text-[8px]
                             font-semibold
                             px-2
                             sm:px-3
