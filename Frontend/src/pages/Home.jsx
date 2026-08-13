@@ -32,6 +32,20 @@ import RockyCreed from "../components/franchise/RockyCreed";
 import MadMax from "../components/franchise/MadMax";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BladeRunner from "../components/duology/BladeRunner";
+import TopGun from "../components/duology/TopGun";
+import JackReacher from "../components/duology/JackReacher";
+import SherlockHolmes from "../components/duology/SherlockHolmes";
+import KillBill from "../components/duology/KillBill";
+import TheRaid from "../components/duology/TheRaid";
+import TheDarkKnight from "../components/triology/TheDarkKnight";
+import ChroniclesOfNarnia from "../components/triology/ChronicalsOfNarnia";
+import MazuRunner from "../components/triology/MazeRunner";
+import Before from "../components/triology/Before";
+import Millennium from "../components/triology/Millennium";
+import TheMatrix from "../components/tetralogy/TheMatrix";
+import BadBoys from "../components/tetralogy/BadBoys";
+import Expandables from "../components/tetralogy/Expandables";
 
 function Home() {
 
@@ -147,7 +161,7 @@ function Home() {
     Standalone Movies
   </h2>
 
-  <div className="text-zinc-500 ml-4">
+  <div className="text-zinc-500 ml-4 space-y-4">
     No movies added yet.
   </div>
 </section>
@@ -158,8 +172,13 @@ function Home() {
     Duologies
   </h2>
 
-  <div className="text-zinc-500 ml-4">
-    No duologies added yet.
+  <div className="text-zinc-500 ml-4 space-y-4  ">
+   <BladeRunner progressMap={progressMap}/>
+   <TopGun progressMap={progressMap}/>
+   <JackReacher progressMap={progressMap} />
+   <SherlockHolmes progressMap={progressMap} />
+   <KillBill progressMap={progressMap} />
+   <TheRaid progressMap={progressMap} />
   </div>
 </section>
 
@@ -169,8 +188,12 @@ function Home() {
     Trilogies
   </h2>
 
-  <div className="text-zinc-500 ml-4">
-    No trilogies added yet.
+  <div className="text-zinc-500 ml-4 space-y-4">
+    <TheDarkKnight progressMap={progressMap} />
+    <ChroniclesOfNarnia progressMap={progressMap} />
+    <MazuRunner progressMap={progressMap} /> 
+    <Before progressMap={progressMap} />
+    <Millennium progressMap={progressMap} />
   </div>
 </section>
 
@@ -180,8 +203,10 @@ function Home() {
     Tetralogies
   </h2>
 
-  <div className="text-zinc-500 ml-4">
-    No Tetralogies added yet.
+  <div className="text-zinc-500 ml-4 space-y-4">
+    <TheMatrix progressMap={progressMap} />
+    <BadBoys progressMap={progressMap} />
+    <Expandables progressMap={progressMap} />
   </div>
 </section>
 {/* ================= PENTALOGIES ================= */}

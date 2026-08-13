@@ -8,6 +8,7 @@ export const theHungerGames = [
     director: "Gary Ross",
     actor: "Jennifer Lawrence",
     country: "USA",
+    imdb: 7.2,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const theHungerGames = [
     director: "Francis Lawrence",
     actor: "Jennifer Lawrence",
     country: "USA",
+    imdb: 7.5,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const theHungerGames = [
     director: "Francis Lawrence",
     actor: "Jennifer Lawrence",
     country: "USA",
+    imdb: 6.6,
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const theHungerGames = [
     director: "Francis Lawrence",
     actor: "Jennifer Lawrence",
     country: "USA",
+    imdb: 6.6,
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const theHungerGames = [
     director: "Francis Lawrence",
     actor: "Tom Blyth",
     country: "USA",
+    imdb: 6.7,
   },
   {
     id: 6,
@@ -58,5 +63,6 @@ export const theHungerGames = [
     director: "Francis Lawrence",
     actor: "Joseph Zada",
     country: "USA",
+    imdb: null,
   },
 ];

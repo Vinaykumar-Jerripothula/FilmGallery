@@ -381,11 +381,11 @@ function FranchiseAccordion({
                       ) : isCurrent ? (
                         <span
                           className="
-                            text-[9px]
-                            sm:text-xs
+                            text-[6px]
+                            sm:text-[10px]
                             font-semibold
-                            px-2
-                            sm:px-3
+                            px-3
+                            sm:px-5
                             py-1
                             rounded-full
                             bg-orange-500/20
@@ -400,11 +400,11 @@ function FranchiseAccordion({
                       ) : (
                         <span
                           className="
-                            text-[9px]
-                            sm:text-xs
+                            text-[9px]  
+                            sm:text-[10px]
                             font-semibold
-                            px-2
-                            sm:px-3
+                            px-3
+                            sm:px-3.5
                             py-1
                             rounded-full
                             bg-zinc-800

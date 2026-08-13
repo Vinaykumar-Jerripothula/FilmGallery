@@ -1,5 +1,5 @@
 export const rockyCreedData = [
-    {
+{
   id: 1,
   watchOrder: 1,
   title: "Rocky",
@@ -8,6 +8,7 @@ export const rockyCreedData = [
   director: "John G. Avildsen",
   actor: "Sylvester Stallone",
   country: "USA",
+  imdb: 8.1,
 },
 {
   id: 2,
@@ -18,6 +19,7 @@ export const rockyCreedData = [
   director: "Sylvester Stallone",
   actor: "Sylvester Stallone",
   country: "USA",
+  imdb: 7.3,
 },
 {
   id: 3,
@@ -28,6 +30,7 @@ export const rockyCreedData = [
   director: "Sylvester Stallone",
   actor: "Sylvester Stallone",
   country: "USA",
+  imdb: 6.8,
 },
 {
   id: 4,
@@ -38,6 +41,7 @@ export const rockyCreedData = [
   director: "Sylvester Stallone",
   actor: "Sylvester Stallone",
   country: "USA",
+  imdb: 6.9,
 },
 {
   id: 5,
@@ -48,6 +52,7 @@ export const rockyCreedData = [
   director: "John G. Avildsen",
   actor: "Sylvester Stallone",
   country: "USA",
+  imdb: 5.4,
 },
 {
   id: 6,
@@ -58,6 +63,7 @@ export const rockyCreedData = [
   director: "Sylvester Stallone",
   actor: "Sylvester Stallone",
   country: "USA",
+  imdb: 7.1,
 },
 {
   id: 7,
@@ -68,6 +74,7 @@ export const rockyCreedData = [
   director: "Ryan Coogler",
   actor: "Michael B. Jordan",
   country: "USA",
+  imdb: 7.6,
 },
 {
   id: 8,
@@ -78,6 +85,7 @@ export const rockyCreedData = [
   director: "Steven Caple Jr.",
   actor: "Michael B. Jordan",
   country: "USA",
+  imdb: 7.1,
 },
 {
   id: 9,
@@ -88,5 +96,6 @@ export const rockyCreedData = [
   director: "Michael B. Jordan",
   actor: "Michael B. Jordan",
   country: "USA",
+  imdb: 6.7,
 },
 ];

@@ -8,6 +8,7 @@ export const jurassicParkData = [
     director: "Steven Spielberg",
     actor: "Sam Neill",
     country: "USA",
+    imdb: 8.2,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const jurassicParkData = [
     director: "Steven Spielberg",
     actor: "Jeff Goldblum",
     country: "USA",
+    imdb: 6.6,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const jurassicParkData = [
     director: "Joe Johnston",
     actor: "Sam Neill",
     country: "USA",
+    imdb: 6.0,
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const jurassicParkData = [
     director: "Colin Trevorrow",
     actor: "Chris Pratt",
     country: "USA",
+    imdb: 7.0,
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const jurassicParkData = [
     director: "J. A. Bayona",
     actor: "Chris Pratt",
     country: "USA",
+    imdb: 6.1,
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const jurassicParkData = [
     director: "Colin Trevorrow",
     actor: "Chris Pratt",
     country: "USA",
+    imdb: 5.6,
   },
   {
     id: 7,
@@ -68,5 +74,6 @@ export const jurassicParkData = [
     director: "Gareth Edwards",
     actor: "Scarlett Johansson",
     country: "USA",
+    imdb: 6.2,
   },
 ];

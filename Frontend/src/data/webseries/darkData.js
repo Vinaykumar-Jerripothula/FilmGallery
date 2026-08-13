@@ -8,6 +8,7 @@ export const darkData = [
     director: "Baran bo Odar",
     actor: "Louis Hofmann",
     country: "Germany",
+    imdb: 8.7,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const darkData = [
     director: "Baran bo Odar",
     actor: "Louis Hofmann",
     country: "Germany",
+    imdb: 8.7,
   },
   {
     id: 3,
@@ -28,5 +30,6 @@ export const darkData = [
     director: "Baran bo Odar",
     actor: "Louis Hofmann",
     country: "Germany",
+    imdb: 8.7,
   },
 ];

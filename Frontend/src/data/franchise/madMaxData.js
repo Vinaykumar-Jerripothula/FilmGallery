@@ -1,5 +1,5 @@
 export const madMaxData = [
-    {
+{
   id: 1,
   watchOrder: 1,
   title: "Mad Max",
@@ -8,6 +8,7 @@ export const madMaxData = [
   director: "George Miller",
   actor: "Mel Gibson",
   country: "Australia",
+  imdb: 6.8,
 },
 {
   id: 2,
@@ -18,6 +19,7 @@ export const madMaxData = [
   director: "George Miller",
   actor: "Mel Gibson",
   country: "Australia",
+  imdb: 7.6,
 },
 {
   id: 3,
@@ -28,6 +30,7 @@ export const madMaxData = [
   director: "George Miller",
   actor: "Mel Gibson",
   country: "Australia",
+  imdb: 6.2,
 },
 {
   id: 4,
@@ -38,6 +41,7 @@ export const madMaxData = [
   director: "George Miller",
   actor: "Tom Hardy",
   country: "USA",
+  imdb: 8.1,
 },
 {
   id: 5,
@@ -48,5 +52,6 @@ export const madMaxData = [
   director: "George Miller",
   actor: "Anya Taylor-Joy",
   country: "USA",
+  imdb: 7.5,
 },
 ];
