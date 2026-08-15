@@ -7,7 +7,7 @@ function Alien({ progressMap }) {
       franchiseName="Alien"
       content={alienData}
       contentId={"alien"}
-      completedCount={progressMap.mcu || 0}
+      completedCount={progressMap.alien || 0}
     />
   );
 }
