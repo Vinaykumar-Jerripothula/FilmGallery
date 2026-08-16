@@ -44,7 +44,7 @@
   {
     id: 4,
     watchOrder: 4,
-    title: "Marvel's Agent Carter",
+    title: "Marvel's Agent Carter [2 Seasons]",
     type: "Series",
     year: 2015,
     director: "Various",
@@ -249,19 +249,7 @@
     collection: 773,
   },
 
-  {
-    id: 19,
-    watchOrder: 19,
-    title: "I Am Groot",
-    type: "Series",
-    year: 2022,
-    director: "Kirsten Lepore",
-    actor: "Vin Diesel",
-    country: "USA",
-    imdb: 6.7,
-    budget: "N/A",
-    collection: "N/A",
-  },
+  
 
   {
     id: 20,
@@ -275,6 +263,19 @@
     imdb: 7.6,
     budget: 200,
     collection: 869,
+  },
+  {
+    id: 19,
+    watchOrder: 19,
+    title: "I Am Groot [Season 1&2]",
+    type: "Series",
+    year: 2022,
+    director: "Kirsten Lepore",
+    actor: "Vin Diesel",
+    country: "USA",
+    imdb: 6.7,
+    budget: "N/A",
+    collection: "N/A",
   },
   {
     id: 21,
@@ -763,7 +764,7 @@
   {
     id: 56,
     watchOrder: 56,
-    title: "Hawkeye",
+    title: "Hawkeye Season 1",
     type: "Series",
     year: 2021,
     director: "Rhys Thomas & Bert & Bertie",
@@ -791,7 +792,7 @@
   {
     id: 58,
     watchOrder: 58,
-    title: "Moon Knight",
+    title: "Moon Knight Season 1",
     type: "Series",
     year: 2022,
     director: "Mohamed Diab",
@@ -819,7 +820,7 @@
   {
     id: 60,
     watchOrder: 60,
-    title: "Echo",
+    title: "Echo Season 1",
     type: "Series",
     year: 2024,
     director: "Sydney Freeland",
