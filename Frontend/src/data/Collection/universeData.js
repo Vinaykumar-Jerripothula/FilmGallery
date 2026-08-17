@@ -3,6 +3,8 @@ import dceuImage from "../../images/universe/dceu/dceuImage.jpeg";
 import dcuImage from "../../images/universe/dcu/dcuImage.jpeg";
 import starWarsImage  from "../../images/universe/starwars/starWarsImage.jpeg";
 import theConjuringImage from "../../images/universe/theconjuring/theConjuringImage.jpeg";
+import monsterVerseImage from "../../images/universe/monsterverse/monsterVerseImage.jpeg";
+import xmenImage from "../../images/universe/xmen/xmenImage.jpeg";
 
 export const universeData = [
   {
@@ -54,7 +56,7 @@ export const universeData = [
     id: 6,
     title: "Monster Verse Universe",
     contentId: "monsterverse",
-    image: null,
+    image: monsterVerseImage,
     total: 8,
     route: "/monsterverse",
   },
@@ -63,7 +65,7 @@ export const universeData = [
     id: 7,
     title: "X-MEN Universe",
     contentId: "xmen",
-    image: null,
+    image: xmenImage,
     total: 14,
     route: "/xmen",
   },

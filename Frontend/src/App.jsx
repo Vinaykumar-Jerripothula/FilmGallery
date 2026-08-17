@@ -11,6 +11,12 @@ import DCU from "./components/universe/DCU";
 import StarWars from "./components/universe/StarWars"
 import { fetchProgress } from "./store/progressSlice";
 import TheConjuring from "./components/universe/TheConjuring";
+import MonsterVerse from "./components/universe/MonsterVerse";
+import XMEN from "./components/universe/XMEN";
+import Alien from "./components/franchise/Alien";
+import BadBoys from "./components/franchise/BadBoys";
+import TheLordOfTheRings from "./components/franchise/TheLordOfTheRings";
+import JohnWick from "./components/franchise/JohnWick";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,7 +52,19 @@ function App() {
 
         <Route path="/theconjuring" element={<TheConjuring />} />
         
+        <Route path="/monsterverse" element={<MonsterVerse />} />
+        
+        <Route path="/xmen" element={<XMEN />} />
+
+        <Route path="/alien" element={<Alien />} />
+        
+        <Route path="/badboys" element={<BadBoys />} />
       
+        <Route path="/lordoftherings" element={<TheLordOfTheRings />} />
+      
+        <Route path="/johnwick" element={<JohnWick />} />
+      
+
       </Routes>
     </BrowserRouter>
   );

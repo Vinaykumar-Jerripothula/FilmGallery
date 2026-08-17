@@ -1,5 +1,7 @@
 import HorizontalCarousel from "../components/template/HorizontalCarousel";
+import { franchiseData } from "../data/Collection/franchiseData";
 import { universeData } from "../data/Collection/universeData";
+import { seriesData } from "../data/Collection/webseries";
 
 function Home() {
   return (
@@ -22,6 +24,19 @@ function Home() {
           title="Cinematic Universe"
           items={universeData}
         />
+
+         {/* ================= FRANCHISES ================= */}
+        <HorizontalCarousel
+          title="Franchises"
+          items={franchiseData}
+        />
+
+        {/* ================= TV / Web Series ================= */}
+        <HorizontalCarousel
+          title="TV / Web Series"
+          items={seriesData}
+        />
+        
 
 
       </div>
