@@ -1,7 +1,7 @@
+import { badBoysData } from "../../data/tetralogy/badboysData";
 import FranchiseAccordion from "../template/FranchiseAccordion";
-import { badBoysData } from "../../data/tetralogy/badboysData"
 
-function Expandables({ progressMap }) {
+function BadBoys({ progressMap }) {
   return (
     <FranchiseAccordion
       franchiseName="Bad Boys"
@@ -12,4 +12,4 @@ function Expandables({ progressMap }) {
   );
 }
 
-export default Expandables;
+export default BadBoys;

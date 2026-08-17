@@ -1,3 +1,4 @@
+
 export const mcuData = [
   {
     id: 1,
@@ -44,6 +45,34 @@ export const mcuData = [
   {
     id: 4,
     watchOrder: 4,
+    title: "Agent Carter: Season 1",
+    type: "Series",
+    year: 2015,
+    director: "Tara Butters, Michele Fazekas",
+    actor: "Hayley Atwell",
+    country: "USA",
+    imdb: 7.8,
+    budget: "N/A",
+    collection: "N/A",
+  },
+
+  {
+    id: 5,
+    watchOrder: 5,
+    title: "Agent Carter: Season 2",
+    type: "Series",
+    year: 2016,
+    director: "Tara Butters, Michele Fazekas",
+    actor: "Hayley Atwell",
+    country: "USA",
+    imdb: 7.9,
+    budget: "N/A",
+    collection: "N/A",
+  },
+
+  {
+    id: 6,
+    watchOrder: 4,
     title: "Captain Marvel",
     type: "Movie",
     year: 2019,
@@ -56,7 +85,7 @@ export const mcuData = [
   },
 
   {
-    id: 5,
+    id: 7,
     watchOrder: 5,
     title: "Iron Man",
     type: "Movie",
@@ -70,7 +99,7 @@ export const mcuData = [
   },
 
   {
-    id: 6,
+    id: 8,
     watchOrder: 6,
     title: "Iron Man 2",
     type: "Movie",
@@ -84,7 +113,7 @@ export const mcuData = [
   },
 
   {
-    id: 7,
+    id: 9,
     watchOrder: 7,
     title: "The Incredible Hulk",
     type: "Movie",
@@ -98,9 +127,10 @@ export const mcuData = [
   },
 
   {
-    id: 8,
+    id: 10,
     watchOrder: 8,
-    title: "Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer",
+    title:
+      "Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer",
     type: "Special",
     year: 2011,
     director: "Leythum",
@@ -112,7 +142,7 @@ export const mcuData = [
   },
 
   {
-    id: 9,
+    id: 11,
     watchOrder: 9,
     title: "Thor",
     type: "Movie",
@@ -126,7 +156,7 @@ export const mcuData = [
   },
 
   {
-    id: 10,
+    id: 12,
     watchOrder: 10,
     title: "Marvel One-Shot: The Consultant",
     type: "Special",
@@ -140,7 +170,7 @@ export const mcuData = [
   },
 
   {
-    id: 11,
+    id: 13,
     watchOrder: 11,
     title: "The Avengers",
     type: "Movie",
@@ -154,7 +184,7 @@ export const mcuData = [
   },
 
   {
-    id: 12,
+    id: 14,
     watchOrder: 12,
     title: "Marvel One-Shot: Item 47",
     type: "Special",
@@ -167,8 +197,8 @@ export const mcuData = [
     collection: "N/A",
   },
 
-    {
-    id: 13,
+  {
+    id: 15,
     watchOrder: 13,
     title: "Thor: The Dark World",
     type: "Movie",
@@ -182,7 +212,7 @@ export const mcuData = [
   },
 
   {
-    id: 14,
+    id: 16,
     watchOrder: 14,
     title: "Iron Man 3",
     type: "Movie",
@@ -196,7 +226,7 @@ export const mcuData = [
   },
 
   {
-    id: 15,
+    id: 17,
     watchOrder: 15,
     title: "Marvel One-Shot: All Hail the King",
     type: "Special",
@@ -210,7 +240,7 @@ export const mcuData = [
   },
 
   {
-    id: 16,
+    id: 18,
     watchOrder: 16,
     title: "Captain America: The Winter Soldier",
     type: "Movie",
@@ -224,7 +254,7 @@ export const mcuData = [
   },
 
   {
-    id: 17,
+    id: 19,
     watchOrder: 17,
     title: "Guardians of the Galaxy",
     type: "Movie",
@@ -238,7 +268,7 @@ export const mcuData = [
   },
 
   {
-    id: 18,
+    id: 20,
     watchOrder: 18,
     title: "Guardians of the Galaxy Vol. 2",
     type: "Movie",
@@ -252,7 +282,7 @@ export const mcuData = [
   },
 
   {
-    id: 19,
+    id: 21,
     watchOrder: 19,
     title: "I Am Groot: Season 1",
     type: "Series",
@@ -266,7 +296,7 @@ export const mcuData = [
   },
 
   {
-    id: 20,
+    id: 22,
     watchOrder: 20,
     title: "I Am Groot: Season 2",
     type: "Series",
@@ -280,7 +310,7 @@ export const mcuData = [
   },
 
   {
-    id: 21,
+    id: 23,
     watchOrder: 21,
     title: "Daredevil: Season 1",
     type: "Series",
@@ -294,7 +324,7 @@ export const mcuData = [
   },
 
   {
-    id: 22,
+    id: 24,
     watchOrder: 22,
     title: "Jessica Jones: Season 1",
     type: "Series",
@@ -308,7 +338,7 @@ export const mcuData = [
   },
 
   {
-    id: 23,
+    id: 25,
     watchOrder: 23,
     title: "Avengers: Age of Ultron",
     type: "Movie",
@@ -322,7 +352,7 @@ export const mcuData = [
   },
 
   {
-    id: 24,
+    id: 26,
     watchOrder: 24,
     title: "Ant-Man",
     type: "Movie",
@@ -336,7 +366,7 @@ export const mcuData = [
   },
 
   {
-    id: 25,
+    id: 27,
     watchOrder: 25,
     title: "Daredevil: Season 2",
     type: "Series",
@@ -350,7 +380,7 @@ export const mcuData = [
   },
 
   {
-    id: 26,
+    id: 28,
     watchOrder: 26,
     title: "Luke Cage: Season 1",
     type: "Series",
@@ -364,7 +394,7 @@ export const mcuData = [
   },
 
   {
-    id: 27,
+    id: 29,
     watchOrder: 27,
     title: "Iron Fist: Season 1",
     type: "Series",
@@ -378,7 +408,7 @@ export const mcuData = [
   },
 
   {
-    id: 28,
+    id: 30,
     watchOrder: 28,
     title: "The Defenders",
     type: "Series",
@@ -392,7 +422,7 @@ export const mcuData = [
   },
 
   {
-    id: 29,
+    id: 31,
     watchOrder: 29,
     title: "Captain America: Civil War",
     type: "Movie",
@@ -406,7 +436,7 @@ export const mcuData = [
   },
 
   {
-    id: 30,
+    id: 32,
     watchOrder: 30,
     title: "Black Widow",
     type: "Movie",
@@ -420,7 +450,7 @@ export const mcuData = [
   },
 
   {
-    id: 31,
+    id: 33,
     watchOrder: 31,
     title: "Black Panther",
     type: "Movie",
@@ -434,7 +464,7 @@ export const mcuData = [
   },
 
   {
-    id: 32,
+    id: 34,
     watchOrder: 32,
     title: "Spider-Man: Homecoming",
     type: "Movie",
@@ -446,8 +476,8 @@ export const mcuData = [
     budget: "$175M",
     collection: "$880.2M",
   },
-    {
-    id: 33,
+  {
+    id: 35,
     watchOrder: 33,
     title: "The Punisher: Season 1",
     type: "Series",
@@ -461,7 +491,7 @@ export const mcuData = [
   },
 
   {
-    id: 34,
+    id: 36,
     watchOrder: 34,
     title: "Doctor Strange",
     type: "Movie",
@@ -475,7 +505,7 @@ export const mcuData = [
   },
 
   {
-    id: 35,
+    id: 37,
     watchOrder: 35,
     title: "Jessica Jones: Season 2",
     type: "Series",
@@ -489,7 +519,7 @@ export const mcuData = [
   },
 
   {
-    id: 36,
+    id: 38,
     watchOrder: 36,
     title: "Luke Cage: Season 2",
     type: "Series",
@@ -503,7 +533,7 @@ export const mcuData = [
   },
 
   {
-    id: 37,
+    id: 39,
     watchOrder: 37,
     title: "Iron Fist: Season 2",
     type: "Series",
@@ -517,7 +547,7 @@ export const mcuData = [
   },
 
   {
-    id: 38,
+    id: 40,
     watchOrder: 38,
     title: "Daredevil: Season 3",
     type: "Series",
@@ -531,7 +561,7 @@ export const mcuData = [
   },
 
   {
-    id: 39,
+    id: 41,
     watchOrder: 39,
     title: "Thor: Ragnarok",
     type: "Movie",
@@ -545,7 +575,7 @@ export const mcuData = [
   },
 
   {
-    id: 40,
+    id: 42,
     watchOrder: 40,
     title: "The Punisher: Season 2",
     type: "Series",
@@ -559,7 +589,7 @@ export const mcuData = [
   },
 
   {
-    id: 41,
+    id: 43,
     watchOrder: 41,
     title: "Jessica Jones: Season 3",
     type: "Series",
@@ -573,7 +603,7 @@ export const mcuData = [
   },
 
   {
-    id: 42,
+    id: 44,
     watchOrder: 42,
     title: "Ant-Man and the Wasp",
     type: "Movie",
@@ -587,7 +617,7 @@ export const mcuData = [
   },
 
   {
-    id: 43,
+    id: 45,
     watchOrder: 43,
     title: "Avengers: Infinity War",
     type: "Movie",
@@ -601,7 +631,7 @@ export const mcuData = [
   },
 
   {
-    id: 44,
+    id: 46,
     watchOrder: 44,
     title: "Avengers: Endgame",
     type: "Movie",
@@ -615,7 +645,7 @@ export const mcuData = [
   },
 
   {
-    id: 45,
+    id: 47,
     watchOrder: 45,
     title: "Loki: Season 1",
     type: "Series",
@@ -629,7 +659,7 @@ export const mcuData = [
   },
 
   {
-    id: 46,
+    id: 48,
     watchOrder: 46,
     title: "What If...?: Season 1",
     type: "Series",
@@ -643,7 +673,7 @@ export const mcuData = [
   },
 
   {
-    id: 47,
+    id: 49,
     watchOrder: 47,
     title: "Marvel Zombies",
     type: "Series",
@@ -657,7 +687,7 @@ export const mcuData = [
   },
 
   {
-    id: 48,
+    id: 50,
     watchOrder: 48,
     title: "WandaVision",
     type: "Series",
@@ -671,7 +701,7 @@ export const mcuData = [
   },
 
   {
-    id: 49,
+    id: 51,
     watchOrder: 49,
     title: "Shang-Chi and the Legend of the Ten Rings",
     type: "Movie",
@@ -685,7 +715,7 @@ export const mcuData = [
   },
 
   {
-    id: 50,
+    id: 52,
     watchOrder: 50,
     title: "The Falcon and the Winter Soldier",
     type: "Series",
@@ -699,7 +729,7 @@ export const mcuData = [
   },
 
   {
-    id: 51,
+    id: 53,
     watchOrder: 51,
     title: "Spider-Man: Far From Home",
     type: "Movie",
@@ -713,7 +743,7 @@ export const mcuData = [
   },
 
   {
-    id: 52,
+    id: 54,
     watchOrder: 52,
     title: "Eternals",
     type: "Movie",
@@ -725,8 +755,8 @@ export const mcuData = [
     budget: "$200M",
     collection: "$402M",
   },
-    {
-    id: 53,
+  {
+    id: 55,
     watchOrder: 53,
     title: "Spider-Man: No Way Home",
     type: "Movie",
@@ -740,7 +770,7 @@ export const mcuData = [
   },
 
   {
-    id: 54,
+    id: 56,
     watchOrder: 54,
     title: "Doctor Strange in the Multiverse of Madness",
     type: "Movie",
@@ -754,7 +784,7 @@ export const mcuData = [
   },
 
   {
-    id: 55,
+    id: 57,
     watchOrder: 55,
     title: "Hawkeye",
     type: "Series",
@@ -768,7 +798,7 @@ export const mcuData = [
   },
 
   {
-    id: 56,
+    id: 58,
     watchOrder: 56,
     title: "Moon Knight",
     type: "Series",
@@ -782,7 +812,7 @@ export const mcuData = [
   },
 
   {
-    id: 57,
+    id: 59,
     watchOrder: 57,
     title: "Black Panther: Wakanda Forever",
     type: "Movie",
@@ -796,7 +826,7 @@ export const mcuData = [
   },
 
   {
-    id: 58,
+    id: 60,
     watchOrder: 58,
     title: "Echo",
     type: "Series",
@@ -810,7 +840,7 @@ export const mcuData = [
   },
 
   {
-    id: 59,
+    id: 61,
     watchOrder: 59,
     title: "She-Hulk: Attorney at Law",
     type: "Series",
@@ -824,7 +854,7 @@ export const mcuData = [
   },
 
   {
-    id: 60,
+    id: 62,
     watchOrder: 60,
     title: "Ms. Marvel",
     type: "Series",
@@ -838,7 +868,7 @@ export const mcuData = [
   },
 
   {
-    id: 61,
+    id: 63,
     watchOrder: 61,
     title: "Thor: Love and Thunder",
     type: "Movie",
@@ -852,7 +882,7 @@ export const mcuData = [
   },
 
   {
-    id: 62,
+    id: 64,
     watchOrder: 62,
     title: "Ironheart",
     type: "Series",
@@ -866,7 +896,7 @@ export const mcuData = [
   },
 
   {
-    id: 63,
+    id: 65,
     watchOrder: 63,
     title: "Werewolf by Night",
     type: "Special",
@@ -880,7 +910,7 @@ export const mcuData = [
   },
 
   {
-    id: 64,
+    id: 66,
     watchOrder: 64,
     title: "The Guardians of the Galaxy Holiday Special",
     type: "Special",
@@ -894,7 +924,7 @@ export const mcuData = [
   },
 
   {
-    id: 65,
+    id: 67,
     watchOrder: 65,
     title: "Ant-Man and the Wasp: Quantumania",
     type: "Movie",
@@ -908,7 +938,7 @@ export const mcuData = [
   },
 
   {
-    id: 66,
+    id: 68,
     watchOrder: 66,
     title: "Guardians of the Galaxy Vol. 3",
     type: "Movie",
@@ -922,7 +952,7 @@ export const mcuData = [
   },
 
   {
-    id: 67,
+    id: 69,
     watchOrder: 67,
     title: "Secret Invasion",
     type: "Series",
@@ -936,7 +966,7 @@ export const mcuData = [
   },
 
   {
-    id: 68,
+    id: 70,
     watchOrder: 68,
     title: "The Marvels",
     type: "Movie",
@@ -950,7 +980,7 @@ export const mcuData = [
   },
 
   {
-    id: 69,
+    id: 71,
     watchOrder: 69,
     title: "Loki: Season 2",
     type: "Series",
@@ -964,7 +994,7 @@ export const mcuData = [
   },
 
   {
-    id: 70,
+    id: 72,
     watchOrder: 70,
     title: "What If...?: Season 2",
     type: "Series",
@@ -978,7 +1008,7 @@ export const mcuData = [
   },
 
   {
-    id: 71,
+    id: 73,
     watchOrder: 71,
     title: "Deadpool & Wolverine",
     type: "Movie",
@@ -992,7 +1022,7 @@ export const mcuData = [
   },
 
   {
-    id: 72,
+    id: 74,
     watchOrder: 72,
     title: "Agatha All Along",
     type: "Series",
@@ -1004,8 +1034,8 @@ export const mcuData = [
     budget: "N/A",
     collection: "N/A",
   },
-    {
-    id: 73,
+  {
+    id: 75,
     watchOrder: 73,
     title: "What If...?: Season 3",
     type: "Series",
@@ -1019,7 +1049,7 @@ export const mcuData = [
   },
 
   {
-    id: 74,
+    id: 76,
     watchOrder: 74,
     title: "Daredevil: Born Again Season 1",
     type: "Series",
@@ -1033,7 +1063,7 @@ export const mcuData = [
   },
 
   {
-    id: 75,
+    id: 77,
     watchOrder: 75,
     title: "Captain America: Brave New World",
     type: "Movie",
@@ -1047,7 +1077,7 @@ export const mcuData = [
   },
 
   {
-    id: 76,
+    id: 78,
     watchOrder: 76,
     title: "Thunderbolts*",
     type: "Movie",
@@ -1061,7 +1091,7 @@ export const mcuData = [
   },
 
   {
-    id: 77,
+    id: 79,
     watchOrder: 77,
     title: "The Fantastic Four: First Steps",
     type: "Movie",
@@ -1075,7 +1105,7 @@ export const mcuData = [
   },
 
   {
-    id: 78,
+    id: 80,
     watchOrder: 78,
     title: "Wonder Man",
     type: "Series",
@@ -1089,7 +1119,7 @@ export const mcuData = [
   },
 
   {
-    id: 79,
+    id: 81,
     watchOrder: 79,
     title: "Daredevil: Born Again Season 2",
     type: "Series",
@@ -1103,7 +1133,7 @@ export const mcuData = [
   },
 
   {
-    id: 80,
+    id: 82,
     watchOrder: 80,
     title: "The Punisher: One Last Kill",
     type: "Special",
@@ -1114,5 +1144,5 @@ export const mcuData = [
     imdb: "TBA",
     budget: "N/A",
     collection: "N/A",
-  }
+  },
 ];

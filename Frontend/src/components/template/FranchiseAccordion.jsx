@@ -1,52 +1,115 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import axios from "axios";
-import { ChevronRight, Circle, CheckCircle2, Lock } from "lucide-react";
-import { useEffect } from "react";
+import {
+  ChevronRight,
+  Circle,
+  CheckCircle2,
+  Lock,
+} from "lucide-react";
+
+import { updateProgress } from "../../store/progressSlice";
 
 function FranchiseAccordion({
   franchiseName,
   content,
   contentId,
   completedCount = 0,
+  showHeader = true,
 }) {
-  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
 
+  const [open, setOpen] = useState(!showHeader);
   const [completed, setCompleted] = useState(completedCount);
 
   useEffect(() => {
     setCompleted(completedCount);
   }, [completedCount]);
 
+  useEffect(() => {
+    if (!showHeader) {
+      setOpen(true);
+    }
+  }, [showHeader]);
+
   const handleToggle = async (index) => {
-    if (index !== completed) {
+    /*
+      Rules:
+
+      index > completed
+        → LOCKED
+        → Do nothing
+
+      index === completed
+        → NEXT movie
+        → Complete it
+        → completed = index + 1
+
+      index < completed
+        → Already completed movie
+        → Make this movie NEXT
+        → completed = index
+    */
+
+    if (index > completed) {
       return;
     }
 
-    const newCompleted = completed + 1;
+    const previousCompleted = completed;
 
+    let newCompleted;
+
+    if (index === completed) {
+      // Current NEXT item is being completed.
+      newCompleted = index + 1;
+    } else {
+      // An already completed item was selected.
+      // That item becomes NEXT.
+      newCompleted = index;
+    }
+
+    // Optimistic local update.
     setCompleted(newCompleted);
 
     try {
       const userId = localStorage.getItem("userId");
 
-      await axios.post("https://filmgallery.onrender.com/api/progress/save", {
-        userId: Number(userId),
-        contentId,
-        lastCompletedPosition: newCompleted,
-      });
+      await axios.post(
+        "https://filmgallery.onrender.com/api/progress/save",
+        {
+          userId: Number(userId),
+          contentId,
+          lastCompletedPosition: newCompleted,
+        }
+      );
 
-      console.log("Progress saved");
+      // Keep Redux synchronized with the database.
+      dispatch(
+        updateProgress({
+          contentId,
+          position: newCompleted,
+        })
+      );
+
+      console.log(
+        `Progress updated: ${contentId} = ${newCompleted}`
+      );
     } catch (error) {
-      console.error(error);
+      console.error("Progress save failed:", error);
+
+      // Backend failed → restore previous UI state.
+      setCompleted(previousCompleted);
     }
   };
 
   const total = content.length;
 
-  const progress = total === 0 ? 0 : Math.round((completed / total) * 100);
+  const progress =
+    total === 0
+      ? 0
+      : Math.round((completed / total) * 100);
 
   /*
-    IMPORTANT:
     Header and rows use exactly the same
     grid column structure.
   */
@@ -56,104 +119,131 @@ function FranchiseAccordion({
   return (
     <div
       className="
-    bg-[#111827]
-    border
-    border-zinc-800
-    rounded-2xl
-    overflow-hidden
-    shadow-xl
-    w-[95%]
-    mx-auto
-  "
+        bg-[#111827]
+        border
+        border-zinc-800
+        rounded-2xl
+        overflow-hidden
+        shadow-xl
+        w-[95%]
+        mx-auto
+      "
     >
-      {/* Franchise Header */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="
-          w-full
-          p-2 sm:p-1
-          text-left
-          hover:bg-[#172036]
-          transition-all
-        "
-      >
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div className="flex items-center gap-4 min-w-0">
-            <div
-              className={`
-                flex-shrink-0
-                text-orange-500
-                transition-transform
-                duration-300
-                ${open ? "rotate-90" : ""}
-              `}
-            >
-              <ChevronRight size={24} />
-            </div>
+      {/* =====================================================
+          FRANCHISE HEADER
+          ===================================================== */}
 
-            <div className="min-w-0">
-              <h2
-                className="
-                  text-xs
-                  sm:text-lg
-                  font-bold
-                  tracking-tight
-                  text-white
-                  truncate
-                "
-              >
-                {franchiseName}
-              </h2>
-
-              <p className="text-zinc-400 text-xs sm:text-sm mt-1">
-                Franchise Progress
-              </p>
-            </div>
-          </div>
-
-          <div className="text-left sm:text-right flex-shrink-0">
-            <div className="text-xl sm:text-1xl font-black text-orange-500">
-              {progress}%
-            </div>
-
-            <div className="text-zinc-400 text-xs sm:text-sm">
-              {completed} / {total}
-            </div>
-          </div>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="mt-5 h-1 bg-zinc-800 rounded-full overflow-hidden">
+      {showHeader && (
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          className="
+            w-full
+            p-2 sm:p-1
+            text-left
+            hover:bg-[#172036]
+            transition-all
+          "
+        >
           <div
             className="
-              h-full
-              bg-gradient-to-r
-              from-orange-500
-              via-orange-400
-              to-yellow-400
-              transition-all
-              duration-500
+              flex
+              flex-col
+              sm:flex-row
+              sm:items-center
+              sm:justify-between
+              gap-4
             "
-            style={{
-              width: `${progress}%`,
-            }}
-          />
-        </div>
-      </button>
+          >
+            <div className="flex items-center gap-4 min-w-0">
+              {/* Arrow */}
+              <div
+                className={`
+                  flex-shrink-0
+                  text-orange-500
+                  transition-transform
+                  duration-300
+                  ${open ? "rotate-90" : ""}
+                `}
+              >
+                <ChevronRight size={24} />
+              </div>
 
-      {/* Content */}
+              {/* Name */}
+              <div className="min-w-0">
+                <h2
+                  className="
+                    text-xs
+                    sm:text-lg
+                    font-bold
+                    tracking-tight
+                    text-white
+                    truncate
+                  "
+                >
+                  {franchiseName}
+                </h2>
+
+                <p className="text-zinc-400 text-xs sm:text-sm mt-1">
+                  Franchise Progress
+                </p>
+              </div>
+            </div>
+
+            {/* Progress */}
+            <div className="text-left sm:text-right flex-shrink-0">
+              <div className="text-xl sm:text-1xl font-black text-orange-500">
+                {progress}%
+              </div>
+
+              <div className="text-zinc-400 text-xs sm:text-sm">
+                {completed} / {total}
+              </div>
+            </div>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="mt-5 h-1 bg-zinc-800 rounded-full overflow-hidden">
+            <div
+              className="
+                h-full
+                bg-gradient-to-r
+                from-orange-500
+                via-orange-400
+                to-yellow-400
+                transition-all
+                duration-500
+              "
+              style={{
+                width: `${progress}%`,
+              }}
+            />
+          </div>
+        </button>
+      )}
+
+      {/* =====================================================
+          CONTENT / TABLE
+          ===================================================== */}
+
       {open && (
-        <div className="border-t border-zinc-800">
+        <div
+          className={
+            showHeader
+              ? "border-t border-zinc-800"
+              : ""
+          }
+        >
           <div className="overflow-x-auto">
-            {/* Table Container */}
             <div className="min-w-[1100px]">
-              {/* Header */}
+
+              {/* Table Header */}
               <div
                 className={`
                   ${gridColumns}
                   grid
                   gap-0
-                  px-6 sm:px-6
+                  px-6
                   py-6
                   bg-[#0f172a]
                   border-b
@@ -166,30 +256,44 @@ function FranchiseAccordion({
                   text-zinc-400
                 `}
               >
-                <div className="pr-4 flex items-center justify-center">S.No</div>
+                <div className="pr-4 flex items-center justify-center">
+                  S.No
+                </div>
 
-                <div className="flex items-center justify-center">Title</div>
+                <div className="flex items-center justify-center">
+                  Title
+                </div>
 
-                <div className="pr-3 flex items-center justify-center">Type</div>
+                <div className="pr-3 flex items-center justify-center">
+                  Type
+                </div>
 
-                <div className="pr-4 flex items-center justify-center">Year</div>
+                <div className="pr-4 flex items-center justify-center">
+                  Year
+                </div>
 
-                <div className="pr-3 flex items-center justify-center">Imdb</div>
+                <div className="pr-3 flex items-center justify-center">
+                  Imdb
+                </div>
 
-                <div className="pr-3 flex items-center justify-center">Director</div>
+                <div className="pr-3 flex items-center justify-center">
+                  Director
+                </div>
 
-                <div className="pr-3 flex items-center justify-center">Actor</div>
+                <div className="pr-3 flex items-center justify-center">
+                  Actor
+                </div>
 
-                {/* <div className="flex items-center">Country</div> */}
-
-                <div className="pr-4 flex items-center justify-center">Status</div>
+                <div className="pr-4 flex items-center justify-center">
+                  Status
+                </div>
               </div>
 
-              {/* Rows */}
+              {/* Table Rows */}
               {content.map((movie, index) => {
                 const isCompleted = index < completed;
-
-                const isCurrent = completed === index;
+                const isCurrent = index === completed;
+                const isLocked = index > completed;
 
                 return (
                   <div
@@ -205,7 +309,24 @@ function FranchiseAccordion({
                       border-zinc-800
                       transition-all
                       duration-300
-                      ${isCurrent ? "hover:bg-[#1A2233] cursor-pointer" : ""}
+
+                      ${
+                        isCompleted
+                          ? "cursor-pointer hover:bg-[#151d2c]"
+                          : ""
+                      }
+
+                      ${
+                        isCurrent
+                          ? "cursor-pointer hover:bg-[#1A2233]"
+                          : ""
+                      }
+
+                      ${
+                        isLocked
+                          ? "cursor-not-allowed"
+                          : ""
+                      }
                     `}
                   >
                     {/* S.No */}
@@ -231,13 +352,12 @@ function FranchiseAccordion({
                           size={16}
                           className="
                             text-zinc-600
-                            justify-center
                             flex-shrink-0
                           "
                         />
                       )}
 
-                      <span className="text-xs sm:text-sm justify-center whitespace-nowrap">
+                      <span className="text-xs sm:text-sm whitespace-nowrap">
                         {movie.watchOrder}
                       </span>
                     </div>
@@ -249,12 +369,12 @@ function FranchiseAccordion({
                         text-xs
                         sm:text-base
                         font-semibold
-                        justify-center
                         whitespace-normal
                         break-words
+
                         ${
                           isCompleted
-                            ? "text-green-400 line-through"
+                            ? "text-green-400"
                             : isCurrent
                               ? "text-orange-300"
                               : "text-zinc-500"
@@ -265,7 +385,7 @@ function FranchiseAccordion({
                     </div>
 
                     {/* Type */}
-                    <div className="flex items-start justify-center min-w-0 ">
+                    <div className="flex items-start justify-center min-w-0">
                       <span
                         className="
                           px-2
@@ -274,7 +394,7 @@ function FranchiseAccordion({
                           text-[9px]
                           sm:text-xs
                           bg-zinc-800
-                          justify-center
+                          border
                           border-zinc-700
                           whitespace-nowrap
                         "
@@ -298,7 +418,7 @@ function FranchiseAccordion({
                       {movie.year}
                     </div>
 
-                    {/* Imdb */}
+                    {/* IMDb */}
                     <div
                       className="
                         flex
@@ -343,20 +463,6 @@ function FranchiseAccordion({
                       {movie.actor}
                     </div>
 
-                    {/* Country */}
-                    {/* <div
-                      className="
-                        text-zinc-300
-                        text-xs
-                        sm:text-sm
-                        whitespace-normal
-                        break-words
-                        pr-3
-                      "
-                    >
-                      {movie.country}
-                    </div> */}
-
                     {/* Status */}
                     <div className="flex items-center justify-center">
                       {isCompleted ? (
@@ -400,7 +506,7 @@ function FranchiseAccordion({
                       ) : (
                         <span
                           className="
-                            text-[9px]  
+                            text-[9px]
                             sm:text-[10px]
                             font-semibold
                             px-3

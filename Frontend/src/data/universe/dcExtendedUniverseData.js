@@ -1,4 +1,4 @@
-export const dcExtendedUniverseData = [
+export const dceuData = [
   {
     id: 1,
     watchOrder: 1,

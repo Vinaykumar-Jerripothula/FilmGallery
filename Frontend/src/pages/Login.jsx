@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import axios from "axios";
+
 import LoadingScreen from "./Loading";
+import {
+  clearProgress,
+  fetchProgress,
+} from "../store/progressSlice";
 
 function Login() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(false);
 
@@ -32,10 +39,10 @@ function Login() {
       console.log(response.data);
 
       if (response.data.message === "Login successful") {
-        localStorage.setItem(
-          "userId",
-          response.data.userId
-        );
+        const userId = response.data.userId;
+
+        // Store logged-in user details
+        localStorage.setItem("userId", userId);
 
         localStorage.setItem(
           "username",
@@ -47,6 +54,13 @@ function Login() {
           response.data.email
         );
 
+        // Clear any previous user's Redux progress
+        dispatch(clearProgress());
+
+        // Fetch progress for the newly logged-in user
+        dispatch(fetchProgress(userId));
+
+        // Go to Home
         setTimeout(() => {
           navigate("/home");
         }, 1800);
