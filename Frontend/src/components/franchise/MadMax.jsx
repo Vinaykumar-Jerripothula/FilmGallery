@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import FranchiseHero from "../template/FranchiseHero";
 import FranchiseAccordion from "../template/FranchiseAccordion";
 import { madMaxData } from "../../data/franchise/madMaxData";
-import madMaxImage from "../../images/franchise/madmax/madMaxImage.jpeg";
+import madMaxImage from "../../images/franchise/madmax/madmaxImage.jpeg";
 
 function FastAndFurious() {
   const progressMap = useSelector(
