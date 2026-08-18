@@ -6,6 +6,7 @@ import com.filmgallery.Backend.dto.SignupRequest;
 import com.filmgallery.Backend.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import com.filmgallery.Backend.dto.RefreshTokenRequest;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -23,5 +24,13 @@ public class AuthController {
     @PostMapping("/login")
     public LoginResponse login(@RequestBody LoginRequest request) {
         return authService.login(request);
+    }
+    @PostMapping("/refresh-token")
+    public LoginResponse refreshToken(
+            @RequestBody RefreshTokenRequest request
+    ) {
+        return authService.refreshToken(
+                request.getRefreshToken()
+        );
     }
 }

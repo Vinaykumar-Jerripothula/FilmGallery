@@ -17,6 +17,7 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final JwtService jwtService;
 
 
 
@@ -64,6 +65,8 @@ public class AuthService {
                     null,
                     null,
                     null,
+                    null,
+                    null,
                     "User not found"
             );
         }
@@ -78,15 +81,71 @@ public class AuthService {
                     null,
                     null,
                     null,
+                    null,
+                    null,
                     "Invalid password"
             );
         }
+
+        String accessToken =
+                jwtService.generateAccessToken(user.getId());
+
+        String refreshToken =
+                jwtService.generateRefreshToken(user.getId());
 
         return new LoginResponse(
                 user.getId(),
                 user.getUsername(),
                 user.getEmail(),
+                accessToken,
+                refreshToken,
                 "Login successful"
+        );
+    }
+
+    public LoginResponse refreshToken(String refreshToken) {
+
+        if (!jwtService.isTokenValid(refreshToken)) {
+
+            return new LoginResponse(
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Refresh token expired"
+            );
+        }
+
+        Long userId =
+                jwtService.extractUserId(refreshToken);
+
+        User user = userRepository
+                .findById(userId)
+                .orElse(null);
+
+        if (user == null) {
+
+            return new LoginResponse(
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "User not found"
+            );
+        }
+
+        String newAccessToken =
+                jwtService.generateAccessToken(userId);
+
+        return new LoginResponse(
+                user.getId(),
+                user.getUsername(),
+                user.getEmail(),
+                newAccessToken,
+                refreshToken,
+                "Token refreshed"
         );
     }
 }
