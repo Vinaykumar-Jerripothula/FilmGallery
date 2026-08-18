@@ -1,4 +1,4 @@
-// universe
+// universe - Data
 import { mcuData } from "../universe/mcuData";
 import { dcuData } from "../universe/dcuData";
 import { dceuData } from "../universe/dceuData";
@@ -6,6 +6,8 @@ import { monsterVerseData } from "../universe/monsterVerseData";
 import { starWarsData } from "../universe/starWarsData";
 import { theConjuringData } from "../universe/theConjuringData";
 import { xmenData } from "../universe/xmenData";
+
+// universe - Image 
 
 // webseries
 import { breakingBadUniverseData } from "../webseries/breakingBadUniverseData";
@@ -16,6 +18,8 @@ import { peakyBlindersData } from "../webseries/peakyBlindersData";
 import { strangerThingsData } from "../webseries/strangerThingsData";
 import { vikingsData } from "../webseries/vikingsData";
 
+// webseries - Image
+
 // duology 
 import { bladeRunnerData } from "../duology/bladeRunnerData";
 import { jackReacherData } from "../duology/jackReacherData";
@@ -23,6 +27,8 @@ import { killBillData } from "../duology/killBillData";
 import { sherlockHolmesData } from "../duology/sherlockHolmesData";
 import { theRaidData } from "../duology/theRaidData";
 import { topGunData } from "../duology/topGunData";
+
+// Duology - Image
 
 // triology
 import { beforeTriologyData } from "../triology/beforeTrilogyData";
@@ -32,11 +38,14 @@ import { mazeRunnerData } from "../triology/mazeRunnerData";
 import { millenniumTrilogyData } from "../triology/millenniumTrilogyData";
 import { darkKnightTrilogyData } from "../triology/theDarkKnightData";
 
+// triology - Image
+
 // tetralogy
 import { badBoysData } from "../tetralogy/badboysData";
 import { expandablesData } from "../tetralogy/expandablesData";
 import { matrixData } from "../tetralogy/theMatrix";
 
+// tetralogy - Image
 
 // franchise
 import { alienData } from "../franchise/alienData";
@@ -56,6 +65,9 @@ import { starTrekData } from "../franchise/starTrekData";
 import { terminatorData } from "../franchise/terminatorData";
 import { theHungerGamesData } from "../franchise/theHungerGamesData";
 import { transformersData } from "../franchise/transformersData";
+
+// franchise - Image 
+
 
 export const contentRegistry = {
     alien: {

@@ -41,7 +41,18 @@ function Login() {
       if (response.data.message === "Login successful") {
         const userId = response.data.userId;
 
-        // Store logged-in user details
+        // JWT Tokens
+        localStorage.setItem(
+          "accessToken",
+          response.data.accessToken
+        );
+
+        localStorage.setItem(
+          "refreshToken",
+          response.data.refreshToken
+        );
+
+        // User Details
         localStorage.setItem("userId", userId);
 
         localStorage.setItem(
@@ -54,13 +65,9 @@ function Login() {
           response.data.email
         );
 
-        // Clear any previous user's Redux progress
         dispatch(clearProgress());
-
-        // Fetch progress for the newly logged-in user
         dispatch(fetchProgress(userId));
 
-        // Go to Home
         setTimeout(() => {
           navigate("/home");
         }, 1800);
@@ -83,8 +90,6 @@ function Login() {
   return (
     <div className="min-h-screen bg-[#0B0F14] flex items-center justify-center px-4">
       <div className="w-full max-w-[300px] sm:max-w-[380px]">
-
-        {/* Header */}
         <div className="mb-5 text-center">
           <h1 className="text-2xl sm:text-4xl font-extrabold text-white">
             Film Gallery
@@ -95,7 +100,6 @@ function Login() {
           </p>
         </div>
 
-        {/* Login Card */}
         <div
           className="
             bg-[#111827]
@@ -111,8 +115,6 @@ function Login() {
           </h2>
 
           <form onSubmit={handleLogin} className="space-y-3">
-
-            {/* Email */}
             <div>
               <label className="block text-xs sm:text-sm text-zinc-300 mb-1.5">
                 Email
@@ -143,7 +145,6 @@ function Login() {
               />
             </div>
 
-            {/* Password */}
             <div>
               <label className="block text-xs sm:text-sm text-zinc-300 mb-1.5">
                 Password
@@ -174,14 +175,12 @@ function Login() {
               />
             </div>
 
-            {/* Error Message */}
             {error && (
               <p className="text-red-500 text-sm text-center">
                 {error}
               </p>
             )}
 
-            {/* Remember Me */}
             <div className="flex items-center justify-between text-xs">
               <label className="flex items-center gap-2 text-zinc-400">
                 <input
@@ -199,7 +198,6 @@ function Login() {
               </button>
             </div>
 
-            {/* Login Button */}
             <button
               type="submit"
               className="
@@ -216,10 +214,8 @@ function Login() {
             >
               Login
             </button>
-
           </form>
 
-          {/* Signup Link */}
           <div className="mt-4 text-center">
             <span className="text-xs text-zinc-400">
               Don't have an account?{" "}
@@ -235,11 +231,9 @@ function Login() {
           </div>
         </div>
 
-        {/* Footer */}
         <p className="text-center text-[11px] text-zinc-500 mt-4">
           Track movies, franchises, universes and TV series in one place.
         </p>
-
       </div>
     </div>
   );
