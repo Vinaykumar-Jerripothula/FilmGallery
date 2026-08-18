@@ -2,6 +2,20 @@ import alienImage from "../../images/franchise/alien/alienImage.jpeg";
 import badboysImage from "../../images/franchise/badboys/badboysImage.jpeg";
 import lordofringsImage from "../../images/franchise/lordofrings/lordofringsImage.jpeg";
 import johnwickImage from "../../images/franchise/johnwick/johnwickImage.jpeg";
+import harrypotterImage from "../../images/franchise/harrypotter/harrypotterImage.jpeg";
+import piratesofthecaribbeanImage from "../../images/franchise/piratesofcarabbean/pofcImage.jpeg";
+import planeoftheapesImage from "../../images/franchise/planetoftheapes/planetoftheapesImage.jpeg";
+import thehungergamesImage from "../../images/franchise/thehungergames/thehungergamesImage.jpeg";
+import jurassicparkImage from "../../images/franchise/jurassicpark/jurassicparkImage.jpeg";
+import missionimpossibleImage from "../../images/franchise/missionimpossible/missionimpossibleImage.jpeg";
+import fastandfuriousImage from "../../images/franchise/fastandfurious/fastandfuriousImage.jpeg";
+import jamesbondImage from "../../images/franchise/jamesbond/jamesbondImage.jpeg";
+import transformersImage from "../../images/franchise/transformers/transformersImage.jpeg";
+import predatorImage from "../../images/franchise/predator/predatorImage.jpeg";
+import terminatorImage from "../../images/franchise/terminator/terminatorImage.jpeg";
+import startrekImage from "../../images/franchise/startrek/startrekImage.jpeg";
+import rockycreedImage from "../../images/franchise/rockycreed/rockycreedImage.jpeg";
+import madmaxImage from "../../images/franchise/madmax/madmaxImage.jpeg";
 
 
 export const franchiseData = [
@@ -27,7 +41,7 @@ export const franchiseData = [
     id: 3,
     title: "Harry Potter",
     contentId: "harrypotter",
-    image: null,
+    image: harrypotterImage,
     total: 11,
     route: "/harrypotter",
   },
@@ -36,7 +50,7 @@ export const franchiseData = [
     id: 4,
     title: "Pirates Of The Caribbean",
     contentId: "piratesofthecaribbean",
-    image: null,
+    image: piratesofthecaribbeanImage,
     total: 5,
     route: "/piratesofthecaribbean",
   },
@@ -45,7 +59,7 @@ export const franchiseData = [
     id: 5,
     title: "Planet Of The Apes",
     contentId: "planetoftheapes",
-    image: null,
+    image: planeoftheapesImage,
     total: 10,
     route: "/planetoftheapes",
   },
@@ -54,7 +68,7 @@ export const franchiseData = [
     id: 6,
     title: "The Hunger Games",
     contentId: "thehungergames",
-    image: null,
+    image: thehungergamesImage,
     total: 6,
     route: "/thehungergames",
   },
@@ -63,7 +77,7 @@ export const franchiseData = [
     id: 7,
     title: "Jurassic Park",
     contentId: "jurassicpark",
-    image: null,
+    image: jurassicparkImage,
     total: 7,
     route: "/jurassicpark",
   },
@@ -81,7 +95,7 @@ export const franchiseData = [
     id: 9,
     title: "Mission Impossible",
     contentId: "missionimpossible",
-    image: null,
+    image: missionimpossibleImage,
     total: 8,
     route: "/missionimpossible",
   },
@@ -90,7 +104,7 @@ export const franchiseData = [
     id: 10,
     title: "Fast & Furious",
     contentId: "fastandfurious",
-    image: null,
+    image: fastandfuriousImage,
     total: 13,
     route: "/fastandfurious",
   },
@@ -99,7 +113,7 @@ export const franchiseData = [
     id: 11,
     title: "James Bond",
     contentId: "jamesbond",
-    image: null,
+    image: jamesbondImage,
     total: 25,
     route: "/jamesbond",
   },
@@ -108,7 +122,7 @@ export const franchiseData = [
     id: 12,
     title: "TransFormers",
     contentId: "transformers",
-    image: null,
+    image: transformersImage,
     total: 8,
     route: "/transformers",
   },
@@ -117,7 +131,7 @@ export const franchiseData = [
     id: 13,
     title: "Predator",
     contentId: "predator",
-    image: null,
+    image: predatorImage,
     total: 9,
     route: "/predator",
   },
@@ -126,7 +140,7 @@ export const franchiseData = [
     id: 14,
     title: "Terminator",
     contentId: "terminator",
-    image: null,
+    image: terminatorImage,
     total: 9,
     route: "/terminator",
   },
@@ -135,7 +149,7 @@ export const franchiseData = [
     id: 15,
     title: "Star Trek",
     contentId: "startrek",
-    image: null,
+    image: startrekImage,
     total: 31,
     route: "/startrek",
   },
@@ -144,7 +158,7 @@ export const franchiseData = [
     id: 16,
     title: "Rocky / Creed",
     contentId: "rockycreed",
-    image: null,
+    image: rockycreedImage,
     total: 9,
     route: "/rockycreed",
   },
@@ -153,7 +167,7 @@ export const franchiseData = [
     id: 17,
     title: "Mad Max",
     contentId: "madmax",
-    image: null,
+    image: madmaxImage,
     total: 5,
     route: "/madmax",
   },

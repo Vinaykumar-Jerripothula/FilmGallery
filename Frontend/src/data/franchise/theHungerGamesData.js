@@ -1,4 +1,4 @@
-export const theHungerGames = [
+export const theHungerGamesData = [
   {
     id: 1,
     watchOrder: 1,

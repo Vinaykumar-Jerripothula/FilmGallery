@@ -66,7 +66,7 @@ function FranchiseCard({ title, contentId, image, total = 0, route }) {
         <div className="absolute inset-0 bg-black/10" />
 
         {/* ================= PROGRESS BADGE ================= */}
-        <div
+        {/* <div
           className="
             absolute
             top-3
@@ -86,7 +86,7 @@ function FranchiseCard({ title, contentId, image, total = 0, route }) {
           "
         >
           {progress}%
-        </div>
+        </div> */}
 
         {/* ================= BOTTOM INFORMATION ================= */}
         <div

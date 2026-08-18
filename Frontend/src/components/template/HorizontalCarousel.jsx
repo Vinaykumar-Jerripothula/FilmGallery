@@ -51,9 +51,8 @@ function HorizontalCarousel({
       <div className="mb-4 sm:mb-5">
         <h2
           className="
-            text-xl
-            sm:text-2xl
-            font-bold
+            text-[14px]
+            sm:text-[17px]
             text-orange-400
           "
         >
