@@ -1,7 +1,7 @@
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-function FranchiseHero({
+function ContentHero({
   title,
   subtitle = "Franchise Progress",
   image,
@@ -12,12 +12,13 @@ function FranchiseHero({
   const navigate = useNavigate();
 
   return (
-    <section className="mb-8 sm:mb-10">
-      {/* ================= OUTER HERO / BANNER ================= */}
+    <section className="mb-6 sm:mb-8 max-w-5xl mx-auto px-3 sm:px-5">
       <div
         className="
           relative
           w-full
+          max-w-[98%]
+          mx-auto
           overflow-hidden
           rounded-2xl
           border
@@ -26,151 +27,128 @@ function FranchiseHero({
           shadow-xl
         "
       >
-        {/* ================= BANNER AREA ================= */}
         <div
           className="
             relative
             w-full
-            h-[240px]
-            sm:h-[280px]
-            md:h-[320px]
-            lg:h-[340px]
+            h-[180px]
+            sm:h-[200px]
+            md:h-[230px]
+            lg:h-[320px]
           "
         >
-          {/* ================= IMAGE ================= */}
-          <img
-            src={image}
-            alt={title}
-            className="
-              absolute
-              inset-0
-              w-full
-              h-full
-              object-cover
-              object-[center_17%]
-            "
-          />
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="
+                absolute
+                inset-0
+                w-full
+                h-full
+                object-cover
+                object-center
+              "
+            />
+          ) : (
+            <div
+              className="
+                absolute
+                inset-0
+                bg-gradient-to-br
+                from-zinc-800
+                via-zinc-900
+                to-black
+              "
+            />
+          )}
 
-          {/* ================= CINEMATIC OVERLAY ================= */}
-          <div
-            className="
-              absolute
-              inset-0
-              bg-black/10
-            "
-          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/15" />
 
-          {/* Bottom gradient */}
           <div
             className="
               absolute
               inset-0
               bg-gradient-to-t
               from-black/95
-              via-black/45
+              via-black/50
               to-transparent
             "
           />
 
-          {/* ================= BACK BUTTON ================= */}
+          {/* Back Button */}
           <button
             type="button"
             onClick={() => navigate(-1)}
             className="
               absolute
-              top-3
-              left-3
-              sm:top-4
-              sm:left-4
+              top-2
+              left-2
+              sm:top-3
+              sm:left-3
               z-20
 
               inline-flex
               items-center
-              gap-1.5
+              gap-1
 
               rounded-full
-
               border
               border-white/15
 
-              bg-black/45
+              bg-black/50
               backdrop-blur-md
 
-              px-2.5
-              py-1.5
+              px-2
+              py-1
 
-              sm:px-3
-              sm:py-2
-
-              text-[10px]
-              sm:text-xs
-              md:text-sm
+              text-[9px]
+              sm:text-[10px]
 
               font-medium
               text-white
 
-              transition-all
-              duration-200
-
-              hover:bg-black/65
-              hover:border-white/25
+              hover:bg-black/70
+              transition
             "
           >
-            <ArrowLeft
-              size={14}
-              className="sm:w-4 sm:h-4"
-            />
-
+            <ArrowLeft size={12} />
             <span>Back</span>
           </button>
 
-          {/* ================= BOTTOM INFORMATION ================= */}
+          {/* Content */}
           <div
             className="
               absolute
               left-3
               right-3
-              bottom-3
+              bottom-2
 
-              sm:left-5
-              sm:right-5
-              sm:bottom-5
+              sm:left-4
+              sm:right-4
+              sm:bottom-3
 
-              md:left-7
-              md:right-7
-              md:bottom-7
+              md:left-5
+              md:right-5
+              md:bottom-4
 
               z-20
             "
           >
-            {/* Universe : Name */}
-            <div
-              className="
-                flex
-                items-center
-                gap-1.5
-                sm:gap-2
-                min-w-0
-              "
-            >
+            <div className="flex items-center gap-1.5">
               <CheckCircle2
-                size={13}
-                className="
-                  flex-shrink-0
-                  text-orange-400
-                  sm:w-4
-                  sm:h-4
-                "
+                size={12}
+                className="text-orange-400 flex-shrink-0"
               />
 
               <p
                 className="
-                  min-w-0
+                  text-[9px]
+                  sm:text-[10px]
+                  md:text-xs
+                  text-white
                   truncate
-                  text-[10px]
-                  sm:text-xs
-                  md:text-sm
-                  leading-tight
                 "
               >
                 <span className="text-zinc-300">
@@ -181,50 +159,39 @@ function FranchiseHero({
                   :
                 </span>
 
-                <span className="text-white">
-                  {title}
-                </span>
+                <span>{title}</span>
               </p>
             </div>
 
-            {/* Watch Progress */}
             <p
               className="
-                mt-2
-                sm:mt-2.5
+                mt-1
 
-                text-[8px]
-                sm:text-[10px]
-                md:text-xs
+                text-[7px]
+                sm:text-[8px]
+                md:text-[10px]
 
                 uppercase
-                tracking-[0.14em]
-                sm:tracking-[0.18em]
-
-                font-medium
+                tracking-[0.18em]
                 text-zinc-300
               "
             >
               Watch Progress
             </p>
 
-            {/* Count + Percentage */}
             <div
               className="
-                mt-0.5
-                sm:mt-1
-
+                mt-1
                 flex
                 items-center
                 justify-between
-                gap-3
               "
             >
               <p
                 className="
-                  text-[10px]
-                  sm:text-xs
-                  md:text-sm
+                  text-[8px]
+                  sm:text-[9px]
+                  md:text-[11px]
                   text-zinc-200
                 "
               >
@@ -240,10 +207,9 @@ function FranchiseHero({
 
               <span
                 className="
-                  text-base
-                  sm:text-xl
-                  md:text-2xl
-
+                  text-sm
+                  sm:text-lg
+                  md:text-xl
                   font-extrabold
                   text-orange-400
                 "
@@ -252,33 +218,24 @@ function FranchiseHero({
               </span>
             </div>
 
-            {/* Progress Bar */}
             <div
               className="
-                mt-2
-                sm:mt-2.5
-
+                mt-1.5
                 h-1.5
-                sm:h-2
-
                 w-full
                 overflow-hidden
                 rounded-full
-
                 bg-white/20
-                backdrop-blur-sm
               "
             >
               <div
                 className="
                   h-full
                   rounded-full
-
                   bg-gradient-to-r
                   from-orange-500
                   via-orange-400
                   to-yellow-400
-
                   transition-all
                   duration-700
                 "
@@ -297,4 +254,4 @@ function FranchiseHero({
   );
 }
 
-export default FranchiseHero;
+export default ContentHero;

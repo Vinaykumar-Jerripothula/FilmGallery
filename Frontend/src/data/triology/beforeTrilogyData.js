@@ -1,4 +1,4 @@
-export const beforeTrilogyData = [
+export const beforeTriologyData = [
   {
     id: 1,
     watchOrder: 1,

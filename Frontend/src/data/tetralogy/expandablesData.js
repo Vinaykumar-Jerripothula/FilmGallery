@@ -1,4 +1,4 @@
-export const expendablesData = [
+export const expandablesData = [
   {
     id: 1,
     watchOrder: 1,

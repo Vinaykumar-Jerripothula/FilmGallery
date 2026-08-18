@@ -10,7 +10,7 @@ import {
 
 import { updateProgress } from "../../store/progressSlice";
 
-function FranchiseAccordion({
+function ContentAccordion({
   franchiseName,
   content,
   contentId,
@@ -124,8 +124,10 @@ function FranchiseAccordion({
         border-zinc-800
         rounded-2xl
         overflow-hidden
-        shadow-xl
-        w-[95%]
+        shadow-xl       
+        w-[90%]
+        sm:w-[95%]
+        lg:w-[70%]
         mx-auto
       "
     >
@@ -166,7 +168,7 @@ function FranchiseAccordion({
                   ${open ? "rotate-90" : ""}
                 `}
               >
-                <ChevronRight size={24} />
+                <ChevronRight size={44} />
               </div>
 
               {/* Name */}
@@ -535,4 +537,4 @@ function FranchiseAccordion({
   );
 }
 
-export default FranchiseAccordion;
+export default ContentAccordion;

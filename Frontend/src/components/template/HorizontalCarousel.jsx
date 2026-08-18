@@ -4,7 +4,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import FranchiseCard from "./FranchiseCard";
+import FranchiseCard from "./ContentCard";
 
 function HorizontalCarousel({
   title,
