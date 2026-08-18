@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -26,7 +27,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signup />} />
+        <Route
+          path="/"
+          element={
+            localStorage.getItem("accessToken") ? (
+              <Navigate to="/home" replace />
+            ) : (
+              <Signup />
+            )
+          }
+        />
 
         <Route path="/signup" element={<Signup />} />
 
