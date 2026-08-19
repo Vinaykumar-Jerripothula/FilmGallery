@@ -14,7 +14,7 @@ import dcuImage from "../../images/universe/dcu/dcuImage.jpeg";
 import mcuImage from "../../images/universe/mcu/mcuImage.jpeg";
 import monsterverseImage from "../../images/universe/monsterverse/monsterVerseImage.jpeg";
 import starWarsImage from "../../images/universe/starwars/starWarsImage.jpeg";
-import theconjuringImage from "../../images/universe/theconjuring/theconjuringImage.jpeg";
+import theconjuringImage from "../../images/universe/theconjuring/theConjuringImage.jpeg";
 import xmenImage from "../../images/universe/xmen/xmenImage.jpeg";
 
 
