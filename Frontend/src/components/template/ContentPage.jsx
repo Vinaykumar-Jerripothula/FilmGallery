@@ -4,10 +4,13 @@ import { useSelector } from "react-redux";
 import ContentHero from "./ContentHero";
 import ContentAccordion from "./ContentAccordion";
 import { contentRegistry } from "../../data/Collection/contentRegistry";
+import { useTheme } from "../../context/ThemeContext";
+import { colors } from "../../themes/colors";
 
 function FranchisePage() {
   const { slug } = useParams();
-
+  const { theme } = useTheme();
+  const currentTheme = colors[theme];
   const franchise = contentRegistry[slug];
 
   const progressMap = useSelector((state) => state.progress.progressMap);

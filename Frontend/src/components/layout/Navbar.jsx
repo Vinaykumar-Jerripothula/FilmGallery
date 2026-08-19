@@ -3,6 +3,8 @@ import { Search, X } from "lucide-react";
 import { searchData } from "../../data/search/searchData";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useTheme } from "../../context/ThemeContext";
+import { colors } from "../../themes/colors";
 
 function Navbar({ setSearchResult }) {
   const [showProfile, setShowProfile] = useState(false);
@@ -11,7 +13,9 @@ function Navbar({ setSearchResult }) {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  console.log(selectedIndex);
+  const { theme, toggleTheme } = useTheme();
+  const currentTheme = colors[theme];
+  const isDark = theme === "dark";
   const username = localStorage.getItem("username") || "User";
   const navigate = useNavigate();
 
@@ -43,24 +47,37 @@ function Navbar({ setSearchResult }) {
   };
 
   const email = localStorage.getItem("email") || "user@email.com";
-
+  const menuItemClass = `
+                w-full
+                px-4
+                py-4
+                text-[14px]
+                flex
+                items-center
+                justify-between
+                transition-colors
+                `;
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-[#0B0F14] border-b border-zinc-800">
+      <nav
+        className={`sticky top-0 z-50 ${currentTheme.page} ${currentTheme.border} border-b`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           {/* Left */}
           <div className="flex items-center gap-3">
             {/* Mobile Controls */}
             <div className="flex items-center gap-2 md:hidden">
               <button
-                className="text-2xl text-white"
+                className={`text-2xl ${isDark ? "text-white" : "text-black"}`}
                 onClick={() => setShowMobileMenu(!showMobileMenu)}
               >
                 ☰
               </button>
             </div>
 
-            <h1 className="font-bold text-xl text-white cursor-pointer">
+            <h1
+              className={`font-bold text-xl cursor-pointer ${currentTheme.text}`}
+            >
               Film Gallery
             </h1>
           </div>
@@ -70,25 +87,25 @@ function Navbar({ setSearchResult }) {
             {/* Desktop Search */}
             <div className="hidden lg:flex items-center relative">
               <div
-                className="
-                    w-72
-                    h-10
-
-                    bg-[#111827]
-
-                    border
-                    border-zinc-800
-
-                    rounded-xl
-
-                    overflow-hidden
-
-                    transition-all
-                    duration-300
-
-                    focus-within:border-orange-500/40
-                    focus-within:shadow-[0_0_20px_rgba(249,115,22,0.15)]
-                  "
+                className={`
+                   w-72
+                   h-10
+                                
+                   ${currentTheme.card}
+                                
+                   border
+                   ${currentTheme.border}
+                                
+                   rounded-xl
+                                
+                   overflow-hidden
+                                
+                   transition-all
+                   duration-300
+                                
+                   focus-within:border-orange-500/40
+                   focus-within:shadow-[0_0_20px_rgba(249,115,22,0.15)]
+                `}
               >
                 <input
                   type="text"
@@ -138,35 +155,36 @@ function Navbar({ setSearchResult }) {
                     }
                   }}
                   placeholder="Search movies, series..."
-                  className="
-                        w-full
-                        h-full
+                  className={`
+                       w-full
+                       h-full
 
-                        px-4
+                       px-4
 
-                        bg-transparent
+                       bg-transparent
 
-                        text-sm
-                        text-white
+                       text-sm
+                       ${currentTheme.text}
 
-                        placeholder:text-zinc-500
+                       placeholder:text-zinc-500
 
-                        outline-none
-                      "
+                       outline-none
+                      `}
                 />
               </div>
               {results.length > 0 && (
                 <div
-                  className="
-                      absolute
-                      top-12
-                      w-72
-                      bg-[#111827]
-                      border border-zinc-800
-                      rounded-xl
-                      overflow-hidden
-                      z-50
-                    "
+                  className={`
+                        absolute
+                        top-12
+                        w-72
+                        ${currentTheme.card}
+                        border
+                        ${currentTheme.border}
+                        rounded-xl
+                        overflow-hidden
+                        z-50
+                    `}
                 >
                   {results.slice(0, 8).map((item, index) => (
                     <button
@@ -185,7 +203,11 @@ function Navbar({ setSearchResult }) {
                         ${
                           selectedIndex === index
                             ? "bg-orange-500 text-white"
-                            : "text-white hover:bg-zinc-800"
+                            : `${currentTheme.text} ${
+                                theme === "dark"
+                                  ? "hover:bg-zinc-800"
+                                  : "hover:bg-zinc-200"
+                              }`
                         }
                       `}
                     >
@@ -197,21 +219,43 @@ function Navbar({ setSearchResult }) {
             </div>
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <button className="text-zinc-300 hover:text-orange-400 transition">
+              <button
+                className={`
+                  ${isDark ? "text-zinc-300" : "text-zinc-700"}
+                  hover:text-orange-400
+                  transition
+                `}
+              >
                 Universes
               </button>
 
-              <button className="text-zinc-300 hover:text-orange-400 transition">
+              <button
+                className={`
+                  ${isDark ? "text-zinc-300" : "text-zinc-700"}
+                  hover:text-orange-400
+                  transition
+                `}
+              >
                 Franchises
               </button>
 
-              <button className="text-zinc-300 hover:text-orange-400 transition">
+              <button
+                className={`
+                  ${isDark ? "text-zinc-300" : "text-zinc-700"}
+                  hover:text-orange-400
+                  transition
+                `}
+              >
                 Movies
               </button>
 
-              <button className="text-zinc-300 hover:text-orange-400 transition">
-                Series
-              </button>
+              <button
+                className={`
+                  ${isDark ? "text-zinc-300" : "text-zinc-700"}
+                  hover:text-orange-400
+                  transition
+                `}
+              ></button>
             </div>
 
             {/* Mobile Search */}
@@ -244,28 +288,35 @@ function Navbar({ setSearchResult }) {
               {/* Premium Dropdown */}
               {showProfile && (
                 <div
-                  className="
-                    absolute
-                    right-0
-                    top-14
+                  className={`
+                   absolute
+                   right-0
+                   top-14
 
-                    w-72
+                   w-72
 
-                    bg-[#0D1117]/95
-                    backdrop-blur-xl
+                   ${theme === "dark" ? "bg-[#0D1117]/95 border-white/10" : "bg-white border-zinc-300"}
 
-                    border
-                    border-white/10
+                   backdrop-blur-xl
 
-                    rounded-2xl
+                   border
 
-                    shadow-[0_20px_60px_rgba(0,0,0,0.7)]
+                   rounded-2xl
 
-                    overflow-hidden
-                  "
+                   shadow-[0_20px_60px_rgba(0,0,0,0.15)]
+
+                   overflow-hidden
+                  `}
                 >
                   {/* Header */}
-                  <div className="p-6 text-center border-b border-white/10">
+                  <div
+                    className={`
+                        p-6
+                        text-center
+                        border-b
+                        ${isDark ? "border-white/10" : "border-zinc-200"}
+                      `}
+                  >
                     <div
                       className="
                         w-20 h-20
@@ -290,31 +341,36 @@ function Navbar({ setSearchResult }) {
                       {username.charAt(0).toUpperCase()}
                     </div>
 
-                    <h3 className="mt-4 text-lg font-semibold text-white">
+                    <h3
+                      className={`
+                        mt-4
+                        text-lg
+                        font-semibold
+                        ${isDark ? "text-white" : "text-black"}
+                      `}
+                    >
                       {username}
                     </h3>
 
-                    <p className="text-sm text-zinc-400 truncate">{email}</p>
+                    <p
+                      className={`
+                          text-sm
+                          truncate
+                          ${isDark ? "text-zinc-400" : "text-zinc-500"}
+                        `}
+                    />
                   </div>
 
                   {/* Menu */}
                   <button
-                    className="
-                      w-full
-                      px-4
-                      py-4
-                      text-[14px]
-                      flex
-                      items-center
-                      justify-between
-
-                      text-zinc-300
-
-                      hover:bg-white/5
-                      hover:text-white
-
-                      transition-all
-                    "
+                    className={`
+                        ${menuItemClass}
+                        ${
+                          isDark
+                            ? "text-zinc-300 hover:bg-white/5 hover:text-white"
+                            : "text-zinc-700 hover:bg-zinc-100 hover:text-black"
+                        }
+                      `}
                   >
                     <span className="flex items-center gap-3">My Profile</span>
 
@@ -322,22 +378,14 @@ function Navbar({ setSearchResult }) {
                   </button>
 
                   <button
-                    className="
-                      w-full
-                      px-4
-                      py-4
-                      text-[14px]
-                      flex
-                      items-center
-                      justify-between
-
-                      text-zinc-300
-
-                      hover:bg-white/5
-                      hover:text-white
-
-                      transition-all
-                    "
+                    className={`
+                        ${menuItemClass}
+                        ${
+                          isDark
+                            ? "text-zinc-300 hover:bg-white/5 hover:text-white"
+                            : "text-zinc-700 hover:bg-zinc-100 hover:text-black"
+                        }
+                      `}
                   >
                     <span className="flex items-center gap-3">Settings</span>
 
@@ -345,45 +393,30 @@ function Navbar({ setSearchResult }) {
                   </button>
 
                   <button
-                    className="
-                      w-full
-                      px-4
-                      py-4
-                      text-[14px]
-                      flex
-                      items-center
-                      justify-between
-
-                      text-zinc-300
-
-                      hover:bg-white/5
-                      hover:text-white
-
-                      transition-all
-                    "
+                    onClick={toggleTheme}
+                    className={`
+                        ${menuItemClass}
+                        ${
+                          isDark
+                            ? "text-zinc-300 hover:bg-white/5 hover:text-white"
+                            : "text-zinc-700 hover:bg-zinc-100 hover:text-black"
+                        }
+                      `}
                   >
                     <span className="flex items-center gap-3">Theme</span>
 
-                    <span>›</span>
+                    <span>{theme === "dark" ? "🌙" : "☀️"}</span>
                   </button>
 
                   <button
-                    className="
-                      w-full
-                      px-4
-                      py-4
-                      text-[14px]
-                      flex
-                      items-center
-                      justify-between
-
-                      text-zinc-300
-
-                      hover:bg-white/5
-                      hover:text-white
-
-                      transition-all
-                    "
+                    className={`
+                        ${menuItemClass}
+                        ${
+                          isDark
+                            ? "text-zinc-300 hover:bg-white/5 hover:text-white"
+                            : "text-zinc-700 hover:bg-zinc-100 hover:text-black"
+                        }
+                      `}
                   >
                     <span className="flex items-center gap-3">Statistics</span>
 
@@ -391,22 +424,14 @@ function Navbar({ setSearchResult }) {
                   </button>
 
                   <button
-                    className="
-                      w-full
-                      px-4
-                      py-4
-                      text-[14px]
-                      flex
-                      items-center
-                      justify-between
-
-                      text-zinc-300
-
-                      hover:bg-white/5
-                      hover:text-white
-
-                      transition-all
-                    "
+                    className={`
+                          ${menuItemClass}
+                          ${
+                            isDark
+                              ? "text-zinc-300 hover:bg-white/5 hover:text-white"
+                              : "text-zinc-700 hover:bg-zinc-100 hover:text-black"
+                          }
+                        `}
                   >
                     <span className="flex items-center gap-3">Favorites</span>
 
@@ -445,12 +470,19 @@ function Navbar({ setSearchResult }) {
       </nav>
 
       {showSearch && (
-        <div className="md:hidden bg-[#0B0F14] px-4 pt-3 pb-2">
+        <div
+          className={`
+            md:hidden
+            ${currentTheme.page}
+            px-4
+            pt-3
+            pb-2
+          `}
+        >
           <input
             type="text"
             value={search}
             onChange={(e) => {
-
               const value = e.target.value;
 
               setSearch(value);
@@ -463,7 +495,6 @@ function Navbar({ setSearchResult }) {
               const matches = searchData.filter((item) =>
                 item.title.toLowerCase().includes(value.toLowerCase()),
               );
-
 
               setResults(matches);
             }}
@@ -493,28 +524,28 @@ function Navbar({ setSearchResult }) {
             }}
             placeholder="Search movies, series..."
             autoFocus
-            className="
-              w-full
-              h-11
+            className={`
+               w-full
+               h-11
 
-              px-4
+               px-4
 
-              bg-[#111827]
+               ${currentTheme.card}
 
-              border
-              border-zinc-800
+               border
+               ${currentTheme.border}
 
-              rounded-xl
+               rounded-xl
 
-              text-white
-              text-sm
+               ${currentTheme.text}
+               text-sm
 
-              placeholder:text-zinc-500
+               placeholder:text-zinc-500
 
-              outline-none
+               outline-none
 
-              focus:border-orange-500/40
-            "
+               focus:border-orange-500/40
+              `}
           />
           {results.length > 0 && (
             <div
@@ -538,14 +569,20 @@ function Navbar({ setSearchResult }) {
                     setShowSearch(false);
                   }}
                   className={`
-                    w-full
-                    text-left
-                    px-4
-                    py-3
-                  text-white
-                    transition
-                    ${selectedIndex === index ? "bg-orange-500 text-white" : "hover:bg-zinc-800"}
-                  `}
+                      w-full
+                      text-left
+                      px-4
+                      py-3
+                      ${currentTheme.text}
+                      transition
+                      ${
+                        selectedIndex === index
+                          ? "bg-orange-500 text-white"
+                          : isDark
+                            ? "hover:bg-zinc-800"
+                            : "hover:bg-zinc-100"
+                      }
+                    `}
                 >
                   {item.title}
                 </button>
@@ -571,77 +608,88 @@ function Navbar({ setSearchResult }) {
 
           {/* Drawer */}
           <div
-            className="
-        fixed
-        top-0
-        left-0
-
-        h-full
-        w-72
-
-        bg-[linear-gradient(180deg,#0B1220_0%,#0A101A_100%)]
-
-        border-r
-        border-white/10
-
-        shadow-[0_20px_80px_rgba(0,0,0,0.8)]
-
-        z-50
-
-        overflow-hidden
-      "
+            className={`
+                fixed
+                top-0
+                left-0
+                          
+                h-full
+                w-72
+                          
+                ${currentTheme.card}
+                          
+                border-r
+                ${currentTheme.border}
+                          
+                shadow-[0_20px_80px_rgba(0,0,0,0.15)]
+                          
+                z-50
+                          
+                overflow-hidden
+              `}
           >
             {/* Header */}
-            <div className="h-16 px-6 flex items-center justify-between border-b border-white/10">
+            <div
+              className={`
+                  h-16
+                  px-6
+                  flex
+                  items-center
+                  justify-between
+                  border-b
+                  ${isDark ? "border-white/10" : "border-zinc-200"}
+                `}
+            >
               <h2
-                className="
-            text-xl
-            font-bold
-            tracking-tight
-            text-white
-          "
+                className={`
+                  text-xl
+                  font-bold
+                  tracking-tight
+                  ${currentTheme.text}
+                `}
               >
                 Film Gallery
               </h2>
 
               <button
-                className="
-            text-zinc-500
-            hover:text-white
-            transition
-            duration-300
-            text-2xl
-          "
+                className={`text-2xl ${currentTheme.text}`}
+                onClick={() => setShowMobileMenu(!showMobileMenu)}
+              >
+                
+              </button>
+              <button
+                className={`${currentTheme.text}`}
                 onClick={() => setShowMobileMenu(false)}
               >
-                ✕
+                <X size={24} />
               </button>
             </div>
 
             {/* Navigation */}
             <div className="pt-5">
               <button
-                className="
-            group
-            relative
-            w-full
-            px-6
-            py-4
+                className={`
+                  group
+                      relative
+                      w-full
+                      px-6
+                      py-4
 
-            text-left
+                      text-left
 
-            text-[15px]
-            font-medium
-            tracking-wide
+                      text-[15px]
+                      font-medium
+                      tracking-wide
 
-            text-zinc-400
+                      ${
+                        isDark
+                          ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
+                          : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+                      }
 
-            hover:text-white
-            hover:bg-white/[0.03]
-
-            transition-all
-            duration-300
-          "
+                     transition-all
+                     duration-300
+                  `}
               >
                 <span
                   className="
@@ -668,27 +716,28 @@ function Navbar({ setSearchResult }) {
               </button>
 
               <button
-                className="
-            group
-            relative
-            w-full
-            px-6
-            py-4
+                className={`
+                    group
+                    relative
+                    w-full
+                    px-6
+                    py-4
 
-            text-left
+                    text-left
 
-            text-[15px]
-            font-medium
-            tracking-wide
+                    text-[15px]
+                    font-medium
+                    tracking-wide
 
-            text-zinc-400
-
-            hover:text-white
-            hover:bg-white/[0.03]
-
-            transition-all
-            duration-300
-          "
+                    ${
+                      isDark
+                        ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
+                        : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+                    }
+                  
+                    transition-all
+                    duration-300
+                  `}
               >
                 <span
                   className="
@@ -715,27 +764,28 @@ function Navbar({ setSearchResult }) {
               </button>
 
               <button
-                className="
-            group
-            relative
-            w-full
-            px-6
-            py-4
-
-            text-left
-
-            text-[15px]
-            font-medium
-            tracking-wide
-
-            text-zinc-400
-
-            hover:text-white
-            hover:bg-white/[0.03]
-
-            transition-all
-            duration-300
-          "
+                className={`
+                  group
+                  relative
+                  w-full
+                  px-6
+                  py-4
+                                
+                  text-left
+                                
+                  text-[15px]
+                  font-medium
+                  tracking-wide
+                                
+                  ${
+                    isDark
+                      ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
+                      : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+                  }
+                
+                  transition-all
+                  duration-300
+                `}
               >
                 <span
                   className="
@@ -762,27 +812,28 @@ function Navbar({ setSearchResult }) {
               </button>
 
               <button
-                className="
-            group
-            relative
-            w-full
-            px-6
-            py-4
+                className={`
+                  group
+                  relative
+                  w-full
+                  px-6
+                  py-4
 
-            text-left
+                  text-left
 
-            text-[15px]
-            font-medium
-            tracking-wide
+                  text-[15px]
+                  font-medium
+                  tracking-wide
 
-            text-zinc-400
-
-            hover:text-white
-            hover:bg-white/[0.03]
-
-            transition-all
-            duration-300
-          "
+                  ${
+                    isDark
+                      ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
+                      : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+                  }
+                
+                  transition-all
+                  duration-300
+                `}
               >
                 <span
                   className="

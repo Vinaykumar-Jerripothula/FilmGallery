@@ -11,14 +11,13 @@ import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
 import { contentRegistry } from "../data/Collection/contentRegistry";
 import { allCollectionsData } from "../data/Collection/allCollectionsData";
+import { useTheme } from "../context/ThemeContext";
+import { colors } from "../themes/colors";
 
 function Home() {
   const [searchResult, setSearchResult] = useState(null);
-
-  const selectedCollection = searchResult
-    ? contentRegistry[searchResult.contentId]
-    : null;
-
+  const { theme } = useTheme();
+  const currentTheme = colors[theme];
   const searchItems = searchResult
     ? allCollectionsData.filter(
         (item) => item.contentId === searchResult.contentId,
@@ -28,10 +27,10 @@ function Home() {
   const isSearchFound = searchItems.length > 0;
 
   return (
-    <div className="min-h-screen bg-[#0B0F14] text-white">
+    <div className={`min-h-screen ${currentTheme.page} ${currentTheme.text}`}>
       <Navbar setSearchResult={setSearchResult} />
 
-        {/* Page Header */}
+      {/* Page Header */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
         {/* <div className="mb-8 sm:mb-10">
           <h1 className="text-lg sm:text-2xl font-extrabold tracking-tight">
@@ -48,10 +47,7 @@ function Home() {
           <>
             {isSearchFound ? (
               <>
-                <HorizontalCarousel
-                  title="Search Result"
-                  items={searchItems}
-                />
+                <HorizontalCarousel title="Search Result" items={searchItems} />
 
                 {/* Back Button Centered */}
                 <div className="flex justify-center mt-12">
@@ -77,9 +73,7 @@ function Home() {
                 {/* Not Found Symbol */}
                 <div className="text-4xl mb-6">🎬</div>
 
-                <h2 className="text-2xl font-bold mb-3">
-                  Content Not Found
-                </h2>
+                <h2 className="text-2xl font-bold mb-3">Content Not Found</h2>
 
                 <p className="text-zinc-400 mb-8 max-w-md">
                   We will add this movie, franchise, universe or series soon.
@@ -112,30 +106,15 @@ function Home() {
             />
 
             {/* ================= FRANCHISES ================= */}
-            <HorizontalCarousel
-              title="Franchises"
-              items={franchiseData}
-            />
+            <HorizontalCarousel title="Franchises" items={franchiseData} />
 
-            <HorizontalCarousel
-              title="TV / Web Series"
-              items={seriesData}
-            />
+            <HorizontalCarousel title="TV / Web Series" items={seriesData} />
 
-            <HorizontalCarousel
-              title="Duology"
-              items={duologyData}
-            />
+            <HorizontalCarousel title="Duology" items={duologyData} />
 
-            <HorizontalCarousel
-              title="Trilogy"
-              items={triologyData}
-            />
+            <HorizontalCarousel title="Trilogy" items={triologyData} />
 
-            <HorizontalCarousel
-              title="Tetralogy"
-              items={tetralogyData}
-            />
+            <HorizontalCarousel title="Tetralogy" items={tetralogyData} />
           </>
         )}
       </div>
