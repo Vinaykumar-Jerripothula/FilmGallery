@@ -46,7 +46,7 @@ export const universeData = [
   {
     id: 5,
     title: "The Conjuring Universe",
-    contentId: "conjuring",
+    contentId: "theconjuring",
     image: theConjuringImage,
     total: 9,
     route: "/theconjuring",

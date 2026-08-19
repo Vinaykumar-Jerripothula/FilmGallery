@@ -3,7 +3,7 @@ import badboysImage from "../../images/franchise/badboys/badboysImage.jpeg";
 import lordofringsImage from "../../images/franchise/lordofrings/lordofringsImage.jpeg";
 import johnwickImage from "../../images/franchise/johnwick/johnwickImage.jpeg";
 import harrypotterImage from "../../images/franchise/harrypotter/harrypotterImage.jpeg";
-import piratesofthecaribbeanImage from "../../images/franchise/piratesofcarabbean/pofcImage.jpeg";
+import pofcImage from "../../images/franchise/piratesofcaribbean/pofcImage.jpeg";
 import planeoftheapesImage from "../../images/franchise/planetoftheapes/planetoftheapesImage.jpeg";
 import thehungergamesImage from "../../images/franchise/thehungergames/thehungergamesImage.jpeg";
 import jurassicparkImage from "../../images/franchise/jurassicpark/jurassicparkImage.jpeg";
@@ -50,7 +50,7 @@ export const franchiseData = [
     id: 4,
     title: "Pirates Of The Caribbean",
     contentId: "piratesofthecaribbean",
-    image: piratesofthecaribbeanImage,
+    image: pofcImage,
     total: 5,
     route: "/piratesofthecaribbean",
   },

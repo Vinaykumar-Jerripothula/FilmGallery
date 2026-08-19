@@ -31,7 +31,7 @@ function ContentHero({
           className="
             relative
             w-full
-            h-[180px]
+            h-[230px]
             sm:h-[200px]
             md:h-[230px]
             lg:h-[320px]
@@ -103,7 +103,7 @@ function ContentHero({
               px-2
               py-1
 
-              text-[9px]
+              text-[10px]
               sm:text-[10px]
 
               font-medium
@@ -113,7 +113,7 @@ function ContentHero({
               transition
             "
           >
-            <ArrowLeft size={12} />
+            <ArrowLeft size={14} />
             <span>Back</span>
           </button>
 
@@ -144,7 +144,7 @@ function ContentHero({
 
               <p
                 className="
-                  text-[9px]
+                  text-[10px]
                   sm:text-[10px]
                   md:text-xs
                   text-white

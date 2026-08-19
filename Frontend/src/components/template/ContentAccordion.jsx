@@ -127,7 +127,7 @@ function ContentAccordion({
         shadow-xl       
         w-[90%]
         sm:w-[95%]
-        lg:w-[70%]
+        lg:w-[78%]
         mx-auto
       "
     >

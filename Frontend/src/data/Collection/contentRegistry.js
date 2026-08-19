@@ -1,3 +1,4 @@
+
 // universe - Data
 import { mcuData } from "../universe/mcuData";
 import { dcuData } from "../universe/dcuData";
@@ -7,47 +8,17 @@ import { starWarsData } from "../universe/starWarsData";
 import { theConjuringData } from "../universe/theConjuringData";
 import { xmenData } from "../universe/xmenData";
 
-// universe - Image 
+// universe - Image
+import dceuImage from "../../images/universe/dceu/dceuImage.jpeg";
+import dcuImage from "../../images/universe/dcu/dcuImage.jpeg";
+import mcuImage from "../../images/universe/mcu/mcuImage.jpeg";
+import monsterverseImage from "../../images/universe/monsterverse/monsterVerseImage.jpeg";
+import starwarsImage from "../../images/universe/starwars/starwarsImage.jpeg";
+import theconjuringImage from "../../images/universe/theconjuring/theconjuringImage.jpeg";
+import xmenImage from "../../images/universe/xmen/xmenImage.jpeg";
 
-// webseries
-import { breakingBadUniverseData } from "../webseries/breakingBadUniverseData";
-import { darkData } from "../webseries/darkData";
-import { fromData } from "../webseries/fromData";
-import { gameOfThronesData } from "../webseries/gameOfThronesData";
-import { peakyBlindersData } from "../webseries/peakyBlindersData";
-import { strangerThingsData } from "../webseries/strangerThingsData";
-import { vikingsData } from "../webseries/vikingsData";
 
-// webseries - Image
-
-// duology 
-import { bladeRunnerData } from "../duology/bladeRunnerData";
-import { jackReacherData } from "../duology/jackReacherData";
-import { killBillData } from "../duology/killBillData";
-import { sherlockHolmesData } from "../duology/sherlockHolmesData";
-import { theRaidData } from "../duology/theRaidData";
-import { topGunData } from "../duology/topGunData";
-
-// Duology - Image
-
-// triology
-import { beforeTriologyData } from "../triology/beforeTrilogyData";
-import { chroniclesOfNarniaData } from "../triology/chroniclesOfNarniaData";
-import { equalizerData } from "../triology/equalizerData";
-import { mazeRunnerData } from "../triology/mazeRunnerData";
-import { millenniumTrilogyData } from "../triology/millenniumTrilogyData";
-import { darkKnightTrilogyData } from "../triology/theDarkKnightData";
-
-// triology - Image
-
-// tetralogy
-import { badBoysData } from "../tetralogy/badboysData";
-import { expandablesData } from "../tetralogy/expandablesData";
-import { matrixData } from "../tetralogy/theMatrix";
-
-// tetralogy - Image
-
-// franchise
+// franchise - Data
 import { alienData } from "../franchise/alienData";
 import { fastAndFuriousData } from "../franchise/fastAndFuriousData";
 import { harryPotterData } from "../franchise/harryPotterData";
@@ -66,14 +37,203 @@ import { terminatorData } from "../franchise/terminatorData";
 import { theHungerGamesData } from "../franchise/theHungerGamesData";
 import { transformersData } from "../franchise/transformersData";
 
-// franchise - Image 
+// franchise - Image
+import alienImage from "../../images/franchise/alien/alienImage.jpeg";
+import fastandfuriousImage from "../../images/franchise/fastandfurious/fastandfuriousImage.jpeg";
+import harrypotterImage from "../../images/franchise/harrypotter/harrypotterImage.jpeg";
+import jamesbondImage from "../../images/franchise/jamesbond/jamesbondImage.jpeg";
+import johnwickImage from "../../images/franchise/johnwick/johnwickImage.jpeg";
+import jurassicparkImage from "../../images/franchise/jurassicpark/jurassicparkImage.jpeg";
+import lordofringsImage from "../../images/franchise/lordofrings/lordofringsImage.jpeg";
+import madmaxImage from "../../images/franchise/madmax/madmaxImage.jpeg";
+import missionimpossibleImage from "../../images/franchise/missionimpossible/missionimpossibleImage.jpeg";
+import pofcImage from "../../images/franchise/piratesofcaribbean/pofcImage.jpeg";
+import planetoftheapesImage from "../../images/franchise/planetoftheapes/planetoftheapesImage.jpeg";
+import predatorImage from "../../images/franchise/predator/predatorImage.jpeg";
+import startrekImage from "../../images/franchise/startrek/startrekImage.jpeg";
+import rockycreedImage from "../../images/franchise/rockycreed/rockycreedImage.jpeg";
+import terminatorImage from "../../images/franchise/terminator/terminatorImage.jpeg";
+import thehungergamesImage from "../../images/franchise/thehungergames/thehungergamesImage.jpeg";
+import transformersImage from "../../images/franchise/transformers/transformersImage.jpeg";
+
+// webseries - Data
+import { breakingBadUniverseData } from "../webseries/breakingBadUniverseData";
+import { darkData } from "../webseries/darkData";
+import { fromData } from "../webseries/fromData";
+import { gameOfThronesData } from "../webseries/gameOfThronesData";
+import { peakyBlindersData } from "../webseries/peakyBlindersData";
+import { strangerThingsData } from "../webseries/strangerThingsData";
+import { vikingsData } from "../webseries/vikingsData";
+
+// webseries - Image
+import breakingbadImage from "../../images/webseries/breakingbad/breakingbadImage.jpeg";
+import darkImage from "../../images/webseries/dark/darkImage.jpeg";
+import fromImage from "../../images/webseries/from/fromImage.jpeg";
+import gameofthronesImage from "../../images/webseries/gameofthrones/gameofthronesImage.jpeg";
+import peakyblindersImage from "../../images/webseries/peakyblinders/peakyblindersImage.jpeg";
+import strangerthingsImage from "../../images/webseries/strangerthings/strangerthingsImage.jpeg";
+import vikingsImage from "../../images/webseries/vikings/vikingsImage.jpeg";
+
+// duology - Data 
+import { bladeRunnerData } from "../duology/bladeRunnerData";
+import { jackReacherData } from "../duology/jackReacherData";
+import { killBillData } from "../duology/killBillData";
+import { sherlockHolmesData } from "../duology/sherlockHolmesData";
+import { theRaidData } from "../duology/theRaidData";
+import { topGunData } from "../duology/topGunData";
+
+// Duology - Image
+import bladeunnerImage from "../../images/duology/bladerunner/bladerunnerImage.jpeg";
+import jackreacherImage from "../../images/duology/jackreacher/jackreacherImage.jpeg";
+import killbillImage from "../../images/duology/killbill/killbillImage.jpeg";
+import sherlockholmesImage from "../../images/duology/sherlockholmes/sherlockholmesImage.jpeg";
+import theraidImage from "../../images/duology/theraid/theraidImage.jpeg";
+import topgunImage from "../../images/duology/topgun/topgunImage.jpeg";
+
+// triology - Data 
+import { beforeTriologyData } from "../triology/beforeTrilogyData";
+import { chroniclesOfNarniaData } from "../triology/chroniclesOfNarniaData";
+import { equalizerData } from "../triology/equalizerData";
+import { mazeRunnerData } from "../triology/mazeRunnerData";
+import { millenniumTrilogyData } from "../triology/millenniumTrilogyData";
+import { darkKnightTrilogyData } from "../triology/theDarkKnightData";
+
+// triology - Image
+import beforeImage from "../../images/triology/before/beforeImage.jpeg";
+import narniaImage from "../../images/triology/narnia/narniaImage.jpeg";
+import thedarkknightImage from "../../images/triology/thedarkknight/thedarkknightImage.jpeg";
+import equalizerImage from "../../images/triology/equalizer/equalizerImage.jpeg";
+import mazerunnerImage from "../../images/triology/mazerunner/mazerunnerImage.jpeg";
+import millenniumImage from "../../images/triology/millennium/millenniumImage.jpeg";
+
+
+// tetralogy - Data 
+import { badBoysData } from "../tetralogy/badboysData";
+import { expandablesData } from "../tetralogy/expandablesData";
+import { matrixData } from "../tetralogy/theMatrix";
+
+// tetralogy - Image
+import badboysImage from "../../images/tetralogy/badboys/badboysImage.jpeg";
+import expandablesImage from "../../images/tetralogy/expandables/expandablesImage.jpeg";
+import matrixImage from "../../images/tetralogy/matrix/matrixImage.jpeg";
+
 
 
 export const contentRegistry = {
-    alien: {
+  
+  // universes
+
+  mcu: {
+    title: "Marvel Cinematic Universe",
+    subtitle: "Cinematic Universe",
+    contentId: "mcu",
+    image: mcuImage,
+    content: mcuData,
+  },
+  dceu: {
+    title: "DC Extended Universe",
+    subtitle: "Cinematic Universe",
+    contentId: "dceu",
+    image: dceuImage,
+    content: dceuData,
+  },
+
+  dcu: {
+    title: "DCU Universe",
+    subtitle: "Cinematic Universe",
+    contentId: "dcu",
+    image: dcuImage,
+    content: dcuData,
+  },
+
+  starwars: {
+    title: "Star Wars",
+    subtitle: "Cinematic Universe",
+    contentId: "starwars",
+    image: starwarsImage,
+    content: starWarsData,
+  },
+
+  theconjuring: {
+    title: "The Conjuring Universe",
+    subtitle: "Cinematic Universe",
+    contentId: "theconjuring",
+    image: theconjuringImage,
+    content: theConjuringData,
+  },
+
+  monsterverse: {
+    title: "MonsterVerse",
+    subtitle: "Cinematic Universe",
+    contentId: "monsterverse",
+    image: monsterverseImage,
+    content: monsterVerseData,
+  },
+
+  xmen: {
+    title: "X-Men Universe",
+    subtitle: "Cinematic Universe",
+    contentId: "xmen",
+    image: xmenImage,
+    content: xmenData,
+  },
+
+  // duologies 
+
+  bladerunner: {
+    title: "Blade Runner",
+    subtitle: "Movie Duology",
+    contentId: "bladerunner",
+    image: bladeunnerImage,
+    content: bladeRunnerData,
+  },
+  jackreacher: {
+    title: "Jack Reacher",
+    subtitle: "Movie Duology",
+    contentId: "jackreacher",
+    image: jackreacherImage,
+    content: jackReacherData,
+  },
+
+  killbill: {
+    title: "Kill Bill",
+    subtitle: "Movie Duology",
+    contentId: "killbill",
+    image: killbillImage,
+    content: killBillData,
+  },
+
+  sherlockholmes: {
+    title: "Sherlock Holmes",
+    subtitle: "Movie Duology",
+    contentId: "sherlockholmes",
+    image: sherlockholmesImage,
+    content: sherlockHolmesData,
+  },
+
+  theraid: {
+    title: "The Raid",
+    subtitle: "Movie Duology",
+    contentId: "theraid",
+    image: theraidImage,
+    content: theRaidData,
+  },
+
+  topgun: {
+    title: "Top Gun",
+    subtitle: "Movie Duology",
+    image: topgunImage,
+    contentId: "topgun",
+    content: topGunData,
+  },
+
+  // franchises
+  
+  alien: {
     title: "Alien Franchise",
     subtitle: "Movie Franchise",
     contentId: "alien",
+    image: alienImage,
     content: alienData,
   },
 
@@ -81,12 +241,14 @@ export const contentRegistry = {
     title: "Harry Potter",
     subtitle: "Movie Franchise",
     contentId: "harrypotter",
+    image: harrypotterImage,
     content: harryPotterData,
   },
   johnwick: {
     title: "John Wick",
     subtitle: "Movie Franchise",
     contentId: "johnwick",
+    image: johnwickImage,
     content: johnWickData,
   },
 
@@ -94,306 +256,246 @@ export const contentRegistry = {
     title: "Jurassic Park",
     subtitle: "Movie Franchise",
     contentId: "jurassicpark",
+    image: jurassicparkImage,
     content: jurassicParkData,
   },
-  mcu: {
-  title: "Marvel Cinematic Universe",
-  subtitle: "Cinematic Universe",
-  contentId: "mcu",
-  content: mcuData,
-},
-dceu: {
-  title: "DC Extended Universe",
-  subtitle: "Cinematic Universe",
-  contentId: "dceu",
-  content: dceuData,
-},
 
-dcu: {
-  title: "DCU Universe",
-  subtitle: "Cinematic Universe",
-  contentId: "dcu",
-  content: dcuData,
-},
+  lordoftherings: {
+    title: "The Lord of the Rings",
+    subtitle: "Movie Franchise",
+    contentId: "lordoftherings",
+    image: lordofringsImage,
+    content: lordOfTheRingsData,
+  },
 
-starwars: {
-  title: "Star Wars",
-  subtitle: "Cinematic Universe",
-  contentId: "starwars",
-  content: starWarsData,
-},
+  fastandfurious: {
+    title: "Fast & Furious",
+    subtitle: "Movie Franchise",
+    contentId: "fastandfurious",
+    image: fastandfuriousImage,
+    content: fastAndFuriousData,
+  },
 
-theconjuring: {
-  title: "The Conjuring Universe",
-  subtitle: "Cinematic Universe",
-  contentId: "theconjuring",
-  content: theConjuringData,
-},
+  jamesbond: {
+    title: "James Bond",
+    subtitle: "Movie Franchise",
+    contentId: "jamesbond",
+    image: jamesbondImage,
+    content: jamesBondData,
+  },
 
-monsterverse: {
-  title: "MonsterVerse",
-  subtitle: "Cinematic Universe",
-  contentId: "monsterverse",
-  content: monsterVerseData,
-},
+  missionimpossible: {
+    title: "Mission Impossible",
+    subtitle: "Movie Franchise",
+    contentId: "missionimpossible",
+    image: missionimpossibleImage,
+    content: missionImpossibleData,
+  },
 
-xmen: {
-  title: "X-Men Universe",
-  subtitle: "Cinematic Universe",
-  contentId: "xmen",
-  content: xmenData,
-},
-bladerunner: {
-  title: "Blade Runner",
-  subtitle: "Movie Duology",
-  contentId: "bladerunner",
-  content: bladeRunnerData,
-},
-jackreacher: {
-  title: "Jack Reacher",
-  subtitle: "Movie Duology",
-  contentId: "jackreacher",
-  content: jackReacherData,
-},
+  piratesofthecaribbean: {
+    title: "Pirates Of The Caribbean",
+    subtitle: "Movie Franchise",
+    contentId: "piratesofthecaribbean",
+    image: pofcImage,
+    content: piratesOfTheCaribbeanData,
+  },
 
-killbill: {
-  title: "Kill Bill",
-  subtitle: "Movie Duology",
-  contentId: "killbill",
-  content: killBillData,
-},
+  planetoftheapes: {
+    title: "Planet Of The Apes",
+    subtitle: "Movie Franchise",
+    contentId: "planetoftheapes",
+    image: planetoftheapesImage,
+    content: planetOfTheApesData,
+  },
 
-sherlockholmes: {
-  title: "Sherlock Holmes",
-  subtitle: "Movie Duology",
-  contentId: "sherlockholmes",
-  content: sherlockHolmesData,
-},
+  thehungergames: {
+    title: "The Hunger Games",
+    subtitle: "Movie Franchise",
+    contentId: "thehungergames",
+    image: thehungergamesImage,
+    content: theHungerGamesData,
+  },
 
-theraid: {
-  title: "The Raid",
-  subtitle: "Movie Duology",
-  contentId: "theraid",
-  content: theRaidData,
-},
+  predator: {
+    title: "Predator",
+    subtitle: "Movie Franchise",
+    contentId: "predator",
+    image: predatorImage,
+    content: predatorData,
+  },
 
-topgun: {
-  title: "Top Gun",
-  subtitle: "Movie Duology",
-  contentId: "topgun",
-  content: topGunData,
-},
-johnwick: {
-  title: "John Wick",
-  subtitle: "Movie Franchise",
-  contentId: "johnwick",
-  content: johnWickData,
-},
+  terminator: {
+    title: "Terminator",
+    subtitle: "Movie Franchise",
+    contentId: "terminator",
+    image: terminatorImage,
+    content: terminatorData,
+  },
 
-jurassicpark: {
-  title: "Jurassic Park",
-  subtitle: "Movie Franchise",
-  contentId: "jurassicpark",
-  content: jurassicParkData,
-},
+  startrek: {
+    title: "Star Trek",
+    subtitle: "Movie Franchise",
+    contentId: "startrek",
+    image: startrekImage,
+    content: starTrekData,
 
-lordoftherings: {
-  title: "The Lord of the Rings",
-  subtitle: "Movie Franchise",
-  contentId: "lordoftherings",
-  content: lordOfTheRingsData,
-},
+  },
 
-fastandfurious: {
-  title: "Fast & Furious",
-  subtitle: "Movie Franchise",
-  contentId: "fastandfurious",
-  content: fastAndFuriousData,
-},
+  rockycreed: {
+    title: "Rocky / Creed",
+    subtitle: "Movie Franchise",
+    contentId: "rockycreed",
+    image: rockycreedImage,
+    content: rockyCreedData,
+  },
 
-jamesbond: {
-  title: "James Bond",
-  subtitle: "Movie Franchise",
-  contentId: "jamesbond",
-  content: jamesBondData,
-},
+  madmax: {
+    title: "Mad Max",
+    subtitle: "Movie Franchise",
+    contentId: "madmax",
+    image: madmaxImage,
+    content: madMaxData,
+  },
 
-missionimpossible: {
-  title: "Mission Impossible",
-  subtitle: "Movie Franchise",
-  contentId: "missionimpossible",
-  content: missionImpossibleData,
-},
+  transformers: {
+    title: "Transformers",
+    subtitle: "Movie Franchise",
+    contentId: "transformers",
+    image: transformersImage,
+    content: transformersData,
+  },
 
-piratesofthecaribbean: {
-  title: "Pirates Of The Caribbean",
-  subtitle: "Movie Franchise",
-  contentId: "piratesofthecaribbean",
-  content: piratesOfTheCaribbeanData,
-},
+  // triologies
 
-planetoftheapes: {
-  title: "Planet Of The Apes",
-  subtitle: "Movie Franchise",
-  contentId: "planetoftheapes",
-  content: planetOfTheApesData,
-},
+  before: {
+    title: "Before Trilogy",
+    subtitle: "Trilogy",
+    contentId: "before",
+    image: beforeImage,
+    content: beforeTriologyData,
+  },
 
-thehungergames: {
-  title: "The Hunger Games",
-  subtitle: "Movie Franchise",
-  contentId: "thehungergames",
-  content: theHungerGamesData,
-},
+  chroniclesofnarnia: {
+    title: "Chronicles Of Narnia",
+    subtitle: "Trilogy",
+    image: narniaImage,
+    contentId: "chroniclesofnarnia",
+    content: chroniclesOfNarniaData,
+  },
 
-predator: {
-  title: "Predator",
-  subtitle: "Movie Franchise",
-  contentId: "predator",
-  content: predatorData,
-},
+  equalizer: {
+    title: "The Equalizer",
+    subtitle: "Trilogy",
+    image: equalizerImage,
+    contentId: "equalizer",
+    content: equalizerData,
+  },
 
-terminator: {
-  title: "Terminator",
-  subtitle: "Movie Franchise",
-  contentId: "terminator",
-  content: terminatorData,
-},
+  mazerunner: {
+    title: "Maze Runner",
+    subtitle: "Trilogy",
+    image: mazerunnerImage,
+    contentId: "mazerunner",
+    content: mazeRunnerData,
+  },
 
-startrek: {
-  title: "Star Trek",
-  subtitle: "Movie Franchise",
-  contentId: "startrek",
-  content: starTrekData,
-},
+  millennium: {
+    title: "Millennium Trilogy",
+    subtitle: "Trilogy",
+    image: millenniumImage,
+    contentId: "millennium",
+    content: millenniumTrilogyData,
+  },
 
-rockycreed: {
-  title: "Rocky / Creed",
-  subtitle: "Movie Franchise",
-  contentId: "rockycreed",
-  content: rockyCreedData,
-},
+  thedarkknight: {
+    title: "The Dark Knight Trilogy",
+    subtitle: "Trilogy",
+    image: thedarkknightImage,
+    contentId: "thedarkknight",
+    content: darkKnightTrilogyData,
+  },
+  
+  // tetrallogies 
 
-madmax: {
-  title: "Mad Max",
-  subtitle: "Movie Franchise",
-  contentId: "madmax",
-  content: madMaxData,
-},
+  badboys: {
+    title: "Bad Boys",
+    subtitle: "Tetralogy",
+    image: badboysImage,
+    contentId: "badboys",
+    content: badBoysData,
+  },
 
-transformers: {
-  title: "Transformers",
-  subtitle: "Movie Franchise",
-  contentId: "transformers",
-  content: transformersData,
-},
-before: {
-  title: "Before Trilogy",
-  subtitle: "Trilogy",
-  contentId: "before",
-  content: beforeTriologyData,
-},
+  expendables: {
+    title: "The Expendables",
+    subtitle: "Tetralogy",
+    image: expandablesImage,
+    contentId: "expendables",
+    content: expandablesData,
+  },
 
-chroniclesofnarnia: {
-  title: "Chronicles Of Narnia",
-  subtitle: "Trilogy",
-  contentId: "chroniclesofnarnia",
-  content: chroniclesOfNarniaData,
-},
+  thematrix: {
+    title: "The Matrix",
+    subtitle: "Tetralogy",
+    image: matrixImage,
+    contentId: "thematrix",
+    content: matrixData,
+  },
 
-equalizer: {
-  title: "The Equalizer",
-  subtitle: "Trilogy",
-  contentId: "equalizer",
-  content: equalizerData,
-},
+  // web series 
 
-mazerunner: {
-  title: "Maze Runner",
-  subtitle: "Trilogy",
-  contentId: "mazerunner",
-  content: mazeRunnerData,
-},
+  breakingbad: {
+    title: "Breaking Bad",
+    subtitle: "TV / Web Series",
+    image: breakingbadImage,
+    contentId: "breakingbad",
+    content: breakingBadUniverseData,
+  },
 
-millennium: {
-  title: "Millennium Trilogy",
-  subtitle: "Trilogy",
-  contentId: "millennium",
-  content: millenniumTrilogyData,
-},
+  gameofthrones: {
+    title: "Game Of Thrones",
+    subtitle: "TV / Web Series",
+    contentId: "gameofthrones",
+    image: gameofthronesImage,
+    content: gameOfThronesData,
+  },
 
-thedarkknight: {
-  title: "The Dark Knight Trilogy",
-  subtitle: "Trilogy",
-  contentId: "thedarkknight",
-  content: darkKnightTrilogyData,
-},
-badboys: {
-  title: "Bad Boys",
-  subtitle: "Tetralogy",
-  contentId: "badboys",
-  content: badBoysData,
-},
+  vikings: {
+    title: "Vikings",
+    subtitle: "TV / Web Series",
+    contentId: "vikings",
+    image: vikingsImage,
+    content: vikingsData,
+  },
 
-expendables: {
-  title: "The Expendables",
-  subtitle: "Tetralogy",
-  contentId: "expendables",
-  content: expandablesData,
-},
+  dark: {
+    title: "Dark",
+    subtitle: "TV / Web Series",
+    contentId: "dark",
+    image: darkImage,
+    content: darkData,
+  },
 
-thematrix: {
-  title: "The Matrix",
-  subtitle: "Tetralogy",
-  contentId: "thematrix",
-  content: matrixData,
-},
-breakingbad: {
-  title: "Breaking Bad",
-  subtitle: "TV / Web Series",
-  contentId: "breakingbad",
-  content: breakingBadUniverseData,
-},
+  from: {
+    title: "From",
+    subtitle: "TV / Web Series",
+    contentId: "from",
+    image: fromImage,
+    content: fromData,
+  },
 
-gameofthrones: {
-  title: "Game Of Thrones",
-  subtitle: "TV / Web Series",
-  contentId: "gameofthrones",
-  content: gameOfThronesData,
-},
+  strangerthings: {
+    title: "Stranger Things",
+    subtitle: "TV / Web Series",
+    contentId: "strangerthings",
+    image: strangerthingsImage,
+    content: strangerThingsData,
+  },
 
-vikings: {
-  title: "Vikings",
-  subtitle: "TV / Web Series",
-  contentId: "vikings",
-  content: vikingsData,
-},
-
-dark: {
-  title: "Dark",
-  subtitle: "TV / Web Series",
-  contentId: "dark",
-  content: darkData,
-},
-
-from: {
-  title: "From",
-  subtitle: "TV / Web Series",
-  contentId: "from",
-  content: fromData,
-},
-
-strangerthings: {
-  title: "Stranger Things",
-  subtitle: "TV / Web Series",
-  contentId: "strangerthings",
-  content: strangerThingsData,
-},
-
-peakyblinders: {
-  title: "Peaky Blinders",
-  subtitle: "TV / Web Series",
-  contentId: "peakyblinders",
-  content: peakyBlindersData,
-},
+  peakyblinders: {
+    title: "Peaky Blinders",
+    subtitle: "TV / Web Series",
+    contentId: "peakyblinders",
+    image: peakyblindersImage,
+    content: peakyBlindersData,
+  },
 };

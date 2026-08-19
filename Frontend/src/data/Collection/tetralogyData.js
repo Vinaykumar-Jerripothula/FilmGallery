@@ -1,9 +1,12 @@
+import badboysImage from "../../images/tetralogy/badboys/badboysImage.jpeg";
+import expandablesImage from "../../images/tetralogy/expandables/expandablesImage.jpeg";
+import matrixImage from "../../images/tetralogy/matrix/matrixImage.jpeg";
 export const tetralogyData = [
   {
     id: 1,
     title: "Bad Boys",
     contentId: "badboys",
-    image: "",
+    image: badboysImage,
     total: 4,
     route: "/badboys",
   },
@@ -11,15 +14,15 @@ export const tetralogyData = [
     id: 2,
     title: "The Expendables",
     contentId: "expendables",
-    image: "",
+    image: expandablesImage,
     total: 4,
     route: "/expendables",
   },
   {
     id: 3,
     title: "The Matrix",
-    contentId: "matrix",
-    image: "",
+    contentId: "thematrix",
+    image: matrixImage,
     total: 4,
     route: "/thematrix",
   },
