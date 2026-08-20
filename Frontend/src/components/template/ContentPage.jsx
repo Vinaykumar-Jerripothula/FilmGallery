@@ -6,11 +6,16 @@ import ContentAccordion from "./ContentAccordion";
 import { contentRegistry } from "../../data/Collection/contentRegistry";
 import { useTheme } from "../../context/ThemeContext";
 import { colors } from "../../themes/colors";
+import { useEffect } from "react";
+import Navbar from "../layout/Navbar";
 
 function FranchisePage() {
   const { slug } = useParams();
   const { theme } = useTheme();
   const currentTheme = colors[theme];
+  useEffect(() => {
+    console.log("CONTENT PAGE RERENDERED:", theme);
+  }, [theme]);
   const franchise = contentRegistry[slug];
 
   const progressMap = useSelector((state) => state.progress.progressMap);
@@ -30,7 +35,18 @@ function FranchisePage() {
   const progress = total > 0 ? Math.round((watched / total) * 100) : 0;
 
   return (
-    <div className="min-h-screen bg-[#0B0F14] text-white px-3 py-4 sm:px-4 md:px-6">
+    <div
+      className={`
+      min-h-screen
+      ${currentTheme.page}
+      ${currentTheme.text}
+    `}
+    >
+      <Navbar enableSearch={false} />
+
+      {" "}
+
+    <div className="pt-4 sm:pt-5">
       <ContentHero
         title={franchise.title}
         subtitle={franchise.subtitle}
@@ -39,7 +55,6 @@ function FranchisePage() {
         total={total}
         progress={progress}
       />
-
       <ContentAccordion
         franchiseName={franchise.title}
         content={franchise.content}
@@ -47,6 +62,7 @@ function FranchisePage() {
         completedCount={watched}
         showHeader={false}
       />
+    </div>
     </div>
   );
 }

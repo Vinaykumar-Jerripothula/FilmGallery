@@ -1,5 +1,7 @@
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
+import { colors } from "../../themes/colors";
 
 function ContentHero({
   title,
@@ -10,11 +12,14 @@ function ContentHero({
   progress = 0,
 }) {
   const navigate = useNavigate();
+  const { theme } = useTheme();
+  const currentTheme = colors[theme];
+  const isDark = theme === "dark";
 
   return (
     <section className="mb-6 sm:mb-8 max-w-5xl mx-auto px-3 sm:px-5">
       <div
-        className="
+        className={`
           relative
           w-full
           max-w-[98%]
@@ -22,20 +27,20 @@ function ContentHero({
           overflow-hidden
           rounded-2xl
           border
-          border-zinc-800
-          bg-[#111318]
           shadow-xl
-        "
+          ${currentTheme.card}
+          ${currentTheme.border}
+        `}
       >
         <div
           className="
-            relative
-            w-full
-            h-[230px]
-            sm:h-[200px]
-            md:h-[230px]
-            lg:h-[320px]
-          "
+    relative
+    w-full
+    h-[240px]
+    sm:h-[200px]
+    md:h-[230px]
+    lg:h-[320px]
+  "
         >
           {image ? (
             <img
@@ -151,13 +156,9 @@ function ContentHero({
                   truncate
                 "
               >
-                <span className="text-zinc-300">
-                  {subtitle}
-                </span>
+                <span className="text-zinc-300">{subtitle}</span>
 
-                <span className="mx-1 text-zinc-500">
-                  :
-                </span>
+                <span className="mx-1 text-zinc-500">:</span>
 
                 <span>{title}</span>
               </p>
@@ -195,14 +196,9 @@ function ContentHero({
                   text-zinc-200
                 "
               >
-                <span className="font-semibold text-white">
-                  {watched}
-                </span>
+                <span className="font-semibold text-white">{watched}</span>
 
-                <span className="text-zinc-400">
-                  {" "}
-                  / {total} watched
-                </span>
+                <span className="text-zinc-400"> / {total} watched</span>
               </p>
 
               <span
@@ -240,10 +236,7 @@ function ContentHero({
                   duration-700
                 "
                 style={{
-                  width: `${Math.min(
-                    Math.max(progress, 0),
-                    100
-                  )}%`,
+                  width: `${Math.min(Math.max(progress, 0), 100)}%`,
                 }}
               />
             </div>

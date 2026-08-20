@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import { colors } from "../../themes/colors";
 
-function Navbar({ setSearchResult }) {
+function Navbar({ setSearchResult, enableSearch = true }) {
   const [showProfile, setShowProfile] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -15,7 +15,6 @@ function Navbar({ setSearchResult }) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const { theme, toggleTheme } = useTheme();
   const currentTheme = colors[theme];
-  console.log("VINAY TEST 999");
   const isDark = theme === "dark";
   const username = localStorage.getItem("username") || "User";
   const navigate = useNavigate();
@@ -51,8 +50,8 @@ function Navbar({ setSearchResult }) {
   const menuItemClass = `
                 w-full
                 px-4
-                py-4
-                text-[14px]
+                py-2
+                text-[12px]
                 flex
                 items-center
                 justify-between
@@ -86,9 +85,11 @@ function Navbar({ setSearchResult }) {
           {/* Right */}
           <div className="flex items-center gap-6">
             {/* Desktop Search */}
-            <div className="hidden lg:flex items-center relative">
-              <div
-                className={`
+            {enableSearch && (
+              <div className="hidden lg:flex items-center relative">
+                {" "}
+                <div
+                  className={`
                    w-72
                    h-10
                                 
@@ -107,56 +108,60 @@ function Navbar({ setSearchResult }) {
                    focus-within:border-orange-500/40
                    focus-within:shadow-[0_0_20px_rgba(249,115,22,0.15)]
                 `}
-              >
-                <input
-                  type="text"
-                  value={search}
-                  onChange={(e) => {
-                    const value = e.target.value;
-                    setSearch(value);
+                >
+                  <input
+                    type="text"
+                    value={search}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setSearch(value);
 
-                    if (!value.trim()) {
-                      setResults([]);
-                      return;
-                    }
-                    console.log("Typed:", value);
-                    const matches = searchData.filter((item) =>
-                      item.title.toLowerCase().includes(value.toLowerCase()),
-                    );
-                    setResults(matches);
-                    setSelectedIndex(-1);
-                  }}
-                  onKeyDown={(e) => {
-                    if (e.key === "ArrowDown") {
-                      e.preventDefault();
-
-                      setSelectedIndex((prev) =>
-                        prev < results.slice(0, 8).length - 1 ? prev + 1 : prev,
-                      );
-                    }
-
-                    if (e.key === "ArrowUp") {
-                      e.preventDefault();
-
-                      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
-                    }
-
-                    if (e.key === "Enter") {
-                      e.preventDefault();
-
-                      if (selectedIndex >= 0) {
-                        setSearchResult(results[selectedIndex]);
-
+                      if (!value.trim()) {
                         setResults([]);
-                        setSearch("");
-                        setSelectedIndex(-1);
-                      } else {
-                        handleSearch();
+                        return;
                       }
-                    }
-                  }}
-                  placeholder="Search movies, series..."
-                  className={`
+                      console.log("Typed:", value);
+                      const matches = searchData.filter((item) =>
+                        item.title.toLowerCase().includes(value.toLowerCase()),
+                      );
+                      setResults(matches);
+                      setSelectedIndex(-1);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === "ArrowDown") {
+                        e.preventDefault();
+
+                        setSelectedIndex((prev) =>
+                          prev < results.slice(0, 8).length - 1
+                            ? prev + 1
+                            : prev,
+                        );
+                      }
+
+                      if (e.key === "ArrowUp") {
+                        e.preventDefault();
+
+                        setSelectedIndex((prev) =>
+                          prev > 0 ? prev - 1 : prev,
+                        );
+                      }
+
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+
+                        if (selectedIndex >= 0) {
+                          setSearchResult(results[selectedIndex]);
+
+                          setResults([]);
+                          setSearch("");
+                          setSelectedIndex(-1);
+                        } else {
+                          handleSearch();
+                        }
+                      }
+                    }}
+                    placeholder="Search movies, series..."
+                    className={`
                        w-full
                        h-full
 
@@ -171,11 +176,11 @@ function Navbar({ setSearchResult }) {
 
                        outline-none
                       `}
-                />
-              </div>
-              {results.length > 0 && (
-                <div
-                  className={`
+                  />
+                </div>
+                {results.length > 0 && (
+                  <div
+                    className={`
                         absolute
                         top-12
                         w-72
@@ -186,16 +191,16 @@ function Navbar({ setSearchResult }) {
                         overflow-hidden
                         z-50
                     `}
-                >
-                  {results.slice(0, 8).map((item, index) => (
-                    <button
-                      key={item.title}
-                      onClick={() => {
-                        setSearchResult(item);
-                        setResults([]);
-                        setSearch("");
-                      }}
-                      className={`
+                  >
+                    {results.slice(0, 8).map((item, index) => (
+                      <button
+                        key={item.title}
+                        onClick={() => {
+                          setSearchResult(item);
+                          setResults([]);
+                          setSearch("");
+                        }}
+                        className={`
                         w-full
                         text-left
                         px-4
@@ -211,13 +216,14 @@ function Navbar({ setSearchResult }) {
                               }`
                         }
                       `}
-                    >
-                      {item.title}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+                      >
+                        {item.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <button
@@ -260,12 +266,15 @@ function Navbar({ setSearchResult }) {
             </div>
 
             {/* Mobile Search */}
+          {enableSearch && (
+          
             <button
               onClick={() => setShowSearch(!showSearch)}
               className="md:hidden px-1 pt-1 text-zinc-400 hover:text-orange-400 transition"
             >
               {showSearch ? <X size={22} /> : <Search size={22} />}
             </button>
+          )}
 
             {/* Avatar */}
             <div className="relative">
@@ -293,8 +302,8 @@ function Navbar({ setSearchResult }) {
                    absolute
                    right-0
                    top-14
-
-                   w-72
+                   h-100
+                   w-68
 
                    ${theme === "dark" ? "bg-[#0D1117]/95 border-white/10" : "bg-white border-zinc-300"}
 
@@ -312,7 +321,7 @@ function Navbar({ setSearchResult }) {
                   {/* Header */}
                   <div
                     className={`
-                        p-6
+                        p-4
                         text-center
                         border-b
                         ${isDark ? "border-white/10" : "border-zinc-200"}
@@ -331,7 +340,7 @@ function Navbar({ setSearchResult }) {
                         items-center
                         justify-center
 
-                        text-3xl
+                        text-2xl
                         font-bold
                         text-white
 
@@ -344,7 +353,7 @@ function Navbar({ setSearchResult }) {
 
                     <h3
                       className={`
-                        mt-4
+                        mt-3
                         text-lg
                         font-semibold
                         ${isDark ? "text-white" : "text-black"}
@@ -394,7 +403,9 @@ function Navbar({ setSearchResult }) {
                   </button>
 
                   <button
-                    onClick={toggleTheme}
+                    onClick={() => {
+                      toggleTheme();
+                    }}
                     className={`
                         ${menuItemClass}
                         ${
@@ -448,14 +459,14 @@ function Navbar({ setSearchResult }) {
                       }}
                       className={`
                             w-full
-                            py-3
+                            py-1
 
                             rounded-xl
 
                             ${
                               isDark
                                 ? "bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500/20"
-                                : "bg-red-50 border border-red-200 text-red-600 hover:bg-red-100"
+                                : "bg-red-50 border border-red-200 text-red-600 hover:bg-red-600"
                             }
                           
                             font-medium
@@ -470,7 +481,7 @@ function Navbar({ setSearchResult }) {
                 </div>
               )}
             </div>
-          </div>
+            </div>
         </div>
       </nav>
 

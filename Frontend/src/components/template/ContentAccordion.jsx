@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import axiosInstance from "../../api/axiosInstance";
 import { ChevronRight, Circle, CheckCircle2, Lock } from "lucide-react";
-
+import { useTheme } from "../../context/ThemeContext";
+import { colors } from "../../themes/colors";
 import { updateProgress } from "../../store/progressSlice";
 
 function ContentAccordion({
@@ -13,7 +14,8 @@ function ContentAccordion({
   showHeader = true,
 }) {
   const dispatch = useDispatch();
-
+  const { theme } = useTheme();
+  const currentTheme = colors[theme];
   const [open, setOpen] = useState(!showHeader);
   const [completed, setCompleted] = useState(completedCount);
 
@@ -105,18 +107,18 @@ function ContentAccordion({
 
   return (
     <div
-      className="
-        bg-[#111827]
-        border
-        border-zinc-800
+      className={`
         rounded-2xl
         overflow-hidden
-        shadow-xl       
+        shadow-xl
         w-[90%]
         sm:w-[95%]
         lg:w-[78%]
         mx-auto
-      "
+        border
+        ${currentTheme.card}
+        ${currentTheme.border}
+      `}
     >
       {/* =====================================================
           FRANCHISE HEADER
@@ -161,19 +163,24 @@ function ContentAccordion({
               {/* Name */}
               <div className="min-w-0">
                 <h2
-                  className="
+                  className={`
                     text-xs
                     sm:text-lg
                     font-bold
                     tracking-tight
-                    text-white
                     truncate
-                  "
+                    ${currentTheme.text}
+                  `}
                 >
                   {franchiseName}
                 </h2>
 
-                <p className="text-zinc-400 text-xs sm:text-sm mt-1">
+                <p
+                  className={`
+                    text-xs sm:text-sm mt-1
+                    ${currentTheme.secondaryText}
+                  `}
+                >
                   Franchise Progress
                 </p>
               </div>
@@ -185,7 +192,13 @@ function ContentAccordion({
                 {progress}%
               </div>
 
-              <div className="text-zinc-400 text-xs sm:text-sm">
+              <div
+                className={`
+                  text-xs sm:text-sm
+                  ${currentTheme.secondaryText}
+                `}
+              >
+                {" "}
                 {completed} / {total}
               </div>
             </div>
@@ -216,9 +229,18 @@ function ContentAccordion({
           ===================================================== */}
 
       {open && (
-        <div className={showHeader ? "border-t border-zinc-800" : ""}>
+        <div
+          className={
+            showHeader
+              ? `border-t ${
+                  theme === "dark" ? "border-zinc-800" : "border-zinc-300"
+                }`
+              : ""
+          }
+        >
+          {" "}
           <div className="overflow-x-auto">
-            <div className="min-w-[1100px]">
+            <div className="min-w-[1153px]">
               {/* Table Header */}
               <div
                 className={`
@@ -227,15 +249,17 @@ function ContentAccordion({
                   gap-0
                   px-6
                   py-6
-                  bg-[#0f172a]
                   border-b
-                  border-zinc-700
                   text-[10px]
                   sm:text-xs
                   font-semibold
                   uppercase
                   tracking-wider
-                  text-zinc-400
+                  ${
+                    theme === "dark"
+                      ? "bg-[#0f172a] border-zinc-700 text-zinc-400"
+                      : "bg-zinc-100 border-zinc-300 text-zinc-600"
+                  }
                 `}
               >
                 <div className="pr-4 flex items-center justify-center">
@@ -286,14 +310,30 @@ function ContentAccordion({
                       px-4 sm:px-6
                       py-4
                       border-b
-                      border-zinc-800
+                      ${theme === "dark" ? "border-zinc-800" : "border-zinc-300"}
                       transition-all
                       duration-300
+                                      
+                      ${
+                        isCompleted
+                          ? `cursor-pointer ${
+                              theme === "dark"
+                                ? "hover:bg-[#151d2c]"
+                                : "hover:bg-zinc-100"
+                            }`
+                          : ""
+                      }
 
-                      ${isCompleted ? "cursor-pointer hover:bg-[#151d2c]" : ""}
-
-                      ${isCurrent ? "cursor-pointer hover:bg-[#1A2233]" : ""}
-
+                      ${
+                        isCurrent
+                          ? `cursor-pointer ${
+                              theme === "dark"
+                                ? "hover:bg-[#1A2233]"
+                                : "hover:bg-zinc-200"
+                            }`
+                          : ""
+                      }
+                                      
                       ${isLocked ? "cursor-not-allowed" : ""}
                     `}
                   >
@@ -303,7 +343,7 @@ function ContentAccordion({
                         <CheckCircle2
                           size={18}
                           className="
-                            text-green-500
+                            text-green-400
                             flex-shrink-0
                           "
                         />
@@ -340,12 +380,16 @@ function ContentAccordion({
                         whitespace-normal
                         break-words
 
+                        ${isCompleted ? "line-through" : ""}
+
                         ${
                           isCompleted
-                            ? "text-green-400"
+                            ? "text-green-500"
                             : isCurrent
-                              ? "text-orange-300"
-                              : "text-zinc-500"
+                              ? "text-orange-400"
+                              : theme === "dark"
+                                ? "text-zinc-400"
+                                : "text-zinc-600"
                         }
                       `}
                     >
@@ -355,17 +399,26 @@ function ContentAccordion({
                     {/* Type */}
                     <div className="flex items-start justify-center min-w-0">
                       <span
-                        className="
+                        className={`
                           px-2
                           py-1
                           rounded-md
                           text-[9px]
                           sm:text-xs
-                          bg-zinc-800
-                          border
-                          border-zinc-700
                           whitespace-nowrap
-                        "
+                          border
+                          ${
+                            theme === "dark"
+                              ? "bg-zinc-800 border-zinc-700 text-white"
+                              : movie.type === "Movie"
+                                ? "bg-blue-50 text-blue-700 border-blue-200"
+                                : movie.type === "Series"
+                                  ? "bg-purple-50 text-purple-700 border-purple-200"
+                                  : movie.type === "Special"
+                                    ? "bg-amber-50 text-amber-700 border-amber-200"
+                                    : "bg-emerald-50 text-emerald-700 border-emerald-200"
+                          }
+                        `}
                       >
                         {movie.type}
                       </span>
@@ -373,60 +426,60 @@ function ContentAccordion({
 
                     {/* Year */}
                     <div
-                      className="
+                      className={`
                         flex
                         items-center
                         justify-center
-                        text-zinc-300
                         text-xs
                         sm:text-sm
                         whitespace-nowrap
-                      "
+                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
+                      `}
                     >
                       {movie.year}
                     </div>
 
                     {/* IMDb */}
                     <div
-                      className="
+                      className={`
                         flex
                         items-center
                         justify-center
-                        text-zinc-300
                         text-xs
                         sm:text-sm
                         whitespace-nowrap
-                      "
+                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
+                      `}
                     >
                       {movie.imdb}
                     </div>
 
                     {/* Director */}
                     <div
-                      className="
+                      className={`
                         flex
                         items-center
                         justify-center
-                        text-zinc-300
                         text-xs
                         sm:text-sm
                         whitespace-nowrap
-                      "
+                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-900"}
+                      `}
                     >
                       {movie.director}
                     </div>
 
                     {/* Actor */}
                     <div
-                      className="
+                      className={`
                         flex
                         items-center
                         justify-center
-                        text-zinc-300
                         text-xs
                         sm:text-sm
                         whitespace-nowrap
-                      "
+                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
+                      `}
                     >
                       {movie.actor}
                     </div>
@@ -435,26 +488,27 @@ function ContentAccordion({
                     <div className="flex items-center justify-center">
                       {isCompleted ? (
                         <span
-                          className="
-                            text-[6px]
-                            sm:text-[8px]
-                            font-semibold
-                            px-2
-                            sm:px-3
-                            py-1
-                            rounded-full
-                            bg-green-500/20
-                            text-green-400
-                            border
-                            border-green-500/30
-                            whitespace-nowrap
-                          "
+                          className={`
+                              text-[6px]
+                              sm:text-[8px]
+                              font-semibold
+                              px-2
+                              sm:px-3
+                              py-1
+                              rounded-full
+                              whitespace-nowrap
+                              ${
+                                theme === "dark"
+                                  ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                                  : "bg-green-100 text-green-700 border border-green-300"
+                              }
+                            `}
                         >
                           COMPLETED
                         </span>
                       ) : isCurrent ? (
                         <span
-                          className="
+                          className={`
                             text-[6px]
                             sm:text-[10px]
                             font-semibold
@@ -462,18 +516,19 @@ function ContentAccordion({
                             sm:px-5
                             py-1
                             rounded-full
-                            bg-orange-500/20
-                            text-orange-400
-                            border
-                            border-orange-500/30
                             whitespace-nowrap
-                          "
+                            ${
+                              theme === "dark"
+                                ? "bg-orange-500/20 text-orange-400 border border-orange-500/30"
+                                : "bg-orange-100 text-orange-700 border border-orange-300"
+                            }
+                          `}
                         >
                           NEXT
                         </span>
                       ) : (
                         <span
-                          className="
+                          className={`
                             text-[9px]
                             sm:text-[10px]
                             font-semibold
@@ -481,12 +536,13 @@ function ContentAccordion({
                             sm:px-3.5
                             py-1
                             rounded-full
-                            bg-zinc-800
-                            text-zinc-500
-                            border
-                            border-zinc-700
                             whitespace-nowrap
-                          "
+                            ${
+                              theme === "dark"
+                                ? "bg-zinc-800 text-zinc-500 border border-zinc-700"
+                                : "bg-slate-100 text-slate-600 border border-slate-300"
+                            }
+                          `}
                         >
                           LOCKED
                         </span>
