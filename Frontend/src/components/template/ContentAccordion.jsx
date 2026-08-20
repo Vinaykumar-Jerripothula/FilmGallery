@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import axios from "axios";
-import {
-  ChevronRight,
-  Circle,
-  CheckCircle2,
-  Lock,
-} from "lucide-react";
+import axiosInstance from "../../api/axiosInstance";
+import { ChevronRight, Circle, CheckCircle2, Lock } from "lucide-react";
 
 import { updateProgress } from "../../store/progressSlice";
 
@@ -74,26 +69,21 @@ function ContentAccordion({
     try {
       const userId = localStorage.getItem("userId");
 
-      await axios.post(
-        "https://filmgallery.onrender.com/api/progress/save",
-        {
-          userId: Number(userId),
-          contentId,
-          lastCompletedPosition: newCompleted,
-        }
-      );
+      await axiosInstance.post("/api/progress/save", {
+        userId: Number(userId),
+        contentId,
+        lastCompletedPosition: newCompleted,
+      });
 
       // Keep Redux synchronized with the database.
       dispatch(
         updateProgress({
           contentId,
           position: newCompleted,
-        })
+        }),
       );
 
-      console.log(
-        `Progress updated: ${contentId} = ${newCompleted}`
-      );
+      console.log(`Progress updated: ${contentId} = ${newCompleted}`);
     } catch (error) {
       console.error("Progress save failed:", error);
 
@@ -104,10 +94,7 @@ function ContentAccordion({
 
   const total = content.length;
 
-  const progress =
-    total === 0
-      ? 0
-      : Math.round((completed / total) * 100);
+  const progress = total === 0 ? 0 : Math.round((completed / total) * 100);
 
   /*
     Header and rows use exactly the same
@@ -229,16 +216,9 @@ function ContentAccordion({
           ===================================================== */}
 
       {open && (
-        <div
-          className={
-            showHeader
-              ? "border-t border-zinc-800"
-              : ""
-          }
-        >
+        <div className={showHeader ? "border-t border-zinc-800" : ""}>
           <div className="overflow-x-auto">
             <div className="min-w-[1100px]">
-
               {/* Table Header */}
               <div
                 className={`
@@ -262,9 +242,7 @@ function ContentAccordion({
                   S.No
                 </div>
 
-                <div className="flex items-center justify-center">
-                  Title
-                </div>
+                <div className="flex items-center justify-center">Title</div>
 
                 <div className="pr-3 flex items-center justify-center">
                   Type
@@ -312,23 +290,11 @@ function ContentAccordion({
                       transition-all
                       duration-300
 
-                      ${
-                        isCompleted
-                          ? "cursor-pointer hover:bg-[#151d2c]"
-                          : ""
-                      }
+                      ${isCompleted ? "cursor-pointer hover:bg-[#151d2c]" : ""}
 
-                      ${
-                        isCurrent
-                          ? "cursor-pointer hover:bg-[#1A2233]"
-                          : ""
-                      }
+                      ${isCurrent ? "cursor-pointer hover:bg-[#1A2233]" : ""}
 
-                      ${
-                        isLocked
-                          ? "cursor-not-allowed"
-                          : ""
-                      }
+                      ${isLocked ? "cursor-not-allowed" : ""}
                     `}
                   >
                     {/* S.No */}

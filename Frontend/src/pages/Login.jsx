@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import axios from "axios";
-
+import axiosInstance from "../api/axiosInstance";
 import LoadingScreen from "./Loading";
 import {
   clearProgress,
@@ -28,8 +27,8 @@ function Login() {
     try {
       setLoading(true);
 
-      const response = await axios.post(
-        "https://filmgallery.onrender.com/api/auth/login",
+      const response = await axiosInstance.post(
+        "/api/auth/login",
         {
           email,
           password,

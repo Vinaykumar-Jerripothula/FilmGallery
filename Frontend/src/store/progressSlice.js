@@ -1,14 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
-
-const API_URL = "https://filmgallery.onrender.com/api/progress";
-
+import axiosInstance from "../api/axiosInstance";
+const API_URL = "/api/progress";
 export const fetchProgress = createAsyncThunk(
   "progress/fetchProgress",
 
   async (userId, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${API_URL}/${userId}`);
+      const response = await axiosInstance.get(`${API_URL}/${userId}`);
 
       const progressMap = {};
 

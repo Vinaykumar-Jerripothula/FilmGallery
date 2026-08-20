@@ -1,33 +1,25 @@
 import { useRef } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Bold, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTheme } from "../../context/ThemeContext";
 
 import FranchiseCard from "./ContentCard";
 
-function HorizontalCarousel({
-  title,
-  items = [],
-}) {
+function HorizontalCarousel({ title, items = [] }) {
   const scrollRef = useRef(null);
-
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
   const scroll = (direction) => {
     const container = scrollRef.current;
 
     if (!container) return;
 
-    const firstCard = container.querySelector(
-      "[data-carousel-card]"
-    );
+    const firstCard = container.querySelector("[data-carousel-card]");
 
     if (!firstCard) return;
 
-    const cardWidth =
-      firstCard.getBoundingClientRect().width;
+    const cardWidth = firstCard.getBoundingClientRect().width;
 
-    const computedStyle =
-      window.getComputedStyle(container);
+    const computedStyle = window.getComputedStyle(container);
 
     const gap =
       parseFloat(computedStyle.columnGap) ||
@@ -37,10 +29,7 @@ function HorizontalCarousel({
     const amount = cardWidth + gap;
 
     container.scrollBy({
-      left:
-        direction === "left"
-          ? -amount
-          : amount,
+      left: direction === "left" ? -amount : amount,
       behavior: "smooth",
     });
   };
@@ -50,11 +39,12 @@ function HorizontalCarousel({
       {/* ================= TITLE ================= */}
       <div className="mb-4 sm:mb-5">
         <h2
-          className="
-            text-[14px]
-            sm:text-[17px]
-            text-orange-400
-          "
+          className={`
+              text-[14px]
+              font-semibold
+              sm:text-[17px]
+              ${isDark ? "text-orange-400" : " text-zinc-900"}
+            `}
         >
           {title}
         </h2>

@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import axios from "axios";
-
+import axiosInstance from "../api/axiosInstance";
 import Loading from "./Loading";
-import {
-  clearProgress,
-  fetchProgress,
-} from "../store/progressSlice";
+import { clearProgress, fetchProgress } from "../store/progressSlice";
 
 function Signup() {
   const navigate = useNavigate();
@@ -38,14 +34,11 @@ function Signup() {
       setLoading(true);
 
       // Step 1: Create account
-      const signupResponse = await axios.post(
-        "https://filmgallery.onrender.com/api/auth/signup",
-        {
-          username,
-          email,
-          password,
-        }
-      );
+      const signupResponse = await axiosInstance.post("/api/auth/signup", {
+        username,
+        email,
+        password,
+      });
 
       console.log("Signup Response:", signupResponse.data);
 
@@ -56,42 +49,35 @@ function Signup() {
       }
 
       // Step 2: Automatically login after successful signup
-      const loginResponse = await axios.post(
-        "https://filmgallery.onrender.com/api/auth/login",
-        {
-          email,
-          password,
-        }
-      );
+      const loginResponse = await axiosInstance.post("/api/auth/login", {
+        email,
+        password,
+      });
 
       console.log("Login Response:", loginResponse.data);
 
       if (loginResponse.data.message === "Login successful") {
         const userId = loginResponse.data.userId;
 
+        localStorage.setItem("accessToken", loginResponse.data.accessToken);
+
+        localStorage.setItem("refreshToken", loginResponse.data.refreshToken);
+
         // Step 3: Store logged-in user details
         localStorage.setItem("userId", userId);
-        localStorage.setItem(
-          "username",
-          loginResponse.data.username
-        );
-        localStorage.setItem(
-          "email",
-          loginResponse.data.email
-        );
+        localStorage.setItem("username", loginResponse.data.username);
+        localStorage.setItem("email", loginResponse.data.email);
 
         // Step 4: Remove any previous user's Redux progress
         dispatch(clearProgress());
 
         // Step 5: Fetch progress for the newly logged-in user
-        dispatch(fetchProgress(userId));
+        await dispatch(fetchProgress(userId));
 
         // Step 6: Go directly to Home
         navigate("/home");
       } else {
-        setError(
-          loginResponse.data.message || "Automatic login failed"
-        );
+        setError(loginResponse.data.message || "Automatic login failed");
         setLoading(false);
       }
     } catch (error) {
@@ -101,7 +87,7 @@ function Signup() {
         setError(
           typeof error.response.data === "string"
             ? error.response.data
-            : "Signup failed"
+            : "Signup failed",
         );
       } else {
         setError("Unable to connect to server");
@@ -118,7 +104,6 @@ function Signup() {
   return (
     <div className="min-h-screen bg-[#0B0F14] flex items-center justify-center px-4">
       <div className="w-full max-w-[300px] sm:max-w-[380px]">
-
         {/* Header */}
         <div className="mb-5 text-center">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
@@ -146,7 +131,6 @@ function Signup() {
           </h2>
 
           <form onSubmit={handleSignup} className="space-y-2">
-
             {/* Username */}
             <div>
               <label className="block text-xs sm:text-sm text-zinc-300 mb-1.5">
@@ -333,7 +317,6 @@ function Signup() {
         <p className="text-center text-[11px] text-zinc-500 mt-4">
           Track movies, franchises, universes and TV series in one place.
         </p>
-
       </div>
     </div>
   );

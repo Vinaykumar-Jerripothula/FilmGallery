@@ -202,7 +202,7 @@ function Navbar({ setSearchResult }) {
                         transition
                         ${
                           selectedIndex === index
-                            ? "bg-orange-500 text-white"
+                            ? "bg-zinc-500 text-white"
                             : `${currentTheme.text} ${
                                 theme === "dark"
                                   ? "hover:bg-zinc-800"
@@ -549,14 +549,14 @@ function Navbar({ setSearchResult }) {
           />
           {results.length > 0 && (
             <div
-              className="
+              className={`
                 mt-2
-                bg-[#111827]
+                ${currentTheme.card}
                 border
-                border-zinc-800
+                ${currentTheme.border}
                 rounded-xl
                 overflow-hidden
-              "
+              `}
             >
               {results.slice(0, 8).map((item, index) => (
                 <button
@@ -573,14 +573,13 @@ function Navbar({ setSearchResult }) {
                       text-left
                       px-4
                       py-3
-                      ${currentTheme.text}
                       transition
                       ${
                         selectedIndex === index
-                          ? "bg-orange-500 text-white"
-                          : isDark
-                            ? "hover:bg-zinc-800"
-                            : "hover:bg-zinc-100"
+                          ? "bg-zinc-500 text-white"
+                          : `${currentTheme.text} ${
+                              isDark ? "hover:bg-zinc-800" : "hover:bg-zinc-200"
+                            }`
                       }
                     `}
                 >
@@ -654,9 +653,7 @@ function Navbar({ setSearchResult }) {
               <button
                 className={`text-2xl ${currentTheme.text}`}
                 onClick={() => setShowMobileMenu(!showMobileMenu)}
-              >
-                
-              </button>
+              ></button>
               <button
                 className={`${currentTheme.text}`}
                 onClick={() => setShowMobileMenu(false)}
