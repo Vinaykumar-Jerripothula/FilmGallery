@@ -60,7 +60,7 @@ function Navbar({ setSearchResult }) {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 ${currentTheme.page} ${currentTheme.border} border-b`}
+        className={`sticky top-0 mb-1 z-50 ${currentTheme.page} ${currentTheme.border} border-b`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           {/* Left */}
