@@ -15,6 +15,7 @@ function Navbar({ setSearchResult }) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const { theme, toggleTheme } = useTheme();
   const currentTheme = colors[theme];
+  console.log("VINAY TEST 999");
   const isDark = theme === "dark";
   const username = localStorage.getItem("username") || "User";
   const navigate = useNavigate();
