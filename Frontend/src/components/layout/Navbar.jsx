@@ -441,23 +441,27 @@ function Navbar({ setSearchResult }) {
                   {/* Logout */}
                   <div className="p-4 border-t border-white/10">
                     <button
-                      className="
-                        w-full
+                      onClick={() => {
+                        localStorage.clear();
+                        navigate("/login");
+                      }}
+                      className={`
+                            w-full
+                            py-3
 
-                        py-3
+                            rounded-xl
 
-                        rounded-xl
-
-                        bg-red-500/10
-                        border
-                        border-red-500/20
-
-                        text-red-400
-
-                        hover:bg-red-500/20
-
-                        transition
-                      "
+                            ${
+                              isDark
+                                ? "bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500/20"
+                                : "bg-red-50 border border-red-200 text-red-600 hover:bg-red-100"
+                            }
+                          
+                            font-medium
+                          
+                            transition-all
+                            duration-300
+                          `}
                     >
                       Logout
                     </button>
