@@ -25,7 +25,7 @@ export const franchiseData = [
     contentId: "lordoftherings",
     image: lordofringsImage,
     total: 9,
-    route: "/lordoftherings",
+    route: "/franchise/lordoftherings",
   },
 
   {
@@ -34,7 +34,7 @@ export const franchiseData = [
     contentId: "johnwick",
     image: johnwickImage,
     total: 6,
-    route: "/johnwick",
+    route: "/franchise/johnwick",
   },
 
   {
@@ -43,7 +43,7 @@ export const franchiseData = [
     contentId: "harrypotter",
     image: harrypotterImage,
     total: 11,
-    route: "/harrypotter",
+    route: "/franchise/harrypotter",
   },
 
   {
@@ -52,7 +52,7 @@ export const franchiseData = [
     contentId: "piratesofthecaribbean",
     image: pofcImage,
     total: 5,
-    route: "/piratesofthecaribbean",
+    route: "/franchise/piratesofthecaribbean",
   },
 
   {
@@ -61,7 +61,7 @@ export const franchiseData = [
     contentId: "planetoftheapes",
     image: planeoftheapesImage,
     total: 10,
-    route: "/planetoftheapes",
+    route: "/franchise/planetoftheapes",
   },
 
   {
@@ -70,7 +70,7 @@ export const franchiseData = [
     contentId: "thehungergames",
     image: thehungergamesImage,
     total: 6,
-    route: "/thehungergames",
+    route: "/franchise/thehungergames",
   },
 
   {
@@ -79,7 +79,7 @@ export const franchiseData = [
     contentId: "jurassicpark",
     image: jurassicparkImage,
     total: 7,
-    route: "/jurassicpark",
+    route: "/franchise/jurassicpark",
   },
 
   {
@@ -88,7 +88,7 @@ export const franchiseData = [
     contentId: "alien",
     image: alienImage,
     total: 8,
-    route: "/alien",
+    route: "/franchise/alien",
   },
 
   {
@@ -97,7 +97,7 @@ export const franchiseData = [
     contentId: "missionimpossible",
     image: missionimpossibleImage,
     total: 8,
-    route: "/missionimpossible",
+    route: "/franchise/missionimpossible",
   },
 
   {
@@ -106,7 +106,7 @@ export const franchiseData = [
     contentId: "fastandfurious",
     image: fastandfuriousImage,
     total: 13,
-    route: "/fastandfurious",
+    route: "/franchise/fastandfurious",
   },
 
   {
@@ -115,7 +115,7 @@ export const franchiseData = [
     contentId: "jamesbond",
     image: jamesbondImage,
     total: 25,
-    route: "/jamesbond",
+    route: "/franchise/jamesbond",
   },
 
   {
@@ -124,7 +124,7 @@ export const franchiseData = [
     contentId: "transformers",
     image: transformersImage,
     total: 8,
-    route: "/transformers",
+    route: "/franchise/transformers",
   },
 
   {
@@ -133,7 +133,7 @@ export const franchiseData = [
     contentId: "predator",
     image: predatorImage,
     total: 9,
-    route: "/predator",
+    route: "/franchise/predator",
   },
 
   {
@@ -142,7 +142,7 @@ export const franchiseData = [
     contentId: "terminator",
     image: terminatorImage,
     total: 9,
-    route: "/terminator",
+    route: "/franchise/terminator",
   },
 
   {
@@ -151,7 +151,7 @@ export const franchiseData = [
     contentId: "startrek",
     image: startrekImage,
     total: 31,
-    route: "/startrek",
+    route: "/franchise/startrek",
   },
 
   {
@@ -160,7 +160,7 @@ export const franchiseData = [
     contentId: "rockycreed",
     image: rockycreedImage,
     total: 9,
-    route: "/rockycreed",
+    route: "/franchise/rockycreed",
   },
 
   {
@@ -169,14 +169,7 @@ export const franchiseData = [
     contentId: "madmax",
     image: madmaxImage,
     total: 5,
-    route: "/madmax",
+    route: "/franchise/madmax",
   },
-//   {
-//     id: 18,
-//     title: "Bad Boys",
-//     contentId: "badboys",
-//     image: badboysImage,
-//     total: 5,
-//     route: "/badboy",
-//   },
+
 ];

@@ -3,9 +3,12 @@ import { franchiseData } from "../data/Collection/franchiseData";
 import { universeData } from "../data/Collection/universeData";
 import { seriesData } from "../data/Collection/webseries";
 import { duologyData } from "../data/Collection/duologyData";
-import { triologyData } from "../data/Collection/triologyData";
+import { triologyData } from "../data/Collection/trilogyData";
 import { tetralogyData } from "../data/Collection/tetralogyData";
+import { directorsData } from "../data/people/directorsData";
+import { actorsData } from "../data/people/actorsData";
 
+import PeopleCarousel from "../components/template/PeopleCarousel";
 import { useState } from "react";
 
 import Navbar from "../components/layout/Navbar";
@@ -143,6 +146,12 @@ function Home() {
                 <HorizontalCarousel title="Trilogy" items={triologyData} />
 
                 <HorizontalCarousel title="Tetralogy" items={tetralogyData} />
+
+                <PeopleCarousel title="Directors" items={directorsData} />
+
+                <PeopleCarousel title="Actors" items={actorsData} />
+
+
               </>
             )}
 

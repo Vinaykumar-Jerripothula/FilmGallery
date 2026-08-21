@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { CheckCircle2 } from "lucide-react";
 
-function FranchiseCard({ title, contentId, image, total = 0, route }) {
+function ContentCard({ title, contentId, image, total = 0, route }) {
   const progressMap = useSelector((state) => state.progress.progressMap);
 
   const watched = progressMap[contentId] || 0;
@@ -200,4 +200,4 @@ function FranchiseCard({ title, contentId, image, total = 0, route }) {
   );
 }
 
-export default FranchiseCard;
+export default ContentCard;

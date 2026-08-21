@@ -12,7 +12,7 @@ export const triologyData = [
     contentId: "before",
     image: beforeImage,
     total: 3,
-    route: "/before",
+    route: "/triology/before",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const triologyData = [
     contentId: "chroniclesofnarnia",
     image: narniaImage,
     total: 3,
-    route: "/chroniclesofnarnia",
+    route: "/triology/chroniclesofnarnia",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export const triologyData = [
     contentId: "thedarkknight",
     image: thedarkknightImage,
     total: 3,
-    route: "/thedarkknight",
+    route: "/triology/thedarkknight",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ export const triologyData = [
     contentId: "equalizer",
     image: equalizerImage,
     total: 3,
-    route: "/equalizer",
+    route: "/triology/equalizer",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ export const triologyData = [
     contentId: "mazerunner",
     image: mazerunnerImage,
     total: 3,
-    route: "/mazerunner",
+    route: "/triology/mazerunner",
   },
   {
     id: 6,
@@ -52,6 +52,6 @@ export const triologyData = [
     contentId: "millennium",
     image: millenniumImage,
     total: 3,
-    route: "/millennium",
+    route: "/triology/millennium",
   },
 ];

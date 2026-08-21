@@ -14,7 +14,7 @@ export const seriesData = [
     contentId: "breakingbad",
     image: breakingbadImage,
     total: 12,
-    route: "/breakingbad",
+    route: "/webseries/breakingbad",
   },
 
   {
@@ -23,7 +23,7 @@ export const seriesData = [
     contentId: "gameofthrones",
     image: gameofthronesImage,
     total: 11,
-    route: "/gameofthrones",
+    route: "/webseries/gameofthrones",
   },
 
   {
@@ -32,7 +32,7 @@ export const seriesData = [
     contentId: "vikings",
     image: vikingsImage,
     total: 9,
-    route: "/vikings",
+    route: "/webseries/vikings",
   },
 
   {
@@ -41,7 +41,7 @@ export const seriesData = [
     contentId: "dark",
     image: darkImage,
     total: 3,
-    route: "/dark",
+    route: "/webseries/dark",
   },
 
   {
@@ -50,7 +50,7 @@ export const seriesData = [
     contentId: "from",
     image: fromImage,
     total: 4,
-    route: "/from",
+    route: "/webseries/from",
   },
 
   {
@@ -59,7 +59,7 @@ export const seriesData = [
     contentId: "strangerthings",
     image: strangerthingsImage,
     total: 5,
-    route: "/strangerthings",
+    route: "/webseries/strangerthings",
   },
 
   {
@@ -68,6 +68,6 @@ export const seriesData = [
     contentId: "peakyblinders",
     image: peakyblindersImage,
     total: 6,
-    route: "/peakyblinders",
+    route: "/webseries/peakyblinders",
   },
 ];

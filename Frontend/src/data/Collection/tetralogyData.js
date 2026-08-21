@@ -8,7 +8,7 @@ export const tetralogyData = [
     contentId: "badboys",
     image: badboysImage,
     total: 4,
-    route: "/badboys",
+    route: "/tetralogy/badboys",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const tetralogyData = [
     contentId: "expendables",
     image: expandablesImage,
     total: 4,
-    route: "/expendables",
+    route: "/tetralogy/expendables",
   },
   {
     id: 3,
@@ -24,6 +24,6 @@ export const tetralogyData = [
     contentId: "thematrix",
     image: matrixImage,
     total: 4,
-    route: "/thematrix",
+    route: "/tetralogy/thematrix",
   },
 ];

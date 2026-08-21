@@ -12,7 +12,7 @@ export const duologyData = [
     contentId: "bladerunner",
     image: bladerunnerImage,
     total: 2,
-    route: "/bladerunner",
+    route: "/duology/bladerunner",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const duologyData = [
     contentId: "jackreacher",
     image: jackreacherImage,
     total: 2,
-    route: "/jackreacher",
+    route: "/duology/jackreacher",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export const duologyData = [
     contentId: "killbill",
     image: killbillImage,
     total: 2,
-    route: "/killbill",
+    route: "/duology/killbill",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ export const duologyData = [
     contentId: "sherlockholmes",
     image: sherlockholmesImage,
     total: 2,
-    route: "/sherlockholmes",
+    route: "/duology/sherlockholmes",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ export const duologyData = [
     contentId: "theraid",
     image: theraidImage,
     total: 2,
-    route: "/theraid",
+    route: "/duology/theraid",
   },
   {
     id: 6,
@@ -52,6 +52,6 @@ export const duologyData = [
     contentId: "topgun",
     image: topgunImage,
     total: 2,
-    route: "/topgun",
+    route: "/duology/topgun",
   },
 ];

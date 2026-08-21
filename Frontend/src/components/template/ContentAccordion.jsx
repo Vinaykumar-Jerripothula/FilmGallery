@@ -5,17 +5,25 @@ import { ChevronRight, Circle, CheckCircle2, Lock } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
 import { colors } from "../../themes/colors";
 import { updateProgress } from "../../store/progressSlice";
+import {
+  markMovieWatched,
+  unmarkMovieWatched,
+} from "../../store/movieProgressSlice";
 
 function ContentAccordion({
   franchiseName,
   content,
   contentId,
   completedCount = 0,
+  watchedMovies = {},
   showHeader = true,
+  mode = "franchise",
 }) {
   const dispatch = useDispatch();
   const { theme } = useTheme();
   const currentTheme = colors[theme];
+  const isMovieMode = mode === "movie";
+  const isFranchiseMode = mode === "franchise";
   const [open, setOpen] = useState(!showHeader);
   const [completed, setCompleted] = useState(completedCount);
 
@@ -30,6 +38,31 @@ function ContentAccordion({
   }, [showHeader]);
 
   const handleToggle = async (index) => {
+    if (isMovieMode) {
+      try {
+        const userId = localStorage.getItem("userId");
+
+        const movieContentId = content[index].contentId;
+
+        const response = await axiosInstance.post(
+          "/api/movie-progress/toggle",
+          {
+            userId: Number(userId),
+            contentId: movieContentId,
+          },
+        );
+
+        if (response.data.watched) {
+          dispatch(markMovieWatched(movieContentId));
+        } else {
+          dispatch(unmarkMovieWatched(movieContentId));
+        }
+      } catch (error) {
+        console.error("Movie progress toggle failed:", error);
+      }
+
+      return;
+    }
     /*
       Rules:
 
@@ -71,9 +104,13 @@ function ContentAccordion({
     try {
       const userId = localStorage.getItem("userId");
 
+      const progressContentId = isMovieMode
+        ? content[index].contentId
+        : contentId;
+
       await axiosInstance.post("/api/progress/save", {
         userId: Number(userId),
-        contentId,
+        contentId: progressContentId,
         lastCompletedPosition: newCompleted,
       });
 
@@ -104,7 +141,6 @@ function ContentAccordion({
   */
   const gridColumns =
     "grid-cols-[80px_minmax(250px,1fr)_110px_90px_180px_180px_110px_130px]";
-
   return (
     <div
       className={`
@@ -295,9 +331,21 @@ function ContentAccordion({
 
               {/* Table Rows */}
               {content.map((movie, index) => {
-                const isCompleted = index < completed;
-                const isCurrent = index === completed;
-                const isLocked = index > completed;
+                let isCompleted;
+                let isCurrent;
+                let isLocked;
+                let isUnwatchedMovie = false;
+
+                if (isMovieMode) {
+                  isCompleted = !!watchedMovies[movie.contentId];
+                  isCurrent = false;
+                  isLocked = false;
+                  isUnwatchedMovie = !isCompleted;
+                } else {
+                  isCompleted = index < completed;
+                  isCurrent = index === completed;
+                  isLocked = index > completed;
+                }
 
                 return (
                   <div
@@ -342,26 +390,22 @@ function ContentAccordion({
                       {isCompleted ? (
                         <CheckCircle2
                           size={18}
-                          className="
-                            text-green-400
-                            flex-shrink-0
-                          "
+                          className="text-green-400 flex-shrink-0"
+                        />
+                      ) : isMovieMode ? (
+                        <Circle
+                          size={18}
+                          className="text-zinc-400 flex-shrink-0"
                         />
                       ) : isCurrent ? (
                         <Circle
                           size={18}
-                          className="
-                            text-orange-400
-                            flex-shrink-0
-                          "
+                          className="text-orange-400 flex-shrink-0"
                         />
                       ) : (
                         <Lock
                           size={16}
-                          className="
-                            text-zinc-600
-                            flex-shrink-0
-                          "
+                          className="text-zinc-600 flex-shrink-0"
                         />
                       )}
 
@@ -489,22 +533,41 @@ function ContentAccordion({
                       {isCompleted ? (
                         <span
                           className={`
-                              text-[6px]
-                              sm:text-[8px]
-                              font-semibold
-                              px-2
-                              sm:px-3
-                              py-1
-                              rounded-full
-                              whitespace-nowrap
-                              ${
-                                theme === "dark"
-                                  ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                                  : "bg-green-100 text-green-700 border border-green-300"
-                              }
-                            `}
+                            text-[11px]
+                            sm:text-[10px]
+                            font-semibold
+                            px-2
+                            sm:px-3
+                            py-1
+                            rounded-full
+                            whitespace-nowrap
+                            ${
+                              theme === "dark"
+                                ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                                : "bg-green-100 text-green-700 border border-green-300"
+                            }
+                          `}
                         >
                           WATCHED
+                        </span>
+                      ) : isMovieMode ? (
+                        <span
+                          className={`
+                            text-[11px]
+                            sm:text-[10px]
+                            font-semibold
+                            px-3
+                            py-1
+                            rounded-full
+                            whitespace-nowrap
+                            ${
+                              theme === "dark"
+                                ? "bg-zinc-800 text-zinc-400 border border-zinc-700"
+                                : "bg-slate-100 text-slate-600 border border-slate-300"
+                            }
+                          `}
+                        >
+                          NOT YET
                         </span>
                       ) : isCurrent ? (
                         <span

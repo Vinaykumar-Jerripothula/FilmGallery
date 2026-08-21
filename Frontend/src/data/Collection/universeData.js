@@ -13,7 +13,7 @@ export const universeData = [
     contentId: "mcu",
     image: mcuImage,
     total: 80,
-    route: "/mcu",
+    route: "/universe/mcu",
   },
 
   {
@@ -22,7 +22,7 @@ export const universeData = [
     contentId: "dceu",
     image: dceuImage,
     total: 16,
-    route: "/dceu",
+    route: "/universe/dceu",
   },
 
   {
@@ -31,7 +31,7 @@ export const universeData = [
     contentId: "dcu",
     image: dcuImage,
     total: 3,
-    route: "/dcu",
+    route: "/universe/dcu",
   },
 
   {
@@ -40,7 +40,7 @@ export const universeData = [
     contentId: "starwars",
     image: starWarsImage,
     total: 41,
-    route: "/starwars",
+    route: "/universe/starwars",
   },
 
   {
@@ -49,7 +49,7 @@ export const universeData = [
     contentId: "theconjuring",
     image: theConjuringImage,
     total: 9,
-    route: "/theconjuring",
+    route: "/universe/theconjuring",
   },
 
   {
@@ -58,7 +58,7 @@ export const universeData = [
     contentId: "monsterverse",
     image: monsterVerseImage,
     total: 8,
-    route: "/monsterverse",
+    route: "/universe/monsterverse",
   },
 
   {
@@ -67,6 +67,6 @@ export const universeData = [
     contentId: "xmen",
     image: xmenImage,
     total: 14,
-    route: "/xmen",
+    route: "/universe/xmen",
   },
 ];

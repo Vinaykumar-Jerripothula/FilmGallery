@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import ContentPage from "./components/template/ContentPage";
 
 import { fetchProgress } from "./store/progressSlice";
+import { fetchMovieProgress } from "./store/movieProgressSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
     }
 
     dispatch(fetchProgress(userId));
+    dispatch(fetchMovieProgress(userId));
   }, [dispatch]);
 
   return (
@@ -37,15 +39,11 @@ function App() {
             )
           }
         />
-
         <Route path="/signup" element={<Signup />} />
-
         <Route path="/login" element={<Login />} />
-
         <Route path="/home" element={<Home />} />
-
         {/* Dynamic Content Route */}
-        <Route path="/:slug" element={<ContentPage />} />
+        <Route path="/:category/:slug" element={<ContentPage />} />{" "}
       </Routes>
     </BrowserRouter>
   );

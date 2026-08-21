@@ -90,13 +90,13 @@ import sherlockholmesImage from "../../images/duology/sherlockholmes/sherlockhol
 import theraidImage from "../../images/duology/theraid/theraidImage.jpeg";
 import topgunImage from "../../images/duology/topgun/topgunImage.jpeg";
 
-// triology - Data 
-import { beforeTriologyData } from "../triology/beforeTrilogyData";
-import { chroniclesOfNarniaData } from "../triology/chroniclesOfNarniaData";
-import { equalizerData } from "../triology/equalizerData";
-import { mazeRunnerData } from "../triology/mazeRunnerData";
-import { millenniumTrilogyData } from "../triology/millenniumTrilogyData";
-import { darkKnightTrilogyData } from "../triology/theDarkKnightData";
+// trilogy - Data 
+import { beforeTriologyData } from "../trilogy/beforeTrilogyData";
+import { chroniclesOfNarniaData } from "../trilogy/chroniclesOfNarniaData";
+import { equalizerData } from "../trilogy/equalizerData";
+import { mazeRunnerData } from "../trilogy/mazeRunnerData";
+import { millenniumTrilogyData } from "../trilogy/millenniumTrilogyData";
+import { darkKnightTrilogyData } from "../trilogy/theDarkKnightData";
 
 // triology - Image
 import beforeImage from "../../images/triology/before/beforeImage.jpeg";

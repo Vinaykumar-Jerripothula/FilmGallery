@@ -6,21 +6,51 @@ import ContentAccordion from "./ContentAccordion";
 import { contentRegistry } from "../../data/Collection/contentRegistry";
 import { useTheme } from "../../context/ThemeContext";
 import { colors } from "../../themes/colors";
-import { useEffect } from "react";
 import Navbar from "../layout/Navbar";
+import { enrichedPeopleData } from "../../utils/enrichPeopleData";
 
 function FranchisePage() {
-  const { slug } = useParams();
+  const { category, slug } = useParams();
+  const normalizedSlug = slug.replaceAll("-", "");
+
   const { theme } = useTheme();
   const currentTheme = colors[theme];
-  useEffect(() => {
-    console.log("CONTENT PAGE RERENDERED:", theme);
-  }, [theme]);
-  const franchise = contentRegistry[slug];
+  
+  let contentItem = null;
+
+  if (category === "actor") {
+    const actor = enrichedPeopleData.actors[normalizedSlug];
+
+    if (actor) {
+      contentItem = {
+        title: actor.name,
+        subtitle: "Actor Filmography",
+        image: actor.image,
+        contentId: normalizedSlug,
+        content: actor.movies,
+      };
+    }
+  } else if (category === "director") {
+    const director = enrichedPeopleData.directors[normalizedSlug];
+
+    if (director) {
+      contentItem = {
+        title: director.name,
+        subtitle: "Director Filmography",
+        image: director.image,
+        contentId: normalizedSlug,
+        content: director.movies,
+      };
+    }
+  } else {
+    contentItem = contentRegistry[slug];
+  }
 
   const progressMap = useSelector((state) => state.progress.progressMap);
-
-  if (!franchise) {
+  const watchedMovies = useSelector(
+    (state) => state.movieProgress.watchedMovies,
+  );
+  if (!contentItem) {
     return (
       <div className="min-h-screen bg-[#0B0F14] text-white flex items-center justify-center">
         Content not found
@@ -28,9 +58,13 @@ function FranchisePage() {
     );
   }
 
-  const watched = progressMap[franchise.contentId] || 0;
+  const isMoviePage = category === "actor" || category === "director";
 
-  const total = franchise.content.length || 0;
+  const watched = isMoviePage
+    ? contentItem.content.filter((movie) => watchedMovies[movie.contentId])
+        .length
+    : progressMap[contentItem.contentId] || 0;
+  const total = contentItem.content.length || 0;
 
   const progress = total > 0 ? Math.round((watched / total) * 100) : 0;
 
@@ -42,27 +76,30 @@ function FranchisePage() {
       ${currentTheme.text}
     `}
     >
-      <Navbar enableSearch={false} />
-
-      {" "}
-
-    <div className="pt-5 pb-5 sm:pt-5 pb-5">
-      <ContentHero
-        title={franchise.title}
-        subtitle={franchise.subtitle}
-        image={franchise.image}
-        watched={watched}
-        total={total}
-        progress={progress}
-      />
-      <ContentAccordion
-        franchiseName={franchise.title}
-        content={franchise.content}
-        contentId={franchise.contentId}
-        completedCount={watched}
-        showHeader={false}
-      />
-    </div>
+      <Navbar enableSearch={false} />{" "}
+      <div className="pt-5 pb-5 sm:pt-5 pb-5">
+        <ContentHero
+          title={contentItem.title}
+          subtitle={contentItem.subtitle}
+          image={contentItem.image}
+          watched={watched}
+          total={total}
+          progress={progress}
+        />
+        <ContentAccordion
+          franchiseName={contentItem.title}
+          content={contentItem.content}
+          contentId={contentItem.contentId}
+          completedCount={watched}
+          watchedMovies={watchedMovies}
+          showHeader={false}
+          mode={
+            category === "actor" || category === "director"
+              ? "movie"
+              : "franchise"
+          }
+        />
+      </div>
     </div>
   );
 }
