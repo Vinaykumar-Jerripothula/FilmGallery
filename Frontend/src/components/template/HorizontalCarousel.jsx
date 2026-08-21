@@ -35,7 +35,7 @@ function HorizontalCarousel({ title, items = [] }) {
   };
 
   return (
-    <section className="mb-10 sm:mb-12">
+    <section className="mb-8 sm:mb-8">
       {/* ================= TITLE ================= */}
       <div className="mb-4 sm:mb-5">
         <h2

@@ -13,9 +13,31 @@ import { contentRegistry } from "../data/Collection/contentRegistry";
 import { allCollectionsData } from "../data/Collection/allCollectionsData";
 import { useTheme } from "../context/ThemeContext";
 import { colors } from "../themes/colors";
+import CardGrid from "../components/template/CardGrid";
+import { useSearchParams } from "react-router-dom";
 
 function Home() {
   const [searchResult, setSearchResult] = useState(null);
+  const [searchParams] = useSearchParams();
+  const [selectedSection, setSelectedSection] = useState(
+    searchParams.get("section") || "home",
+  );
+  const sectionData = {
+    universes: {
+      title: "All Universes",
+      items: universeData,
+    },
+
+    franchises: {
+      title: "All Franchises",
+      items: franchiseData,
+    },
+
+    series: {
+      title: "All Web Series",
+      items: seriesData,
+    },
+  };
   const { theme } = useTheme();
   const currentTheme = colors[theme];
   const searchItems = searchResult
@@ -28,7 +50,10 @@ function Home() {
 
   return (
     <div className={`min-h-screen ${currentTheme.page} ${currentTheme.text}`}>
-      <Navbar setSearchResult={setSearchResult} />
+      <Navbar
+        setSearchResult={setSearchResult}
+        setSelectedSection={setSelectedSection}
+      />
 
       {/* Page Header */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
@@ -99,22 +124,55 @@ function Home() {
           </>
         ) : (
           <>
-            {/* ================= CINEMATIC UNIVERSE ================= */}
-            <HorizontalCarousel
-              title="Cinematic Universe"
-              items={universeData}
-            />
+            {selectedSection === "home" && (
+              <>
+                <HorizontalCarousel
+                  title="Cinematic Universe"
+                  items={universeData}
+                />
 
-            {/* ================= FRANCHISES ================= */}
-            <HorizontalCarousel title="Franchises" items={franchiseData} />
+                <HorizontalCarousel title="Franchises" items={franchiseData} />
 
-            <HorizontalCarousel title="TV / Web Series" items={seriesData} />
+                <HorizontalCarousel
+                  title="TV / Web Series"
+                  items={seriesData}
+                />
 
-            <HorizontalCarousel title="Duology" items={duologyData} />
+                <HorizontalCarousel title="Duology" items={duologyData} />
 
-            <HorizontalCarousel title="Trilogy" items={triologyData} />
+                <HorizontalCarousel title="Trilogy" items={triologyData} />
 
-            <HorizontalCarousel title="Tetralogy" items={tetralogyData} />
+                <HorizontalCarousel title="Tetralogy" items={tetralogyData} />
+              </>
+            )}
+
+            {selectedSection !== "home" && (
+              <>
+                <CardGrid
+                  title={sectionData[selectedSection].title}
+                  items={sectionData[selectedSection].items}
+                />
+
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={() => setSelectedSection("home")}
+                    className="
+                      px-4
+                      py-1
+                      sm:h-10
+                      rounded-lg
+                      bg-orange-500
+                      hover:bg-orange-600
+                      text-white
+                      font-medium
+                      transition-colors
+                    "
+                  >
+                    Back to Home
+                  </button>
+                </div>
+              </>
+            )}
           </>
         )}
       </div>

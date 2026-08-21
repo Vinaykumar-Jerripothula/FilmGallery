@@ -46,7 +46,7 @@ function FranchisePage() {
 
       {" "}
 
-    <div className="pt-4 sm:pt-5">
+    <div className="pt-5 pb-5 sm:pt-5 pb-5">
       <ContentHero
         title={franchise.title}
         subtitle={franchise.subtitle}

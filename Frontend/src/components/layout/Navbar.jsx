@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Search, X } from "lucide-react";
 import { searchData } from "../../data/search/searchData";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import { colors } from "../../themes/colors";
+import { useLocation } from "react-router-dom";
 
-function Navbar({ setSearchResult, enableSearch = true }) {
+function Navbar({ setSearchResult, setSelectedSection, enableSearch = true }) {
   const [showProfile, setShowProfile] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -18,10 +18,8 @@ function Navbar({ setSearchResult, enableSearch = true }) {
   const isDark = theme === "dark";
   const username = localStorage.getItem("username") || "User";
   const navigate = useNavigate();
+  const location = useLocation();
 
-  useEffect(() => {
-    console.log("Selected:", selectedIndex);
-  }, [selectedIndex]);
 
   const handleSearch = () => {
     if (!search.trim()) return;
@@ -120,7 +118,6 @@ function Navbar({ setSearchResult, enableSearch = true }) {
                         setResults([]);
                         return;
                       }
-                      console.log("Typed:", value);
                       const matches = searchData.filter((item) =>
                         item.title.toLowerCase().includes(value.toLowerCase()),
                       );
@@ -225,11 +222,20 @@ function Navbar({ setSearchResult, enableSearch = true }) {
               </div>
             )}
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               <button
+                onClick={() => {
+                  if (location.pathname !== "/home") {
+                    navigate("/home?section=universes");
+                  } else {
+                    setSelectedSection("universes");
+                  }
+                }}
                 className={`
                   ${isDark ? "text-zinc-300" : "text-zinc-700"}
                   hover:text-orange-400
+                  text-[13.5px]
+                  font-semibold
                   transition
                 `}
               >
@@ -237,23 +243,53 @@ function Navbar({ setSearchResult, enableSearch = true }) {
               </button>
 
               <button
+                onClick={() => {
+                  if (location.pathname !== "/home") {
+                    navigate("/home?section=franchises");
+                  } else if (setSelectedSection) {
+                    setSelectedSection("franchises");
+                  }
+                }}
+                className={`
+                    ${isDark ? "text-zinc-300" : "text-zinc-700"}
+                  hover:text-orange-400
+                    text-[13.5px]
+                    font-semibold
+                    transition
+                  `}
+              >
+                Franchises
+              </button>
+
+              <button
+                onClick={() => {
+                  if (location.pathname !== "/home") {
+                    navigate("/home?section=series");
+                  } else if (setSelectedSection) {
+                    setSelectedSection("series");
+                  }
+                }}
                 className={`
                   ${isDark ? "text-zinc-300" : "text-zinc-700"}
                   hover:text-orange-400
+                  text-[13.5px]
+                  font-semibold
                   transition
                 `}
               >
-                Franchises
+                Web Series
               </button>
 
               <button
                 className={`
                   ${isDark ? "text-zinc-300" : "text-zinc-700"}
                   hover:text-orange-400
+                  text-[13.5px]
+                  font-semibold
                   transition
                 `}
               >
-                Movies
+                Top 250 Movies
               </button>
 
               <button
@@ -266,15 +302,14 @@ function Navbar({ setSearchResult, enableSearch = true }) {
             </div>
 
             {/* Mobile Search */}
-          {enableSearch && (
-          
-            <button
-              onClick={() => setShowSearch(!showSearch)}
-              className="md:hidden px-1 pt-1 text-zinc-400 hover:text-orange-400 transition"
-            >
-              {showSearch ? <X size={22} /> : <Search size={22} />}
-            </button>
-          )}
+            {enableSearch && (
+              <button
+                onClick={() => setShowSearch(!showSearch)}
+                className="md:hidden px-1 pt-1 text-zinc-400 hover:text-orange-400 transition"
+              >
+                {showSearch ? <X size={22} /> : <Search size={22} />}
+              </button>
+            )}
 
             {/* Avatar */}
             <div className="relative">
@@ -466,7 +501,7 @@ function Navbar({ setSearchResult, enableSearch = true }) {
                             ${
                               isDark
                                 ? "bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500/20"
-                                : "bg-red-50 border border-red-200 text-red-600 hover:bg-red-600"
+                                : "bg-red-50 border border-red-200 text-red-600 hover:bg-red-600 hover:text-white"
                             }
                           
                             font-medium
@@ -481,7 +516,7 @@ function Navbar({ setSearchResult, enableSearch = true }) {
                 </div>
               )}
             </div>
-            </div>
+          </div>
         </div>
       </nav>
 
@@ -681,28 +716,33 @@ function Navbar({ setSearchResult, enableSearch = true }) {
             {/* Navigation */}
             <div className="pt-5">
               <button
+                onClick={() => {
+                  if (location.pathname !== "/home") {
+                    navigate("/home?section=universes");
+                  } else if (setSelectedSection) {
+                    setSelectedSection("universes");
+                  }
+
+                  setShowMobileMenu(false);
+                }}
                 className={`
                   group
-                      relative
-                      w-full
-                      px-6
-                      py-4
-
-                      text-left
-
-                      text-[15px]
-                      font-medium
-                      tracking-wide
-
-                      ${
-                        isDark
-                          ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
-                          : "text-zinc-700 hover:text-black hover:bg-zinc-100"
-                      }
-
-                     transition-all
-                     duration-300
-                  `}
+                  relative
+                  w-full
+                  px-6
+                  py-4
+                  text-left
+                  text-[15px]
+                  font-medium
+                  tracking-wide
+                  ${
+                    isDark
+                      ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
+                      : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+                  }
+                  transition-all
+                  duration-300
+                `}
               >
                 <span
                   className="
@@ -729,6 +769,15 @@ function Navbar({ setSearchResult, enableSearch = true }) {
               </button>
 
               <button
+                onClick={() => {
+                  if (location.pathname !== "/home") {
+                    navigate("/home?section=franchises");
+                  } else if (setSelectedSection) {
+                    setSelectedSection("franchises");
+                  }
+
+                  setShowMobileMenu(false);
+                }}
                 className={`
                     group
                     relative
@@ -777,54 +826,15 @@ function Navbar({ setSearchResult, enableSearch = true }) {
               </button>
 
               <button
-                className={`
-                  group
-                  relative
-                  w-full
-                  px-6
-                  py-4
-                                
-                  text-left
-                                
-                  text-[15px]
-                  font-medium
-                  tracking-wide
-                                
-                  ${
-                    isDark
-                      ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
-                      : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+                onClick={() => {
+                  if (location.pathname !== "/home") {
+                    navigate("/home?section=series");
+                  } else if (setSelectedSection) {
+                    setSelectedSection("series");
                   }
-                
-                  transition-all
-                  duration-300
-                `}
-              >
-                <span
-                  className="
-              absolute
-              left-0
-              top-1/2
-              -translate-y-1/2
 
-              h-6
-              w-[2px]
-
-              bg-orange-500
-
-              opacity-0
-              group-hover:opacity-100
-
-              transition-all
-            "
-                />
-
-                <span className="group-hover:translate-x-1 transition-transform duration-300">
-                  Movies
-                </span>
-              </button>
-
-              <button
+                  setShowMobileMenu(false);
+                }}
                 className={`
                   group
                   relative
@@ -869,6 +879,54 @@ function Navbar({ setSearchResult, enableSearch = true }) {
 
                 <span className="group-hover:translate-x-1 transition-transform duration-300">
                   Series
+                </span>
+              </button>
+
+              <button
+                className={`
+                  group
+                  relative
+                  w-full
+                  px-6
+                  py-4
+                                
+                  text-left
+                                
+                  text-[15px]
+                  font-medium
+                  tracking-wide
+                                
+                  ${
+                    isDark
+                      ? "text-zinc-400 hover:text-white hover:bg-white/[0.03]"
+                      : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+                  }
+                
+                  transition-all
+                  duration-300
+                `}
+              >
+                <span
+                  className="
+              absolute
+              left-0
+              top-1/2
+              -translate-y-1/2
+
+              h-6
+              w-[2px]
+
+              bg-orange-500
+
+              opacity-0
+              group-hover:opacity-100
+
+              transition-all
+            "
+                />
+
+                <span className="group-hover:translate-x-1 transition-transform duration-300">
+                  Movies
                 </span>
               </button>
             </div>

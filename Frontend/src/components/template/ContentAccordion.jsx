@@ -504,7 +504,7 @@ function ContentAccordion({
                               }
                             `}
                         >
-                          COMPLETED
+                          WATCHED
                         </span>
                       ) : isCurrent ? (
                         <span
