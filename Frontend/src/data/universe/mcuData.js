@@ -1,5 +1,7 @@
+import { enrichCollectionData } from "../../utils/enrichCollectionData";
+import { generateContentId } from "../../utils/generateContentId";
 
-export const mcuData = [
+const rawMcuData = [
   {
     id: 1,
     watchOrder: 1,
@@ -1146,3 +1148,10 @@ export const mcuData = [
     collection: "N/A",
   },
 ];
+
+console.log("movie item mcu " + rawMcuData[7]); // any Iron Man index
+
+export const mcuData = rawMcuData.map((movie) => ({
+  ...movie,
+  contentId: generateContentId(movie),
+}));

@@ -1,9 +1,21 @@
+// Hollywood Directos - Images
+import chrisnolanImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/chrisnolanImage.jpeg";
+import stevenspielbergImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/stevenspielbergImage.jpeg";
+import martinscorseseImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/martinscorseseImage.jpeg";
+import jamescameronImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/jamescameronImage.jpeg";
+import quentintarantinoImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/quentintarantinoImage.jpeg";
+import ridleyscottImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/ridleyscottImage.jpeg";
+import peterjacksonImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/peterjacksonImage.jpeg";
+import denisvilleneuveImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/denisvilleneuveImage.jpeg";
+import davidfincherImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/davidfincherImage.jpeg";
+import francisfordcoppolaImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/francisfordcoppolaImage.jpeg";
+import jonfavreauImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/jonfavreauImage.jpeg"
+
 export const directorsData = [
   {
     id: 1,
     name: "Christopher Nolan",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/9/95/Christopher_Nolan_Cannes_2018.jpg",
+    image: chrisnolanImage,
     slug: "christophernolan",
     route: "/director/christophernolan",
   },
@@ -11,8 +23,7 @@ export const directorsData = [
   {
     id: 2,
     name: "Steven Spielberg",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7a/Steven_Spielberg_by_Gage_Skidmore.jpg",
+    image: stevenspielbergImage,
     slug: "stevenspielberg",
     route: "/director/stevenspielberg",
   },
@@ -20,8 +31,7 @@ export const directorsData = [
   {
     id: 3,
     name: "Martin Scorsese",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/76/Martin_Scorsese_Cannes_2018.jpg",
+    image: martinscorseseImage,
     slug: "martinscorsese",
     route: "/director/martinscorsese",
   },
@@ -29,8 +39,7 @@ export const directorsData = [
   {
     id: 4,
     name: "James Cameron",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/9/9d/James_Cameron_by_Gage_Skidmore.jpg",
+    image: jamescameronImage,
     slug: "jamescameron",
     route: "/director/jamescameron",
   },
@@ -38,8 +47,7 @@ export const directorsData = [
   {
     id: 5,
     name: "Quentin Tarantino",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/0/0b/Quentin_Tarantino_2015.jpg",
+    image: quentintarantinoImage,
     slug: "quentintarantino",
     route: "/director/quentintarantino",
   },
@@ -47,8 +55,7 @@ export const directorsData = [
   {
     id: 6,
     name: "Ridley Scott",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/6/63/Ridley_Scott_by_Gage_Skidmore.jpg",
+    image: ridleyscottImage,
     slug: "ridleyscott",
     route: "/director/ridleyscott",
   },
@@ -56,8 +63,7 @@ export const directorsData = [
   {
     id: 7,
     name: "Peter Jackson",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4f/Peter_Jackson_SDCC_2014.jpg",
+    image: peterjacksonImage,
     slug: "peterjackson",
     route: "/director/peterjackson",
   },
@@ -65,8 +71,7 @@ export const directorsData = [
   {
     id: 8,
     name: "Denis Villeneuve",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/70/Denis_Villeneuve_2017.jpg",
+    image: denisvilleneuveImage,
     slug: "denisvilleneuve",
     route: "/director/denisvilleneuve",
   },
@@ -74,8 +79,7 @@ export const directorsData = [
   {
     id: 9,
     name: "David Fincher",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/4d/David_Fincher_2014.jpg",
+    image: davidfincherImage,
     slug: "davidfincher",
     route: "/director/davidfincher",
   },
@@ -83,9 +87,16 @@ export const directorsData = [
   {
     id: 10,
     name: "Francis Ford Coppola",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/e8/Francis_Ford_Coppola_2019.jpg",
+    image: francisfordcoppolaImage,
     slug: "francisfordcoppola",
     route: "/director/francisfordcoppola",
+  },
+  
+  {
+    id: 11,
+    name: "Jon Favreau",
+    image: jonfavreauImage,
+    slug: "jonfavreau",
+    route: "/director/jonfavreau",
   },
 ];

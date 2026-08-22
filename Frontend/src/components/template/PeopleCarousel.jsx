@@ -3,12 +3,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import PersonCard from "./PersonCard";
 import { useTheme } from "../../context/ThemeContext";
 import { colors } from "../../themes/colors";
+import { useNavigate } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-function PeopleCarousel({ title, items = [] }) {
+function PeopleCarousel({ title, items = [], type, onShowMore }) {
   const scrollRef = useRef(null);
   const { theme } = useTheme();
   const currentTheme = colors[theme];
   const isDark = theme === "dark";
+  const navigate = useNavigate();
 
   const scroll = (direction) => {
     const container = scrollRef.current;
@@ -77,14 +80,74 @@ function PeopleCarousel({ title, items = [] }) {
             pb-2
           "
         >
-          {items.map((person) => (
+          {items.slice(0, 10).map((person) => (
             <PersonCard
               key={person.id}
               name={person.name}
               image={person.image}
               route={person.route}
+              slug={person.slug}
+              type={type}
             />
           ))}
+
+          <div
+            onClick={onShowMore}
+            className="
+              cursor-pointer
+              flex-shrink-0
+              w-[120px]
+              sm:w-[140px]
+            "
+          >
+            <div
+              className="
+                w-full
+                h-[180px]
+                sm:h-[210px]
+
+                rounded-xl
+                border
+                border-zinc-700
+
+                flex flex-col
+                items-center
+                justify-center
+
+                cursor-pointer
+                group
+
+                transition-all
+                duration-300
+
+                hover:bg-white/5
+                hover:border-zinc-500
+              "
+            >
+              <ArrowRight
+                size={42}
+                strokeWidth={1.5}
+                className="
+                  text-zinc-500
+                  group-hover:text-zinc-300
+                  transition-colors
+                "
+              />
+
+              <span
+                className="
+                  mt-2
+                  text-sm
+                  font-semibold
+                  text-zinc-400
+                  group-hover:text-white
+                  transition-colors
+                "
+              >
+                Show More
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -20,10 +20,8 @@ function Navbar({ setSearchResult, setSelectedSection, enableSearch = true }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-
   const handleSearch = () => {
     if (!search.trim()) return;
-
     const query = search.toLowerCase().trim();
 
     const result = searchData.find((item) =>
@@ -191,7 +189,7 @@ function Navbar({ setSearchResult, setSelectedSection, enableSearch = true }) {
                   >
                     {results.slice(0, 8).map((item, index) => (
                       <button
-                        key={item.title}
+                        key={`${item.title}-${item.type}-${index}`}
                         onClick={() => {
                           setSearchResult(item);
                           setResults([]);
@@ -611,7 +609,7 @@ function Navbar({ setSearchResult, setSelectedSection, enableSearch = true }) {
             >
               {results.slice(0, 8).map((item, index) => (
                 <button
-                  key={item.title}
+                  key={`${item.title}-${item.type}-${index}`}
                   onClick={() => {
                     setSearchResult(item);
 

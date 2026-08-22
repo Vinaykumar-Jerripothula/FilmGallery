@@ -7,6 +7,7 @@ import { triologyData } from "../data/Collection/trilogyData";
 import { tetralogyData } from "../data/Collection/tetralogyData";
 import { directorsData } from "../data/people/directorsData";
 import { actorsData } from "../data/people/actorsData";
+import { peopleData } from "../data/people/peopleData";
 
 import PeopleCarousel from "../components/template/PeopleCarousel";
 import { useState } from "react";
@@ -18,6 +19,9 @@ import { useTheme } from "../context/ThemeContext";
 import { colors } from "../themes/colors";
 import CardGrid from "../components/template/CardGrid";
 import { useSearchParams } from "react-router-dom";
+import PersonCard from "../components/template/PersonCard";
+import { mcuData } from "../data/universe/mcuData";
+import { allContentItems } from "../data/Collection/allContentItems";
 
 function Home() {
   const [searchResult, setSearchResult] = useState(null);
@@ -25,6 +29,10 @@ function Home() {
   const [selectedSection, setSelectedSection] = useState(
     searchParams.get("section") || "home",
   );
+
+  console.log(mcuData[1]);
+
+  console.log(mcuData.slice(0, 3));
   const sectionData = {
     universes: {
       title: "All Universes",
@@ -40,6 +48,16 @@ function Home() {
       title: "All Web Series",
       items: seriesData,
     },
+
+    directors: {
+      title: "All Directors",
+      items: directorsData,
+    },
+
+    actors: {
+      title: "All Actors",
+      items: actorsData,
+    },
   };
   const { theme } = useTheme();
   const currentTheme = colors[theme];
@@ -48,8 +66,65 @@ function Home() {
         (item) => item.contentId === searchResult.contentId,
       )
     : [];
+  const matchingActors =
+    searchResult?.type === "movie"
+      ? actorsData.filter((actorCard) => {
+          const actor = peopleData.actors[actorCard.slug];
+
+          return actor?.movies.some(
+            (movie) =>
+              movie.title.toLowerCase() === searchResult.title.toLowerCase(),
+          );
+        })
+      : [];
+
+  const matchingDirectors =
+    searchResult?.type === "movie"
+      ? directorsData.filter((directorCard) => {
+          const director = peopleData.directors[directorCard.slug];
+
+          return director?.movies.some(
+            (movie) =>
+              movie.title.toLowerCase() === searchResult.title.toLowerCase(),
+          );
+        })
+      : [];
 
   const isSearchFound = searchItems.length > 0;
+  const actorMatch =
+    searchResult?.type === "actor"
+      ? actorsData.find(
+          (actor) =>
+            actor.name.toLowerCase() === searchResult.title.toLowerCase(),
+        )
+      : null;
+  const directorMatch =
+    searchResult?.type === "director"
+      ? directorsData.find(
+          (director) =>
+            director.name.toLowerCase() === searchResult.title.toLowerCase(),
+        )
+      : null;
+
+  console.log("directorMatch", directorMatch);
+  const movieMatch =
+    searchResult?.type === "movie"
+      ? allContentItems.find(
+          (item) => item.contentId === searchResult.contentId,
+        )
+      : null;
+
+  const collectionItems = movieMatch
+    ? allCollectionsData.filter(
+        (item) => item.contentId === movieMatch.collectionId,
+      )
+    : [];
+
+  console.log("movieMatch", movieMatch);
+  console.log("collectionItems", collectionItems);
+
+  console.log("searchResult", searchResult);
+  console.log("collectionItems", collectionItems);
 
   return (
     <div className={`min-h-screen ${currentTheme.page} ${currentTheme.text}`}>
@@ -73,17 +148,124 @@ function Home() {
         {/* ================= SEARCH MODE ================= */}
         {searchResult ? (
           <>
-            {isSearchFound ? (
+            {searchResult.type === "movie" ? (
               <>
-                <HorizontalCarousel title="Search Result" items={searchItems} />
+                <div className="mb-8 border-l-4 border-orange-500 pl-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                    Movie
+                  </p>
 
-                {/* Back Button Centered */}
+                  <h1 className="sm:text-2xl text-[17px] font-bold">
+                    {searchResult.title}
+                  </h1>
+                </div>
+
+                {/* Universe / Franchise */}
+                {collectionItems.length > 0 && (
+                  <div className="mb-10">
+                    <HorizontalCarousel
+                      title="Cinematic Universe"
+                      items={collectionItems}
+                    />
+                  </div>
+                )}
+
+                {/* Actor + Director */}
+                {(matchingActors.length > 0 ||
+                  matchingDirectors.length > 0) && (
+                  <div>
+                    <div className="flex gap-8 flex-wrap">
+                      {matchingActors.length > 0 && (
+                        <div>
+                          <div className="mb-4 border-l-4 border-orange-500 pl-4">
+                            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                              Actor
+                            </p>
+
+                            <h4 className="text-lg font-bold">
+                              {matchingActors[0].name}
+                            </h4>
+                          </div>
+                          <PersonCard
+                            name={matchingActors[0].name}
+                            image={matchingActors[0].image}
+                            route={matchingActors[0].route}
+                            slug={matchingActors[0].slug}
+                            type="actor"
+                          />
+                        </div>
+                      )}
+
+                      {matchingDirectors.length > 0 && (
+                        <div>
+                          <div className="mb-4 border-l-4 border-orange-500 pl-4">
+                            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                              Director
+                            </p>
+
+                            <h4 className="text-lg font-bold">
+                              {matchingDirectors[0].name}
+                            </h4>
+                          </div>
+                          <PersonCard
+                            name={matchingDirectors[0].name}
+                            image={matchingDirectors[0].image}
+                            route={matchingDirectors[0].route}
+                            slug={matchingDirectors[0].slug}
+                            type="director"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex justify-center mt-20">
+                  <button
+                    onClick={() => setSearchResult(null)}
+                    className="
+          px-6
+          py-3
+          rounded-lg
+          bg-orange-500
+          hover:bg-orange-600
+          text-white
+          font-medium
+          transition-colors
+        "
+                  >
+                    Back to Home
+                  </button>
+                </div>
+              </>
+            ) : searchResult.type === "actor" ? (
+              <>
+                <div className="mb-8 border-l-4 border-orange-500 pl-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                    {searchResult.type}
+                  </p>
+
+                  <h1 className="text-3xl font-bold">{searchResult.title}</h1>
+                </div>
+
+                {actorMatch && (
+                  <PersonCard
+                    name={actorMatch.name}
+                    image={actorMatch.image}
+                    route={actorMatch.route}
+                    slug={actorMatch.slug}
+                    type="actor"
+                  />
+                )}
+
                 <div className="flex justify-center mt-12">
                   <button
                     onClick={() => setSearchResult(null)}
                     className="
                       px-6
                       py-3
+                      mt-15
+                      sm:mt-10
                       rounded-lg
                       bg-orange-500
                       hover:bg-orange-600
@@ -91,6 +273,46 @@ function Home() {
                       font-medium
                       transition-colors
                     "
+                  >
+                    Back to Home
+                  </button>
+                </div>
+              </>
+            ) : searchResult.type === "director" ? (
+              <>
+                <div className="mb-8 border-l-4 border-orange-500 pl-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                    {searchResult.type}
+                  </p>
+
+                  <h1 className="text-3xl font-bold">{searchResult.title}</h1>
+                </div>
+
+                {directorMatch && (
+                  <PersonCard
+                    name={directorMatch.name}
+                    image={directorMatch.image}
+                    route={directorMatch.route}
+                    slug={directorMatch.slug}
+                    type="director"
+                  />
+                )}
+
+                <div className="flex justify-center mt-12">
+                  <button
+                    onClick={() => setSearchResult(null)}
+                    className="
+          px-6
+          py-3
+          mt-15
+          sm:mt-10
+          rounded-lg
+          bg-orange-500
+          hover:bg-orange-600
+          text-white
+          font-medium
+          transition-colors
+        "
                   >
                     Back to Home
                   </button>
@@ -147,35 +369,70 @@ function Home() {
 
                 <HorizontalCarousel title="Tetralogy" items={tetralogyData} />
 
-                <PeopleCarousel title="Directors" items={directorsData} />
+                <PeopleCarousel
+                  title="Directors"
+                  items={directorsData}
+                  type="director"
+                  onShowMore={() => setSelectedSection("directors")}
+                />
 
-                <PeopleCarousel title="Actors" items={actorsData} />
-
-
+                <PeopleCarousel
+                  title="Actors"
+                  items={actorsData}
+                  type="actor"
+                  onShowMore={() => setSelectedSection("actors")}
+                />
               </>
             )}
 
             {selectedSection !== "home" && (
               <>
-                <CardGrid
-                  title={sectionData[selectedSection].title}
-                  items={sectionData[selectedSection].items}
-                />
+                {selectedSection === "directors" ||
+                selectedSection === "actors" ? (
+                  <>
+                    <h2 className="text-xl sm:text-2xl font-bold mb-6">
+                      {sectionData[selectedSection].title}
+                    </h2>
+
+                    <div className="grid grid-cols-3 gap-3">
+                      {" "}
+                      {sectionData[selectedSection].items.map((person) => (
+                        <PersonCard
+                          key={person.id}
+                          name={person.name}
+                          image={person.image}
+                          route={person.route}
+                          slug={person.slug}
+                          type={
+                            selectedSection === "directors"
+                              ? "director"
+                              : "actor"
+                          }
+                        />
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <CardGrid
+                    title={sectionData[selectedSection].title}
+                    items={sectionData[selectedSection].items}
+                  />
+                )}
 
                 <div className="flex justify-center mt-8">
                   <button
                     onClick={() => setSelectedSection("home")}
                     className="
-                      px-4
-                      py-1
-                      sm:h-10
-                      rounded-lg
-                      bg-orange-500
-                      hover:bg-orange-600
-                      text-white
-                      font-medium
-                      transition-colors
-                    "
+          px-4
+          py-1
+          sm:h-10
+          rounded-lg
+          bg-orange-500
+          hover:bg-orange-600
+          text-white
+          font-medium
+          transition-colors
+        "
                   >
                     Back to Home
                   </button>

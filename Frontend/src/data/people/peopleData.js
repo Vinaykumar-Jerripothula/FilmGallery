@@ -1,10 +1,34 @@
 // people.js
+// Hollywood Directors - Banners
+import chrisnolanBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/chrisnolanBanner.jpeg";
+import martinscorseseBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/martinscorseseBanner.jpeg";
+import stevenspielbergBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/stevenspielbergBanner.jpeg";
+import jamescameronBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/jamescameronBanner.jpeg";
+import quentintarantinoBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/quentintarantinoBanner.jpeg";
+import ridleyscottBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/ridleyscottBanner.jpeg";
+import peterjacksonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/peterjacksonBanner.jpeg";
+import denisvilleneuveBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/denisvilleneuveBanner.jpeg";
+import davidfincherBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/davidfincherBanner.jpeg";
+import francisfordcoppolaBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/francisfordcoppolaBanner.jpeg";
+import leonardodicaprioBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/leonardodicaprioBanner.jpeg";
+import tomcruiseBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/tomcruiseBanner.jpeg";
+import robertdowneyjnrBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/robertdowneyjnrImage.jpeg";
+import christianbaleBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/christianbaleBanner.jpeg";
+import bradpittBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/bardpittBanner.jpeg";
+import johnnydeppBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/johnnydeepBanner.jpeg";
+import tomhanksBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/tomhanksBanner.jpeg";
+import denzelwashingtonBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/denzelwashingtonBanner.jpeg";
+import keanureevesBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/keanureevesBanner.jpeg";
+import morganfreemanBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/morganfreemanBanner.jpeg";
+import jonfavreauBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/jonfavreauBanner.jpeg";
+import chrishemsworthBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/chrishemsworthBanner.jpeg";
+
 
 export const peopleData = {
   directors: {
     christophernolan: {
       name: "Christopher Nolan",
-      image: "",
+      image: chrisnolanBanner,
       movies: [
         {
           id: 1,
@@ -165,7 +189,7 @@ export const peopleData = {
     },
     stevenspielberg: {
       name: "Steven Spielberg",
-      image: "",
+      image: stevenspielbergBanner,
       movies: [
         {
           id: 1,
@@ -626,7 +650,7 @@ export const peopleData = {
     },
     martinscorsese: {
       name: "Martin Scorsese",
-      image: "",
+      image: martinscorseseBanner,
       movies: [
         {
           id: 1,
@@ -955,7 +979,7 @@ export const peopleData = {
     },
     jamescameron: {
       name: "James Cameron",
-      image: "",
+      image: jamescameronBanner,
       movies: [
         {
           id: 1,
@@ -1152,7 +1176,7 @@ export const peopleData = {
     },
     quentintarantino: {
       name: "Quentin Tarantino",
-      image: "",
+      image: quentintarantinoBanner,
       movies: [
         {
           id: 1,
@@ -1301,7 +1325,7 @@ export const peopleData = {
     },
     ridleyscott: {
       name: "Ridley Scott",
-      image: "",
+      image: ridleyscottBanner,
       movies: [
         {
           id: 1,
@@ -1666,7 +1690,7 @@ export const peopleData = {
     },
     peterjackson: {
       name: "Peter Jackson",
-      image: "",
+      image: peterjacksonBanner,
       movies: [
         {
           id: 1,
@@ -1851,7 +1875,7 @@ export const peopleData = {
     },
     denisvilleneuve: {
       name: "Denis Villeneuve",
-      image: "",
+      image: denisvilleneuveBanner,
       movies: [
         {
           id: 1,
@@ -2000,7 +2024,7 @@ export const peopleData = {
     },
     davidfincher: {
       name: "David Fincher",
-      image: "",
+      image: davidfincherBanner,
       movies: [
         {
           id: 1,
@@ -2161,7 +2185,7 @@ export const peopleData = {
     },
     francisfordcoppola: {
       name: "Francis Ford Coppola",
-      image: "",
+      image: francisfordcoppolaBanner,
       movies: [
         {
           id: 1,
@@ -2464,13 +2488,126 @@ export const peopleData = {
         },
       ],
     },
+    jonfavreau: {
+      name: "Jon Favreau",
+      image: jonfavreauBanner,
+      movies: [
+        {
+          id: 1,
+          watchOrder: 1,
+          title: "Made",
+          type: "Movie",
+          year: 2001,
+          director: "Jon Favreau",
+          actor: "Jon Favreau",
+          country: "USA",
+          imdb: 6.8,
+        },
+
+        {
+          id: 2,
+          watchOrder: 2,
+          title: "Elf",
+          type: "Movie",
+          year: 2003,
+          director: "Jon Favreau",
+          actor: "Will Ferrell",
+          country: "USA",
+          imdb: 7.1,
+        },
+
+        {
+          id: 3,
+          watchOrder: 3,
+          title: "Zathura: A Space Adventure",
+          type: "Movie",
+          year: 2005,
+          director: "Jon Favreau",
+          actor: "Josh Hutcherson",
+          country: "USA",
+          imdb: 6.3,
+        },
+
+        {
+          id: 4,
+          watchOrder: 4,
+          title: "Iron Man",
+          type: "Movie",
+          year: 2008,
+          director: "Jon Favreau",
+          actor: "Robert Downey Jr.",
+          country: "USA",
+          imdb: 7.9,
+        },
+
+        {
+          id: 5,
+          watchOrder: 5,
+          title: "Iron Man 2",
+          type: "Movie",
+          year: 2010,
+          director: "Jon Favreau",
+          actor: "Robert Downey Jr.",
+          country: "USA",
+          imdb: 6.9,
+        },
+
+        {
+          id: 6,
+          watchOrder: 6,
+          title: "Cowboys & Aliens",
+          type: "Movie",
+          year: 2011,
+          director: "Jon Favreau",
+          actor: "Daniel Craig",
+          country: "USA",
+          imdb: 6.0,
+        },
+
+        {
+          id: 7,
+          watchOrder: 7,
+          title: "Chef",
+          type: "Movie",
+          year: 2014,
+          director: "Jon Favreau",
+          actor: "Jon Favreau",
+          country: "USA",
+          imdb: 7.3,
+        },
+
+        {
+          id: 8,
+          watchOrder: 8,
+          title: "The Jungle Book",
+          type: "Movie",
+          year: 2016,
+          director: "Jon Favreau",
+          actor: "Neel Sethi",
+          country: "USA",
+          imdb: 7.4,
+        },
+
+        {
+          id: 9,
+          watchOrder: 9,
+          title: "The Lion King",
+          type: "Movie",
+          year: 2019,
+          director: "Jon Favreau",
+          actor: "Donald Glover",
+          country: "USA",
+          imdb: 6.8,
+        },
+      ],
+    },
   },
 
   actors: {
     // actors here later
     leonardodicaprio: {
       name: "Leonardo DiCaprio",
-      image: "",
+      image: leonardodicaprioBanner,
       movies: [
         {
           id: 1,
@@ -2799,7 +2936,7 @@ export const peopleData = {
     },
     tomcruise: {
       name: "Tom Cruise",
-      image: "",
+      image: tomcruiseBanner,
       movies: [
         {
           id: 1,
@@ -3308,7 +3445,7 @@ export const peopleData = {
     },
     robertdowneyjr: {
       name: "Robert Downey Jr.",
-      image: "",
+      image: robertdowneyjnrBanner,
       movies: [
         {
           id: 1,
@@ -3757,7 +3894,7 @@ export const peopleData = {
     },
     christianbale: {
       name: "Christian Bale",
-      image: "",
+      image: christianbaleBanner,
       movies: [
         {
           id: 1,
@@ -4134,7 +4271,7 @@ export const peopleData = {
     },
     bradpitt: {
       name: "Brad Pitt",
-      image: "",
+      image: bradpittBanner,
       movies: [
         {
           id: 1,
@@ -4571,7 +4708,7 @@ export const peopleData = {
     },
     johnnydepp: {
       name: "Johnny Depp",
-      image: "",
+      image: johnnydeppBanner,
       movies: [
         {
           id: 1,
@@ -5032,7 +5169,7 @@ export const peopleData = {
     },
     tomhanks: {
       name: "Tom Hanks",
-      image: "",
+      image: tomhanksBanner,
       movies: [
         {
           id: 1,
@@ -5469,7 +5606,7 @@ export const peopleData = {
     },
     denzelwashington: {
       name: "Denzel Washington",
-      image: "",
+      image: denzelwashingtonBanner,
       movies: [
         {
           id: 1,
@@ -5858,7 +5995,7 @@ export const peopleData = {
     },
     keanureeves: {
       name: "Keanu Reeves",
-      image: "",
+      image: keanureevesBanner,
       movies: [
         {
           id: 1,
@@ -6261,7 +6398,7 @@ export const peopleData = {
           watchOrder: 34,
           title: "John Wick: Chapter 5",
           type: "Movie",
-          year: 2026,
+          year: 2027,
           director: "Chad Stahelski",
           actor: "Keanu Reeves",
           country: "USA",
@@ -6271,7 +6408,7 @@ export const peopleData = {
     },
     morganfreeman: {
       name: "Morgan Freeman",
-      image: "",
+      image: morganfreemanBanner,
       movies: [
         {
           id: 1,
@@ -6631,6 +6768,311 @@ export const peopleData = {
           actor: "Morgan Freeman",
           country: "USA",
           imdb: null,
+        },
+      ],
+    },
+    chrishemsworth: {
+      name: "Chris Hemsworth",
+      image: chrishemsworthBanner,
+      movies: [
+        {
+          id: 1,
+          watchOrder: 1,
+          title: "Star Trek",
+          type: "Movie",
+          year: 2009,
+          director: "J. J. Abrams",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.9,
+        },
+
+        {
+          id: 2,
+          watchOrder: 2,
+          title: "Ca$h",
+          type: "Movie",
+          year: 2010,
+          director: "Stephen Milburn Anderson",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.0,
+        },
+
+        {
+          id: 3,
+          watchOrder: 3,
+          title: "Thor",
+          type: "Movie",
+          year: 2011,
+          director: "Kenneth Branagh",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.0,
+        },
+
+        {
+          id: 4,
+          watchOrder: 4,
+          title: "The Cabin in the Woods",
+          type: "Movie",
+          year: 2012,
+          director: "Drew Goddard",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.0,
+        },
+
+        {
+          id: 5,
+          watchOrder: 5,
+          title: "Snow White and the Huntsman",
+          type: "Movie",
+          year: 2012,
+          director: "Rupert Sanders",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.1,
+        },
+
+        {
+          id: 6,
+          watchOrder: 6,
+          title: "The Avengers",
+          type: "Movie",
+          year: 2012,
+          director: "Joss Whedon",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 8.0,
+        },
+
+        {
+          id: 7,
+          watchOrder: 7,
+          title: "Rush",
+          type: "Movie",
+          year: 2013,
+          director: "Ron Howard",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 8.1,
+        },
+
+        {
+          id: 8,
+          watchOrder: 8,
+          title: "Thor: The Dark World",
+          type: "Movie",
+          year: 2013,
+          director: "Alan Taylor",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.7,
+        },
+
+        {
+          id: 9,
+          watchOrder: 9,
+          title: "Blackhat",
+          type: "Movie",
+          year: 2015,
+          director: "Michael Mann",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 5.5,
+        },
+
+        {
+          id: 10,
+          watchOrder: 10,
+          title: "Avengers: Age of Ultron",
+          type: "Movie",
+          year: 2015,
+          director: "Joss Whedon",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.3,
+        },
+
+        {
+          id: 11,
+          watchOrder: 11,
+          title: "In the Heart of the Sea",
+          type: "Movie",
+          year: 2015,
+          director: "Ron Howard",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.9,
+        },
+
+        {
+          id: 12,
+          watchOrder: 12,
+          title: "The Huntsman: Winter's War",
+          type: "Movie",
+          year: 2016,
+          director: "Cedric Nicolas-Troyan",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.1,
+        },
+
+        {
+          id: 13,
+          watchOrder: 13,
+          title: "Ghostbusters",
+          type: "Movie",
+          year: 2016,
+          director: "Paul Feig",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.8,
+        },
+
+        {
+          id: 14,
+          watchOrder: 14,
+          title: "Doctor Strange",
+          type: "Movie",
+          year: 2016,
+          director: "Scott Derrickson",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.5,
+        },
+
+        {
+          id: 15,
+          watchOrder: 15,
+          title: "Thor: Ragnarok",
+          type: "Movie",
+          year: 2017,
+          director: "Taika Waititi",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.9,
+        },
+
+        {
+          id: 16,
+          watchOrder: 16,
+          title: "12 Strong",
+          type: "Movie",
+          year: 2018,
+          director: "Nicolai Fuglsig",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.5,
+        },
+
+        {
+          id: 17,
+          watchOrder: 17,
+          title: "Avengers: Infinity War",
+          type: "Movie",
+          year: 2018,
+          director: "Anthony Russo & Joe Russo",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 8.4,
+        },
+
+        {
+          id: 18,
+          watchOrder: 18,
+          title: "Bad Times at the El Royale",
+          type: "Movie",
+          year: 2018,
+          director: "Drew Goddard",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.1,
+        },
+
+        {
+          id: 19,
+          watchOrder: 19,
+          title: "Avengers: Endgame",
+          type: "Movie",
+          year: 2019,
+          director: "Anthony Russo & Joe Russo",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 8.4,
+        },
+
+        {
+          id: 20,
+          watchOrder: 20,
+          title: "Men in Black: International",
+          type: "Movie",
+          year: 2019,
+          director: "F. Gary Gray",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 5.6,
+        },
+
+        {
+          id: 21,
+          watchOrder: 21,
+          title: "Extraction",
+          type: "Movie",
+          year: 2020,
+          director: "Sam Hargrave",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.8,
+        },
+
+        {
+          id: 22,
+          watchOrder: 22,
+          title: "Spider-Man: No Way Home",
+          type: "Movie",
+          year: 2021,
+          director: "Jon Watts",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 8.2,
+        },
+
+        {
+          id: 23,
+          watchOrder: 23,
+          title: "Thor: Love and Thunder",
+          type: "Movie",
+          year: 2022,
+          director: "Taika Waititi",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 6.2,
+        },
+
+        {
+          id: 24,
+          watchOrder: 24,
+          title: "Extraction 2",
+          type: "Movie",
+          year: 2023,
+          director: "Sam Hargrave",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.0,
+        },
+
+        {
+          id: 25,
+          watchOrder: 25,
+          title: "Transformers One",
+          type: "Movie",
+          year: 2024,
+          director: "Josh Cooley",
+          actor: "Chris Hemsworth",
+          country: "USA",
+          imdb: 7.6,
         },
       ],
     },

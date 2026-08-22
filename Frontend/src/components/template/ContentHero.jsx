@@ -34,13 +34,13 @@ function ContentHero({
       >
         <div
           className="
-    relative
-    w-full
-    h-[240px]
-    sm:h-[200px]
-    md:h-[230px]
-    lg:h-[320px]
-  "
+            relative
+            w-full
+            h-[240px]
+            sm:h-[200px]
+            md:h-[230px]
+            lg:h-[450px]
+          "
         >
           {image ? (
             <img
@@ -52,7 +52,7 @@ function ContentHero({
                 w-full
                 h-full
                 object-cover
-                object-center
+                object-top
               "
             />
           ) : (
