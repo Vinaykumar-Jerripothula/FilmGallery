@@ -23,7 +23,7 @@ import morganfreemanBanner from "../../images/people/hollywoodactors/hollywoodac
 import jonfavreauBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/jonfavreauBanner.jpeg";
 import chrishemsworthBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/chrishemsworthBanner.jpeg";
 import guillermodeltoroBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/guillermodeltoroBanner.jpeg";
-import christophermcquarrieBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/christophermcquarrieBanner.jpeg";
+import christophermcquarrieBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/christophermcquarrieBanner.jpeg"
 import darrenaronofskyBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/darrenaronofskyBanner.jpeg";
 import paulthomasandersonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/paulthomasandersonBanner.jpeg";
 import guyritchieBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/guyritchieBanner.jpeg";
