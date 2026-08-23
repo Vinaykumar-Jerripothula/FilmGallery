@@ -14,8 +14,3 @@ export const allContentItems = Object.entries(contentRegistry).flatMap(
     })),
 );
 
-console.log(
-  allContentItems.filter((item) =>
-    item.title.toLowerCase().includes("thor"),
-  ),
-);

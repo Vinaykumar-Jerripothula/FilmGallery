@@ -5,10 +5,8 @@ import { useSelector } from "react-redux";
 import { generateContentId } from "../../utils/generateContentId";
 import { enrichedPeopleData } from "../../utils/enrichPeopleData";
 
-function PersonCard({ name, image, route, slug, type }) {
+function PersonCard({ id, name, image, route, slug, type }) {
   const navigate = useNavigate();
-  console.log("slug =", slug);
-  console.log("type =", type);
   const { theme } = useTheme();
   const currentTheme = colors[theme];
   const watchedMovies = useSelector(
@@ -22,9 +20,6 @@ function PersonCard({ name, image, route, slug, type }) {
   const movies = person?.movies || [];
 
   const totalMovies = movies.length;
-  console.log(person);
-  console.log(movies[0]);
-  console.log(watchedMovies);
   const watchedCount = movies.filter(
     (movie) => watchedMovies[movie.contentId],
   ).length;
@@ -44,16 +39,16 @@ function PersonCard({ name, image, route, slug, type }) {
     >
       <div
         className={`
-    relative
-    overflow-hidden
-    rounded-xl
-    border
-    ${currentTheme.border}
-    ${currentTheme.card}
-    transition-transform
-    duration-300
-    hover:scale-103
-  `}
+          relative
+          overflow-hidden
+          rounded-xl
+          border
+          ${currentTheme.border}
+          ${currentTheme.card}
+          transition-transform
+          duration-300
+          hover:scale-103
+        `}
       >
         <img
           src={image}
@@ -65,6 +60,21 @@ function PersonCard({ name, image, route, slug, type }) {
             object-cover
           "
         />
+
+        <div
+          className="
+            absolute
+            top-2
+            left-2
+            text-orange-500
+            text-[11px]
+            font-semibold
+            z-10
+          "
+        >
+          {id}
+        </div>
+
         <div className="absolute bottom-1 left-2 right-2">
           <div className="h-0.5 bg-black/30 rounded-full overflow-hidden">
             <div

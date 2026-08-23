@@ -61,20 +61,10 @@ export const searchData = [
     [
       ...collectionSearchItems,
       ...movieItems,
+      ...directorMovieItems,
+      ...actorMovieItems,
       ...actorNameItems,
       ...directorNameItems,
     ].map((item) => [item.title.toLowerCase(), item]),
   ).values(),
 ];
-
-console.log(searchData);
-
-console.log(
-  "THOR IN ALLCONTENTITEMS",
-  allContentItems.find((item) => item.title === "Thor"),
-);
-
-console.log(
-  "THOR IN SEARCHDATA",
-  searchData.find((item) => item.title === "Thor"),
-);

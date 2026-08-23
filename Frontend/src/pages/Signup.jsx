@@ -40,7 +40,7 @@ function Signup() {
         password,
       });
 
-      console.log("Signup Response:", signupResponse.data);
+      // console.log("Signup Response:", signupResponse.data);
 
       if (signupResponse.data !== "Signup successful") {
         setError(signupResponse.data);
@@ -54,7 +54,7 @@ function Signup() {
         password,
       });
 
-      console.log("Login Response:", loginResponse.data);
+      // console.log("Login Response:", loginResponse.data);
 
       if (loginResponse.data.message === "Login successful") {
         const userId = loginResponse.data.userId;

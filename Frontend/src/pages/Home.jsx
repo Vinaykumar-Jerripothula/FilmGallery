@@ -30,9 +30,7 @@ function Home() {
     searchParams.get("section") || "home",
   );
 
-  console.log(mcuData[1]);
 
-  console.log(mcuData.slice(0, 3));
   const sectionData = {
     universes: {
       title: "All Universes",
@@ -106,7 +104,6 @@ function Home() {
         )
       : null;
 
-  console.log("directorMatch", directorMatch);
   const movieMatch =
     searchResult?.type === "movie"
       ? allContentItems.find(
@@ -119,12 +116,6 @@ function Home() {
         (item) => item.contentId === movieMatch.collectionId,
       )
     : [];
-
-  console.log("movieMatch", movieMatch);
-  console.log("collectionItems", collectionItems);
-
-  console.log("searchResult", searchResult);
-  console.log("collectionItems", collectionItems);
 
   return (
     <div className={`min-h-screen ${currentTheme.page} ${currentTheme.text}`}>
@@ -392,13 +383,14 @@ function Home() {
                   <>
                     <h2 className="text-xl sm:text-2xl font-bold mb-6">
                       {sectionData[selectedSection].title}
-                    </h2>
+                     </h2>
 
-                    <div className="grid grid-cols-3 gap-3">
+                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
                       {" "}
                       {sectionData[selectedSection].items.map((person) => (
                         <PersonCard
                           key={person.id}
+                          id={person.id}
                           name={person.name}
                           image={person.image}
                           route={person.route}
@@ -423,16 +415,16 @@ function Home() {
                   <button
                     onClick={() => setSelectedSection("home")}
                     className="
-          px-4
-          py-1
-          sm:h-10
-          rounded-lg
-          bg-orange-500
-          hover:bg-orange-600
-          text-white
-          font-medium
-          transition-colors
-        "
+                      px-4
+                      py-1
+                      sm:h-10
+                      rounded-lg
+                      bg-orange-500
+                      hover:bg-orange-600
+                      text-white
+                      font-medium
+                      transition-colors
+                    "
                   >
                     Back to Home
                   </button>

@@ -83,6 +83,7 @@ function PeopleCarousel({ title, items = [], type, onShowMore }) {
           {items.slice(0, 10).map((person) => (
             <PersonCard
               key={person.id}
+              id={person.id}
               name={person.name}
               image={person.image}
               route={person.route}

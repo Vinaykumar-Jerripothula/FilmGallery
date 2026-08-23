@@ -27,6 +27,7 @@ import chrishemsworthBanner from "../../images/people/hollywoodactors/hollywooda
 export const peopleData = {
   directors: {
     christophernolan: {
+      id:1 ,
       name: "Christopher Nolan",
       image: chrisnolanBanner,
       movies: [
@@ -188,6 +189,7 @@ export const peopleData = {
       ],
     },
     stevenspielberg: {
+      id :2,
       name: "Steven Spielberg",
       image: stevenspielbergBanner,
       movies: [
@@ -649,6 +651,7 @@ export const peopleData = {
       ],
     },
     martinscorsese: {
+      id : 3 , 
       name: "Martin Scorsese",
       image: martinscorseseBanner,
       movies: [
@@ -978,6 +981,7 @@ export const peopleData = {
       ],
     },
     jamescameron: {
+      id : 4 ,
       name: "James Cameron",
       image: jamescameronBanner,
       movies: [
@@ -1175,6 +1179,7 @@ export const peopleData = {
       ],
     },
     quentintarantino: {
+      id : 5 , 
       name: "Quentin Tarantino",
       image: quentintarantinoBanner,
       movies: [
@@ -1324,6 +1329,7 @@ export const peopleData = {
       ],
     },
     ridleyscott: {
+      id: 6,
       name: "Ridley Scott",
       image: ridleyscottBanner,
       movies: [
@@ -1689,6 +1695,7 @@ export const peopleData = {
       ],
     },
     peterjackson: {
+      id : 7,
       name: "Peter Jackson",
       image: peterjacksonBanner,
       movies: [
@@ -1874,6 +1881,7 @@ export const peopleData = {
       ],
     },
     denisvilleneuve: {
+      id : 8 , 
       name: "Denis Villeneuve",
       image: denisvilleneuveBanner,
       movies: [
@@ -2023,6 +2031,7 @@ export const peopleData = {
       ],
     },
     davidfincher: {
+      id: 9,
       name: "David Fincher",
       image: davidfincherBanner,
       movies: [
@@ -2184,6 +2193,7 @@ export const peopleData = {
       ],
     },
     francisfordcoppola: {
+      id: 10,
       name: "Francis Ford Coppola",
       image: francisfordcoppolaBanner,
       movies: [
@@ -2489,6 +2499,7 @@ export const peopleData = {
       ],
     },
     jonfavreau: {
+      id : 11,
       name: "Jon Favreau",
       image: jonfavreauBanner,
       movies: [
@@ -2606,6 +2617,7 @@ export const peopleData = {
   actors: {
     // actors here later
     leonardodicaprio: {
+      id:1,
       name: "Leonardo DiCaprio",
       image: leonardodicaprioBanner,
       movies: [
@@ -2935,6 +2947,7 @@ export const peopleData = {
       ],
     },
     tomcruise: {
+      id:2,
       name: "Tom Cruise",
       image: tomcruiseBanner,
       movies: [
@@ -3444,6 +3457,7 @@ export const peopleData = {
       ],
     },
     robertdowneyjr: {
+      id:3,
       name: "Robert Downey Jr.",
       image: robertdowneyjnrBanner,
       movies: [
@@ -3893,6 +3907,7 @@ export const peopleData = {
       ],
     },
     christianbale: {
+      id:4,
       name: "Christian Bale",
       image: christianbaleBanner,
       movies: [
@@ -4270,6 +4285,7 @@ export const peopleData = {
       ],
     },
     bradpitt: {
+      id:5,
       name: "Brad Pitt",
       image: bradpittBanner,
       movies: [
@@ -4707,6 +4723,7 @@ export const peopleData = {
       ],
     },
     johnnydepp: {
+      id:6,
       name: "Johnny Depp",
       image: johnnydeppBanner,
       movies: [
@@ -5168,6 +5185,7 @@ export const peopleData = {
       ],
     },
     tomhanks: {
+      id:7,
       name: "Tom Hanks",
       image: tomhanksBanner,
       movies: [
@@ -5605,6 +5623,7 @@ export const peopleData = {
       ],
     },
     denzelwashington: {
+      id:8,
       name: "Denzel Washington",
       image: denzelwashingtonBanner,
       movies: [
@@ -5994,6 +6013,7 @@ export const peopleData = {
       ],
     },
     keanureeves: {
+      id:9,
       name: "Keanu Reeves",
       image: keanureevesBanner,
       movies: [
@@ -6407,6 +6427,7 @@ export const peopleData = {
       ],
     },
     morganfreeman: {
+      id:10,
       name: "Morgan Freeman",
       image: morganfreemanBanner,
       movies: [
@@ -6772,6 +6793,7 @@ export const peopleData = {
       ],
     },
     chrishemsworth: {
+      id:11,
       name: "Chris Hemsworth",
       image: chrishemsworthBanner,
       movies: [
