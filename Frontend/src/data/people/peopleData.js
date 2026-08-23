@@ -1,44 +1,88 @@
-// people.js
 // Hollywood Directors - Banners
+
+import alejandroginarrituBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/alejandroginarrituBanner.jpeg";
+
+import bongjoonhoBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/bongjoonhoBanner.jpeg";
+
 import chrisnolanBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/chrisnolanBanner.jpeg";
-import martinscorseseBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/martinscorseseBanner.jpeg";
-import stevenspielbergBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/stevenspielbergBanner.jpeg";
-import jamescameronBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/jamescameronBanner.jpeg";
-import quentintarantinoBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/quentintarantinoBanner.jpeg";
-import ridleyscottBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/ridleyscottBanner.jpeg";
-import peterjacksonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/peterjacksonBanner.jpeg";
-import denisvilleneuveBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/denisvilleneuveBanner.jpeg";
+
+import christophermcquarrieBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/christophermcquarrieBanner.jpeg";
+
+import damienchazelleBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/damienchazelleBanner.jpeg";
+
+import darrenaronofskyBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/darrenaronofskyBanner.jpeg";
+
 import davidfincherBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/davidfincherBanner.jpeg";
+
+import denisvilleneuveBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/denisvilleneuveBanner.jpeg";
+
 import francisfordcoppolaBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/francisfordcoppolaBanner.jpeg";
-import leonardodicaprioBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/leonardodicaprioBanner.jpeg";
-import tomcruiseBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/tomcruiseBanner.jpeg";
-import robertdowneyjnrBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/robertdowneyjnrImage.jpeg";
-import christianbaleBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/christianbaleBanner.jpeg";
-import bradpittBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/bardpittBanner.jpeg";
-import johnnydeppBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/johnnydeepBanner.jpeg";
-import tomhanksBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/tomhanksBanner.jpeg";
-import denzelwashingtonBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/denzelwashingtonBanner.jpeg";
-import keanureevesBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/keanureevesBanner.jpeg";
-import morganfreemanBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/morganfreemanBanner.jpeg";
+
+import guillermodeltoroBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/guillermodeltoroBanner.jpeg";
+
+import guyritchieBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/guyritchieBanner.jpeg";
+
+import jamescameronBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/jamescameronBanner.jpeg";
+
 import jonfavreauBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/jonfavreauBanner.jpeg";
+
+import martinscorseseBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/martinscorseseBanner.jpeg";
+
+import paulthomasandersonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/paulthomasandersonBanner.jpeg";
+
+import peterjacksonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/peterjacksonBanner.jpeg";
+
+import quentintarantinoBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/quentintarantinoBanner.jpeg";
+
+import ridleyscottBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/ridleyscottBanner.jpeg";
+
+import stevenspielbergBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/stevenspielbergBanner.jpeg";
+
+import wesandersonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/wesandersonBanner.jpeg";
+
+
+// Hollywood Actors - Banners 
+
+// Hollywood Actors - Banners
+
+import leonardodicaprioBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/leonardodicaprioBanner.jpeg";
+
+import tomcruiseBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/tomcruiseBanner.jpeg";
+
+import robertdowneyjnrBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/robertdowneyjnrImage.jpeg";
+
+import christianbaleBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/christianbaleBanner.jpeg";
+
+import bradpittBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/bradpittBanner.jpeg";
+
+import johnnydeppBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/johnnydeepBanner.jpeg";
+
+import tomhanksBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/tomhanksBanner.jpeg";
+
+import denzelwashingtonBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/denzelwashingtonBanner.jpeg";
+
+import keanureevesBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/keanureevesBanner.jpeg";
+
+import morganfreemanBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/morganfreemanBanner.jpeg";
+
 import chrishemsworthBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/chrishemsworthBanner.jpeg";
-import guillermodeltoroBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/guillermodeltoroBanner.jpeg";
-import christophermcquarrieBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/christophermcquarrieBanner.jpeg"
-import darrenaronofskyBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/darrenaronofskyBanner.jpeg";
-import paulthomasandersonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/paulthomasandersonBanner.jpeg";
-import guyritchieBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/guyritchieBanner.jpeg";
-import alejandroginarrituBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/alejandroginarrituBanner.jpeg";
-import damienchazelleBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/damienchazelleBanner.jpeg";
-import wesandersonBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/wesandersonBanner.jpeg";
-import bongjoonhoBanner from "../../images/people/hollywooddirectors/hollywooddirectorsBanners/bongjoonhoBanner.jpeg";
+
 import ryangoslingBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/ryangoslingBanner.jpeg";
+
 import joaquinphoenixBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/joaquinphoenixBanner.jpeg";
+
 import jakegyllenhaalBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/jakegyllenhaalBanner.jpeg";
+
 import chrisevansBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/chrisevansBanner.jpeg";
+
 import chrisprattBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/chrisprattBanner.jpeg";
+
 import ryanreynoldsBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/ryanreynoldsBanner.jpeg";
+
 import henrycavillBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/henrycavillBanner.jpeg";
+
 import cillianmurphyBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/cillianmurphyBanner.jpeg";
+
 import mattdamonBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/mattdamonBanner.jpeg";
 
 export const peopleData = {
