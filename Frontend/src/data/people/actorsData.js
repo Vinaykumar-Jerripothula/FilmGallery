@@ -16,7 +16,7 @@ import denzelwashingtonImage from "../../images/people/hollywoodactors/hollywood
 
 import keanureevesImage from "../../images/people/hollywoodactors/hollywoodactorsimages/keanureevesImage.jpeg";
 
-import morganfreemanImage from "../../images/people/hollywoodactors/hollywoodactorsimages/morganfreemanImage.jpeg";
+import morganfremanImage from "../../images/people/hollywoodactors/hollywoodactorsimages/morganfreemanImage.jpeg";
 
 import chrishemsworthImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrishemsworthImage.jpeg";
 

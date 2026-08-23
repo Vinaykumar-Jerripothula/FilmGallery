@@ -1,5 +1,9 @@
 // Hollywood Directors - Banners
 
+
+// not correct 
+
+
 import alejandroginarrituBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/alejandroginarrituBanner.jpeg";
 
 import bongjoonhoBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/bongjoonhoBanner.jpeg";
