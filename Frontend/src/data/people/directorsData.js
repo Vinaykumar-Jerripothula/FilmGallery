@@ -9,7 +9,16 @@ import peterjacksonImage from "../../images/people/hollywooddirectors/hollywoodd
 import denisvilleneuveImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/denisvilleneuveImage.jpeg";
 import davidfincherImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/davidfincherImage.jpeg";
 import francisfordcoppolaImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/francisfordcoppolaImage.jpeg";
-import jonfavreauImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/jonfavreauImage.jpeg"
+import jonfavreauImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/jonfavreauImage.jpeg";
+import guillermodeltoroImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/guillermodeltoroImage.jpeg";
+import christophermcquarrieImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/christophermcquarrieImage.jpeg";
+import darrenaronofskyImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/darrenaronofskyImage.jpeg";
+import paulthomasandersonImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/paulthomasandersonImage.jpeg";
+import guyritchieImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/guyritchieImage.jpeg";
+import alejandroginarrituImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/alejandroginarrituImage.jpeg";
+import damienchazelleImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/damienchazelleImage.jpeg";
+import wesandersonImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/wesandersonImage.jpeg";
+import bongjoonhoImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/bongjoonhoImage.jpeg";
 
 export const directorsData = [
   {
@@ -91,12 +100,75 @@ export const directorsData = [
     slug: "francisfordcoppola",
     route: "/director/francisfordcoppola",
   },
-  
+
   {
     id: 11,
     name: "Jon Favreau",
     image: jonfavreauImage,
     slug: "jonfavreau",
     route: "/director/jonfavreau",
+  },
+  {
+    id: 12,
+    name: "Guillermo del Toro",
+    image: guillermodeltoroImage,
+    slug: "guillermodeltoro",
+    route: "/director/guillermodeltoro",
+  },
+  {
+    id: 13,
+    name: "Christopher McQuarrie",
+    image: christophermcquarrieImage,
+    slug: "christophermcquarrie",
+    route: "/director/christophermcquarrie",
+  },
+  {
+    id: 14,
+    name: "Darren Aronofsky",
+    image: darrenaronofskyImage,
+    slug: "darrenaronofsky",
+    route: "/director/darrenaronofsky",
+  },
+  {
+    id: 15,
+    name: "Paul Thomas Anderson",
+    image: paulthomasandersonImage,
+    slug: "paulthomasanderson",
+    route: "/director/paulthomasanderson",
+  },
+  {
+    id: 16,
+    name: "Guy Ritchie",
+    image: guyritchieImage,
+    slug: "guyritchie",
+    route: "/director/guyritchie",
+  },
+  {
+    id: 17,
+    name: "Alejandro G. Iñárritu",
+    image: alejandroginarrituImage,
+    slug: "alejandroginarritu",
+    route: "/director/alejandroginarritu",
+  },
+  {
+    id: 18,
+    name: "Damien Chazelle",
+    image: damienchazelleImage,
+    slug: "damienchazelle",
+    route: "/director/damienchazelle",
+  },
+  {
+    id: 19,
+    name: "Wes Anderson",
+    image: wesandersonImage,
+    slug: "wesanderson",
+    route: "/director/wesanderson",
+  },
+  {
+    id: 20,
+    name: "Bong Joon-ho",
+    image: bongjoonhoImage,
+    slug: "bongjoonho",
+    route: "/director/bongjoonho",
   },
 ];

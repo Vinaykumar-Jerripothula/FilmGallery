@@ -9,7 +9,16 @@ import tomhanksImage from "../../images/people/hollywoodactors/hollywoodactorsim
 import denzelwashingtonImage from "../../images/people/hollywoodactors/hollywoodactorsimages/denzelwashingtonImage.jpeg";
 import keanureevesImage from "../../images/people/hollywoodactors/hollywoodactorsimages/keanureevesImage.jpeg";
 import morganfremanImage from "../../images/people/hollywoodactors/hollywoodactorsimages/morganfreemanImage.jpeg";
-import chrishemsworthImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrishemsworthImage.jpeg"
+import chrishemsworthImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrishemsworthImage.jpeg";
+import ryangoslingImage from "../../images/people/hollywoodactors/hollywoodactorsimages/ryangoslingImage.jpeg";
+import joaquinphoenixImage from "../../images/people/hollywoodactors/hollywoodactorsimages/joaquinphoenixImage.jpeg";
+import jakegyllenhaalImage from "../../images/people/hollywoodactors/hollywoodactorsimages/jakegyllenhaalImage.jpeg";
+import chrisevansImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrisevansImage.jpeg";
+import chrisprattImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrisprattImage.jpeg";
+import ryanreynoldsImage from "../../images/people/hollywoodactors/hollywoodactorsimages/ryanreynoldsImage.jpeg";
+import henrycavillImage from "../../images/people/hollywoodactors/hollywoodactorsimages/henrycavillImage.jpeg";
+import cillianmurphyImage from "../../images/people/hollywoodactors/hollywoodactorsimages/cillianmurphyImage.jpeg";
+import mattdamonImage from "../../images/people/hollywoodactors/hollywoodactorsimages/mattdamonImage.jpeg";
 
 export const actorsData = [
   {
@@ -97,5 +106,68 @@ export const actorsData = [
     image: chrishemsworthImage,
     slug: "chrishemsworth",
     route: "/actor/chris-hemsworth",
+  },
+  {
+    id: 12,
+    name: "Ryan Gosling",
+    image: ryangoslingImage,
+    slug: "ryangosling",
+    route: "/actor/ryan-gosling",
+  },
+  {
+    id: 13,
+    name: "Joaquin Phoenix",
+    image: joaquinphoenixImage,
+    slug: "joaquinphoenix",
+    route: "/actor/joaquin-phoenix",
+  },
+  {
+    id: 14,
+    name: "Jake Gyllenhaal",
+    image: jakegyllenhaalImage,
+    slug: "jakegyllenhaal",
+    route: "/actor/jake-gyllenhaal",
+  },
+  {
+    id: 15,
+    name: "Chris Evans",
+    image: chrisevansImage,
+    slug: "chrisevans",
+    route: "/actor/chris-evans",
+  },
+  {
+    id: 16,
+    name: "Chris Pratt",
+    image: chrisprattImage,
+    slug: "chrispratt",
+    route: "/actor/chris-pratt",
+  },
+  {
+    id: 17,
+    name: "Ryan Reynolds",
+    image: ryanreynoldsImage,
+    slug: "ryanreynolds",
+    route: "/actor/ryan-reynolds",
+  },
+  {
+    id: 18,
+    name: "Henry Cavill",
+    image: henrycavillImage,
+    slug: "henrycavill",
+    route: "/actor/henry-cavill",
+  },
+  {
+    id: 19,
+    name: "Cillian Murphy",
+    image: cillianmurphyImage,
+    slug: "cillianmurphy",
+    route: "/actor/cillian-murphy",
+  },
+  {
+    id: 20,
+    name: "Matt Damon",
+    image: mattdamonImage,
+    slug: "mattdamon",
+    route: "/actor/matt-damon",
   },
 ];

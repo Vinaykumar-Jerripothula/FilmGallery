@@ -179,6 +179,7 @@ function Home() {
                           </div>
                           <PersonCard
                             name={matchingActors[0].name}
+                            id={matchingActors[0].id}
                             image={matchingActors[0].image}
                             route={matchingActors[0].route}
                             slug={matchingActors[0].slug}
@@ -200,6 +201,7 @@ function Home() {
                           </div>
                           <PersonCard
                             name={matchingDirectors[0].name}
+                            id={matchingDirectors[0].id}
                             image={matchingDirectors[0].image}
                             route={matchingDirectors[0].route}
                             slug={matchingDirectors[0].slug}
@@ -242,6 +244,7 @@ function Home() {
                 {actorMatch && (
                   <PersonCard
                     name={actorMatch.name}
+                    id={actorMatch.id}
                     image={actorMatch.image}
                     route={actorMatch.route}
                     slug={actorMatch.slug}
