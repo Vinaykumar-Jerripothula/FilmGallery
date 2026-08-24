@@ -376,6 +376,27 @@ function Home() {
                   type="actor"
                   onShowMore={() => setSelectedSection("actors")}
                 />
+                <div className="mt-12 mb-4 flex justify-center items-center gap-4 text-sm sm:text-base">
+  <a
+    href="https://t.me/ProSearchM11Bot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`${currentTheme.text} hover:text-orange-500 transition-colors font-medium`}
+  >
+    Watch Movies
+  </a>
+
+  <span className="text-zinc-900"> & </span>
+
+  <a
+    href="https://t.me/ProSearchY11Bot"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`${currentTheme.text} hover:text-orange-500 transition-colors font-medium`}
+  >
+    Watch Web Series
+  </a>
+</div>
               </>
             )}
 
