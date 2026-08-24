@@ -16,7 +16,7 @@ import denzelwashingtonImage from "../../images/people/hollywoodactors/hollywood
 
 import keanureevesImage from "../../images/people/hollywoodactors/hollywoodactorsimages/keanureevesImage.jpeg";
 
-import morganfremanImage from "../../images/people/hollywoodactors/hollywoodactorsimages/morganfreemanImage.jpeg";
+import morganfremanImage from "../../images/people/hollywoodactors/hollywoodactorsimages/morganfremanImage.jpeg";
 
 import chrishemsworthImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrishemsworthImage.jpeg";
 
@@ -66,7 +66,7 @@ export const actorsData = [
   {
     id: 4,
     name: "Christian Bale",
-    image: christanbaleImage,
+    image: christianbaleImage,
     slug: "christianbale",
     route: "/actor/christian-bale",
   },

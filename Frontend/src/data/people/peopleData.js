@@ -1,9 +1,5 @@
 // Hollywood Directors - Banners
 
-
-// not correct 
-
-
 import alejandroginarrituBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/alejandroginarrituBanner.jpeg";
 
 import bongjoonhoBanner from "../../images/people/hollywooddirectors/hollywooddirectorsbanners/bongjoonhoBanner.jpeg";
@@ -67,7 +63,7 @@ import denzelwashingtonBanner from "../../images/people/hollywoodactors/hollywoo
 
 import keanureevesBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/keanureevesBanner.jpeg";
 
-import morganfreemanBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/morganfreemanBanner.jpeg";
+import morganfremanBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/morganfremanBanner.jpeg";
 
 import chrishemsworthBanner from "../../images/people/hollywoodactors/hollywoodactorsBanners/chrishemsworthBanner.jpeg";
 
@@ -7652,7 +7648,7 @@ export const peopleData = {
     morganfreeman: {
       id: 10,
       name: "Morgan Freeman",
-      image: morganfreemanBanner,
+      image: morganfremanBanner,
       movies: [
         {
           id: 1,
