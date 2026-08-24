@@ -74,7 +74,7 @@ const rawMcuData = [
 
   {
     id: 6,
-    watchOrder: 4,
+    watchOrder: 6,
     title: "Captain Marvel",
     type: "Movie",
     year: 2019,
@@ -88,7 +88,7 @@ const rawMcuData = [
 
   {
     id: 7,
-    watchOrder: 5,
+    watchOrder: 7,
     title: "Iron Man",
     type: "Movie",
     year: 2008,
@@ -102,7 +102,7 @@ const rawMcuData = [
 
   {
     id: 8,
-    watchOrder: 6,
+    watchOrder: 8,
     title: "Iron Man 2",
     type: "Movie",
     year: 2010,
@@ -116,7 +116,7 @@ const rawMcuData = [
 
   {
     id: 9,
-    watchOrder: 7,
+    watchOrder: 9,
     title: "The Incredible Hulk",
     type: "Movie",
     year: 2008,
@@ -130,7 +130,7 @@ const rawMcuData = [
 
   {
     id: 10,
-    watchOrder: 8,
+    watchOrder: 10,
     title:
       "Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer",
     type: "Special",
@@ -145,7 +145,7 @@ const rawMcuData = [
 
   {
     id: 11,
-    watchOrder: 9,
+    watchOrder: 11,
     title: "Thor",
     type: "Movie",
     year: 2011,
@@ -159,7 +159,7 @@ const rawMcuData = [
 
   {
     id: 12,
-    watchOrder: 10,
+    watchOrder: 12,
     title: "Marvel One-Shot: The Consultant",
     type: "Special",
     year: 2011,
@@ -173,7 +173,7 @@ const rawMcuData = [
 
   {
     id: 13,
-    watchOrder: 11,
+    watchOrder: 13,
     title: "The Avengers",
     type: "Movie",
     year: 2012,
@@ -187,7 +187,7 @@ const rawMcuData = [
 
   {
     id: 14,
-    watchOrder: 12,
+    watchOrder: 14,
     title: "Marvel One-Shot: Item 47",
     type: "Special",
     year: 2012,
@@ -201,7 +201,7 @@ const rawMcuData = [
 
   {
     id: 15,
-    watchOrder: 13,
+    watchOrder: 15,
     title: "Thor: The Dark World",
     type: "Movie",
     year: 2013,
@@ -215,7 +215,7 @@ const rawMcuData = [
 
   {
     id: 16,
-    watchOrder: 14,
+    watchOrder: 16,
     title: "Iron Man 3",
     type: "Movie",
     year: 2013,
@@ -229,7 +229,7 @@ const rawMcuData = [
 
   {
     id: 17,
-    watchOrder: 15,
+    watchOrder: 17,
     title: "Marvel One-Shot: All Hail the King",
     type: "Special",
     year: 2014,
@@ -243,7 +243,7 @@ const rawMcuData = [
 
   {
     id: 18,
-    watchOrder: 16,
+    watchOrder: 18,
     title: "Captain America: The Winter Soldier",
     type: "Movie",
     year: 2014,
@@ -257,7 +257,7 @@ const rawMcuData = [
 
   {
     id: 19,
-    watchOrder: 17,
+    watchOrder: 19,
     title: "Guardians of the Galaxy",
     type: "Movie",
     year: 2014,
@@ -271,7 +271,7 @@ const rawMcuData = [
 
   {
     id: 20,
-    watchOrder: 18,
+    watchOrder: 20,
     title: "Guardians of the Galaxy Vol. 2",
     type: "Movie",
     year: 2017,
@@ -285,7 +285,7 @@ const rawMcuData = [
 
   {
     id: 21,
-    watchOrder: 19,
+    watchOrder: 21,
     title: "I Am Groot: Season 1",
     type: "Series",
     year: 2022,
@@ -299,7 +299,7 @@ const rawMcuData = [
 
   {
     id: 22,
-    watchOrder: 20,
+    watchOrder: 22,
     title: "I Am Groot: Season 2",
     type: "Series",
     year: 2023,
@@ -313,7 +313,7 @@ const rawMcuData = [
 
   {
     id: 23,
-    watchOrder: 21,
+    watchOrder: 23,
     title: "Daredevil: Season 1",
     type: "Series",
     year: 2015,
@@ -327,7 +327,7 @@ const rawMcuData = [
 
   {
     id: 24,
-    watchOrder: 22,
+    watchOrder: 24,
     title: "Jessica Jones: Season 1",
     type: "Series",
     year: 2015,
@@ -341,7 +341,7 @@ const rawMcuData = [
 
   {
     id: 25,
-    watchOrder: 23,
+    watchOrder: 25,
     title: "Avengers: Age of Ultron",
     type: "Movie",
     year: 2015,
@@ -355,7 +355,7 @@ const rawMcuData = [
 
   {
     id: 26,
-    watchOrder: 24,
+    watchOrder: 26,
     title: "Ant-Man",
     type: "Movie",
     year: 2015,
@@ -369,7 +369,7 @@ const rawMcuData = [
 
   {
     id: 27,
-    watchOrder: 25,
+    watchOrder: 27,
     title: "Daredevil: Season 2",
     type: "Series",
     year: 2016,
@@ -383,7 +383,7 @@ const rawMcuData = [
 
   {
     id: 28,
-    watchOrder: 26,
+    watchOrder: 28,
     title: "Luke Cage: Season 1",
     type: "Series",
     year: 2016,
@@ -397,7 +397,7 @@ const rawMcuData = [
 
   {
     id: 29,
-    watchOrder: 27,
+    watchOrder: 29,
     title: "Iron Fist: Season 1",
     type: "Series",
     year: 2017,
@@ -411,7 +411,7 @@ const rawMcuData = [
 
   {
     id: 30,
-    watchOrder: 28,
+    watchOrder: 30,
     title: "The Defenders",
     type: "Series",
     year: 2017,
@@ -425,7 +425,7 @@ const rawMcuData = [
 
   {
     id: 31,
-    watchOrder: 29,
+    watchOrder: 31,
     title: "Captain America: Civil War",
     type: "Movie",
     year: 2016,
@@ -439,7 +439,7 @@ const rawMcuData = [
 
   {
     id: 32,
-    watchOrder: 30,
+    watchOrder: 32,
     title: "Black Widow",
     type: "Movie",
     year: 2021,
@@ -453,7 +453,7 @@ const rawMcuData = [
 
   {
     id: 33,
-    watchOrder: 31,
+    watchOrder: 33,
     title: "Black Panther",
     type: "Movie",
     year: 2018,
@@ -467,7 +467,7 @@ const rawMcuData = [
 
   {
     id: 34,
-    watchOrder: 32,
+    watchOrder: 34,
     title: "Spider-Man: Homecoming",
     type: "Movie",
     year: 2017,
@@ -480,7 +480,7 @@ const rawMcuData = [
   },
   {
     id: 35,
-    watchOrder: 33,
+    watchOrder: 35,
     title: "The Punisher: Season 1",
     type: "Series",
     year: 2017,
@@ -494,7 +494,7 @@ const rawMcuData = [
 
   {
     id: 36,
-    watchOrder: 34,
+    watchOrder: 36,
     title: "Doctor Strange",
     type: "Movie",
     year: 2016,
@@ -508,7 +508,7 @@ const rawMcuData = [
 
   {
     id: 37,
-    watchOrder: 35,
+    watchOrder: 37,
     title: "Jessica Jones: Season 2",
     type: "Series",
     year: 2018,
@@ -522,7 +522,7 @@ const rawMcuData = [
 
   {
     id: 38,
-    watchOrder: 36,
+    watchOrder: 38,
     title: "Luke Cage: Season 2",
     type: "Series",
     year: 2018,
@@ -536,7 +536,7 @@ const rawMcuData = [
 
   {
     id: 39,
-    watchOrder: 37,
+    watchOrder: 39,
     title: "Iron Fist: Season 2",
     type: "Series",
     year: 2018,
@@ -550,7 +550,7 @@ const rawMcuData = [
 
   {
     id: 40,
-    watchOrder: 38,
+    watchOrder: 40,
     title: "Daredevil: Season 3",
     type: "Series",
     year: 2018,
@@ -564,7 +564,7 @@ const rawMcuData = [
 
   {
     id: 41,
-    watchOrder: 39,
+    watchOrder: 41,
     title: "Thor: Ragnarok",
     type: "Movie",
     year: 2017,
@@ -578,7 +578,7 @@ const rawMcuData = [
 
   {
     id: 42,
-    watchOrder: 40,
+    watchOrder: 42,
     title: "The Punisher: Season 2",
     type: "Series",
     year: 2019,
@@ -592,7 +592,7 @@ const rawMcuData = [
 
   {
     id: 43,
-    watchOrder: 41,
+    watchOrder: 43,
     title: "Jessica Jones: Season 3",
     type: "Series",
     year: 2019,
@@ -606,7 +606,7 @@ const rawMcuData = [
 
   {
     id: 44,
-    watchOrder: 42,
+    watchOrder: 44,
     title: "Ant-Man and the Wasp",
     type: "Movie",
     year: 2018,
@@ -620,7 +620,7 @@ const rawMcuData = [
 
   {
     id: 45,
-    watchOrder: 43,
+    watchOrder: 45,
     title: "Avengers: Infinity War",
     type: "Movie",
     year: 2018,
@@ -634,7 +634,7 @@ const rawMcuData = [
 
   {
     id: 46,
-    watchOrder: 44,
+    watchOrder: 46,
     title: "Avengers: Endgame",
     type: "Movie",
     year: 2019,
@@ -648,7 +648,7 @@ const rawMcuData = [
 
   {
     id: 47,
-    watchOrder: 45,
+    watchOrder: 47,
     title: "Loki: Season 1",
     type: "Series",
     year: 2021,
@@ -662,7 +662,7 @@ const rawMcuData = [
 
   {
     id: 48,
-    watchOrder: 46,
+    watchOrder: 48,
     title: "What If...?: Season 1",
     type: "Series",
     year: 2021,
@@ -676,7 +676,7 @@ const rawMcuData = [
 
   {
     id: 49,
-    watchOrder: 47,
+    watchOrder: 49,
     title: "Marvel Zombies",
     type: "Series",
     year: 2025,
@@ -690,7 +690,7 @@ const rawMcuData = [
 
   {
     id: 50,
-    watchOrder: 48,
+    watchOrder: 50,
     title: "WandaVision",
     type: "Series",
     year: 2021,
@@ -704,7 +704,7 @@ const rawMcuData = [
 
   {
     id: 51,
-    watchOrder: 49,
+    watchOrder: 51,
     title: "Shang-Chi and the Legend of the Ten Rings",
     type: "Movie",
     year: 2021,
@@ -718,7 +718,7 @@ const rawMcuData = [
 
   {
     id: 52,
-    watchOrder: 50,
+    watchOrder: 52,
     title: "The Falcon and the Winter Soldier",
     type: "Series",
     year: 2021,
@@ -732,7 +732,7 @@ const rawMcuData = [
 
   {
     id: 53,
-    watchOrder: 51,
+    watchOrder: 53,
     title: "Spider-Man: Far From Home",
     type: "Movie",
     year: 2019,
@@ -746,7 +746,7 @@ const rawMcuData = [
 
   {
     id: 54,
-    watchOrder: 52,
+    watchOrder: 54,
     title: "Eternals",
     type: "Movie",
     year: 2021,
@@ -759,7 +759,7 @@ const rawMcuData = [
   },
   {
     id: 55,
-    watchOrder: 53,
+    watchOrder: 55,
     title: "Spider-Man: No Way Home",
     type: "Movie",
     year: 2021,
@@ -773,7 +773,7 @@ const rawMcuData = [
 
   {
     id: 56,
-    watchOrder: 54,
+    watchOrder: 56,
     title: "Doctor Strange in the Multiverse of Madness",
     type: "Movie",
     year: 2022,
@@ -787,7 +787,7 @@ const rawMcuData = [
 
   {
     id: 57,
-    watchOrder: 55,
+    watchOrder: 57,
     title: "Hawkeye",
     type: "Series",
     year: 2021,
@@ -801,7 +801,7 @@ const rawMcuData = [
 
   {
     id: 58,
-    watchOrder: 56,
+    watchOrder: 58,
     title: "Moon Knight",
     type: "Series",
     year: 2022,
@@ -815,7 +815,7 @@ const rawMcuData = [
 
   {
     id: 59,
-    watchOrder: 57,
+    watchOrder: 59,
     title: "Black Panther: Wakanda Forever",
     type: "Movie",
     year: 2022,
@@ -829,7 +829,7 @@ const rawMcuData = [
 
   {
     id: 60,
-    watchOrder: 58,
+    watchOrder: 60,
     title: "Echo",
     type: "Series",
     year: 2024,
@@ -843,7 +843,7 @@ const rawMcuData = [
 
   {
     id: 61,
-    watchOrder: 59,
+    watchOrder: 61,
     title: "She-Hulk: Attorney at Law",
     type: "Series",
     year: 2022,
@@ -857,7 +857,7 @@ const rawMcuData = [
 
   {
     id: 62,
-    watchOrder: 60,
+    watchOrder: 62,
     title: "Ms. Marvel",
     type: "Series",
     year: 2022,
@@ -871,7 +871,7 @@ const rawMcuData = [
 
   {
     id: 63,
-    watchOrder: 61,
+    watchOrder: 63,
     title: "Thor: Love and Thunder",
     type: "Movie",
     year: 2022,
@@ -885,7 +885,7 @@ const rawMcuData = [
 
   {
     id: 64,
-    watchOrder: 62,
+    watchOrder: 64,
     title: "Ironheart",
     type: "Series",
     year: 2025,
@@ -899,7 +899,7 @@ const rawMcuData = [
 
   {
     id: 65,
-    watchOrder: 63,
+    watchOrder: 65,
     title: "Werewolf by Night",
     type: "Special",
     year: 2022,
@@ -913,7 +913,7 @@ const rawMcuData = [
 
   {
     id: 66,
-    watchOrder: 64,
+    watchOrder: 66,
     title: "The Guardians of the Galaxy Holiday Special",
     type: "Special",
     year: 2022,
@@ -927,7 +927,7 @@ const rawMcuData = [
 
   {
     id: 67,
-    watchOrder: 65,
+    watchOrder: 67,
     title: "Ant-Man and the Wasp: Quantumania",
     type: "Movie",
     year: 2023,
@@ -941,7 +941,7 @@ const rawMcuData = [
 
   {
     id: 68,
-    watchOrder: 66,
+    watchOrder: 68,
     title: "Guardians of the Galaxy Vol. 3",
     type: "Movie",
     year: 2023,
@@ -955,7 +955,7 @@ const rawMcuData = [
 
   {
     id: 69,
-    watchOrder: 67,
+    watchOrder: 69,
     title: "Secret Invasion",
     type: "Series",
     year: 2023,
@@ -969,7 +969,7 @@ const rawMcuData = [
 
   {
     id: 70,
-    watchOrder: 68,
+    watchOrder: 70,
     title: "The Marvels",
     type: "Movie",
     year: 2023,
@@ -983,7 +983,7 @@ const rawMcuData = [
 
   {
     id: 71,
-    watchOrder: 69,
+    watchOrder: 71,
     title: "Loki: Season 2",
     type: "Series",
     year: 2023,
@@ -997,7 +997,7 @@ const rawMcuData = [
 
   {
     id: 72,
-    watchOrder: 70,
+    watchOrder: 72,
     title: "What If...?: Season 2",
     type: "Series",
     year: 2023,
@@ -1011,7 +1011,7 @@ const rawMcuData = [
 
   {
     id: 73,
-    watchOrder: 71,
+    watchOrder: 73,
     title: "Deadpool & Wolverine",
     type: "Movie",
     year: 2024,
@@ -1025,7 +1025,7 @@ const rawMcuData = [
 
   {
     id: 74,
-    watchOrder: 72,
+    watchOrder: 74,
     title: "Agatha All Along",
     type: "Series",
     year: 2024,
@@ -1038,7 +1038,7 @@ const rawMcuData = [
   },
   {
     id: 75,
-    watchOrder: 73,
+    watchOrder: 75,
     title: "What If...?: Season 3",
     type: "Series",
     year: 2024,
@@ -1052,7 +1052,7 @@ const rawMcuData = [
 
   {
     id: 76,
-    watchOrder: 74,
+    watchOrder: 76,
     title: "Daredevil: Born Again Season 1",
     type: "Series",
     year: 2025,
@@ -1066,7 +1066,7 @@ const rawMcuData = [
 
   {
     id: 77,
-    watchOrder: 75,
+    watchOrder: 77,
     title: "Captain America: Brave New World",
     type: "Movie",
     year: 2025,
@@ -1080,7 +1080,7 @@ const rawMcuData = [
 
   {
     id: 78,
-    watchOrder: 76,
+    watchOrder: 78,
     title: "Thunderbolts*",
     type: "Movie",
     year: 2025,
@@ -1094,7 +1094,7 @@ const rawMcuData = [
 
   {
     id: 79,
-    watchOrder: 77,
+    watchOrder: 79,
     title: "The Fantastic Four: First Steps",
     type: "Movie",
     year: 2025,
@@ -1108,7 +1108,7 @@ const rawMcuData = [
 
   {
     id: 80,
-    watchOrder: 78,
+    watchOrder: 80,
     title: "Wonder Man",
     type: "Series",
     year: 2025,
@@ -1122,7 +1122,7 @@ const rawMcuData = [
 
   {
     id: 81,
-    watchOrder: 79,
+    watchOrder: 81,
     title: "Daredevil: Born Again Season 2",
     type: "Series",
     year: 2026,
@@ -1136,7 +1136,7 @@ const rawMcuData = [
 
   {
     id: 82,
-    watchOrder: 80,
+    watchOrder: 82,
     title: "The Punisher: One Last Kill",
     type: "Special",
     year: 2026,
@@ -1147,9 +1147,20 @@ const rawMcuData = [
     budget: "N/A",
     collection: "N/A",
   },
+  {
+    id: 83,
+    watchOrder: 83,
+    title: "Spider-Man: Brand New Day",
+    type: "Movie",
+    year: 2026,
+    director: "Destin Daniel Cretton",
+    actor: "Tom Holland",
+    country: "USA",
+    imdb: 8,
+    budget: "$250M",
+    collection: "$2.22B+",
+  },
 ];
-
-console.log("movie item mcu " + rawMcuData[7]); // any Iron Man index
 
 export const mcuData = rawMcuData.map((movie) => ({
   ...movie,
