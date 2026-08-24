@@ -6,7 +6,11 @@ import { useTheme } from "../../context/ThemeContext";
 import { colors } from "../../themes/colors";
 import { useLocation } from "react-router-dom";
 
-function Navbar({ setSearchResult, setSelectedSection, enableSearch = true }) {
+function Navbar({
+  setSearchResult = () => {},
+  setSelectedSection = () => {},
+  enableSearch = true,
+}) {
   const [showProfile, setShowProfile] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);

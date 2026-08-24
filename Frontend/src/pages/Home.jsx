@@ -30,7 +30,6 @@ function Home() {
     searchParams.get("section") || "home",
   );
 
-
   const sectionData = {
     universes: {
       title: "All Universes",
@@ -367,94 +366,37 @@ function Home() {
                   title="Directors"
                   items={directorsData}
                   type="director"
-                  onShowMore={() => setSelectedSection("directors")}
                 />
 
                 <PeopleCarousel
                   title="Actors"
                   items={actorsData}
                   type="actor"
-                  onShowMore={() => setSelectedSection("actors")}
                 />
                 <div className="mt-12 mb-4 flex justify-center items-center gap-4 text-sm sm:text-base">
-  <a
-    href="https://t.me/ProSearchM11Bot"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`${currentTheme.text} hover:text-orange-500 transition-colors font-medium`}
-  >
-    Watch Movies
-  </a>
-
-  <span className="text-zinc-900"> & </span>
-
-  <a
-    href="https://t.me/ProSearchY11Bot"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`${currentTheme.text} hover:text-orange-500 transition-colors font-medium`}
-  >
-    Watch Web Series
-  </a>
-</div>
-              </>
-            )}
-
-            {selectedSection !== "home" && (
-              <>
-                {selectedSection === "directors" ||
-                selectedSection === "actors" ? (
-                  <>
-                    <h2 className="text-xl sm:text-2xl font-bold mb-6">
-                      {sectionData[selectedSection].title}
-                     </h2>
-
-                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-                      {" "}
-                      {sectionData[selectedSection].items.map((person) => (
-                        <PersonCard
-                          key={person.id}
-                          id={person.id}
-                          name={person.name}
-                          image={person.image}
-                          route={person.route}
-                          slug={person.slug}
-                          type={
-                            selectedSection === "directors"
-                              ? "director"
-                              : "actor"
-                          }
-                        />
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <CardGrid
-                    title={sectionData[selectedSection].title}
-                    items={sectionData[selectedSection].items}
-                  />
-                )}
-
-                <div className="flex justify-center mt-8">
-                  <button
-                    onClick={() => setSelectedSection("home")}
-                    className="
-                      px-4
-                      py-1
-                      sm:h-10
-                      rounded-lg
-                      bg-orange-500
-                      hover:bg-orange-600
-                      text-white
-                      font-medium
-                      transition-colors
-                    "
+                  <a
+                    href="https://t.me/ProSearchM11Bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${currentTheme.text} hover:text-orange-500 transition-colors font-medium`}
                   >
-                    Back to Home
-                  </button>
+                    Watch Movies
+                  </a>
+
+                  <span className="text-zinc-900"> & </span>
+
+                  <a
+                    href="https://t.me/ProSearchY11Bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${currentTheme.text} hover:text-orange-500 transition-colors font-medium`}
+                  >
+                    Watch Web Series
+                  </a>
                 </div>
               </>
             )}
+
           </>
         )}
       </div>

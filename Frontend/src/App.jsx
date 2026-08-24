@@ -11,6 +11,7 @@ import ContentPage from "./components/template/ContentPage";
 
 import { fetchProgress } from "./store/progressSlice";
 import { fetchMovieProgress } from "./store/movieProgressSlice";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         {/* Dynamic Content Route */}
+        <Route path="/category/:type" element={<CategoryPage />} />
         <Route path="/:category/:slug" element={<ContentPage />} />{" "}
       </Routes>
     </BrowserRouter>
