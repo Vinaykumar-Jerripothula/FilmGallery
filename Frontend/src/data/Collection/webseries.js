@@ -1,10 +1,10 @@
-import breakingbadImage from "../../images/webseries/breakingbad/breakingbadImage.jpeg";
-import gameofthronesImage from "../../images/webseries/gameofthrones/gameofthronesImage.jpeg";
-import vikingsImage from "../../images/webseries/vikings/vikingsImage.jpeg";
-import darkImage from "../../images/webseries/dark/darkImage.jpeg";
-import fromImage from "../../images/webseries/from/fromImage.jpeg";
-import strangerthingsImage from "../../images/webseries/strangerthings/strangerthingsImage.jpeg";
-import peakyblindersImage from "../../images/webseries/peakyblinders/peakyblindersImage.jpeg";
+import breakingbadImage from "../../images/hollywood/webseries/breakingbad/breakingbadImage.jpeg";
+import gameofthronesImage from "../../images/hollywood/webseries/gameofthrones/gameofthronesImage.jpeg";
+import vikingsImage from "../../images/hollywood/webseries/vikings/vikingsImage.jpeg";
+import darkImage from "../../images/hollywood/webseries/dark/darkImage.jpeg";
+import fromImage from "../../images/hollywood/webseries/from/fromImage.jpeg";
+import strangerthingsImage from "../../images/hollywood/webseries/strangerthings/strangerthingsImage.jpeg";
+import peakyblindersImage from "../../images/hollywood/webseries/peakyblinders/peakyblindersImage.jpeg";
 
 
 export const seriesData = [

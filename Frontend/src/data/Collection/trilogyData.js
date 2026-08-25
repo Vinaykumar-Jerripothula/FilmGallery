@@ -1,9 +1,9 @@
-import beforeImage from "../../images/triology/before/beforeImage.jpeg";
-import narniaImage from "../../images/triology/narnia/narniaImage.jpeg";
-import thedarkknightImage from "../../images/triology/thedarkknight/thedarkknightImage.jpeg";
-import equalizerImage from "../../images/triology/equalizer/equalizerImage.jpeg";
-import mazerunnerImage from "../../images/triology/mazerunner/mazerunnerImage.jpeg";
-import millenniumImage from "../../images/triology/millennium/millenniumImage.jpeg";
+import beforeImage from "../../images/hollywood/triology/before/beforeImage.jpeg";
+import narniaImage from "../../images/hollywood/triology/narnia/narniaImage.jpeg";
+import thedarkknightImage from "../../images/hollywood/triology/thedarkknight/thedarkknightImage.jpeg";
+import equalizerImage from "../../images/hollywood/triology/equalizer/equalizerImage.jpeg";
+import mazerunnerImage from "../../images/hollywood/triology/mazerunner/mazerunnerImage.jpeg";
+import millenniumImage from "../../images/hollywood/triology/millennium/millenniumImage.jpeg";
 
 export const triologyData = [
   {

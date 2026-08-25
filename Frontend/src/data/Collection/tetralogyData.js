@@ -1,6 +1,6 @@
-import badboysImage from "../../images/tetralogy/badboys/badboysImage.jpeg";
-import expandablesImage from "../../images/tetralogy/expandables/expandablesImage.jpeg";
-import matrixImage from "../../images/tetralogy/matrix/matrixImage.jpeg";
+import badboysImage from "../../images/hollywood/tetralogy/badboys/badboysImage.jpeg";
+import expandablesImage from "../../images/hollywood/tetralogy/expandables/expandablesImage.jpeg";
+import matrixImage from "../../images/hollywood/tetralogy/matrix/matrixImage.jpeg";
 export const tetralogyData = [
   {
     id: 1,

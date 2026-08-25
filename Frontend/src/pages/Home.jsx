@@ -5,9 +5,9 @@ import { seriesData } from "../data/Collection/webseries";
 import { duologyData } from "../data/Collection/duologyData";
 import { triologyData } from "../data/Collection/trilogyData";
 import { tetralogyData } from "../data/Collection/tetralogyData";
-import { directorsData } from "../data/people/directorsData";
-import { actorsData } from "../data/people/actorsData";
-import { peopleData } from "../data/people/peopleData";
+import { directorsData } from "../data/hollywood/people/directorsData";
+import { actorsData } from "../data/hollywood/people/actorsData";
+import { peopleData } from "../data/hollywood/people/peopleData";
 
 import PeopleCarousel from "../components/template/PeopleCarousel";
 import { useState } from "react";
@@ -20,11 +20,12 @@ import { colors } from "../themes/colors";
 import CardGrid from "../components/template/CardGrid";
 import { useSearchParams } from "react-router-dom";
 import PersonCard from "../components/template/PersonCard";
-import { mcuData } from "../data/universe/mcuData";
+import { mcuData } from "../data/hollywood/universe/mcuData";
 import { allContentItems } from "../data/Collection/allContentItems";
 
 function Home() {
   const [searchResult, setSearchResult] = useState(null);
+  const [selectedIndustry, setSelectedIndustry] = useState("hollywood");
   const [searchParams] = useSearchParams();
   const [selectedSection, setSelectedSection] = useState(
     searchParams.get("section") || "home",
@@ -121,6 +122,8 @@ function Home() {
       <Navbar
         setSearchResult={setSearchResult}
         setSelectedSection={setSelectedSection}
+        selectedIndustry={selectedIndustry}
+        setSelectedIndustry={setSelectedIndustry}
       />
 
       {/* Page Header */}
@@ -347,20 +350,38 @@ function Home() {
                 <HorizontalCarousel
                   title="Cinematic Universe"
                   items={universeData}
+                  showMoreRoute="/category/universes"
                 />
 
-                <HorizontalCarousel title="Franchises" items={franchiseData} />
+                <HorizontalCarousel
+                  title="Franchises"
+                  items={franchiseData}
+                  showMoreRoute="/category/franchises"
+                />
 
                 <HorizontalCarousel
                   title="TV / Web Series"
                   items={seriesData}
+                  showMoreRoute="/category/series"
                 />
 
-                <HorizontalCarousel title="Duology" items={duologyData} />
+                <HorizontalCarousel
+                  title="Duology"
+                  items={duologyData}
+                  showMoreRoute="/category/duologies"
+                />
 
-                <HorizontalCarousel title="Trilogy" items={triologyData} />
+                <HorizontalCarousel
+                  title="Trilogy"
+                  items={triologyData}
+                  showMoreRoute="/category/trilogies"
+                />
 
-                <HorizontalCarousel title="Tetralogy" items={tetralogyData} />
+                <HorizontalCarousel
+                  title="Tetralogy"
+                  items={tetralogyData}
+                  showMoreRoute="/category/tetralogies"
+                />
 
                 <PeopleCarousel
                   title="Directors"
@@ -396,7 +417,6 @@ function Home() {
                 </div>
               </>
             )}
-
           </>
         )}
       </div>

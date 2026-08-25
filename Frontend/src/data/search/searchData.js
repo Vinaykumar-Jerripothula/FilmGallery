@@ -1,5 +1,5 @@
 import { contentRegistry } from "../Collection/contentRegistry";
-import { peopleData } from "../people/peopleData";
+import { peopleData } from "../hollywood/people/peopleData";
 import { enrichedPeopleData } from "../../utils/enrichPeopleData";
 import { allContentItems } from "../Collection/allContentItems";
 

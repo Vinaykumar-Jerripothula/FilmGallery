@@ -124,7 +124,7 @@ function ContentCard({ title, contentId, image, total = 0, route }) {
               mt-2
 
               w-full
-              h-1.5
+              h-1
 
               overflow-hidden
               rounded-full

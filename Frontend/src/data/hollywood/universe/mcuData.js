@@ -1,5 +1,4 @@
-import { enrichCollectionData } from "../../utils/enrichCollectionData";
-import { generateContentId } from "../../utils/generateContentId";
+import { generateContentId } from "../../../utils/generateContentId";
 
 const rawMcuData = [
   {

@@ -1,9 +1,9 @@
-import bladerunnerImage from "../../images/duology/bladerunner/bladerunnerImage.jpeg";
-import jackreacherImage from "../../images/duology/jackreacher/jackreacherImage.jpeg";
-import killbillImage from "../../images/duology/killbill/killbillImage.jpeg";
-import sherlockholmesImage from "../../images/duology/sherlockholmes/sherlockholmesImage.jpeg";
-import theraidImage from "../../images/duology/theraid/theraidImage.jpeg";
-import topgunImage from "../../images/duology/topgun/topgunImage.jpeg";
+import bladerunnerImage from "../../images/hollywood/duology/bladerunner/bladerunnerImage.jpeg";
+import jackreacherImage from "../../images/hollywood/duology/jackreacher/jackreacherImage.jpeg";
+import killbillImage from "../../images/hollywood/duology/killbill/killbillImage.jpeg";
+import sherlockholmesImage from "../../images/hollywood/duology/sherlockholmes/sherlockholmesImage.jpeg";
+import theraidImage from "../../images/hollywood/duology/theraid/theraidImage.jpeg";
+import topgunImage from "../../images/hollywood/duology/topgun/topgunImage.jpeg";
 
 export const duologyData = [
   {

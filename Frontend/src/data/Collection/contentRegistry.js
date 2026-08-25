@@ -1,121 +1,121 @@
 
 // universe - Data
-import { mcuData } from "../universe/mcuData";
-import { dcuData } from "../universe/dcuData";
-import { dceuData } from "../universe/dceuData";
-import { monsterVerseData } from "../universe/monsterVerseData";
-import { starWarsData } from "../universe/starWarsData";
-import { theConjuringData } from "../universe/theConjuringData";
-import { xmenData } from "../universe/xmenData";
+import { mcuData } from "../hollywood/universe/mcuData";
+import { dcuData } from "../hollywood/universe/dcuData";
+import { dceuData } from "../hollywood/universe/dceuData";
+import { monsterVerseData } from "../hollywood/universe/monsterVerseData";
+import { starWarsData } from "../hollywood/universe/starWarsData";
+import { theConjuringData } from "../hollywood/universe/theConjuringData";
+import { xmenData } from "../hollywood/universe/xmenData";
 
 // universe - Image
-import dceuImage from "../../images/universe/dceu/dceuImage.jpeg";
-import dcuImage from "../../images/universe/dcu/dcuImage.jpeg";
-import mcuImage from "../../images/universe/mcu/mcuImage.jpeg";
-import monsterverseImage from "../../images/universe/monsterverse/monsterVerseImage.jpeg";
-import starwarsImage from "../../images/universe/starwars/starWarsImage.jpeg";
-import theconjuringImage from "../../images/universe/theconjuring/theConjuringImage.jpeg";
-import xmenImage from "../../images/universe/xmen/xmenImage.jpeg";
+import dceuImage from "../../images/hollywood/universe/dceu/dceuImage.jpeg";
+import dcuImage from "../../images/hollywood/universe/dcu/dcuImage.jpeg";
+import mcuImage from "../../images/hollywood/universe/mcu/mcuImage.jpeg";
+import monsterverseImage from "../../images/hollywood/universe/monsterverse/monsterVerseImage.jpeg";
+import starwarsImage from "../../images/hollywood/universe/starwars/starWarsImage.jpeg";
+import theconjuringImage from "../../images/hollywood/universe/theconjuring/theConjuringImage.jpeg";
+import xmenImage from "../../images/hollywood/universe/xmen/xmenImage.jpeg";
 
 
 // franchise - Data
-import { alienData } from "../franchise/alienData";
-import { fastAndFuriousData } from "../franchise/fastAndFuriousData";
-import { harryPotterData } from "../franchise/harryPotterData";
-import { jamesBondData } from "../franchise/jamesBondData";
-import { johnWickData } from "../franchise/johnWickData";
-import { jurassicParkData } from "../franchise/jurassicParkData";
-import { lordOfTheRingsData } from "../franchise/lordOfTheRingsData";
-import { madMaxData } from "../franchise/madMaxData";
-import { missionImpossibleData } from "../franchise/missionImpossibleData";
-import { piratesOfTheCaribbeanData } from "../franchise/piratesOfTheCaribbeanData";
-import { planetOfTheApesData } from "../franchise/planetOfTheApesData";
-import { predatorData } from "../franchise/predatorData";
-import { rockyCreedData } from "../franchise/rockyCreedData";
-import { starTrekData } from "../franchise/starTrekData";
-import { terminatorData } from "../franchise/terminatorData";
-import { theHungerGamesData } from "../franchise/theHungerGamesData";
-import { transformersData } from "../franchise/transformersData";
+import { alienData } from "../hollywood/franchise/alienData";
+import { fastAndFuriousData } from "../hollywood/franchise/fastAndFuriousData";
+import { harryPotterData } from "../hollywood/franchise/harryPotterData";
+import { jamesBondData } from "../hollywood/franchise/jamesBondData";
+import { johnWickData } from "../hollywood/franchise/johnWickData";
+import { jurassicParkData } from "../hollywood/franchise/jurassicParkData";
+import { lordOfTheRingsData } from "../hollywood/franchise/lordOfTheRingsData";
+import { madMaxData } from "../hollywood/franchise/madMaxData";
+import { missionImpossibleData } from "../hollywood/franchise/missionImpossibleData";
+import { piratesOfTheCaribbeanData } from "../hollywood/franchise/piratesOfTheCaribbeanData";
+import { planetOfTheApesData } from "../hollywood/franchise/planetOfTheApesData";
+import { predatorData } from "../hollywood/franchise/predatorData";
+import { rockyCreedData } from "../hollywood/franchise/rockyCreedData";
+import { starTrekData } from "../hollywood/franchise/starTrekData";
+import { terminatorData } from "../hollywood/franchise/terminatorData";
+import { theHungerGamesData } from "../hollywood/franchise/theHungerGamesData";
+import { transformersData } from "../hollywood/franchise/transformersData";
 
 // franchise - Image
-import alienImage from "../../images/franchise/alien/alienImage.jpeg";
-import fastandfuriousImage from "../../images/franchise/fastandfurious/fastandfuriousImage.jpeg";
-import harrypotterImage from "../../images/franchise/harrypotter/harrypotterImage.jpeg";
-import jamesbondImage from "../../images/franchise/jamesbond/jamesbondImage.jpeg";
-import johnwickImage from "../../images/franchise/johnwick/johnwickImage.jpeg";
-import jurassicparkImage from "../../images/franchise/jurassicpark/jurassicparkImage.jpeg";
-import lordofringsImage from "../../images/franchise/lordofrings/lordofringsImage.jpeg";
-import madmaxImage from "../../images/franchise/madmax/madmaxImage.jpeg";
-import missionimpossibleImage from "../../images/franchise/missionimpossible/missionimpossibleImage.jpeg";
-import pofcImage from "../../images/franchise/piratesofcaribbean/pofcImage.jpeg";
-import planetoftheapesImage from "../../images/franchise/planetoftheapes/planetoftheapesImage.jpeg";
-import predatorImage from "../../images/franchise/predator/predatorImage.jpeg";
-import startrekImage from "../../images/franchise/startrek/startrekImage.jpeg";
-import rockycreedImage from "../../images/franchise/rockycreed/rockycreedImage.jpeg";
-import terminatorImage from "../../images/franchise/terminator/terminatorImage.jpeg";
-import thehungergamesImage from "../../images/franchise/thehungergames/thehungergamesImage.jpeg";
-import transformersImage from "../../images/franchise/transformers/transformersImage.jpeg";
+import alienImage from "../../images/hollywood/franchise/alien/alienImage.jpeg";
+import fastandfuriousImage from "../../images/hollywood/franchise/fastandfurious/fastandfuriousImage.jpeg";
+import harrypotterImage from "../../images/hollywood/franchise/harrypotter/harrypotterImage.jpeg";
+import jamesbondImage from "../../images/hollywood/franchise/jamesbond/jamesbondImage.jpeg";
+import johnwickImage from "../../images/hollywood/franchise/johnwick/johnwickImage.jpeg";
+import jurassicparkImage from "../../images/hollywood/franchise/jurassicpark/jurassicparkImage.jpeg";
+import lordofringsImage from "../../images/hollywood/franchise/lordofrings/lordofringsImage.jpeg";
+import madmaxImage from "../../images/hollywood/franchise/madmax/madmaxImage.jpeg";
+import missionimpossibleImage from "../../images/hollywood/franchise/missionimpossible/missionimpossibleImage.jpeg";
+import pofcImage from "../../images/hollywood/franchise/piratesofcaribbean/pofcImage.jpeg";
+import planetoftheapesImage from "../../images/hollywood/franchise/planetoftheapes/planetoftheapesImage.jpeg";
+import predatorImage from "../../images/hollywood/franchise/predator/predatorImage.jpeg";
+import startrekImage from "../../images/hollywood/franchise/startrek/startrekImage.jpeg";
+import rockycreedImage from "../../images/hollywood/franchise/rockycreed/rockycreedImage.jpeg";
+import terminatorImage from "../../images/hollywood/franchise/terminator/terminatorImage.jpeg";
+import thehungergamesImage from "../../images/hollywood/franchise/thehungergames/thehungergamesImage.jpeg";
+import transformersImage from "../../images/hollywood/franchise/transformers/transformersImage.jpeg";
 
 // webseries - Data
-import { breakingBadUniverseData } from "../webseries/breakingBadUniverseData";
-import { darkData } from "../webseries/darkData";
-import { fromData } from "../webseries/fromData";
-import { gameOfThronesData } from "../webseries/gameOfThronesData";
-import { peakyBlindersData } from "../webseries/peakyBlindersData";
-import { strangerThingsData } from "../webseries/strangerThingsData";
-import { vikingsData } from "../webseries/vikingsData";
+import { breakingBadUniverseData } from "../hollywood/webseries/breakingBadUniverseData";
+import { darkData } from "../hollywood/webseries/darkData";
+import { fromData } from "../hollywood/webseries/fromData";
+import { gameOfThronesData } from "../hollywood/webseries/gameOfThronesData";
+import { peakyBlindersData } from "../hollywood/webseries/peakyBlindersData";
+import { strangerThingsData } from "../hollywood/webseries/strangerThingsData";
+import { vikingsData } from "../hollywood/webseries/vikingsData";
 
 // webseries - Image
-import breakingbadImage from "../../images/webseries/breakingbad/breakingbadImage.jpeg";
-import darkImage from "../../images/webseries/dark/darkImage.jpeg";
-import fromImage from "../../images/webseries/from/fromImage.jpeg";
-import gameofthronesImage from "../../images/webseries/gameofthrones/gameofthronesImage.jpeg";
-import peakyblindersImage from "../../images/webseries/peakyblinders/peakyblindersImage.jpeg";
-import strangerthingsImage from "../../images/webseries/strangerthings/strangerthingsImage.jpeg";
-import vikingsImage from "../../images/webseries/vikings/vikingsImage.jpeg";
+import breakingbadImage from "../../images/hollywood/webseries/breakingbad/breakingbadImage.jpeg";
+import darkImage from "../../images/hollywood/webseries/dark/darkImage.jpeg";
+import fromImage from "../../images/hollywood/webseries/from/fromImage.jpeg";
+import gameofthronesImage from "../../images/hollywood/webseries/gameofthrones/gameofthronesImage.jpeg";
+import peakyblindersImage from "../../images/hollywood/webseries/peakyblinders/peakyblindersImage.jpeg";
+import strangerthingsImage from "../../images/hollywood/webseries/strangerthings/strangerthingsImage.jpeg";
+import vikingsImage from "../../images/hollywood/webseries/vikings/vikingsImage.jpeg";
 
 // duology - Data 
-import { bladeRunnerData } from "../duology/bladeRunnerData";
-import { jackReacherData } from "../duology/jackReacherData";
-import { killBillData } from "../duology/killBillData";
-import { sherlockHolmesData } from "../duology/sherlockHolmesData";
-import { theRaidData } from "../duology/theRaidData";
-import { topGunData } from "../duology/topGunData";
+import { bladeRunnerData } from "../hollywood/duology/bladeRunnerData";
+import { jackReacherData } from "../hollywood/duology/jackReacherData";
+import { killBillData } from "../hollywood/duology/killBillData";
+import { sherlockHolmesData } from "../hollywood/duology/sherlockHolmesData";
+import { theRaidData } from "../hollywood/duology/theRaidData";
+import { topGunData } from "../hollywood/duology/topGunData";
 
 // Duology - Image
-import bladeunnerImage from "../../images/duology/bladerunner/bladerunnerImage.jpeg";
-import jackreacherImage from "../../images/duology/jackreacher/jackreacherImage.jpeg";
-import killbillImage from "../../images/duology/killbill/killbillImage.jpeg";
-import sherlockholmesImage from "../../images/duology/sherlockholmes/sherlockholmesImage.jpeg";
-import theraidImage from "../../images/duology/theraid/theraidImage.jpeg";
-import topgunImage from "../../images/duology/topgun/topgunImage.jpeg";
+import bladeunnerImage from "../../images/hollywood/duology/bladerunner/bladerunnerImage.jpeg";
+import jackreacherImage from "../../images/hollywood/duology/jackreacher/jackreacherImage.jpeg";
+import killbillImage from "../../images/hollywood/duology/killbill/killbillImage.jpeg";
+import sherlockholmesImage from "../../images/hollywood/duology/sherlockholmes/sherlockholmesImage.jpeg";
+import theraidImage from "../../images/hollywood/duology/theraid/theraidImage.jpeg";
+import topgunImage from "../../images/hollywood/duology/topgun/topgunImage.jpeg";
 
 // trilogy - Data 
-import { beforeTriologyData } from "../trilogy/beforeTrilogyData";
-import { chroniclesOfNarniaData } from "../trilogy/chroniclesOfNarniaData";
-import { equalizerData } from "../trilogy/equalizerData";
-import { mazeRunnerData } from "../trilogy/mazeRunnerData";
-import { millenniumTrilogyData } from "../trilogy/millenniumTrilogyData";
-import { darkKnightTrilogyData } from "../trilogy/theDarkKnightData";
+import { beforeTriologyData } from "../hollywood/trilogy/beforeTrilogyData";
+import { chroniclesOfNarniaData } from "../hollywood/trilogy/chroniclesOfNarniaData";
+import { equalizerData } from "../hollywood/trilogy/equalizerData";
+import { mazeRunnerData } from "../hollywood/trilogy/mazeRunnerData";
+import { millenniumTrilogyData } from "../hollywood/trilogy/millenniumTrilogyData";
+import { darkKnightTrilogyData } from "../hollywood/trilogy/theDarkKnightData";
 
 // triology - Image
-import beforeImage from "../../images/triology/before/beforeImage.jpeg";
-import narniaImage from "../../images/triology/narnia/narniaImage.jpeg";
-import thedarkknightImage from "../../images/triology/thedarkknight/thedarkknightImage.jpeg";
-import equalizerImage from "../../images/triology/equalizer/equalizerImage.jpeg";
-import mazerunnerImage from "../../images/triology/mazerunner/mazerunnerImage.jpeg";
-import millenniumImage from "../../images/triology/millennium/millenniumImage.jpeg";
+import beforeImage from "../../images/hollywood/triology/before/beforeImage.jpeg";
+import narniaImage from "../../images/hollywood/triology/narnia/narniaImage.jpeg";
+import thedarkknightImage from "../../images/hollywood/triology/thedarkknight/thedarkknightImage.jpeg";
+import equalizerImage from "../../images/hollywood/triology/equalizer/equalizerImage.jpeg";
+import mazerunnerImage from "../../images/hollywood/triology/mazerunner/mazerunnerImage.jpeg";
+import millenniumImage from "../../images/hollywood/triology/millennium/millenniumImage.jpeg";
 
 
 // tetralogy - Data 
-import { badBoysData } from "../tetralogy/badboysData";
-import { expandablesData } from "../tetralogy/expandablesData";
-import { matrixData } from "../tetralogy/theMatrix";
+import { badBoysData } from "../hollywood/tetralogy/badboysData";
+import { expandablesData } from "../hollywood/tetralogy/expandablesData";
+import { matrixData } from "../hollywood/tetralogy/theMatrix";
 
 // tetralogy - Image
-import badboysImage from "../../images/tetralogy/badboys/badboysImage.jpeg";
-import expandablesImage from "../../images/tetralogy/expandables/expandablesImage.jpeg";
-import matrixImage from "../../images/tetralogy/matrix/matrixImage.jpeg";
+import badboysImage from "../../images/hollywood/tetralogy/badboys/badboysImage.jpeg"
+import expandablesImage from "../../images/hollywood/tetralogy/expandables/expandablesImage.jpeg";
+import matrixImage from "../../images/hollywood/tetralogy/matrix/matrixImage.jpeg";
 
 
 

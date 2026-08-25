@@ -1,42 +1,42 @@
-import leonardodicaprioImage from "../../images/people/hollywoodactors/hollywoodactorsimages/leonardodicaprioImage.jpeg";
+import leonardodicaprioImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/leonardodicaprioImage.jpeg";
 
-import tomcruiseImage from "../../images/people/hollywoodactors/hollywoodactorsimages/tomcruiseImage.jpeg";
+import tomcruiseImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/tomcruiseImage.jpeg";
 
-import robertdowneyjnrImage from "../../images/people/hollywoodactors/hollywoodactorsimages/robertdowneyjnrImage.jpeg";
+import robertdowneyjnrImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/robertdowneyjnrImage.jpeg";
 
-import christianbaleImage from "../../images/people/hollywoodactors/hollywoodactorsimages/christianbaleImage.jpeg";
+import christianbaleImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/christianbaleImage.jpeg";
 
-import bradpittImage from "../../images/people/hollywoodactors/hollywoodactorsimages/bradpittImage.jpeg";
+import bradpittImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/bradpittImage.jpeg";
 
-import johnnydeepImage from "../../images/people/hollywoodactors/hollywoodactorsimages/johnnydeepImage.jpeg";
+import johnnydeepImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/johnnydeepImage.jpeg";
 
-import tomhanksImage from "../../images/people/hollywoodactors/hollywoodactorsimages/tomhanksImage.jpeg";
+import tomhanksImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/tomhanksImage.jpeg";
 
-import denzelwashingtonImage from "../../images/people/hollywoodactors/hollywoodactorsimages/denzelwashingtonImage.jpeg";
+import denzelwashingtonImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/denzelwashingtonImage.jpeg";
 
-import keanureevesImage from "../../images/people/hollywoodactors/hollywoodactorsimages/keanureevesImage.jpeg";
+import keanureevesImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/keanureevesImage.jpeg";
 
-import morganfremanImage from "../../images/people/hollywoodactors/hollywoodactorsimages/morganfremanImage.jpeg";
+import morganfremanImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/morganfremanImage.jpeg";
 
-import chrishemsworthImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrishemsworthImage.jpeg";
+import chrishemsworthImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/chrishemsworthImage.jpeg";
 
-import ryangoslingImage from "../../images/people/hollywoodactors/hollywoodactorsimages/ryangoslingImage.jpeg";
+import ryangoslingImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/ryangoslingImage.jpeg";
 
-import joaquinphoenixImage from "../../images/people/hollywoodactors/hollywoodactorsimages/joaquinphoenixImage.jpeg";
+import joaquinphoenixImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/joaquinphoenixImage.jpeg";
 
-import jakegyllenhaalImage from "../../images/people/hollywoodactors/hollywoodactorsimages/jakegyllenhaalImage.jpeg";
+import jakegyllenhaalImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/jakegyllenhaalImage.jpeg";
 
-import chrisevansImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrisevansImage.jpeg";
+import chrisevansImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/chrisevansImage.jpeg";
 
-import chrisprattImage from "../../images/people/hollywoodactors/hollywoodactorsimages/chrisprattImage.jpeg";
+import chrisprattImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/chrisprattImage.jpeg";
 
-import ryanreynoldsImage from "../../images/people/hollywoodactors/hollywoodactorsimages/ryanreynoldsImage.jpeg";
+import ryanreynoldsImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/ryanreynoldsImage.jpeg";
 
-import henrycavillImage from "../../images/people/hollywoodactors/hollywoodactorsimages/henrycavillImage.jpeg";
+import henrycavillImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/henrycavillImage.jpeg";
 
-import cillianmurphyImage from "../../images/people/hollywoodactors/hollywoodactorsimages/cillianmurphyImage.jpeg";
+import cillianmurphyImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/cillianmurphyImage.jpeg";
 
-import mattdamonImage from "../../images/people/hollywoodactors/hollywoodactorsimages/mattdamonImage.jpeg";
+import mattdamonImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/mattdamonImage.jpeg";
 
 export const actorsData = [
   {

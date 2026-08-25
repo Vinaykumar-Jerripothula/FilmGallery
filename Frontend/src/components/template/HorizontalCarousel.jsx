@@ -1,13 +1,15 @@
 import { useRef } from "react";
 import { Bold, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
-
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import FranchiseCard from "./ContentCard";
 
-function HorizontalCarousel({ title, items = [] }) {
+function HorizontalCarousel({ title, items = [], showMoreRoute }) {
   const scrollRef = useRef(null);
   const { theme } = useTheme();
   const isDark = theme === "dark";
+  const navigate = useNavigate();
   const scroll = (direction) => {
     const container = scrollRef.current;
 
@@ -155,6 +157,8 @@ function HorizontalCarousel({ title, items = [] }) {
             scrollbar-hide
 
             pb-1
+            pr-27
+            md:pr-0
           "
           style={{
             scrollbarWidth: "none",
@@ -185,6 +189,65 @@ function HorizontalCarousel({ title, items = [] }) {
               />
             </div>
           ))}
+          {showMoreRoute && (
+            <div
+              onClick={() => navigate(showMoreRoute)}
+              className="
+                cursor-pointer
+                flex-shrink-0
+
+                w-[120px]
+                sm:w-[140px]
+
+                flex
+              "
+            >
+              <div
+                className="
+                  w-full
+                  aspect-[16/10]
+
+                  rounded-xl
+                  border
+                  border-zinc-700
+
+                  flex flex-col
+                  items-center
+                  justify-center
+
+                  transition-all
+                  duration-300
+
+                  hover:bg-white/5
+                  hover:border-zinc-500
+                  group
+                "
+              >
+                <ArrowRight
+                  size={42}
+                  strokeWidth={1.5}
+                  className="
+                    text-zinc-500
+                    group-hover:text-zinc-300
+                    transition-colors
+                  "
+                />
+
+                <span
+                  className="
+                    mt-2
+                    text-sm
+                    font-semibold
+                    text-zinc-400
+                    group-hover:text-white
+                    transition-colors
+                  "
+                >
+                  Show More
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

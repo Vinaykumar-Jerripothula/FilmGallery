@@ -9,6 +9,8 @@ import { useLocation } from "react-router-dom";
 function Navbar({
   setSearchResult = () => {},
   setSelectedSection = () => {},
+  selectedIndustry,
+ setSelectedIndustry = () => {},
   enableSearch = true,
 }) {
   const [showProfile, setShowProfile] = useState(false);
@@ -227,11 +229,13 @@ function Navbar({
             <div className="hidden md:flex items-center gap-6">
               <button
                 onClick={() => {
+                  setSelectedIndustry("hollywood");
+
                   if (location.pathname !== "/home") {
-                    navigate("/home?section=universes");
-                  } else {
-                    setSelectedSection("universes");
+                    navigate("/home");
                   }
+
+                  setSelectedSection("home");
                 }}
                 className={`
                   ${isDark ? "text-zinc-300" : "text-zinc-700"}
@@ -241,7 +245,7 @@ function Navbar({
                   transition
                 `}
               >
-                Universes
+                Hollywood
               </button>
 
               <button
@@ -260,7 +264,7 @@ function Navbar({
                     transition
                   `}
               >
-                Franchises
+                Korean
               </button>
 
               <button
@@ -279,7 +283,7 @@ function Navbar({
                   transition
                 `}
               >
-                Web Series
+                Anime
               </button>
 
               <button
@@ -291,7 +295,7 @@ function Navbar({
                   transition
                 `}
               >
-                Top 250 Movies
+                Tollywood
               </button>
 
               <button
@@ -719,11 +723,13 @@ function Navbar({
             <div className="pt-5">
               <button
                 onClick={() => {
+                  setSelectedIndustry("hollywood");
+
                   if (location.pathname !== "/home") {
-                    navigate("/home?section=universes");
-                  } else if (setSelectedSection) {
-                    setSelectedSection("universes");
+                    navigate("/home");
                   }
+
+                  setSelectedSection("home");
 
                   setShowMobileMenu(false);
                 }}
@@ -766,7 +772,7 @@ function Navbar({
                 />
 
                 <span className="group-hover:translate-x-1 transition-transform duration-300">
-                  Universes
+                  Hollywood
                 </span>
               </button>
 
@@ -823,7 +829,7 @@ function Navbar({
                 />
 
                 <span className="group-hover:translate-x-1 transition-transform duration-300">
-                  Franchises
+                  Korean
                 </span>
               </button>
 
@@ -880,7 +886,7 @@ function Navbar({
                 />
 
                 <span className="group-hover:translate-x-1 transition-transform duration-300">
-                  Series
+                  Anime
                 </span>
               </button>
 
@@ -928,7 +934,7 @@ function Navbar({
                 />
 
                 <span className="group-hover:translate-x-1 transition-transform duration-300">
-                  Movies
+                  Tollywood
                 </span>
               </button>
             </div>

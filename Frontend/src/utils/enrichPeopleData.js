@@ -1,4 +1,4 @@
-import { peopleData } from "../data/people/peopleData";
+import { peopleData } from "../data/hollywood/people/peopleData";
 import { generateContentId } from "./generateContentId";
 
 export const enrichedPeopleData = {

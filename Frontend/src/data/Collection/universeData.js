@@ -1,10 +1,10 @@
-import  mcuImage  from "../../images/universe/mcu/mcuImage.jpeg";
-import dceuImage from "../../images/universe/dceu/dceuImage.jpeg";
-import dcuImage from "../../images/universe/dcu/dcuImage.jpeg";
-import starWarsImage  from "../../images/universe/starwars/starWarsImage.jpeg";
-import theConjuringImage from "../../images/universe/theconjuring/theConjuringImage.jpeg";
-import monsterVerseImage from "../../images/universe/monsterverse/monsterVerseImage.jpeg";
-import xmenImage from "../../images/universe/xmen/xmenImage.jpeg";
+import  mcuImage  from "../../images/hollywood/universe/mcu/mcuImage.jpeg";
+import dceuImage from "../../images/hollywood/universe/dceu/dceuImage.jpeg";
+import dcuImage from "../../images/hollywood/universe/dcu/dcuImage.jpeg";
+import starWarsImage  from "../../images/hollywood/universe/starwars/starWarsImage.jpeg";
+import theConjuringImage from "../../images/hollywood/universe/theconjuring/theConjuringImage.jpeg";
+import monsterVerseImage from "../../images/hollywood/universe/monsterverse/monsterVerseImage.jpeg";
+import xmenImage from "../../images/hollywood/universe/xmen/xmenImage.jpeg";
 
 export const universeData = [
   {

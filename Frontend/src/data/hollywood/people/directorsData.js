@@ -1,44 +1,44 @@
 // Hollywood Directors - Images
 
-import chrisnolanImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/chrisnolanImage.jpeg";
+import chrisnolanImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/chrisnolanImage.jpeg";
 
-import stevenspielbergImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/stevenspielbergImage.jpeg";
+import stevenspielbergImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/stevenspielbergImage.jpeg";
 
-import martinscorseseImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/martinscorseseImage.jpeg";
+import martinscorseseImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/martinscorseseImage.jpeg";
 
-import jamescameronImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/jamescameronImage.jpeg";
+import jamescameronImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/jamescameronImage.jpeg";
 
-import quentintarantinoImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/quentintarantinoImage.jpeg";
+import quentintarantinoImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/quentintarantinoImage.jpeg";
 
-import ridleyscottImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/ridleyscottImage.jpeg";
+import ridleyscottImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/ridleyscottImage.jpeg";
 
-import peterjacksonImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/peterjacksonImage.jpeg";
+import peterjacksonImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/peterjacksonImage.jpeg";
 
-import denisvilleneuveImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/denisvilleneuveImage.jpeg";
+import denisvilleneuveImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/denisvilleneuveImage.jpeg";
 
-import davidfincherImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/davidfincherImage.jpeg";
+import davidfincherImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/davidfincherImage.jpeg";
 
-import francisfordcoppolaImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/francisfordcoppolaImage.jpeg";
+import francisfordcoppolaImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/francisfordcoppolaImage.jpeg";
 
-import jonfavreauImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/jonfavreauImage.jpeg";
+import jonfavreauImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/jonfavreauImage.jpeg";
 
-import guillermodeltoroImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/guillermodeltoroImage.jpeg";
+import guillermodeltoroImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/guillermodeltoroImage.jpeg";
 
-import christophermcquarrieImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/christophermcquarrieImage.jpeg";
+import christophermcquarrieImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/christophermcquarrieImage.jpeg";
 
-import darrenaronofskyImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/darrenaronofskyImage.jpeg";
+import darrenaronofskyImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/darrenaronofskyImage.jpeg";
 
-import paulthomasandersonImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/paulthomasandersonImage.jpeg";
+import paulthomasandersonImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/paulthomasandersonImage.jpeg";
 
-import guyritchieImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/guyritchieImage.jpeg";
+import guyritchieImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/guyritchieImage.jpeg";
 
-import alejandroginarrituImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/alejandroginarrituImage.jpeg";
+import alejandroginarrituImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/alejandroginarrituImage.jpeg";
 
-import damienchazelleImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/damienchazelleImage.jpeg";
+import damienchazelleImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/damienchazelleImage.jpeg";
 
-import wesandersonImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/wesandersonImage.jpeg";
+import wesandersonImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/wesandersonImage.jpeg";
 
-import bongjoonhoImage from "../../images/people/hollywooddirectors/hollywooddirectorsimages/bongjoonhoImage.jpeg";
+import bongjoonhoImage from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsimages/bongjoonhoImage.jpeg";
 
 
 export const directorsData = [
