@@ -1,9 +1,9 @@
-import { universeData } from "./universeData";
-import { franchiseData } from "./franchiseData";
-import { seriesData } from "./webseries";
-import { duologyData } from "./duologyData";
-import { triologyData } from "./trilogyData";
-import { tetralogyData } from "./tetralogyData";
+import { universeData } from "../hollywood/universe/universeData";
+import { franchiseData } from "../hollywood/franchise/franchiseData";
+import { seriesData } from "../hollywood/webseries/webseries";
+import { duologyData } from "./../hollywood/duology/duologyData";
+import { triologyData } from "../hollywood/trilogy/trilogyData";
+import { tetralogyData } from "../hollywood/tetralogy/tetralogyData";
 
 export const allCollectionsData = [
   ...universeData,

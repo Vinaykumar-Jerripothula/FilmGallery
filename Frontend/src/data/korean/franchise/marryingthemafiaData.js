@@ -1,0 +1,61 @@
+export const marryingthemafiaData = [
+  {
+    id: 1,
+    watchOrder: 1,
+    title: "Marrying the Mafia",
+    type: "Movie",
+    year: 2002,
+    director: "Jeong Heung-sun",
+    actor: "Jung Joon-ho",
+    country: "South Korea",
+    imdb: 6.1,
+  },
+
+  {
+    id: 2,
+    watchOrder: 2,
+    title: "Marrying the Mafia II: Enemy-in-Law",
+    type: "Movie",
+    year: 2005,
+    director: "Jeong Yong-ki",
+    actor: "Shin Hyun-joon",
+    country: "South Korea",
+    imdb: 5.7,
+  },
+
+  {
+    id: 3,
+    watchOrder: 3,
+    title: "Marrying the Mafia III: Family Hustle",
+    type: "Movie",
+    year: 2006,
+    director: "Jeong Yong-ki",
+    actor: "Shin Hyun-joon",
+    country: "South Korea",
+    imdb: 5.3,
+  },
+
+  {
+    id: 4,
+    watchOrder: 4,
+    title: "Marrying the Mafia IV: Unstoppable Family",
+    type: "Movie",
+    year: 2011,
+    director: "Jeong Tae-won",
+    actor: "Kim Su-mi",
+    country: "South Korea",
+    imdb: 4.7,
+  },
+
+  {
+    id: 5,
+    watchOrder: 5,
+    title: "Marrying the Mafia V: Return of the Family",
+    type: "Movie",
+    year: 2012,
+    director: "Jeong Yong-ki",
+    actor: "Jung Joon-ho",
+    country: "South Korea",
+    imdb: 4.8,
+  },
+];

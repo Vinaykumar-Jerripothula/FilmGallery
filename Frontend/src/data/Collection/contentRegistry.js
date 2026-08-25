@@ -1,3 +1,4 @@
+/* ============================ HollyWood - Start ========================================== */
 
 // universe - Data
 import { mcuData } from "../hollywood/universe/mcuData";
@@ -16,7 +17,6 @@ import monsterverseImage from "../../images/hollywood/universe/monsterverse/mons
 import starwarsImage from "../../images/hollywood/universe/starwars/starWarsImage.jpeg";
 import theconjuringImage from "../../images/hollywood/universe/theconjuring/theConjuringImage.jpeg";
 import xmenImage from "../../images/hollywood/universe/xmen/xmenImage.jpeg";
-
 
 // franchise - Data
 import { alienData } from "../hollywood/franchise/alienData";
@@ -74,7 +74,7 @@ import peakyblindersImage from "../../images/hollywood/webseries/peakyblinders/p
 import strangerthingsImage from "../../images/hollywood/webseries/strangerthings/strangerthingsImage.jpeg";
 import vikingsImage from "../../images/hollywood/webseries/vikings/vikingsImage.jpeg";
 
-// duology - Data 
+// duology - Data
 import { bladeRunnerData } from "../hollywood/duology/bladeRunnerData";
 import { jackReacherData } from "../hollywood/duology/jackReacherData";
 import { killBillData } from "../hollywood/duology/killBillData";
@@ -90,7 +90,7 @@ import sherlockholmesImage from "../../images/hollywood/duology/sherlockholmes/s
 import theraidImage from "../../images/hollywood/duology/theraid/theraidImage.jpeg";
 import topgunImage from "../../images/hollywood/duology/topgun/topgunImage.jpeg";
 
-// trilogy - Data 
+// trilogy - Data
 import { beforeTriologyData } from "../hollywood/trilogy/beforeTrilogyData";
 import { chroniclesOfNarniaData } from "../hollywood/trilogy/chroniclesOfNarniaData";
 import { equalizerData } from "../hollywood/trilogy/equalizerData";
@@ -106,21 +106,48 @@ import equalizerImage from "../../images/hollywood/triology/equalizer/equalizerI
 import mazerunnerImage from "../../images/hollywood/triology/mazerunner/mazerunnerImage.jpeg";
 import millenniumImage from "../../images/hollywood/triology/millennium/millenniumImage.jpeg";
 
-
-// tetralogy - Data 
+// tetralogy - Data
 import { badBoysData } from "../hollywood/tetralogy/badboysData";
 import { expandablesData } from "../hollywood/tetralogy/expandablesData";
 import { matrixData } from "../hollywood/tetralogy/theMatrix";
 
 // tetralogy - Image
-import badboysImage from "../../images/hollywood/tetralogy/badboys/badboysImage.jpeg"
+import badboysImage from "../../images/hollywood/tetralogy/badboys/badboysImage.jpeg";
 import expandablesImage from "../../images/hollywood/tetralogy/expandables/expandablesImage.jpeg";
 import matrixImage from "../../images/hollywood/tetralogy/matrix/matrixImage.jpeg";
 
+/* ============================ HollyWood - End ========================================== */
 
+/* ============================ Korean - Start ========================================== */
+
+// Franchise - Data
+import { theRoundupData } from "../korean/franchise/theroundupData";
+import { alongWithTheGodsData } from "../korean/franchise/alongwiththegodsData";
+import { whisperingCorridorsData } from "../korean/franchise/whisperingcorridorsData";
+import { detectivekData } from "../korean/franchise/detectivekData";
+import { thepiratesData } from "../korean/franchise/thepiratesData";
+import { marryingthemafiaData } from "../korean/franchise/marryingthemafiaData";
+import { mywifeisagangsterData } from "../korean/franchise/mywifeisagangsterData";
+import { vengeanceData } from "../korean/franchise/vengeanceData";
+// Franchise - Image
+import theroundupImage from "../../images/korean/franchise/theroundup/theroundupImage.jpeg";
+import alongwiththegodsImage from "../../images/korean/franchise/alongwiththegods/alongwiththegodsImage.jpeg";
+import whisperingcorridorsImage from "../../images/korean/franchise/whisperingcorridors/whisperingcorridorsImage.jpeg";
+import detectivekImage from "../../images/korean/franchise/detectivek/detectivekImage.jpeg";
+import thepiratesImage from "../../images/korean/franchise/thepirates/thepiratesImage.jpeg";
+import marryingthemafiaImage from "../../images/korean/franchise/marryingthemafia/marryingthemafiaImage.jpeg";
+import mywifeisagangsterImage from "../../images/korean/franchise/mywifeisagangster/mywifeisagangsterImage.jpeg";
+import vengeanceImage from "../../images/korean/franchise/vengeance/vengeanceImage.jpeg";
+
+// K-Drama - Data
+
+// K-Drama - Image
+
+/* ============================ Korean - End ========================================== */
 
 export const contentRegistry = {
-  
+  /* ============== HollyWood ==================== */
+
   // universes
 
   mcu: {
@@ -178,7 +205,7 @@ export const contentRegistry = {
     content: xmenData,
   },
 
-  // duologies 
+  // duologies
 
   bladerunner: {
     title: "Blade Runner",
@@ -228,7 +255,7 @@ export const contentRegistry = {
   },
 
   // franchises
-  
+
   alien: {
     title: "Alien Franchise",
     subtitle: "Movie Franchise",
@@ -338,7 +365,6 @@ export const contentRegistry = {
     contentId: "startrek",
     image: startrekImage,
     content: starTrekData,
-
   },
 
   rockycreed: {
@@ -414,8 +440,8 @@ export const contentRegistry = {
     contentId: "thedarkknight",
     content: darkKnightTrilogyData,
   },
-  
-  // tetrallogies 
+
+  // tetrallogies
 
   badboys: {
     title: "Bad Boys",
@@ -441,7 +467,7 @@ export const contentRegistry = {
     content: matrixData,
   },
 
-  // web series 
+  // web series
 
   breakingbad: {
     title: "Breaking Bad",
@@ -497,5 +523,65 @@ export const contentRegistry = {
     contentId: "peakyblinders",
     image: peakyblindersImage,
     content: peakyBlindersData,
+  },
+
+  /* ============== Korean ==================== */
+
+  // Franchises
+  theroundup: {
+    title: "The Roundup",
+    subtitle: "Movie Franchise",
+    contentId: "theroundup",
+    image: theroundupImage,
+    content: theRoundupData,
+  },
+  alongwiththegods: {
+    title: "Along with the Gods",
+    subtitle: "Franchise",
+    contentId: "alongwiththegods",
+    image: alongwiththegodsImage,
+    content: alongWithTheGodsData,
+  },
+  whisperingcorridors: {
+    title: "Whispering Corridors",
+    subtitle: "Franchise",
+    contentId: "whisperingcorridors",
+    image: whisperingcorridorsImage,
+    content: whisperingCorridorsData,
+  },
+  detectivek: {
+    title: "Detective K",
+    subtitle: "Franchise",
+    contentId: "detectivek",
+    image: detectivekImage,
+    content: detectivekData,
+  },
+  thepirates: {
+    title: "The Pirates",
+    subtitle: "Franchise",
+    contentId: "thepirates",
+    image: thepiratesImage,
+    content: thepiratesData,
+  },
+  marryingthemafia: {
+    title: "Marrying the Mafia",
+    subtitle: "Franchise",
+    contentId: "marryingthemafia",
+    image: marryingthemafiaImage,
+    content: marryingthemafiaData,
+  },
+  mywifeisagangster: {
+    title: "My Wife Is a Gangster",
+    subtitle: "Movie Franchise",
+    contentId: "mywifeisagangster",
+    image: mywifeisagangsterImage,
+    content: mywifeisagangsterData,
+  },
+  vengeance: {
+    title: "Vengeance",
+    subtitle: "Movie Trilogy",
+    contentId: "vengeance",
+    image: vengeanceImage,
+    content: vengeanceData,
   },
 };

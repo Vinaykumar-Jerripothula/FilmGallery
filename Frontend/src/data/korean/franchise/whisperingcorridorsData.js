@@ -1,0 +1,73 @@
+export const whisperingCorridorsData = [
+  {
+    id: 1,
+    watchOrder: 1,
+    title: "Whispering Corridors",
+    type: "Movie",
+    year: 1998,
+    director: "Park Ki-hyung",
+    actor: "Kim Gyu-ri",
+    country: "South Korea",
+    imdb: 5.9,
+  },
+
+  {
+    id: 2,
+    watchOrder: 2,
+    title: "Memento Mori",
+    type: "Movie",
+    year: 1999,
+    director: "Kim Tae-yong & Min Kyu-dong",
+    actor: "Park Ye-jin",
+    country: "South Korea",
+    imdb: 6.3,
+  },
+
+  {
+    id: 3,
+    watchOrder: 3,
+    title: "Wishing Stairs",
+    type: "Movie",
+    year: 2003,
+    director: "Yun Jae-yeon",
+    actor: "Song Ji-hyo",
+    country: "South Korea",
+    imdb: 5.8,
+  },
+
+  {
+    id: 4,
+    watchOrder: 4,
+    title: "Voice",
+    type: "Movie",
+    year: 2005,
+    director: "Choi Ik-hwan",
+    actor: "Kim Ok-vin",
+    country: "South Korea",
+    imdb: 6.2,
+  },
+
+  {
+    id: 5,
+    watchOrder: 5,
+    title: "A Blood Pledge",
+    type: "Movie",
+    year: 2009,
+    director: "Lee Jong-yong",
+    actor: "Oh Yeon-seo",
+    country: "South Korea",
+    imdb: 5.5,
+  },
+
+  {
+    id: 6,
+    watchOrder: 6,
+    title: "Whispering Corridors 6: The Humming",
+    type: "Movie",
+    year: 2021,
+    director: "Lee Mi-young",
+    actor: "Kim Seo-hyung",
+    country: "South Korea",
+    imdb: 5.1,
+  },
+];

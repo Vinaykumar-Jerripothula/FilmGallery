@@ -34,7 +34,7 @@ function App() {
           path="/"
           element={
             localStorage.getItem("accessToken") ? (
-              <Navigate to="/home" replace />
+              <Navigate to="/hollywood" replace />
             ) : (
               <Signup />
             )
@@ -42,10 +42,10 @@ function App() {
         />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/:industry" element={<Home />} />{" "}
         {/* Dynamic Content Route */}
-        <Route path="/category/:type" element={<CategoryPage />} />
-        <Route path="/:category/:slug" element={<ContentPage />} />{" "}
+        <Route path="/:industry/:type" element={<CategoryPage />} />
+        <Route path="/content/:category/:slug" element={<ContentPage />} />{" "}
       </Routes>
     </BrowserRouter>
   );

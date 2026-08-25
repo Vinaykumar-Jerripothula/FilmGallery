@@ -1,35 +1,56 @@
 import HorizontalCarousel from "../components/template/HorizontalCarousel";
-import { franchiseData } from "../data/Collection/franchiseData";
-import { universeData } from "../data/Collection/universeData";
-import { seriesData } from "../data/Collection/webseries";
-import { duologyData } from "../data/Collection/duologyData";
-import { triologyData } from "../data/Collection/trilogyData";
-import { tetralogyData } from "../data/Collection/tetralogyData";
+
+/*========================== Hollywood Content Imports ==============================*/
+
+import { universeData } from "../data/hollywood/universe/universeData";
+import { franchiseData as hollywoodFranchiseData } from "../data/hollywood/franchise/franchiseData";
+import { seriesData } from "../data/hollywood/webseries/webseries";
+import { duologyData } from "../data/hollywood/duology/duologyData";
+import { triologyData } from "../data/hollywood/trilogy/trilogyData";
+import { tetralogyData } from "../data/hollywood/tetralogy/tetralogyData";
 import { directorsData } from "../data/hollywood/people/directorsData";
 import { actorsData } from "../data/hollywood/people/actorsData";
-import { peopleData } from "../data/hollywood/people/peopleData";
+import { peopleData as hollywoodPeopleData } from "../data/hollywood/people/peopleData";
+
+/*========================== Korean Content Imports =================================*/
+import { franchiseData as koreanFranchiseData } from "../data/korean/franchise/franchiseData";
+
+/*========================== Anime Content Imports ==================================*/
+
+/*========================== Indian Content Imports =================================*/
 
 import PeopleCarousel from "../components/template/PeopleCarousel";
 import { useState } from "react";
-
 import Navbar from "../components/layout/Navbar";
-import { contentRegistry } from "../data/Collection/contentRegistry";
 import { allCollectionsData } from "../data/Collection/allCollectionsData";
 import { useTheme } from "../context/ThemeContext";
 import { colors } from "../themes/colors";
-import CardGrid from "../components/template/CardGrid";
 import { useSearchParams } from "react-router-dom";
 import PersonCard from "../components/template/PersonCard";
-import { mcuData } from "../data/hollywood/universe/mcuData";
 import { allContentItems } from "../data/Collection/allContentItems";
-
+import { useParams } from "react-router-dom";
 function Home() {
   const [searchResult, setSearchResult] = useState(null);
-  const [selectedIndustry, setSelectedIndustry] = useState("hollywood");
+  const { industry } = useParams();
+  const selectedIndustry = industry || "hollywood";
   const [searchParams] = useSearchParams();
   const [selectedSection, setSelectedSection] = useState(
     searchParams.get("section") || "home",
   );
+  console.log("URL INDUSTRY:", industry);
+  console.log("SELECTED INDUSTRY:", selectedIndustry);
+  const industryData = {
+    hollywood: {
+      franchises: hollywoodFranchiseData,
+    },
+
+    korean: {
+      franchises: koreanFranchiseData,
+    },
+  };
+
+  const currentIndustryData =
+    industryData[selectedIndustry] || industryData.hollywood;
 
   const sectionData = {
     universes: {
@@ -39,7 +60,7 @@ function Home() {
 
     franchises: {
       title: "All Franchises",
-      items: franchiseData,
+      items: currentIndustryData.franchises,
     },
 
     series: {
@@ -67,7 +88,7 @@ function Home() {
   const matchingActors =
     searchResult?.type === "movie"
       ? actorsData.filter((actorCard) => {
-          const actor = peopleData.actors[actorCard.slug];
+          const actor = hollywoodPeopleData.actors[actorCard.slug];
 
           return actor?.movies.some(
             (movie) =>
@@ -79,7 +100,7 @@ function Home() {
   const matchingDirectors =
     searchResult?.type === "movie"
       ? directorsData.filter((directorCard) => {
-          const director = peopleData.directors[directorCard.slug];
+          const director = hollywoodPeopleData.directors[directorCard.slug];
 
           return director?.movies.some(
             (movie) =>
@@ -116,14 +137,12 @@ function Home() {
         (item) => item.contentId === movieMatch.collectionId,
       )
     : [];
-
+  console.log("HOME INDUSTRY:", selectedIndustry);
   return (
     <div className={`min-h-screen ${currentTheme.page} ${currentTheme.text}`}>
       <Navbar
         setSearchResult={setSearchResult}
         setSelectedSection={setSelectedSection}
-        selectedIndustry={selectedIndustry}
-        setSelectedIndustry={setSelectedIndustry}
       />
 
       {/* Page Header */}
@@ -350,37 +369,37 @@ function Home() {
                 <HorizontalCarousel
                   title="Cinematic Universe"
                   items={universeData}
-                  showMoreRoute="/category/universes"
+                  showMoreRoute={`/${selectedIndustry}/universes`}
                 />
 
                 <HorizontalCarousel
                   title="Franchises"
-                  items={franchiseData}
-                  showMoreRoute="/category/franchises"
+                  items={currentIndustryData.franchises}
+                  showMoreRoute={`/${selectedIndustry}/franchises`}
                 />
 
                 <HorizontalCarousel
                   title="TV / Web Series"
                   items={seriesData}
-                  showMoreRoute="/category/series"
+                  showMoreRoute={`/${selectedIndustry}/series`}
                 />
 
                 <HorizontalCarousel
                   title="Duology"
                   items={duologyData}
-                  showMoreRoute="/category/duologies"
+                  showMoreRoute={`/${selectedIndustry}/duologies`}
                 />
 
                 <HorizontalCarousel
                   title="Trilogy"
                   items={triologyData}
-                  showMoreRoute="/category/trilogies"
+                  showMoreRoute={`/${selectedIndustry}/trilogies`}
                 />
 
                 <HorizontalCarousel
                   title="Tetralogy"
                   items={tetralogyData}
-                  showMoreRoute="/category/tetralogies"
+                  showMoreRoute={`/${selectedIndustry}/tetralogies`}
                 />
 
                 <PeopleCarousel

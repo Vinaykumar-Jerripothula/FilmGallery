@@ -4,19 +4,22 @@ import PersonCard from "../components/template/PersonCard";
 import { useNavigate } from "react-router-dom";
 import { actorsData } from "../data/hollywood/people/actorsData";
 import { directorsData } from "../data/hollywood/people/directorsData";
-import { universeData } from "../data/Collection/universeData";
-import { franchiseData } from "../data/Collection/franchiseData";
-import { seriesData } from "../data/Collection/webseries";
-import { duologyData } from "../data/Collection/duologyData";
-import { triologyData } from "../data/Collection/trilogyData";
-import { tetralogyData } from "../data/Collection/tetralogyData";
+import { universeData } from "../data/hollywood/universe/universeData";
+import { franchiseData } from "../data/hollywood/franchise/franchiseData";
+import { seriesData } from "../data/hollywood/webseries/webseries";
+//import { duologyData } from "../../data/Collection/duologyData";
+import { duologyData } from "../data/hollywood/duology/duologyData";
+import { triologyData } from "../data/hollywood/trilogy/trilogyData";
+import { tetralogyData } from "../data/hollywood/tetralogy/tetralogyData";
 import ContentCard from "../components/template/ContentCard";
+
+import { franchiseData as koreanFranchiseData } from "../data/korean/franchise/franchiseData";
 
 import { useTheme } from "../context/ThemeContext";
 import { colors } from "../themes/colors";
 
 function CategoryPage() {
-  const { type } = useParams();
+  const { industry, type } = useParams();
   const navigate = useNavigate();
   const { theme } = useTheme();
   const currentTheme = colors[theme];
@@ -27,7 +30,9 @@ function CategoryPage() {
   if (type === "directors") data = directorsData;
 
   if (type === "universes") data = universeData;
-  if (type === "franchises") data = franchiseData;
+  if (type === "franchises") {
+    data = industry === "korean" ? koreanFranchiseData : franchiseData;
+  }
   if (type === "series") data = seriesData;
   if (type === "duologies") data = duologyData;
   if (type === "trilogies") data = triologyData;
