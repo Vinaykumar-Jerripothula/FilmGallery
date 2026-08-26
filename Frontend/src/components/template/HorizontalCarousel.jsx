@@ -165,7 +165,7 @@
               msOverflowStyle: "none",
             }}
           >
-            {items.map((item) => (
+            {items.slice(0,10).map((item) => (
               <div
                 key={item.id}
                 data-carousel-card

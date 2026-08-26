@@ -24,6 +24,8 @@ function ContentAccordion({
   const currentTheme = colors[theme];
   const isMovieMode = mode === "movie";
   const isFranchiseMode = mode === "franchise";
+  const isAnimeContent =
+    content.length > 0 && content[0]?.creator && content[0]?.country;
   const [open, setOpen] = useState(!showHeader);
   const [completed, setCompleted] = useState(completedCount);
 
@@ -317,11 +319,11 @@ function ContentAccordion({
                 </div>
 
                 <div className="pr-3 flex items-center justify-center">
-                  Director
+                  {isAnimeContent ? "Creator" : "Director"}
                 </div>
 
                 <div className="pr-3 flex items-center justify-center">
-                  Actor
+                  {isAnimeContent ? "Country" : "Actor"}
                 </div>
 
                 <div className="pr-4 flex items-center justify-center">
@@ -510,7 +512,7 @@ function ContentAccordion({
                         ${theme === "dark" ? "text-zinc-300" : "text-zinc-900"}
                       `}
                     >
-                      {movie.director}
+                      {isAnimeContent ? movie.creator : movie.director}
                     </div>
 
                     {/* Actor */}
@@ -525,7 +527,7 @@ function ContentAccordion({
                         ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
                       `}
                     >
-                      {movie.actor}
+                      {isAnimeContent ? movie.country : movie.actor}
                     </div>
 
                     {/* Status */}

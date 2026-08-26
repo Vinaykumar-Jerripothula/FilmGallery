@@ -7,33 +7,53 @@ import { directorsData } from "../data/hollywood/people/directorsData";
 import { universeData } from "../data/hollywood/universe/universeData";
 import { franchiseData } from "../data/hollywood/franchise/franchiseData";
 import { seriesData } from "../data/hollywood/webseries/webseries";
-//import { duologyData } from "../../data/Collection/duologyData";
 import { duologyData } from "../data/hollywood/duology/duologyData";
 import { triologyData } from "../data/hollywood/trilogy/trilogyData";
 import { tetralogyData } from "../data/hollywood/tetralogy/tetralogyData";
 import ContentCard from "../components/template/ContentCard";
 
+/* =============================== Korean ====================================== */
 import { franchiseData as koreanFranchiseData } from "../data/korean/franchise/franchiseData";
+import { seriesData as koreanSeriesData } from "../data/korean/webseries/webseries";
+import { directorsData as koreanDirectorsData } from "../data/korean/people/directorsData";
+
+/* ================================ Anime ====================================== */
+import { franchiseData as animeFranchiseData } from "../data/anime/franchise/franchiseData";
 
 import { useTheme } from "../context/ThemeContext";
 import { colors } from "../themes/colors";
 
 function CategoryPage() {
   const { industry, type } = useParams();
+  console.log("CATEGORY INDUSTRY:", industry);
+  console.log("CATEGORY TYPE:", type);
   const navigate = useNavigate();
   const { theme } = useTheme();
   const currentTheme = colors[theme];
 
   let data = [];
 
-  if (type === "actors") data = actorsData;
-  if (type === "directors") data = directorsData;
+  /* if (type === "actors") {
+    data = industry === "korean" ? koreanActorsData : actorsData;
+  } */
+
+  if (type === "directors") {
+    data = industry === "korean" ? koreanDirectorsData : directorsData;
+  }
 
   if (type === "universes") data = universeData;
   if (type === "franchises") {
-    data = industry === "korean" ? koreanFranchiseData : franchiseData;
+    if (industry === "anime") {
+      data = animeFranchiseData;
+    } else if (industry === "korean") {
+      data = koreanFranchiseData;
+    } else {
+      data = franchiseData;
+    }
   }
-  if (type === "series") data = seriesData;
+  if (type === "series") {
+    data = industry === "korean" ? koreanSeriesData : seriesData;
+  }
   if (type === "duologies") data = duologyData;
   if (type === "trilogies") data = triologyData;
   if (type === "tetralogies") data = tetralogyData;
@@ -77,7 +97,7 @@ function CategoryPage() {
         )}
         <div className="flex justify-center mt-8 sm:mt-10">
           <button
-            onClick={() => navigate("/home")}
+            onClick={() => navigate(`/${industry}`)}
             className="
       px-4
       py-1

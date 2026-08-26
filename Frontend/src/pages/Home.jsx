@@ -14,8 +14,11 @@ import { peopleData as hollywoodPeopleData } from "../data/hollywood/people/peop
 
 /*========================== Korean Content Imports =================================*/
 import { franchiseData as koreanFranchiseData } from "../data/korean/franchise/franchiseData";
+import { seriesData as koreanSeriesData } from "../data/korean/webseries/webseries";
+import { directorsData as koreanDirectorsData } from "../data/korean/people/directorsData";
 
 /*========================== Anime Content Imports ==================================*/
+import { franchiseData as animeFranchiseData } from "../data/anime/franchise/franchiseData";
 
 /*========================== Indian Content Imports =================================*/
 
@@ -28,10 +31,12 @@ import { colors } from "../themes/colors";
 import { useSearchParams } from "react-router-dom";
 import PersonCard from "../components/template/PersonCard";
 import { allContentItems } from "../data/Collection/allContentItems";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+
 function Home() {
   const [searchResult, setSearchResult] = useState(null);
   const { industry } = useParams();
+  const navigate = useNavigate();
   const selectedIndustry = industry || "hollywood";
   const [searchParams] = useSearchParams();
   const [selectedSection, setSelectedSection] = useState(
@@ -41,11 +46,35 @@ function Home() {
   console.log("SELECTED INDUSTRY:", selectedIndustry);
   const industryData = {
     hollywood: {
+      universes: universeData,
       franchises: hollywoodFranchiseData,
+      series: seriesData,
+      duologies: duologyData,
+      trilogies: triologyData,
+      tetralogies: tetralogyData,
+      directors: directorsData,
+      actors: actorsData,
     },
 
     korean: {
+      universes: [],
       franchises: koreanFranchiseData,
+      series: koreanSeriesData, // add koreanSeriesData later
+      duologies: [],
+      trilogies: [],
+      tetralogies: [],
+      directors: koreanDirectorsData, // add koreanDirectorsData later
+      actors: [], // add koreanActorsData later
+    },
+    anime: {
+      universes: [],
+      franchises: animeFranchiseData,
+      series: [],
+      duologies: [],
+      trilogies: [],
+      tetralogies: [],
+      directors: [],
+      actors: [],
     },
   };
 
@@ -366,11 +395,13 @@ function Home() {
           <>
             {selectedSection === "home" && (
               <>
-                <HorizontalCarousel
-                  title="Cinematic Universe"
-                  items={universeData}
-                  showMoreRoute={`/${selectedIndustry}/universes`}
-                />
+                {currentIndustryData.universes?.length > 0 && (
+                  <HorizontalCarousel
+                    title="Cinematic Universe"
+                    items={currentIndustryData.universes}
+                    showMoreRoute={`/${selectedIndustry}/universes`}
+                  />
+                )}
 
                 <HorizontalCarousel
                   title="Franchises"
@@ -378,41 +409,57 @@ function Home() {
                   showMoreRoute={`/${selectedIndustry}/franchises`}
                 />
 
-                <HorizontalCarousel
-                  title="TV / Web Series"
-                  items={seriesData}
-                  showMoreRoute={`/${selectedIndustry}/series`}
-                />
+                {currentIndustryData.series?.length > 0 && (
+                  <HorizontalCarousel
+                    title="TV / Web Series"
+                    items={currentIndustryData.series}
+                    showMoreRoute={`/${selectedIndustry}/series`}
+                  />
+                )}
 
-                <HorizontalCarousel
-                  title="Duology"
-                  items={duologyData}
-                  showMoreRoute={`/${selectedIndustry}/duologies`}
-                />
+                {currentIndustryData.duologies?.length > 0 && (
+                  <HorizontalCarousel
+                    title="Duology"
+                    items={currentIndustryData.duologies}
+                    showMoreRoute={`/${selectedIndustry}/duologies`}
+                  />
+                )}
 
-                <HorizontalCarousel
-                  title="Trilogy"
-                  items={triologyData}
-                  showMoreRoute={`/${selectedIndustry}/trilogies`}
-                />
+                {currentIndustryData.trilogies?.length > 0 && (
+                  <HorizontalCarousel
+                    title="Trilogy"
+                    items={currentIndustryData.trilogies}
+                    showMoreRoute={`/${selectedIndustry}/trilogies`}
+                  />
+                )}
 
-                <HorizontalCarousel
-                  title="Tetralogy"
-                  items={tetralogyData}
-                  showMoreRoute={`/${selectedIndustry}/tetralogies`}
-                />
+                {currentIndustryData.tetralogies?.length > 0 && (
+                  <HorizontalCarousel
+                    title="Tetralogy"
+                    items={currentIndustryData.tetralogies}
+                    showMoreRoute={`/${selectedIndustry}/tetralogies`}
+                  />
+                )}
 
-                <PeopleCarousel
-                  title="Directors"
-                  items={directorsData}
-                  type="director"
-                />
+                {currentIndustryData.directors?.length > 0 && (
+                  <PeopleCarousel
+                    title="Directors"
+                    items={currentIndustryData.directors}
+                    type="director"
+                    onShowMore={() =>
+                      navigate(`/${selectedIndustry}/directors`)
+                    }
+                  />
+                )}
 
-                <PeopleCarousel
-                  title="Actors"
-                  items={actorsData}
-                  type="actor"
-                />
+                {currentIndustryData.actors?.length > 0 && (
+                  <PeopleCarousel
+                    title="Actors"
+                    items={currentIndustryData.actors}
+                    type="actor"
+                    onShowMore={() => navigate(`/${selectedIndustry}/actors`)}
+                  />
+                )}
                 <div className="mt-12 mb-4 flex justify-center items-center gap-4 text-sm sm:text-base">
                   <a
                     href="https://t.me/ProSearchM11Bot"

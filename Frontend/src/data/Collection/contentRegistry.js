@@ -140,10 +140,62 @@ import mywifeisagangsterImage from "../../images/korean/franchise/mywifeisagangs
 import vengeanceImage from "../../images/korean/franchise/vengeance/vengeanceImage.jpeg";
 
 // K-Drama - Data
+import { squidgameData } from "../korean/webseries/squidgameData";
+import { crashlandingonyouData } from "../korean/webseries/crashlandingonyouData";
+import { kingdomData } from "../korean/webseries/kingdomData";
+import { goblinData } from "../korean/webseries/goblinData";
+import { descendantsofthesunData } from "../korean/webseries/descendantsofthesunData";
+import { reply1988Data } from "../korean/webseries/reply1988Data";
+import { mymisterData } from "../korean/webseries/mymisterData";
+import { signalData } from "../korean/webseries/signalData";
+import { strangerData } from "../korean/webseries/strangerData";
+import { misaengData } from "../korean/webseries/misaengData";
+import { vincenzoData } from "../korean/webseries/vincenzoData";
+import { thegloryData } from "../korean/webseries/thegloryData";
+import { movingData } from "../korean/webseries/movingData";
+import { weakheroclass1Data } from "../korean/webseries/weakheroclass1Data";
+import { sweethomeData } from "../korean/webseries/sweethomeData";
+import { allofusaredeadData } from "../korean/webseries/allofusaredeadData";
+import { itaewonclassData } from "../korean/webseries/itaewonclassData";
+import { itsokaytonotbeokayData } from "../korean/webseries/itsokaytonotbeokayData";
+import { queenoftearsData } from "../korean/webseries/queenoftearsData";
+import { mrsunshineData } from "../korean/webseries/mrsunshineData";
 
 // K-Drama - Image
+import squidgameImage from "../../images/korean/webseries/squidgame/squidgameImage.jpeg";
+import crashlandingonyouImage from "../../images/korean/webseries/crashlandingonyou/crashlandingonyouImage.jpeg";
+import kingdomImage from "../../images/korean/webseries/kingdom/kingdomImage.jpeg";
+import goblinImage from "../../images/korean/webseries/goblin/goblinImage.jpeg";
+import descendantsofthesunImage from "../../images/korean/webseries/descendantsofthesun/descendantsofthesunImage.jpeg";
+import reply1988Image from "../../images/korean/webseries/reply1988/reply1988Image.jpeg";
+import mymisterImage from "../../images/korean/webseries/mymister/mymisterImage.jpeg";
+import signalImage from "../../images/korean/webseries/signal/signalImage.jpeg";
+import strangerImage from "../../images/korean/webseries/stranger/strangerImage.jpeg";
+import misaengImage from "../../images/korean/webseries/misaeng/misaengImage.jpeg";
+import vincenzoImage from "../../images/korean/webseries/vincenzo/vincenzoImage.jpeg";
+import thegloryImage from "../../images/korean/webseries/theglory/thegloryImage.jpeg";
+import movingImage from "../../images/korean/webseries/moving/movingImage.jpeg";
+import weakheroclass1Image from "../../images/korean/webseries/weakheroclass1/weakheroclass1Image.jpeg";
+import sweethomeImage from "../../images/korean/webseries/sweethome/sweethomeImage.jpeg";
+import allofusaredeadImage from "../../images/korean/webseries/allofusaredead/allofusaredeadImage.jpeg";
+import itaewonclassImage from "../../images/korean/webseries/itaewonclass/itaewonclassImage.jpeg";
+import itsokaytonotbeokayImage from "../../images/korean/webseries/itsokaytonotbeokay/itsokaytonotbeokayImage.jpeg";
+import queenoftearsImage from "../../images/korean/webseries/queenoftears/queenoftearsImage.jpeg";
+import mrsunshineImage from "../../images/korean/webseries/mrsunshine/mrsunshineImage.jpeg";
 
 /* ============================ Korean - End ========================================== */
+
+/* ============================= Anime - Start ========================================== */
+
+// One Piece
+
+import { onePiece } from "../anime/franchise/onepiece/onePiece";
+import { onePieceStoryWatchOrder } from "../anime/franchise/onepiece/onePieceStoryWatchOrder";
+import { onePieceMovies } from "../anime/franchise/onepiece/onePieceMovies";
+import { onePieceSpecials } from "../anime/franchise/onepiece/onePieceSpecials";
+import { onePieceOVAs } from "../anime/franchise/onepiece/onePieceOVAs";
+
+/* ============================= Anime- End ============================================= */
 
 export const contentRegistry = {
   /* ============== HollyWood ==================== */
@@ -528,6 +580,7 @@ export const contentRegistry = {
   /* ============== Korean ==================== */
 
   // Franchises
+
   theroundup: {
     title: "The Roundup",
     subtitle: "Movie Franchise",
@@ -584,4 +637,157 @@ export const contentRegistry = {
     image: vengeanceImage,
     content: vengeanceData,
   },
+
+  // k-drama
+
+  squidgame: {
+    title: "Squid Game",
+    subtitle: "TV Series",
+    contentId: "squidgame",
+    image: squidgameImage,
+    content: squidgameData,
+  },
+  crashlandingonyou: {
+    title: "Crash Landing on You",
+    subtitle: "TV Series",
+    contentId: "crashlandingonyou",
+    image: crashlandingonyouImage,
+    content: crashlandingonyouData,
+  },
+  kingdom: {
+    title: "Kingdom",
+    subtitle: "TV Series",
+    contentId: "kingdom",
+    image: kingdomImage,
+    content: kingdomData,
+  },
+  goblin: {
+    title: "Goblin",
+    subtitle: "TV Series",
+    contentId: "goblin",
+    image: goblinImage,
+    content: goblinData,
+  },
+  descendantsofthesun: {
+    title: "Descendants of the Sun",
+    subtitle: "TV Series",
+    contentId: "descendantsofthesun",
+    image: descendantsofthesunImage,
+    content: descendantsofthesunData,
+  },
+  reply1988: {
+    title: "Reply 1988",
+    subtitle: "TV Series",
+    contentId: "reply1988",
+    image: reply1988Image,
+    content: reply1988Data,
+  },
+  mymister: {
+    title: "My Mister",
+    subtitle: "TV Series",
+    contentId: "mymister",
+    image: mymisterImage,
+    content: mymisterData,
+  },
+  signal: {
+    title: "Signal",
+    subtitle: "K-Drama Series",
+    contentId: "signal",
+    image: signalImage,
+    content: signalData,
+  },
+  stranger: {
+    title: "Stranger",
+    subtitle: "K-Drama Series",
+    contentId: "stranger",
+    image: strangerImage,
+    content: strangerData,
+  },
+  misaeng: {
+    title: "Misaeng",
+    subtitle: "K-Drama Series",
+    contentId: "misaeng",
+    image: misaengImage,
+    content: misaengData,
+  },
+  vincenzo: {
+    title: "Vincenzo",
+    subtitle: "K-Drama Series",
+    contentId: "vincenzo",
+    image: vincenzoImage,
+    content: vincenzoData,
+  },
+  theglory: {
+    title: "The Glory",
+    subtitle: "K-Drama Series",
+    contentId: "theglory",
+    image: thegloryImage,
+    content: thegloryData,
+  },
+  moving: {
+    title: "Moving",
+    subtitle: "K-Drama Series",
+    contentId: "moving",
+    image: movingImage,
+    content: movingData,
+  },
+  weakheroclass1: {
+    title: "Weak Hero Class 1",
+    subtitle: "K-Drama Series",
+    contentId: "weakheroclass1",
+    image: weakheroclass1Image,
+    content: weakheroclass1Data,
+  },
+  sweethome: {
+    title: "Sweet Home",
+    subtitle: "K-Drama Series",
+    contentId: "sweethome",
+    image: sweethomeImage,
+    content: sweethomeData,
+  },
+  allofusaredead: {
+    title: "All of Us Are Dead",
+    subtitle: "K-Drama Series",
+    contentId: "allofusaredead",
+    image: allofusaredeadImage,
+    content: allofusaredeadData,
+  },
+  itaewonclass: {
+    title: "Itaewon Class",
+    subtitle: "K-Drama Series",
+    contentId: "itaewonclass",
+    image: itaewonclassImage,
+    content: itaewonclassData,
+  },
+  itsokaytonotbeokay: {
+    title: "It's Okay to Not Be Okay",
+    subtitle: "K-Drama Series",
+    contentId: "itsokaytonotbeokay",
+    image: itsokaytonotbeokayImage,
+    content: itsokaytonotbeokayData,
+  },
+  queenoftears: {
+    title: "Queen of Tears",
+    subtitle: "K-Drama Series",
+    contentId: "queenoftears",
+    image: queenoftearsImage,
+    content: queenoftearsData,
+  },
+  mrsunshine: {
+    title: "Mr. Sunshine",
+    subtitle: "K-Drama Series",
+    contentId: "mrsunshine",
+    image: mrsunshineImage,
+    content: mrsunshineData,
+  },
+
+  /* ========================= Anime =========================== */
+
+  onepiece: onePiece,
+  "onepiece-story-watch-order": onePieceStoryWatchOrder,
+  "onepiece-movies": onePieceMovies,
+  "onepiece-specials": onePieceSpecials,
+  "onepiece-ovas": onePieceOVAs,
+
+  
 };

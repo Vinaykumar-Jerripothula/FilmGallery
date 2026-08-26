@@ -93,7 +93,7 @@ function PeopleCarousel({ title, items = [], type, onShowMore }) {
           ))}
 
           <div
-            onClick={() => navigate(`/category/${type}s`)}
+            onClick={onShowMore}
             className="
               cursor-pointer
               flex-shrink-0

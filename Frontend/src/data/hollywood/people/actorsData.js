@@ -44,7 +44,7 @@ export const actorsData = [
     name: "Leonardo DiCaprio",
     image: leonardodicaprioImage,
     slug: "leonardodicaprio",
-    route: "/actor/leonardo-dicaprio",
+    route: "/hollywood/actor/leonardo-dicaprio",
   },
 
   {
@@ -52,7 +52,7 @@ export const actorsData = [
     name: "Tom Cruise",
     image: tomcruiseImage,
     slug: "tomcruise",
-    route: "/actor/tom-cruise",
+    route: "/hollywood/actor/tom-cruise",
   },
 
   {
@@ -60,7 +60,7 @@ export const actorsData = [
     name: "Robert Downey Jr.",
     image: robertdowneyjnrImage,
     slug: "robertdowneyjr",
-    route: "/actor/robert-downey-jr",
+    route: "/hollywood/actor/robert-downey-jr",
   },
 
   {
@@ -68,7 +68,7 @@ export const actorsData = [
     name: "Christian Bale",
     image: christianbaleImage,
     slug: "christianbale",
-    route: "/actor/christian-bale",
+    route: "/hollywood/actor/christian-bale",
   },
 
   {
@@ -76,7 +76,7 @@ export const actorsData = [
     name: "Brad Pitt",
     image: bradpittImage,
     slug: "bradpitt",
-    route: "/actor/brad-pitt",
+    route: "/hollywood/actor/brad-pitt",
   },
 
   {
@@ -84,7 +84,7 @@ export const actorsData = [
     name: "Johnny Depp",
     image: johnnydeepImage,
     slug: "johnnydepp",
-    route: "/actor/johnny-depp",
+    route: "/hollywood/actor/johnny-depp",
   },
 
   {
@@ -92,7 +92,7 @@ export const actorsData = [
     name: "Tom Hanks",
     image: tomhanksImage,
     slug: "tomhanks",
-    route: "/actor/tom-hanks",
+    route: "/hollywood/actor/tom-hanks",
   },
 
   {
@@ -100,7 +100,7 @@ export const actorsData = [
     name: "Denzel Washington",
     image: denzelwashingtonImage,
     slug: "denzelwashington",
-    route: "/actor/denzel-washington",
+    route: "/hollywood/actor/denzel-washington",
   },
 
   {
@@ -108,7 +108,7 @@ export const actorsData = [
     name: "Keanu Reeves",
     image: keanureevesImage,
     slug: "keanureeves",
-    route: "/actor/keanu-reeves",
+    route: "/hollywood/actor/keanu-reeves",
   },
 
   {
@@ -116,76 +116,76 @@ export const actorsData = [
     name: "Morgan Freeman",
     image: morganfremanImage,
     slug: "morganfreeman",
-    route: "/actor/morgan-freeman",
+    route: "/hollywood/actor/morgan-freeman",
   },
   {
     id: 11,
     name: "Chris Hemsworth",
     image: chrishemsworthImage,
     slug: "chrishemsworth",
-    route: "/actor/chris-hemsworth",
+    route: "/hollywood/actor/chris-hemsworth",
   },
   {
     id: 12,
     name: "Ryan Gosling",
     image: ryangoslingImage,
     slug: "ryangosling",
-    route: "/actor/ryan-gosling",
+    route: "/hollywood/actor/ryan-gosling",
   },
   {
     id: 13,
     name: "Joaquin Phoenix",
     image: joaquinphoenixImage,
     slug: "joaquinphoenix",
-    route: "/actor/joaquin-phoenix",
+    route: "/hollywood/actor/joaquin-phoenix",
   },
   {
     id: 14,
     name: "Jake Gyllenhaal",
     image: jakegyllenhaalImage,
     slug: "jakegyllenhaal",
-    route: "/actor/jake-gyllenhaal",
+    route: "/hollywood/actor/jake-gyllenhaal",
   },
   {
     id: 15,
     name: "Chris Evans",
     image: chrisevansImage,
     slug: "chrisevans",
-    route: "/actor/chris-evans",
+    route: "/hollywood/actor/chris-evans",
   },
   {
     id: 16,
     name: "Chris Pratt",
     image: chrisprattImage,
     slug: "chrispratt",
-    route: "/actor/chris-pratt",
+    route: "/hollywood/actor/chris-pratt",
   },
   {
     id: 17,
     name: "Ryan Reynolds",
     image: ryanreynoldsImage,
     slug: "ryanreynolds",
-    route: "/actor/ryan-reynolds",
+    route: "/hollywood/actor/ryan-reynolds",
   },
   {
     id: 18,
     name: "Henry Cavill",
     image: henrycavillImage,
     slug: "henrycavill",
-    route: "/actor/henry-cavill",
+    route: "/hollywood/actor/henry-cavill",
   },
   {
     id: 19,
     name: "Cillian Murphy",
     image: cillianmurphyImage,
     slug: "cillianmurphy",
-    route: "/actor/cillian-murphy",
+    route: "/hollywood/actor/cillian-murphy",
   },
   {
     id: 20,
     name: "Matt Damon",
     image: mattdamonImage,
     slug: "mattdamon",
-    route: "/actor/matt-damon",
+    route: "/hollywood/actor/matt-damon",
   },
 ];

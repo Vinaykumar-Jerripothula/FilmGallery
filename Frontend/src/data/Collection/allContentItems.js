@@ -2,15 +2,22 @@ import { contentRegistry } from "./contentRegistry";
 import { generateContentId } from "../../utils/generateContentId";
 
 export const allContentItems = Object.entries(contentRegistry).flatMap(
-  ([collectionKey, collection]) =>
-    collection.content.map((movie) => ({
-      ...movie,
+  ([collectionKey, collection]) => {
+    // Skip Anime Hub containers
+    if (collection.isHub) {
+      return [];
+    }
 
-      contentId: generateContentId(movie),
+    return collection.content
+      .filter((item) => item.director) // only movie/series items
+      .map((movie) => ({
+        ...movie,
 
-      collectionId: collection.contentId,
+        contentId: generateContentId(movie),
 
-      collectionTitle: collection.title,
-    })),
+        collectionId: collection.contentId,
+
+        collectionTitle: collection.title,
+      }));
+  },
 );
-

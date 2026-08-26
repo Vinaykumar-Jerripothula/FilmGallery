@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import AnimeHubPage from "../../pages/AnimeHubPage";
 import ContentHero from "./ContentHero";
 import ContentAccordion from "./ContentAccordion";
 import { contentRegistry } from "../../data/Collection/contentRegistry";
@@ -15,7 +15,7 @@ function FranchisePage() {
 
   const { theme } = useTheme();
   const currentTheme = colors[theme];
-  
+
   let contentItem = null;
 
   if (category === "actor") {
@@ -59,7 +59,10 @@ function FranchisePage() {
   }
 
   const isMoviePage = category === "actor" || category === "director";
-
+  const isAnimeHub = contentItem?.isHub;
+  if (isAnimeHub) {
+    return <AnimeHubPage contentItem={contentItem} />;
+  }
   const watched = isMoviePage
     ? contentItem.content.filter((movie) => watchedMovies[movie.contentId])
         .length

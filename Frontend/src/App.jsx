@@ -45,6 +45,7 @@ function App() {
         <Route path="/:industry" element={<Home />} />{" "}
         {/* Dynamic Content Route */}
         <Route path="/:industry/:type" element={<CategoryPage />} />
+        <Route path="/:industry/:category/:slug" element={<ContentPage />} />
         <Route path="/content/:category/:slug" element={<ContentPage />} />{" "}
       </Routes>
     </BrowserRouter>

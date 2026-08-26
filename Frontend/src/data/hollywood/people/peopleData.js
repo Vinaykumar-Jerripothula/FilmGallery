@@ -2,8 +2,6 @@
 
 import alejandroginarrituBanner from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsbanners/alejandroginarrituBanner.jpeg";
 
-import bongjoonhoBanner from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsbanners/bongjoonhoBanner.jpeg";
-
 import chrisnolanBanner from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsbanners/chrisnolanBanner.jpeg";
 
 import christophermcquarrieBanner from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsbanners/christophermcquarrieBanner.jpeg";
@@ -3729,108 +3727,7 @@ export const peopleData = {
         },
       ],
     },
-    bongjoonho: {
-      id: 18,
-      name: "Bong Joon-ho",
-      image: bongjoonhoBanner,
-      movies: [
-        {
-          id: 1,
-          watchOrder: 1,
-          title: "Barking Dogs Never Bite",
-          type: "Movie",
-          year: 2000,
-          director: "Bong Joon-ho",
-          actor: "Lee Sung-jae",
-          country: "South Korea",
-          imdb: 6.9,
-        },
-
-        {
-          id: 2,
-          watchOrder: 2,
-          title: "Memories of Murder",
-          type: "Movie",
-          year: 2003,
-          director: "Bong Joon-ho",
-          actor: "Song Kang-ho",
-          country: "South Korea",
-          imdb: 8.1,
-        },
-
-        {
-          id: 3,
-          watchOrder: 3,
-          title: "The Host",
-          type: "Movie",
-          year: 2006,
-          director: "Bong Joon-ho",
-          actor: "Song Kang-ho",
-          country: "South Korea",
-          imdb: 7.1,
-        },
-
-        {
-          id: 4,
-          watchOrder: 4,
-          title: "Mother",
-          type: "Movie",
-          year: 2009,
-          director: "Bong Joon-ho",
-          actor: "Kim Hye-ja",
-          country: "South Korea",
-          imdb: 7.7,
-        },
-
-        {
-          id: 5,
-          watchOrder: 5,
-          title: "Snowpiercer",
-          type: "Movie",
-          year: 2013,
-          director: "Bong Joon-ho",
-          actor: "Chris Evans",
-          country: "South Korea",
-          imdb: 7.1,
-        },
-
-        {
-          id: 6,
-          watchOrder: 6,
-          title: "Okja",
-          type: "Movie",
-          year: 2017,
-          director: "Bong Joon-ho",
-          actor: "Ahn Seo-hyun",
-          country: "South Korea",
-          imdb: 7.3,
-        },
-
-        {
-          id: 7,
-          watchOrder: 7,
-          title: "Parasite",
-          type: "Movie",
-          year: 2019,
-          director: "Bong Joon-ho",
-          actor: "Song Kang-ho",
-          country: "South Korea",
-          imdb: 8.5,
-        },
-
-        {
-          id: 8,
-          watchOrder: 8,
-          title: "Mickey 17",
-          type: "Movie",
-          year: 2025,
-          director: "Bong Joon-ho",
-          actor: "Robert Pattinson",
-          country: "USA",
-          imdb: 6.8,
-        },
-      ],
-    },
+    
   },
 
   actors: {
