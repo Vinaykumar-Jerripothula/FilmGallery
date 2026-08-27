@@ -18,6 +18,7 @@ import { seriesData as koreanSeriesData } from "../data/korean/webseries/webseri
 import { directorsData as koreanDirectorsData } from "../data/korean/people/directorsData";
 
 /*========================== Anime Content Imports ==================================*/
+import { universeData as animeUniverseData } from "../data/anime/universe/universeData";
 import { franchiseData as animeFranchiseData } from "../data/anime/franchise/franchiseData";
 
 /*========================== Indian Content Imports =================================*/
@@ -42,8 +43,6 @@ function Home() {
   const [selectedSection, setSelectedSection] = useState(
     searchParams.get("section") || "home",
   );
-  console.log("URL INDUSTRY:", industry);
-  console.log("SELECTED INDUSTRY:", selectedIndustry);
   const industryData = {
     hollywood: {
       universes: universeData,
@@ -67,7 +66,7 @@ function Home() {
       actors: [], // add koreanActorsData later
     },
     anime: {
-      universes: [],
+      universes: animeUniverseData,
       franchises: animeFranchiseData,
       series: [],
       duologies: [],
@@ -114,6 +113,8 @@ function Home() {
         (item) => item.contentId === searchResult.contentId,
       )
     : [];
+  
+  
   const matchingActors =
     searchResult?.type === "movie"
       ? actorsData.filter((actorCard) => {
@@ -166,7 +167,9 @@ function Home() {
         (item) => item.contentId === movieMatch.collectionId,
       )
     : [];
-  console.log("HOME INDUSTRY:", selectedIndustry);
+
+  
+  
   return (
     <div className={`min-h-screen ${currentTheme.page} ${currentTheme.text}`}>
       <Navbar
@@ -362,9 +365,47 @@ function Home() {
                   </button>
                 </div>
               </>
+            ) : searchResult.type === "collection" ? (
+              <>
+                <div className="mb-8 border-l-4 border-orange-500 pl-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                    Collection
+                  </p>
+
+                  <h1 className="text-3xl font-bold">
+                    {searchResult.collectionTitle || searchResult.title}
+                  </h1>
+                </div>
+
+                {searchItems.length > 0 && (
+                  <HorizontalCarousel
+                    title={searchResult.collectionTitle || searchResult.title}
+                    items={searchItems}
+                  />
+                )}
+
+                <div className="flex justify-center mt-12">
+                  <button
+                    onClick={() => setSearchResult(null)}
+                    className="
+          px-6
+          py-3
+          rounded-lg
+          bg-orange-500
+          hover:bg-orange-600
+          text-white
+          font-medium
+          transition-colors
+        "
+                  >
+                    Back to Home
+                  </button>
+                </div>
+              </>
             ) : (
               <div className="flex flex-col items-center justify-center py-20 text-center">
                 {/* Not Found Symbol */}
+
                 <div className="text-4xl mb-6">🎬</div>
 
                 <h2 className="text-2xl font-bold mb-3">Content Not Found</h2>

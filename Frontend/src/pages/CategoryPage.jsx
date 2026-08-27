@@ -33,10 +33,9 @@ function CategoryPage() {
 
   let data = [];
 
-  /* if (type === "actors") {
-    data = industry === "korean" ? koreanActorsData : actorsData;
-  } */
-
+  if (type === "actors") {
+    data = actorsData;
+  }
   if (type === "directors") {
     data = industry === "korean" ? koreanDirectorsData : directorsData;
   }

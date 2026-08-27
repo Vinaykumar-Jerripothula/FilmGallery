@@ -38,9 +38,6 @@ import stevenspielbergBanner from "../../../images/hollywood/people/hollywooddir
 
 import wesandersonBanner from "../../../images/hollywood/people/hollywooddirectors/hollywooddirectorsbanners/wesandersonBanner.jpeg";
 
-
-// Hollywood Actors - Banners 
-
 // Hollywood Actors - Banners
 
 import leonardodicaprioBanner from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsBanners/leonardodicaprioBanner.jpeg";

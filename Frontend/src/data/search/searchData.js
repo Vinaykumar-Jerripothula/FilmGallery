@@ -14,7 +14,8 @@ const collectionSearchItems = Object.values(contentRegistry).flatMap(
 
     ...collection.content.map((item) => ({
       title: item.title,
-      contentId: collection.contentId,
+      contentId: collection.contentId, // parent collection
+      slug: item.slug, // clicked child item
       type: "collection",
       collectionTitle: collection.title,
     })),

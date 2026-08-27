@@ -187,13 +187,169 @@ import mrsunshineImage from "../../images/korean/webseries/mrsunshine/mrsunshine
 
 /* ============================= Anime - Start ========================================== */
 
-// One Piece
+/* ====== Universes ====== */
 
+// Dragon Ball
+import { dragonBall } from "../anime/universe/dragonball/dragonball";
+import { dragonBallStoryWatchOrder } from "../anime/universe/dragonball/dragonballStoryWatchOrder";
+import { dragonBallTVSeries } from "../anime/universe/dragonball/dragonballTVSeries";
+import { dragonBallMovies } from "../anime/universe/dragonball/dragonballMovies";
+import { dragonBallTVSpecials } from "../anime/universe/dragonball/dragonballTVSpecials";
+import { dragonBallOVAs } from "../anime/universe/dragonball/dragonballOVAs";
+import { dragonBallONAs } from "../anime/universe/dragonball/dragonballONAs";
+import { dragonBallShorts } from "../anime/universe/dragonball/dragonballShorts";
+
+// Naruto
+import { naruto } from "../anime/universe/naruto/naruto";
+import { narutoStoryWatchOrder } from "../anime/universe/naruto/narutoStoryWatchOrder";
+import { narutoTVSeries } from "../anime/universe/naruto/narutoTVSeries";
+import { narutoMovies } from "../anime/universe/naruto/narutoMovies";
+import { narutoTVSpecials } from "../anime/universe/naruto/narutoTVSpecials";
+import { narutoOVAs } from "../anime/universe/naruto/narutoOVAs";
+import { narutoONAs } from "../anime/universe/naruto/narutoONAs";
+import { narutoShorts } from "../anime/universe/naruto/narutoShorts";
+
+/* ====== Franchises ====== */
+
+// One Piece
 import { onePiece } from "../anime/franchise/onepiece/onePiece";
 import { onePieceStoryWatchOrder } from "../anime/franchise/onepiece/onePieceStoryWatchOrder";
 import { onePieceMovies } from "../anime/franchise/onepiece/onePieceMovies";
 import { onePieceSpecials } from "../anime/franchise/onepiece/onePieceSpecials";
 import { onePieceOVAs } from "../anime/franchise/onepiece/onePieceOVAs";
+
+// Bleach
+import { bleach } from "../anime/franchise/bleach/bleach";
+import { bleachStoryWatchOrder } from "../anime/franchise/bleach/bleachStoryWatchOrder";
+import { bleachMovies } from "../anime/franchise/bleach/bleachMovies";
+import { bleachSpecials } from "../anime/franchise/bleach/bleachSpecials";
+import { bleachOVAs } from "../anime/franchise/bleach/bleachOVAs";
+
+// Attack On Titans
+import { attackOnTitan } from "../anime/franchise/attackontitan/attackontitan";
+import { attackOnTitanStoryWatchOrder } from "../anime/franchise/attackontitan/attackontitanStoryWatchOrder";
+import { attackOnTitanMovies } from "../anime/franchise/attackontitan/attackontitanMovies";
+import { attackOnTitanSpecials } from "../anime/franchise/attackontitan/attackontitanSpecials";
+import { attackOnTitanOVAs } from "../anime/franchise/attackontitan/attackontitanOVAs";
+
+// Demon Slayer
+import { demonSlayer } from "../anime/franchise/demonslayer/demonslayer";
+import { demonSlayerStoryWatchOrder } from "../anime/franchise/demonslayer/demonslayerStoryWatchOrder";
+import { demonSlayerMovies } from "../anime/franchise/demonslayer/demonslayerMovies";
+import { demonSlayerSpecials } from "../anime/franchise/demonslayer/demonslayerSpecials";
+import { demonSlayerOVAs } from "../anime/franchise/demonslayer/demonslayerOVAs";
+
+// Jujutsu Kaisen
+import { jujutsuKaisen } from "../anime/franchise/jujutsukaisen/jujutsukaisen";
+import { jujutsuKaisenStoryWatchOrder } from "../anime/franchise/jujutsukaisen/jujutsukaisenStoryWatchOrder";
+import { jujutsuKaisenMovies } from "../anime/franchise/jujutsukaisen/jujutsukaisenMovies";
+import { jujutsuKaisenSpecials } from "../anime/franchise/jujutsukaisen/jujutsukaisenSpecials";
+import { jujutsuKaisenOVAs } from "../anime/franchise/jujutsukaisen/jujutsukaisenOVAs";
+
+// Death Note
+import { deathNote } from "../anime/franchise/deathnote/deathnote";
+import { deathNoteStoryWatchOrder } from "../anime/franchise/deathnote/deathnoteStoryWatchOrder";
+import { deathNoteMovies } from "../anime/franchise/deathnote/deathnoteMovies";
+import { deathNoteSpecials } from "../anime/franchise/deathnote/deathnoteSpecials";
+import { deathNoteOVAs } from "../anime/franchise/deathnote/deathnoteOVAs";
+
+// My Hero Academia
+import { myHeroAcademia } from "../anime/franchise/myheroacademia/myheroacademia";
+import { myHeroAcademiaStoryWatchOrder } from "../anime/franchise/myheroacademia/myheroacademiaStoryWatchOrder";
+import { myHeroAcademiaMovies } from "../anime/franchise/myheroacademia/myheroacademiaMovies";
+import { myHeroAcademiaSpecials } from "../anime/franchise/myheroacademia/myheroacademiaSpecials";
+import { myHeroAcademiaOVAs } from "../anime/franchise/myheroacademia/myheroacademiaOVAs";
+
+// Spy x Family
+import { spyXFamily } from "../anime/franchise/spyxfamily/spyxfamily";
+import { spyXFamilyStoryWatchOrder } from "../anime/franchise/spyxfamily/spyxfamilyStoryWatchOrder";
+import { spyXFamilyMovies } from "../anime/franchise/spyxfamily/spyxfamilyMovies";
+import { spyXFamilySpecials } from "../anime/franchise/spyxfamily/spyxfamilySpecials";
+import { spyXFamilyOVAs } from "../anime/franchise/spyxfamily/spyxfamilyOVAs";
+
+// Tokyo Ghoul
+import { tokyoGhoul } from "../anime/franchise/tokyoghoul/tokyoghoul";
+import { tokyoGhoulStoryWatchOrder } from "../anime/franchise/tokyoghoul/tokyoghoulStoryWatchOrder";
+import { tokyoGhoulMovies } from "../anime/franchise/tokyoghoul/tokyoghoulMovies";
+import { tokyoGhoulSpecials } from "../anime/franchise/tokyoghoul/tokyoghoulSpecials";
+import { tokyoGhoulOVAs } from "../anime/franchise/tokyoghoul/tokyoghoulOVAs";
+
+// Black Clover
+import { blackClover } from "../anime/franchise/blackclover/blackclover";
+import { blackCloverStoryWatchOrder } from "../anime/franchise/blackclover/blackcloverStoryWatchOrder";
+import { blackCloverMovies } from "../anime/franchise/blackclover/blackcloverMovies";
+import { blackCloverSpecials } from "../anime/franchise/blackclover/blackcloverSpecials";
+import { blackCloverOVAs } from "../anime/franchise/blackclover/blackcloverOVAs";
+
+// Chain Saw Man
+import { chainsawMan } from "../anime/franchise/chainsawman/chainsawman";
+import { chainsawManStoryWatchOrder } from "../anime/franchise/chainsawman/chainsawmanStoryWatchOrder";
+import { chainsawManMovies } from "../anime/franchise/chainsawman/chainsawmanMovies";
+import { chainsawManSpecials } from "../anime/franchise/chainsawman/chainsawmanSpecials";
+import { chainsawManOVAs } from "../anime/franchise/chainsawman/chainsawmanOVAs";
+
+// Haikyu
+import { haikyu } from "../anime/franchise/haikyu/haikyu";
+import { haikyuStoryWatchOrder } from "../anime/franchise/haikyu/haikyuStoryWatchOrder";
+import { haikyuMovies } from "../anime/franchise/haikyu/haikyuMovies";
+import { haikyuSpecials } from "../anime/franchise/haikyu/haikyuSpecials";
+import { haikyuOVAs } from "../anime/franchise/haikyu/haikyuOVAs";
+
+// Hunter x Hunter
+import { hunterXHunter } from "../anime/franchise/hunterxhunter/hunterxhunter";
+import { hunterXHunterStoryWatchOrder } from "../anime/franchise/hunterxhunter/hunterxhunterStoryWatchOrder";
+import { hunterXHunterMovies } from "../anime/franchise/hunterxhunter/hunterxhunterMovies";
+import { hunterXHunterSpecials } from "../anime/franchise/hunterxhunter/hunterxhunterSpecials";
+import { hunterXHunterOVAs } from "../anime/franchise/hunterxhunter/hunterxhunterOVAs";
+
+// Full Metal Alchemist
+import { fullmetalAlchemist } from "../anime/franchise/fullmetalalchemist/fullmetalalchemist";
+import { fullmetalAlchemistStoryWatchOrder } from "../anime/franchise/fullmetalalchemist/fullmetalalchemistStoryWatchOrder";
+import { fullmetalAlchemistMovies } from "../anime/franchise/fullmetalalchemist/fullmetalalchemistMovies";
+import { fullmetalAlchemistSpecials } from "../anime/franchise/fullmetalalchemist/fullmetalalchemistSpecials";
+import { fullmetalAlchemistOVAs } from "../anime/franchise/fullmetalalchemist/fullmetalalchemistOVAs";
+
+// Steins;Gate
+import { steinsGate } from "../anime/franchise/steinsgate/steinsgate";
+import { steinsGateStoryWatchOrder } from "../anime/franchise/steinsgate/steinsgateStoryWatchOrder";
+import { steinsGateMovies } from "../anime/franchise/steinsgate/steinsgateMovies";
+import { steinsGateSpecials } from "../anime/franchise/steinsgate/steinsgateSpecials";
+import { steinsGateOVAs } from "../anime/franchise/steinsgate/steinsgateOVAs";
+
+// Code Geass
+import { codeGeass } from "../anime/franchise/codegeass/codegeass";
+import { codeGeassStoryWatchOrder } from "../anime/franchise/codegeass/codegeassStoryWatchOrder";
+import { codeGeassMovies } from "../anime/franchise/codegeass/codegeassMovies";
+import { codeGeassSpecials } from "../anime/franchise/codegeass/codegeassSpecials";
+import { codeGeassOVAs } from "../anime/franchise/codegeass/codegeassOVAs";
+
+// Assassination Classroom
+import { assassinationClassroom } from "../anime/franchise/assassinationclassroom/assassinationclassroom";
+import { assassinationClassroomStoryWatchOrder } from "../anime/franchise/assassinationclassroom/assassinationclassroomStoryWatchOrder";
+import { assassinationClassroomMovies } from "../anime/franchise/assassinationclassroom/assassinationclassroomMovies";
+import { assassinationClassroomSpecials } from "../anime/franchise/assassinationclassroom/assassinationclassroomSpecials";
+import { assassinationClassroomOVAs } from "../anime/franchise/assassinationclassroom/assassinationclassroomOVAs";
+
+// Dr. Stone
+import { drStone } from "../anime/franchise/drstone/drstone";
+import { drStoneStoryWatchOrder } from "../anime/franchise/drstone/drstoneStoryWatchOrder";
+import { drStoneMovies } from "../anime/franchise/drstone/drstoneMovies";
+import { drStoneSpecials } from "../anime/franchise/drstone/drstoneSpecials";
+import { drStoneOVAs } from "../anime/franchise/drstone/drstoneOVAs";
+
+// Blue Lock
+import { blueLock } from "../anime/franchise/bluelock/bluelock";
+import { blueLockStoryWatchOrder } from "../anime/franchise/bluelock/bluelockStoryWatchOrder";
+import { blueLockMovies } from "../anime/franchise/bluelock/bluelockMovies";
+import { blueLockSpecials } from "../anime/franchise/bluelock/bluelockSpecials";
+import { blueLockOVAs } from "../anime/franchise/bluelock/bluelockOVAs";
+
+// Tokyo Revenger's
+import { tokyoRevengers } from "../anime/franchise/tokyorevengers/tokyorevengers";
+import { tokyoRevengersStoryWatchOrder } from "../anime/franchise/tokyorevengers/tokyorevengersStoryWatchOrder";
+import { tokyoRevengersMovies } from "../anime/franchise/tokyorevengers/tokyorevengersMovies";
+import { tokyoRevengersSpecials } from "../anime/franchise/tokyorevengers/tokyorevengersSpecials";
+import { tokyoRevengersOVAs } from "../anime/franchise/tokyorevengers/tokyorevengersOVAs";
 
 /* ============================= Anime- End ============================================= */
 
@@ -783,11 +939,146 @@ export const contentRegistry = {
 
   /* ========================= Anime =========================== */
 
+  // Universes
+
+  dragonball: dragonBall,
+  "dragonball-story-watch-order": dragonBallStoryWatchOrder,
+  "dragonball-tv-series": dragonBallTVSeries,
+  "dragonball-movies": dragonBallMovies,
+  "dragonball-tv-specials": dragonBallTVSpecials,
+  "dragonball-ovas": dragonBallOVAs,
+  "dragonball-onas": dragonBallONAs,
+  "dragonball-shorts": dragonBallShorts,
+
+  naruto: naruto,
+  "naruto-story-watch-order": narutoStoryWatchOrder,
+  "naruto-tv-series": narutoTVSeries,
+  "naruto-movies": narutoMovies,
+  "naruto-tv-specials": narutoTVSpecials,
+  "naruto-ovas": narutoOVAs,
+  "naruto-onas": narutoONAs,
+  "naruto-shorts": narutoShorts,
+ 
+  // Franchises
+
   onepiece: onePiece,
   "onepiece-story-watch-order": onePieceStoryWatchOrder,
   "onepiece-movies": onePieceMovies,
   "onepiece-specials": onePieceSpecials,
   "onepiece-ovas": onePieceOVAs,
 
-  
+  bleach: bleach,
+  "bleach-story-watch-order": bleachStoryWatchOrder,
+  "bleach-movies": bleachMovies,
+  "bleach-specials": bleachSpecials,
+  "bleach-ovas": bleachOVAs,
+
+  attackontitan: attackOnTitan,
+  "attackontitan-story-watch-order": attackOnTitanStoryWatchOrder,
+  "attackontitan-movies": attackOnTitanMovies,
+  "attackontitan-specials": attackOnTitanSpecials,
+  "attackontitan-ovas": attackOnTitanOVAs,
+
+  demonslayer: demonSlayer,
+  "demonslayer-story-watch-order": demonSlayerStoryWatchOrder,
+  "demonslayer-movies": demonSlayerMovies,
+  "demonslayer-specials": demonSlayerSpecials,
+  "demonslayer-ovas": demonSlayerOVAs,
+
+  jujutsukaisen: jujutsuKaisen,
+  "jujutsukaisen-story-watch-order": jujutsuKaisenStoryWatchOrder,
+  "jujutsukaisen-movies": jujutsuKaisenMovies,
+  "jujutsukaisen-specials": jujutsuKaisenSpecials,
+  "jujutsukaisen-ovas": jujutsuKaisenOVAs,
+
+  deathnote: deathNote,
+  "deathnote-story-watch-order": deathNoteStoryWatchOrder,
+  "deathnote-movies": deathNoteMovies,
+  "deathnote-specials": deathNoteSpecials,
+  "deathnote-ovas": deathNoteOVAs,
+
+  myheroacademia: myHeroAcademia,
+  "myheroacademia-story-watch-order": myHeroAcademiaStoryWatchOrder,
+  "myheroacademia-movies": myHeroAcademiaMovies,
+  "myheroacademia-specials": myHeroAcademiaSpecials,
+  "myheroacademia-ovas": myHeroAcademiaOVAs,
+
+  spyxfamily: spyXFamily,
+  "spyxfamily-story-watch-order": spyXFamilyStoryWatchOrder,
+  "spyxfamily-movies": spyXFamilyMovies,
+  "spyxfamily-specials": spyXFamilySpecials,
+  "spyxfamily-ovas": spyXFamilyOVAs,
+
+  tokyoghoul: tokyoGhoul,
+  "tokyoghoul-story-watch-order": tokyoGhoulStoryWatchOrder,
+  "tokyoghoul-movies": tokyoGhoulMovies,
+  "tokyoghoul-specials": tokyoGhoulSpecials,
+  "tokyoghoul-ovas": tokyoGhoulOVAs,
+
+  blackclover: blackClover,
+  "blackclover-story-watch-order": blackCloverStoryWatchOrder,
+  "blackclover-movies": blackCloverMovies,
+  "blackclover-specials": blackCloverSpecials,
+  "blackclover-ovas": blackCloverOVAs,
+
+  chainsawman: chainsawMan,
+  "chainsawman-story-watch-order": chainsawManStoryWatchOrder,
+  "chainsawman-movies": chainsawManMovies,
+  "chainsawman-specials": chainsawManSpecials,
+  "chainsawman-ovas": chainsawManOVAs,
+
+  haikyu: haikyu,
+  "haikyu-story-watch-order": haikyuStoryWatchOrder,
+  "haikyu-movies": haikyuMovies,
+  "haikyu-specials": haikyuSpecials,
+  "haikyu-ovas": haikyuOVAs,
+
+  hunterxhunter: hunterXHunter,
+  "hunterxhunter-story-watch-order": hunterXHunterStoryWatchOrder,
+  "hunterxhunter-movies": hunterXHunterMovies,
+  "hunterxhunter-specials": hunterXHunterSpecials,
+  "hunterxhunter-ovas": hunterXHunterOVAs,
+
+  fullmetalalchemist: fullmetalAlchemist,
+  "fullmetalalchemist-story-watch-order": fullmetalAlchemistStoryWatchOrder,
+  "fullmetalalchemist-movies": fullmetalAlchemistMovies,
+  "fullmetalalchemist-specials": fullmetalAlchemistSpecials,
+  "fullmetalalchemist-ovas": fullmetalAlchemistOVAs,
+
+  steinsgate: steinsGate,
+  "steinsgate-story-watch-order": steinsGateStoryWatchOrder,
+  "steinsgate-movies": steinsGateMovies,
+  "steinsgate-specials": steinsGateSpecials,
+  "steinsgate-ovas": steinsGateOVAs,
+
+  codegeass: codeGeass,
+  "codegeass-story-watch-order": codeGeassStoryWatchOrder,
+  "codegeass-movies": codeGeassMovies,
+  "codegeass-specials": codeGeassSpecials,
+  "codegeass-ovas": codeGeassOVAs,
+
+  assassinationclassroom: assassinationClassroom,
+  "assassinationclassroom-story-watch-order":
+    assassinationClassroomStoryWatchOrder,
+  "assassinationclassroom-movies": assassinationClassroomMovies,
+  "assassinationclassroom-specials": assassinationClassroomSpecials,
+  "assassinationclassroom-ovas": assassinationClassroomOVAs,
+
+  drstone: drStone,
+  "drstone-story-watch-order": drStoneStoryWatchOrder,
+  "drstone-movies": drStoneMovies,
+  "drstone-specials": drStoneSpecials,
+  "drstone-ovas": drStoneOVAs,
+
+  bluelock: blueLock,
+  "bluelock-story-watch-order": blueLockStoryWatchOrder,
+  "bluelock-movies": blueLockMovies,
+  "bluelock-specials": blueLockSpecials,
+  "bluelock-ovas": blueLockOVAs,
+
+  tokyorevengers: tokyoRevengers,
+  "tokyorevengers-story-watch-order": tokyoRevengersStoryWatchOrder,
+  "tokyorevengers-movies": tokyoRevengersMovies,
+  "tokyorevengers-specials": tokyoRevengersSpecials,
+  "tokyorevengers-ovas": tokyoRevengersOVAs,
 };
