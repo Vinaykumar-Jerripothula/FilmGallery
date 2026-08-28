@@ -12,6 +12,7 @@ import ContentPage from "./components/template/ContentPage";
 import { fetchProgress } from "./store/progressSlice";
 import { fetchMovieProgress } from "./store/movieProgressSlice";
 import CategoryPage from "./pages/CategoryPage";
+import ScrollToTop from "./pages/ScrollToTop";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"

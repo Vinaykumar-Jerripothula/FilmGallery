@@ -352,7 +352,6 @@ function ContentAccordion({
                 return (
                   <div
                     key={movie.id}
-                    onClick={() => handleToggle(index)}
                     className={`
                       ${gridColumns}
                       grid
@@ -366,7 +365,7 @@ function ContentAccordion({
                                       
                       ${
                         isCompleted
-                          ? `cursor-pointer ${
+                          ? `${
                               theme === "dark"
                                 ? "hover:bg-[#151d2c]"
                                 : "hover:bg-zinc-100"
@@ -376,11 +375,7 @@ function ContentAccordion({
 
                       ${
                         isCurrent
-                          ? `cursor-pointer ${
-                              theme === "dark"
-                                ? "hover:bg-[#1A2233]"
-                                : "hover:bg-zinc-200"
-                            }`
+                          ? `${theme === "dark" ? "hover:bg-[#1A2233]" : "hover:bg-zinc-200"}`
                           : ""
                       }
                                       
@@ -444,7 +439,10 @@ function ContentAccordion({
 
                     {/* Type */}
                     <div className="flex items-start justify-center min-w-0">
-                      <span
+                      <button
+                        type="button"
+                        onClick={() => handleToggle(index)}
+                        disabled={isLocked}
                         className={`
                           px-2
                           py-1
@@ -453,6 +451,14 @@ function ContentAccordion({
                           sm:text-xs
                           whitespace-nowrap
                           border
+                          transition-all
+
+                          ${
+                            isLocked
+                              ? "cursor-not-allowed opacity-50"
+                              : "cursor-pointer hover:scale-105"
+                          }
+                        
                           ${
                             theme === "dark"
                               ? "bg-zinc-800 border-zinc-700 text-white"
@@ -467,7 +473,7 @@ function ContentAccordion({
                         `}
                       >
                         {movie.type}
-                      </span>
+                      </button>
                     </div>
 
                     {/* Year */}
