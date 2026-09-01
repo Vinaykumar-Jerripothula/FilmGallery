@@ -517,7 +517,7 @@ function Home() {
                     Watch Movies
                   </a>
 
-                  <span className="text-zinc-900"> & </span>
+                  <span className={`${currentTheme.text}text-zinc-900`}> & </span>
 
                   <a
                     href="https://t.me/ProSearchY11Bot"

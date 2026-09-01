@@ -25,7 +25,7 @@ export const seriesData = [
     title: "Squid Game",
     contentId: "squidgame",
     image: squidgameImage,
-    total: 22,
+    total: 3,
     route: "/korean/series/squidgame",
   },
   {
@@ -33,7 +33,7 @@ export const seriesData = [
     title: "Crash Landing on You",
     contentId: "crashlandingonyou",
     image: crashlandingonyouImage,
-    total: 16,
+    total: 1,
     route: "/korean/series/crashlandingonyou",
   },
   {
@@ -41,7 +41,7 @@ export const seriesData = [
     title: "Kingdom",
     contentId: "kingdom",
     image: kingdomImage,
-    total: 12,
+    total: 3,
     route: "/korean/series/kingdom",
   },
   {
@@ -49,7 +49,7 @@ export const seriesData = [
     title: "Goblin",
     contentId: "goblin",
     image: goblinImage,
-    total: 19,
+    total: 2,
     route: "/korean/series/goblin",
   },
   {
@@ -57,7 +57,7 @@ export const seriesData = [
     title: "Descendants of the Sun",
     contentId: "descendantsofthesun",
     image: descendantsofthesunImage,
-    total: 19,
+    total: 2,
     route: "/korean/series/descendantsofthesun",
   },
   {
@@ -65,7 +65,7 @@ export const seriesData = [
     title: "Reply 1988",
     contentId: "reply1988",
     image: reply1988Image,
-    total: 20,
+    total: 1,
     route: "/korean/series/reply1988",
   },
   {
@@ -73,7 +73,7 @@ export const seriesData = [
     title: "My Mister",
     contentId: "mymister",
     image: mymisterImage,
-    total: 16,
+    total: 1,
     route: "/korean/series/mymister",
   },
   {
@@ -113,7 +113,7 @@ export const seriesData = [
     title: "The Glory",
     contentId: "theglory",
     image: thegloryImage,
-    total: 16,
+    total: 2,
     route: "/korean/series/theglory",
   },
   {

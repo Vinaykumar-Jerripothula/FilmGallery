@@ -38,6 +38,12 @@ import cillianmurphyImage from "../../../images/hollywood/people/hollywoodactors
 
 import mattdamonImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/mattdamonImage.jpeg";
 
+import robertpattinsonImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/robertpattinsonImage.jpeg";
+import tomhollandImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/tomhollandImage.jpeg";
+import tomhiddlestonImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/tomhiddlestonImage.jpeg";
+import andrewgarfieldImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/andrewgarfieldImage.jpeg";
+import tobeymaguireImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/tobeymaguireImage.jpeg";
+
 export const actorsData = [
   {
     id: 1,
@@ -187,5 +193,40 @@ export const actorsData = [
     image: mattdamonImage,
     slug: "mattdamon",
     route: "/hollywood/actor/matt-damon",
+  },
+  {
+    id: 21,
+    name: "Robert Pattinson",
+    image: robertpattinsonImage,
+    slug: "robertpattinson",
+    route: "/hollywood/actor/robert-pattinson",
+  },
+  {
+    id: 22,
+    name: "Tom Holland",
+    image: tomhollandImage,
+    slug: "tomholland",
+    route: "/hollywood/actor/tom-holland",
+  },
+  {
+    id: 23,
+    name: "Tom Hiddleston",
+    image: tomhiddlestonImage,
+    slug: "tomhiddleston",
+    route: "/hollywood/actor/tom-hiddleston",
+  },
+  {
+    id: 24,
+    name: "Andrew Garfield",
+    image: andrewgarfieldImage,
+    slug: "andrewgarfield",
+    route: "/hollywood/actor/andrew-garfield",
+  },
+  {
+    id: 25,
+    name: "Tobey Maguire",
+    image: tobeymaguireImage,
+    slug: "tobeymaguire",
+    route: "/hollywood/actor/tobey-maguire",
   },
 ];

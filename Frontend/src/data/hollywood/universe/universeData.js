@@ -12,7 +12,7 @@ export const universeData = [
     title: "Marvel Cinematic Universe",
     contentId: "mcu",
     image: mcuImage,
-    total: 80,
+    total: 83,
     route: "/hollywood/universe/mcu",
   },
 
