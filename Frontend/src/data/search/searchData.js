@@ -1,5 +1,6 @@
 import { contentRegistry } from "../Collection/contentRegistry";
 import { peopleData } from "../hollywood/people/peopleData";
+import { directorsData as koreanDirectorsData } from "../korean/people/directorsData";
 import { enrichedPeopleData } from "../../utils/enrichPeopleData";
 import { allContentItems } from "../Collection/allContentItems";
 
@@ -57,6 +58,12 @@ const directorNameItems = Object.values(peopleData.directors).map(
     type: "director",
   }),
 );
+
+const koreanDirectorNameItems = koreanDirectorsData.map((director) => ({
+  title: director.name,
+  type: "director",
+}));
+
 export const searchData = [
   ...new Map(
     [
@@ -66,6 +73,7 @@ export const searchData = [
       ...actorMovieItems,
       ...actorNameItems,
       ...directorNameItems,
+      ...koreanDirectorNameItems,
     ].map((item) => [item.title.toLowerCase(), item]),
   ).values(),
 ];

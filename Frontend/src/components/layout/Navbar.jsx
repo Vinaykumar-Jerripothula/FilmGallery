@@ -58,9 +58,7 @@ function Navbar({
                   `;
   return (
     <>
-      <nav
-        className={`sticky top-0 mb-1 z-50 ${currentTheme.page} ${currentTheme.border} border-b`}
-      >
+      <nav className={`sticky top-0 mb-0 z-50 ${currentTheme.page}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           {/* Left */}
           <div className="flex items-center gap-3">

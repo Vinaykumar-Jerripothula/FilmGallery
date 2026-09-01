@@ -16,6 +16,7 @@ import { peopleData as hollywoodPeopleData } from "../data/hollywood/people/peop
 import { franchiseData as koreanFranchiseData } from "../data/korean/franchise/franchiseData";
 import { seriesData as koreanSeriesData } from "../data/korean/webseries/webseries";
 import { directorsData as koreanDirectorsData } from "../data/korean/people/directorsData";
+import { peopleData as koreanPeopleData } from "../data/korean/people/peopleData";
 
 /*========================== Anime Content Imports ==================================*/
 import { universeData as animeUniverseData } from "../data/anime/universe/universeData";
@@ -79,6 +80,11 @@ function Home() {
 
   const currentIndustryData =
     industryData[selectedIndustry] || industryData.hollywood;
+
+  const allDirectors = [
+  ...directorsData,
+  ...koreanDirectorsData,
+];
 
   const sectionData = {
     universes: {
@@ -148,12 +154,12 @@ function Home() {
         )
       : null;
   const directorMatch =
-    searchResult?.type === "director"
-      ? directorsData.find(
-          (director) =>
-            director.name.toLowerCase() === searchResult.title.toLowerCase(),
-        )
-      : null;
+  searchResult?.type === "director"
+    ? allDirectors.find(
+        (director) =>
+          director.name.toLowerCase() === searchResult.title.toLowerCase(),
+      )
+    : null;
 
   const movieMatch =
     searchResult?.type === "movie"
@@ -291,7 +297,7 @@ function Home() {
                     {searchResult.type}
                   </p>
 
-                  <h1 className="text-3xl font-bold">{searchResult.title}</h1>
+                  <h1 className="text-2xl font-bold">{searchResult.title}</h1>
                 </div>
 
                 {actorMatch && (
@@ -310,7 +316,7 @@ function Home() {
                     onClick={() => setSearchResult(null)}
                     className="
                       px-6
-                      py-3
+                      py-1
                       mt-15
                       sm:mt-10
                       rounded-lg
@@ -328,11 +334,11 @@ function Home() {
             ) : searchResult.type === "director" ? (
               <>
                 <div className="mb-8 border-l-4 border-orange-500 pl-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                  <p className="text-[12px] uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                     {searchResult.type}
                   </p>
 
-                  <h1 className="text-3xl font-bold">{searchResult.title}</h1>
+                  <h1 className="text-2xl  font-bold">{searchResult.title}</h1>
                 </div>
 
                 {directorMatch && (
@@ -350,7 +356,7 @@ function Home() {
                     onClick={() => setSearchResult(null)}
                     className="
           px-6
-          py-3
+          py-1
           mt-15
           sm:mt-10
           rounded-lg
@@ -389,7 +395,7 @@ function Home() {
                     onClick={() => setSearchResult(null)}
                     className="
           px-6
-          py-3
+          py-1
           rounded-lg
           bg-orange-500
           hover:bg-orange-600

@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://ep-bold-pine-ae7ugbci-pooler.c-2.us-east-2.aws.neon.tech:5432/neondb?sslmode=require
+    url: jdbc:postgresql://ep-rough-haze-aek1mrpa-pooler.c-2.us-east-2.aws.neon.tech:5432/neondb?sslmode=require
     username: neondb_owner
-    password: npg_xIbaA2FfWg0e
+    password: npg_spdrvfzhT4Y5
     driver-class-name: org.postgresql.Driver
 
     hikari:

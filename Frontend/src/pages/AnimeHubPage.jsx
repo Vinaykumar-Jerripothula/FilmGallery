@@ -2,15 +2,26 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import ContentCard from "../components/template/ContentCard";
 import { contentRegistry } from "../data/Collection/contentRegistry";
+import { useTheme } from "../context/ThemeContext";
+import { colors } from "../themes/colors";
 
 function AnimeHubPage({ contentItem }) {
   const navigate = useNavigate();
+  const { theme } = useTheme();
+  const currentTheme = colors[theme];
 
   return (
     <>
       <Navbar />
 
-      <div className="max-w-6xl mx-auto px-4 py-6">
+      <div
+  className={`
+    min-h-screen
+    ${currentTheme.page}
+    ${currentTheme.text}
+  `}
+>
+  <div className="max-w-6xl mx-auto px-4 py-6">
         <div className="mb-6">
           <div className="flex items-start gap-4">
             <div className="w-1 h-14 bg-orange-500 rounded-full mt-1" />
@@ -44,9 +55,7 @@ function AnimeHubPage({ contentItem }) {
           </div>
         </div>
 
-        <div
-          className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-3 gap-4"
-        >
+        <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-4">
           {contentItem.content
             .filter((section) => {
               const hubContent = contentRegistry[section.slug];
@@ -81,6 +90,7 @@ function AnimeHubPage({ contentItem }) {
             Back
           </button>
         </div>
+      </div>
       </div>
     </>
   );
