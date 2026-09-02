@@ -857,6 +857,15 @@ function Navbar({
               </button>
 
               <button
+                onClick={() => {
+                  if (location.pathname !== "/home") {
+                    navigate("/indian");
+                  } else if (setSelectedSection) {
+                    setSelectedSection("series");
+                  }
+
+                  setShowMobileMenu(false);
+                }}
                 className={`
                     group
                     relative
