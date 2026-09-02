@@ -22,8 +22,11 @@ import { peopleData as koreanPeopleData } from "../data/korean/people/peopleData
 import { universeData as animeUniverseData } from "../data/anime/universe/universeData";
 import { franchiseData as animeFranchiseData } from "../data/anime/franchise/franchiseData";
 
-/*========================== Indian Content Imports =================================*/
+/* ========================== Indian Content Imports ================================= */
 
+import { directorsData as indianDirectorsData } from "../data/indian/people/directorsData";
+
+/* ================================================================================== */
 import PeopleCarousel from "../components/template/PeopleCarousel";
 import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
@@ -76,15 +79,22 @@ function Home() {
       directors: [],
       actors: [],
     },
+    indian: {
+      universes: [],
+      franchises: [],
+      series: [],
+      duologies: [],
+      trilogies: [],
+      tetralogies: [],
+      directors: indianDirectorsData,
+      actors: [],
+    },
   };
 
   const currentIndustryData =
     industryData[selectedIndustry] || industryData.hollywood;
 
-  const allDirectors = [
-  ...directorsData,
-  ...koreanDirectorsData,
-];
+  const allDirectors = [...directorsData, ...koreanDirectorsData ,  ...indianDirectorsData ];
 
   const sectionData = {
     universes: {
@@ -119,8 +129,7 @@ function Home() {
         (item) => item.contentId === searchResult.contentId,
       )
     : [];
-  
-  
+
   const matchingActors =
     searchResult?.type === "movie"
       ? actorsData.filter((actorCard) => {
@@ -154,12 +163,12 @@ function Home() {
         )
       : null;
   const directorMatch =
-  searchResult?.type === "director"
-    ? allDirectors.find(
-        (director) =>
-          director.name.toLowerCase() === searchResult.title.toLowerCase(),
-      )
-    : null;
+    searchResult?.type === "director"
+      ? allDirectors.find(
+          (director) =>
+            director.name.toLowerCase() === searchResult.title.toLowerCase(),
+        )
+      : null;
 
   const movieMatch =
     searchResult?.type === "movie"
@@ -174,8 +183,6 @@ function Home() {
       )
     : [];
 
-  
-  
   return (
     <div className={`min-h-screen ${currentTheme.page} ${currentTheme.text}`}>
       <Navbar
@@ -517,7 +524,10 @@ function Home() {
                     Watch Movies
                   </a>
 
-                  <span className={`${currentTheme.text}text-zinc-900`}> & </span>
+                  <span className={`${currentTheme.text}text-zinc-900`}>
+                    {" "}
+                    &{" "}
+                  </span>
 
                   <a
                     href="https://t.me/ProSearchY11Bot"

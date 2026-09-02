@@ -20,6 +20,12 @@ import { directorsData as koreanDirectorsData } from "../data/korean/people/dire
 /* ================================ Anime ====================================== */
 import { franchiseData as animeFranchiseData } from "../data/anime/franchise/franchiseData";
 
+/* =============================== Indian ====================================== */
+
+import { directorsData as indianDirectorsData } from "../data/indian/people/directorsData";
+
+/* ============================================================================= */
+
 import { useTheme } from "../context/ThemeContext";
 import { colors } from "../themes/colors";
 
@@ -37,7 +43,13 @@ function CategoryPage() {
     data = actorsData;
   }
   if (type === "directors") {
-    data = industry === "korean" ? koreanDirectorsData : directorsData;
+    const directorMap = {
+      hollywood: directorsData,
+      korean: koreanDirectorsData,
+      indian: indianDirectorsData,
+    };
+
+    data = directorMap[industry] || directorsData;
   }
 
   if (type === "universes") data = universeData;

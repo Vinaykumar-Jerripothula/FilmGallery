@@ -1,5 +1,6 @@
 import { peopleData } from "../data/hollywood/people/peopleData";
 import { peopleData as koreanPeopleData } from "../data/korean/people/peopleData";
+import { peopleData as indianPeopleData } from "../data/indian/people/peopleData";
 import { generateContentId } from "./generateContentId";
 
 export const enrichedPeopleData = {
@@ -22,6 +23,20 @@ Object.entries(peopleData.directors).forEach(
 );
 
 Object.entries(koreanPeopleData.directors).forEach(
+  ([key, director]) => {
+    enrichedPeopleData.directors[key] = {
+      ...director,
+
+      movies: director.movies.map((movie) => ({
+        ...movie,
+
+        contentId: generateContentId(movie),
+      })),
+    };
+  },
+);
+
+Object.entries(indianPeopleData.directors).forEach(
   ([key, director]) => {
     enrichedPeopleData.directors[key] = {
       ...director,

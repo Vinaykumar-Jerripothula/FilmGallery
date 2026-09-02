@@ -262,6 +262,7 @@ function Navbar({
               </button>
 
               <button
+                onClick={() => navigate("/indian")}
                 className={`
                     ${isDark ? "text-zinc-300" : "text-zinc-700"}
                     hover:text-orange-400
@@ -270,7 +271,7 @@ function Navbar({
                     transition
                   `}
               >
-                Tollywood
+                Indian
               </button>
 
               <button
@@ -899,7 +900,7 @@ function Navbar({
                 />
 
                 <span className="group-hover:translate-x-1 transition-transform duration-300">
-                  Tollywood
+                  Indian
                 </span>
               </button>
             </div>
