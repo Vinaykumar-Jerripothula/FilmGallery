@@ -43,6 +43,8 @@ import tomhollandImage from "../../../images/hollywood/people/hollywoodactors/ho
 import tomhiddlestonImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/tomhiddlestonImage.jpeg";
 import andrewgarfieldImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/andrewgarfieldImage.jpeg";
 import tobeymaguireImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/tobeymaguireImage.jpeg";
+import hughjackmanImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/hughjackmanImage.jpeg";
+import jasonmomoaImage from "../../../images/hollywood/people/hollywoodactors/hollywoodactorsimages/jasonmomoaImage.jpeg";
 
 export const actorsData = [
   {
@@ -228,5 +230,17 @@ export const actorsData = [
     image: tobeymaguireImage,
     slug: "tobeymaguire",
     route: "/hollywood/actor/tobey-maguire",
-  },
+  },{
+  id: 26,
+  name: "Hugh Jackman",
+  image: hughjackmanImage,
+  slug: "hughjackman",
+  route: "/hollywood/actor/hugh-jackman",
+},{
+  id: 27,
+  name: "Jason Momoa",
+  image: jasonmomoaImage,
+  slug: "jasonmomoa",
+  route: "/hollywood/actor/jason-momoa",
+},
 ];
