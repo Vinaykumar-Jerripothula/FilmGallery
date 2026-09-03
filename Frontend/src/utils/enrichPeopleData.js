@@ -50,7 +50,23 @@ Object.entries(indianPeopleData.directors).forEach(
   },
 );
 
+
+
 Object.entries(peopleData.actors).forEach(
+  ([key, actor]) => {
+    enrichedPeopleData.actors[key] = {
+      ...actor,
+
+      movies: actor.movies.map((movie) => ({
+        ...movie,
+
+        contentId: generateContentId(movie),
+      })),
+    };
+  },
+);
+
+Object.entries(indianPeopleData.actors).forEach(
   ([key, actor]) => {
     enrichedPeopleData.actors[key] = {
       ...actor,

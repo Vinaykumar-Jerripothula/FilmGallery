@@ -25,7 +25,7 @@ import { franchiseData as animeFranchiseData } from "../data/anime/franchise/fra
 /* ========================== Indian Content Imports ================================= */
 
 import { directorsData as indianDirectorsData } from "../data/indian/people/directorsData";
-
+import { actorsData as indianActorsData } from "../data/indian/people/actorsData";
 /* ================================================================================== */
 import PeopleCarousel from "../components/template/PeopleCarousel";
 import { useState } from "react";
@@ -87,7 +87,7 @@ function Home() {
       trilogies: [],
       tetralogies: [],
       directors: indianDirectorsData,
-      actors: [],
+      actors: indianActorsData,
     },
   };
 
