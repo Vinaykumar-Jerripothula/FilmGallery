@@ -9,6 +9,7 @@ import {
   markMovieWatched,
   unmarkMovieWatched,
 } from "../../store/movieProgressSlice";
+import telegramIcon from "../../images/watchicons/telegram.jpeg";
 
 function ContentAccordion({
   franchiseName,
@@ -66,22 +67,22 @@ function ContentAccordion({
       return;
     }
     /*
-      Rules:
+        Rules:
 
-      index > completed
-        → LOCKED
-        → Do nothing
+        index > completed
+          → LOCKED
+          → Do nothing
 
-      index === completed
-        → NEXT movie
-        → Complete it
-        → completed = index + 1
+        index === completed
+          → NEXT movie
+          → Complete it
+          → completed = index + 1
 
-      index < completed
-        → Already completed movie
-        → Make this movie NEXT
-        → completed = index
-    */
+        index < completed
+          → Already completed movie
+          → Make this movie NEXT
+          → completed = index
+      */
 
     if (index > completed) {
       return;
@@ -133,67 +134,75 @@ function ContentAccordion({
     }
   };
 
+  const handleTelegramClick = async (title) => {
+    await navigator.clipboard.writeText(title);
+
+    window.open("https://t.me/+MArbDNiKNQ4yZjU1", "_blank");
+  };
+
   const total = content.length;
 
   const progress = total === 0 ? 0 : Math.round((completed / total) * 100);
 
   /*
-    Header and rows use exactly the same
-    grid column structure.
-  */
+      Header and rows use exactly the same
+      grid column structure.
+    */
   const gridColumns =
-    "grid-cols-[80px_minmax(250px,1fr)_110px_90px_180px_180px_110px_130px]";
+    "grid-cols-[80px_minmax(300px,1fr)_110px_120px_80px_80px_220px_220px_40px]";
+  const centerCell = "flex items-center justify-center min-w-0";
+
   return (
     <div
       className={`
-        rounded-2xl
-        overflow-hidden
-        shadow-xl
-        w-[90%]
-        sm:w-[95%]
-        lg:w-[78%]
-        mx-auto
-        border
-        ${currentTheme.card}
-        ${currentTheme.border}
-      `}
+          rounded-2xl
+          overflow-hidden
+          shadow-xl
+          w-[90%]
+          sm:w-[90%]
+          lg:w-[88%]
+          mx-auto
+          border
+          ${currentTheme.card}
+          ${currentTheme.border}
+        `}
     >
       {/* =====================================================
-          FRANCHISE HEADER
-          ===================================================== */}
+            FRANCHISE HEADER
+            ===================================================== */}
 
       {showHeader && (
         <button
           type="button"
           onClick={() => setOpen(!open)}
           className="
-            w-full
-            p-2 sm:p-1
-            text-left
-            hover:bg-[#172036]
-            transition-all
-          "
+              w-full
+              p-2 sm:p-1
+              text-left
+              hover:bg-[#172036]
+              transition-all
+            "
         >
           <div
             className="
-              flex
-              flex-col
-              sm:flex-row
-              sm:items-center
-              sm:justify-between
-              gap-4
-            "
+                flex
+                flex-col
+                sm:flex-row
+                sm:items-center
+                sm:justify-between
+                gap-4
+              "
           >
             <div className="flex items-center gap-4 min-w-0">
               {/* Arrow */}
               <div
                 className={`
-                  flex-shrink-0
-                  text-orange-500
-                  transition-transform
-                  duration-300
-                  ${open ? "rotate-90" : ""}
-                `}
+                    flex-shrink-0
+                    text-orange-500
+                    transition-transform
+                    duration-300
+                    ${open ? "rotate-90" : ""}
+                  `}
               >
                 <ChevronRight size={44} />
               </div>
@@ -202,22 +211,22 @@ function ContentAccordion({
               <div className="min-w-0">
                 <h2
                   className={`
-                    text-xs
-                    sm:text-lg
-                    font-bold
-                    tracking-tight
-                    truncate
-                    ${currentTheme.text}
-                  `}
+                      text-xs
+                      sm:text-lg
+                      font-bold
+                      tracking-tight
+                      truncate
+                      ${currentTheme.text}
+                    `}
                 >
                   {franchiseName}
                 </h2>
 
                 <p
                   className={`
-                    text-xs sm:text-sm mt-1
-                    ${currentTheme.secondaryText}
-                  `}
+                      text-xs sm:text-sm mt-1
+                      ${currentTheme.secondaryText}
+                    `}
                 >
                   Franchise Progress
                 </p>
@@ -232,9 +241,9 @@ function ContentAccordion({
 
               <div
                 className={`
-                  text-xs sm:text-sm
-                  ${currentTheme.secondaryText}
-                `}
+                    text-xs sm:text-sm
+                    ${currentTheme.secondaryText}
+                  `}
               >
                 {" "}
                 {completed} / {total}
@@ -246,14 +255,14 @@ function ContentAccordion({
           <div className="mt-5 h-1 bg-zinc-800 rounded-full overflow-hidden">
             <div
               className="
-                h-full
-                bg-gradient-to-r
-                from-orange-500
-                via-orange-400
-                to-yellow-400
-                transition-all
-                duration-500
-              "
+                  h-full
+                  bg-gradient-to-r
+                  from-orange-500
+                  via-orange-400
+                  to-yellow-400
+                  transition-all
+                  duration-500
+                "
               style={{
                 width: `${progress}%`,
               }}
@@ -263,8 +272,8 @@ function ContentAccordion({
       )}
 
       {/* =====================================================
-          CONTENT / TABLE
-          ===================================================== */}
+            CONTENT / TABLE
+            ===================================================== */}
 
       {open && (
         <div
@@ -278,57 +287,49 @@ function ContentAccordion({
         >
           {" "}
           <div className="overflow-x-auto">
-            <div className="min-w-[1153px]">
+            <div className="min-w-[1280px] lg:min-w-[1153px]">
               {/* Table Header */}
               <div
                 className={`
-                  ${gridColumns}
-                  grid
-                  gap-0
-                  px-6
-                  py-6
-                  border-b
-                  text-[10px]
-                  sm:text-xs
-                  font-semibold
-                  uppercase
-                  tracking-wider
-                  ${
-                    theme === "dark"
-                      ? "bg-[#0f172a] border-zinc-700 text-zinc-400"
-                      : "bg-zinc-100 border-zinc-300 text-zinc-600"
-                  }
-                `}
+                    ${gridColumns}
+                    grid
+                    gap-0
+                    px-4 sm:px-6
+                    py-6
+                    border-b
+                    text-[10px]
+                    sm:text-xs
+                    font-semibold
+                    uppercase
+                    tracking-wider
+                    ${
+                      theme === "dark"
+                        ? "bg-[#0f172a] border-zinc-700 text-zinc-400"
+                        : "bg-zinc-100 border-zinc-300 text-zinc-600"
+                    }
+                  `}
               >
-                <div className="pr-4 flex items-center justify-center">
-                  S.No
-                </div>
+                <div className=" flex items-center justify-center">S.No</div>
 
                 <div className="flex items-center justify-center">Title</div>
 
-                <div className="pr-3 flex items-center justify-center">
-                  Type
-                </div>
+                <div className=" flex items-center justify-center">Status</div>
 
-                <div className="pr-4 flex items-center justify-center">
-                  Year
-                </div>
+                <div className=" flex items-center justify-center">Type</div>
 
-                <div className="pr-3 flex items-center justify-center">
-                  Imdb
-                </div>
+                <div className="flex items-center justify-center">Year</div>
 
-                <div className="pr-3 flex items-center justify-center">
+                <div className="flex items-center justify-center">Imdb</div>
+
+                <div className="flex items-center justify-center">
                   {isAnimeContent ? "Creator" : "Director"}
                 </div>
 
-                <div className="pr-3 flex items-center justify-center">
+                <div className="flex items-center justify-center">
                   {isAnimeContent ? "Country" : "Actor"}
                 </div>
 
-                <div className="pr-4 flex items-center justify-center">
-                  Status
-                </div>
+                <div className="flex items-center justify-center">Watch</div>
               </div>
 
               {/* Table Rows */}
@@ -353,34 +354,34 @@ function ContentAccordion({
                   <div
                     key={movie.id}
                     className={`
-                      ${gridColumns}
-                      grid
-                      gap-0
-                      px-4 sm:px-6
-                      py-4
-                      border-b
-                      ${theme === "dark" ? "border-zinc-800" : "border-zinc-300"}
-                      transition-all
-                      duration-300
-                                      
-                      ${
-                        isCompleted
-                          ? `${
-                              theme === "dark"
-                                ? "hover:bg-[#151d2c]"
-                                : "hover:bg-zinc-100"
-                            }`
-                          : ""
-                      }
+                        ${gridColumns}
+                        grid
+                        gap-0
+                        px-4 sm:px-6
+                        py-4
+                        border-b
+                        ${theme === "dark" ? "border-zinc-800" : "border-zinc-300"}
+                        transition-all
+                        duration-300
+                                        
+                        ${
+                          isCompleted
+                            ? `${
+                                theme === "dark"
+                                  ? "hover:bg-[#151d2c]"
+                                  : "hover:bg-zinc-100"
+                              }`
+                            : ""
+                        }
 
-                      ${
-                        isCurrent
-                          ? `${theme === "dark" ? "hover:bg-[#1A2233]" : "hover:bg-zinc-200"}`
-                          : ""
-                      }
-                                      
-                      ${isLocked ? "cursor-not-allowed" : ""}
-                    `}
+                        ${
+                          isCurrent
+                            ? `${theme === "dark" ? "hover:bg-[#1A2233]" : "hover:bg-zinc-200"}`
+                            : ""
+                        }
+                                        
+                        ${isLocked ? "cursor-not-allowed" : ""}
+                      `}
                   >
                     {/* S.No */}
                     <div className="flex items-center justify-center gap-2 min-w-0">
@@ -414,35 +415,134 @@ function ContentAccordion({
                     {/* Title */}
                     <div
                       className={`
-                        min-w-0
-                        text-xs
-                        sm:text-base
-                        font-semibold
-                        whitespace-normal
-                        break-words
-
-                        ${isCompleted ? "line-through" : ""}
-
-                        ${
-                          isCompleted
-                            ? "text-green-500"
-                            : isCurrent
-                              ? "text-orange-400"
-                              : theme === "dark"
-                                ? "text-zinc-400"
-                                : "text-zinc-600"
-                        }
-                      `}
+                          flex
+                          items-center
+                          min-w-0
+                          text-xs
+                          sm:text-base
+                          font-semibold
+                          px-2
+                                            
+                          ${isCompleted ? "line-through" : ""}
+                                            
+                          ${
+                            isCompleted
+                              ? "text-green-500"
+                              : isCurrent
+                                ? "text-orange-400"
+                                : theme === "dark"
+                                  ? "text-zinc-400"
+                                  : "text-zinc-600"
+                          }
+                        `}
                     >
                       {movie.title}
                     </div>
 
+                    {/* Status */}
+                    <div
+                      className="flex items-center justify-center"
+                      onClick={() => {
+                        if (!isLocked) {
+                          handleToggle(index);
+                        }
+                      }}
+                    >
+                      {isCompleted ? (
+                        <span
+                          className={`
+                              cursor-pointer
+                              hover:scale-105
+                              transition-all
+                              text-[11px]
+                              sm:text-[10px]
+                              font-semibold
+                              px-2
+                              sm:px-3
+                              py-1
+                              rounded-full
+                              whitespace-nowrap
+                              ${
+                                theme === "dark"
+                                  ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                                  : "bg-green-100 text-green-700 border border-green-300"
+                              }
+                            `}
+                        >
+                          WATCHED
+                        </span>
+                      ) : isMovieMode ? (
+                        <span
+                          className={`
+                              cursor-pointer
+                              hover:scale-105
+                              transition-all
+                              text-[9px]
+                              sm:text-[10px]
+                              font-semibold
+                              px-3
+                              py-1
+                              rounded-full
+                              whitespace-nowrap
+                              ${
+                                theme === "dark"
+                                  ? "bg-zinc-800 text-zinc-400 border border-zinc-700"
+                                  : "bg-slate-100 text-slate-600 border border-slate-300"
+                              }
+                            `}
+                        >
+                          NOT YET
+                        </span>
+                      ) : isCurrent ? (
+                        <span
+                          className={`
+                              cursor-pointer
+                              hover:scale-105
+                              transition-all
+                              text-[9px]
+                              sm:text-[10px]
+                              font-semibold
+                              px-3
+                              sm:px-5
+                              py-1
+                              rounded-full
+                              whitespace-nowrap
+                              ${
+                                theme === "dark"
+                                  ? "bg-orange-500/20 text-orange-400 border border-orange-500/30"
+                                  : "bg-orange-100 text-orange-700 border border-orange-300"
+                              }
+                            `}
+                        >
+                          NEXT
+                        </span>
+                      ) : (
+                        <span
+                          className={`
+                              cursor-not-allowed
+                              text-[9px]
+                              sm:text-[10px]
+                              font-semibold
+                              px-3
+                              sm:px-3.5
+                              py-1
+                              rounded-full
+                              whitespace-nowrap
+                              ${
+                                theme === "dark"
+                                  ? "bg-zinc-800 text-zinc-500 border border-zinc-700"
+                                  : "bg-slate-100 text-slate-600 border border-slate-300"
+                              }
+                            `}
+                        >
+                          LOCKED
+                        </span>
+                      )}
+                    </div>
+
                     {/* Type */}
-                    <div className="flex items-start justify-center min-w-0">
-                      <button
-                        type="button"
-                        onClick={() => handleToggle(index)}
-                        disabled={isLocked}
+                    <div className="flex items-center justify-center min-w-0">
+                      <span
                         className={`
                           px-2
                           py-1
@@ -451,14 +551,7 @@ function ContentAccordion({
                           sm:text-xs
                           whitespace-nowrap
                           border
-                          transition-all
 
-                          ${
-                            isLocked
-                              ? "cursor-not-allowed opacity-50"
-                              : "cursor-pointer hover:scale-105"
-                          }
-                        
                           ${
                             theme === "dark"
                               ? "bg-zinc-800 border-zinc-700 text-white"
@@ -473,20 +566,20 @@ function ContentAccordion({
                         `}
                       >
                         {movie.type}
-                      </button>
+                      </span>
                     </div>
 
                     {/* Year */}
                     <div
                       className={`
-                        flex
-                        items-center
-                        justify-center
-                        text-xs
-                        sm:text-sm
-                        whitespace-nowrap
-                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
-                      `}
+                          flex
+                          items-center
+                          justify-center
+                          text-xs
+                          sm:text-sm
+                          whitespace-nowrap
+                          ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
+                        `}
                     >
                       {movie.year}
                     </div>
@@ -494,14 +587,14 @@ function ContentAccordion({
                     {/* IMDb */}
                     <div
                       className={`
-                        flex
-                        items-center
-                        justify-center
-                        text-xs
-                        sm:text-sm
-                        whitespace-nowrap
-                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
-                      `}
+                          flex
+                          items-center
+                          justify-center
+                          text-xs
+                          sm:text-sm
+                          whitespace-nowrap
+                          ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
+                        `}
                     >
                       {movie.imdb}
                     </div>
@@ -509,115 +602,61 @@ function ContentAccordion({
                     {/* Director */}
                     <div
                       className={`
-                        flex
-                        items-center
-                        justify-center
-                        text-xs
-                        sm:text-sm
-                        whitespace-nowrap
-                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-900"}
-                      `}
+                          flex
+                          items-center
+                          justify-center
+                          min-w-0
+                          text-xs
+                          sm:text-sm
+                          text-center
+                          px-2
+                        `}
+                      title={isAnimeContent ? movie.creator : movie.director}
                     >
-                      {isAnimeContent ? movie.creator : movie.director}
+                      <span className="truncate">
+                        {isAnimeContent ? movie.creator : movie.director}
+                      </span>
                     </div>
 
                     {/* Actor */}
                     <div
                       className={`
-                        flex
-                        items-center
-                        justify-center
-                        text-xs
-                        sm:text-sm
-                        whitespace-nowrap
-                        ${theme === "dark" ? "text-zinc-300" : "text-zinc-700"}
-                      `}
+                          flex
+                          items-center
+                          justify-center
+                          min-w-0
+                          text-xs
+                          sm:text-sm
+                          text-center
+                          px-2
+                        `}
+                      title={isAnimeContent ? movie.country : movie.actor}
                     >
-                      {isAnimeContent ? movie.country : movie.actor}
+                      <span className="truncate">
+                        {isAnimeContent ? movie.country : movie.actor}
+                      </span>
                     </div>
 
-                    {/* Status */}
+                    {/* Watch */}
                     <div className="flex items-center justify-center">
-                      {isCompleted ? (
-                        <span
-                          className={`
-                            text-[11px]
-                            sm:text-[10px]
-                            font-semibold
-                            px-2
-                            sm:px-3
-                            py-1
-                            rounded-full
-                            whitespace-nowrap
-                            ${
-                              theme === "dark"
-                                ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                                : "bg-green-100 text-green-700 border border-green-300"
-                            }
-                          `}
-                        >
-                          WATCHED
-                        </span>
-                      ) : isMovieMode ? (
-                        <span
-                          className={`
-                            text-[11px]
-                            sm:text-[10px]
-                            font-semibold
-                            px-3
-                            py-1
-                            rounded-full
-                            whitespace-nowrap
-                            ${
-                              theme === "dark"
-                                ? "bg-zinc-800 text-zinc-400 border border-zinc-700"
-                                : "bg-slate-100 text-slate-600 border border-slate-300"
-                            }
-                          `}
-                        >
-                          NOT YET
-                        </span>
-                      ) : isCurrent ? (
-                        <span
-                          className={`
-                            text-[6px]
-                            sm:text-[10px]
-                            font-semibold
-                            px-3
-                            sm:px-5
-                            py-1
-                            rounded-full
-                            whitespace-nowrap
-                            ${
-                              theme === "dark"
-                                ? "bg-orange-500/20 text-orange-400 border border-orange-500/30"
-                                : "bg-orange-100 text-orange-700 border border-orange-300"
-                            }
-                          `}
-                        >
-                          NEXT
-                        </span>
-                      ) : (
-                        <span
-                          className={`
-                            text-[9px]
-                            sm:text-[10px]
-                            font-semibold
-                            px-3
-                            sm:px-3.5
-                            py-1
-                            rounded-full
-                            whitespace-nowrap
-                            ${
-                              theme === "dark"
-                                ? "bg-zinc-800 text-zinc-500 border border-zinc-700"
-                                : "bg-slate-100 text-slate-600 border border-slate-300"
-                            }
-                          `}
-                        >
-                          LOCKED
-                        </span>
-                      )}
+                      <button
+                        type="button"
+                        onClick={() => handleTelegramClick(movie.title)}
+                        className="
+                          p-1
+                          rounded-full
+                          hover:scale-110
+                          transition-all
+                          duration-200
+                        "
+                        title={`Copy "${movie.title}"`}
+                      >
+                        <img
+                          src={telegramIcon}
+                          alt="Telegram"
+                          className="w-5 h-5"
+                        />
+                      </button>
                     </div>
                   </div>
                 );
