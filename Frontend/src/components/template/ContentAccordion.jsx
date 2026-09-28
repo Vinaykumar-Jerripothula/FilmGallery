@@ -641,7 +641,7 @@ function ContentAccordion({
                     <div className="flex items-center justify-center">
                       <button
                         type="button"
-                        onClick={() => handleTelegramClick(movie.title)}
+                        onClick={() => handleTelegramClick(movie.title + " " + movie.year)}
                         className="
                           p-1
                           rounded-full
