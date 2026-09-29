@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axiosInstance from "../api/axiosInstance";
 const API_URL = "/api/progress";
+
 export const fetchProgress = createAsyncThunk(
   "progress/fetchProgress",
 

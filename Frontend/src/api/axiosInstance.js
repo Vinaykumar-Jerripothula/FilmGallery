@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://filmgallery.onrender.com",
+  baseURL: "https://filgallery.onrender.com",
 });
 
 axiosInstance.interceptors.request.use(

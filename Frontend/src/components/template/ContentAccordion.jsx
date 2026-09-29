@@ -29,6 +29,7 @@ function ContentAccordion({
     content.length > 0 && content[0]?.creator && content[0]?.country;
   const [open, setOpen] = useState(!showHeader);
   const [completed, setCompleted] = useState(completedCount);
+  const [selectedRow, setSelectedRow] = useState(null);
 
   useEffect(() => {
     setCompleted(completedCount);
@@ -140,6 +141,10 @@ function ContentAccordion({
     window.open("https://t.me/+MArbDNiKNQ4yZjU1", "_blank");
   };
 
+  const handleRowSelect = (index) => {
+    setSelectedRow((prev) => (prev === index ? null : index));
+  };
+
   const total = content.length;
 
   const progress = total === 0 ? 0 : Math.round((completed / total) * 100);
@@ -151,6 +156,8 @@ function ContentAccordion({
   const gridColumns =
     "grid-cols-[80px_minmax(300px,1fr)_110px_120px_80px_80px_220px_220px_40px]";
   const centerCell = "flex items-center justify-center min-w-0";
+
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
     <div
@@ -353,6 +360,11 @@ function ContentAccordion({
                 return (
                   <div
                     key={movie.id}
+                    onClick={() => {
+                      if (isMobile) {
+                        handleRowSelect(index);
+                      }
+                    }}
                     className={`
                         ${gridColumns}
                         grid
@@ -381,6 +393,13 @@ function ContentAccordion({
                         }
                                         
                         ${isLocked ? "cursor-not-allowed" : ""}
+                        ${
+                          selectedRow === index
+                            ? theme === "dark"
+                              ? "bg-white/5"
+                              : "bg-black/5"
+                            : ""
+                        }
                       `}
                   >
                     {/* S.No */}
@@ -641,7 +660,9 @@ function ContentAccordion({
                     <div className="flex items-center justify-center">
                       <button
                         type="button"
-                        onClick={() => handleTelegramClick(movie.title + " " + movie.year)}
+                        onClick={() =>
+                          handleTelegramClick(movie.title + " " + movie.year)
+                        }
                         className="
                           p-1
                           rounded-full
