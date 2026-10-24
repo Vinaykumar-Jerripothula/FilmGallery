@@ -80,28 +80,37 @@ function FranchisePage() {
     `}
     >
       <Navbar enableSearch={false} />{" "}
-      <div className="pt-5 pb-5 sm:pt-5 pb-5">
-        <ContentHero
-          title={contentItem.title}
-          subtitle={contentItem.subtitle}
-          image={contentItem.image}
-          watched={watched}
-          total={total}
-          progress={progress}
-        />
-        <ContentAccordion
-          franchiseName={contentItem.title}
-          content={contentItem.content}
-          contentId={contentItem.contentId}
-          completedCount={watched}
-          watchedMovies={watchedMovies}
-          showHeader={false}
-          mode={
-            category === "actor" || category === "director"
-              ? "movie"
-              : "franchise"
-          }
-        />
+      <div className="mx-auto max-w-[1400px] px-4 py-5 sm:px-6">
+        <div className="grid grid-cols-1 items-start gap-5 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[400px_minmax(0,1fr)]">
+          {/* Left: Progress card */}
+          <div className="w-full lg:sticky lg:top-5">
+            <ContentHero
+              title={contentItem.title}
+              subtitle={contentItem.subtitle}
+              image={contentItem.image}
+              watched={watched}
+              total={total}
+              progress={progress}
+            />
+          </div>
+
+          {/* Right: Movie list */}
+          <div className="min-w-0 w-full">
+            <ContentAccordion
+              franchiseName={contentItem.title}
+              content={contentItem.content}
+              contentId={contentItem.contentId}
+              completedCount={watched}
+              watchedMovies={watchedMovies}
+              showHeader={false}
+              mode={
+                category === "actor" || category === "director"
+                  ? "movie"
+                  : "franchise"
+              }
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
