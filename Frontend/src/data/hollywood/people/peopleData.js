@@ -106,7 +106,6 @@ export const peopleData = {
           country: "UK",
           imdb: 7.4,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -118,7 +117,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.4,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -130,7 +128,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -142,7 +139,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -154,7 +150,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.5,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -164,9 +159,8 @@ export const peopleData = {
           director: "Christopher Nolan",
           actor: "Christian Bale",
           country: "USA",
-          imdb: 9.0,
+          imdb: 9.1,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -178,7 +172,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.8,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -190,7 +183,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.4,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -202,7 +194,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.7,
         },
-
         {
           id: 10,
           watchOrder: 10,
@@ -214,7 +205,6 @@ export const peopleData = {
           country: "UK",
           imdb: 7.8,
         },
-
         {
           id: 11,
           watchOrder: 11,
@@ -226,7 +216,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
           id: 12,
           watchOrder: 12,
@@ -236,9 +225,8 @@ export const peopleData = {
           director: "Christopher Nolan",
           actor: "Cillian Murphy",
           country: "USA",
-          imdb: 8.3,
+          imdb: 8.2,
         },
-
         {
           id: 13,
           watchOrder: 13,
@@ -260,6 +248,17 @@ export const peopleData = {
         {
           id: 1,
           watchOrder: 1,
+          title: "Duel",
+          type: "Movie",
+          year: 1971,
+          director: "Steven Spielberg",
+          actor: "Dennis Weaver",
+          country: "USA",
+          imdb: 7.6,
+        },
+        {
+          id: 2,
+          watchOrder: 2,
           title: "The Sugarland Express",
           type: "Movie",
           year: 1974,
@@ -268,10 +267,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.7,
         },
-
         {
-          id: 2,
-          watchOrder: 2,
+          id: 3,
+          watchOrder: 3,
           title: "Jaws",
           type: "Movie",
           year: 1975,
@@ -280,10 +278,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.1,
         },
-
         {
-          id: 3,
-          watchOrder: 3,
+          id: 4,
+          watchOrder: 4,
           title: "Close Encounters of the Third Kind",
           type: "Movie",
           year: 1977,
@@ -292,22 +289,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.6,
         },
-
         {
-          id: 4,
-          watchOrder: 4,
+          id: 5,
+          watchOrder: 5,
           title: "1941",
           type: "Movie",
           year: 1979,
           director: "Steven Spielberg",
           actor: "Dan Aykroyd",
           country: "USA",
-          imdb: 5.8,
+          imdb: 5.7,
         },
-
         {
-          id: 5,
-          watchOrder: 5,
+          id: 6,
+          watchOrder: 6,
           title: "Raiders of the Lost Ark",
           type: "Movie",
           year: 1981,
@@ -316,10 +311,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.4,
         },
-
         {
-          id: 6,
-          watchOrder: 6,
+          id: 7,
+          watchOrder: 7,
           title: "E.T. the Extra-Terrestrial",
           type: "Movie",
           year: 1982,
@@ -328,10 +322,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.9,
         },
-
         {
-          id: 7,
-          watchOrder: 7,
+          id: 8,
+          watchOrder: 8,
+          title: "Twilight Zone: The Movie",
+          type: "Movie",
+          year: 1983,
+          director: "Steven Spielberg",
+          actor: "Scatman Crothers",
+          country: "USA",
+          imdb: 6.4,
+        },
+        {
+          id: 9,
+          watchOrder: 9,
           title: "Indiana Jones and the Temple of Doom",
           type: "Movie",
           year: 1984,
@@ -340,10 +344,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 8,
-          watchOrder: 8,
+          id: 10,
+          watchOrder: 10,
           title: "The Color Purple",
           type: "Movie",
           year: 1985,
@@ -352,10 +355,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
-          id: 9,
-          watchOrder: 9,
+          id: 11,
+          watchOrder: 11,
           title: "Empire of the Sun",
           type: "Movie",
           year: 1987,
@@ -364,22 +366,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
-          id: 10,
-          watchOrder: 10,
-          title: "Always",
-          type: "Movie",
-          year: 1989,
-          director: "Steven Spielberg",
-          actor: "Richard Dreyfuss",
-          country: "USA",
-          imdb: 6.4,
-        },
-
-        {
-          id: 11,
-          watchOrder: 11,
+          id: 12,
+          watchOrder: 12,
           title: "Indiana Jones and the Last Crusade",
           type: "Movie",
           year: 1989,
@@ -388,10 +377,20 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
-          id: 12,
-          watchOrder: 12,
+          id: 13,
+          watchOrder: 13,
+          title: "Always",
+          type: "Movie",
+          year: 1989,
+          director: "Steven Spielberg",
+          actor: "Richard Dreyfuss",
+          country: "USA",
+          imdb: 6.4,
+        },
+        {
+          id: 14,
+          watchOrder: 14,
           title: "Hook",
           type: "Movie",
           year: 1991,
@@ -400,10 +399,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
-          id: 13,
-          watchOrder: 13,
+          id: 15,
+          watchOrder: 15,
           title: "Jurassic Park",
           type: "Movie",
           year: 1993,
@@ -412,10 +410,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
-          id: 14,
-          watchOrder: 14,
+          id: 16,
+          watchOrder: 16,
           title: "Schindler's List",
           type: "Movie",
           year: 1993,
@@ -424,10 +421,9 @@ export const peopleData = {
           country: "USA",
           imdb: 9.0,
         },
-
         {
-          id: 15,
-          watchOrder: 15,
+          id: 17,
+          watchOrder: 17,
           title: "The Lost World: Jurassic Park",
           type: "Movie",
           year: 1997,
@@ -436,10 +432,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
-          id: 16,
-          watchOrder: 16,
+          id: 18,
+          watchOrder: 18,
           title: "Amistad",
           type: "Movie",
           year: 1997,
@@ -448,10 +443,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
-          id: 17,
-          watchOrder: 17,
+          id: 19,
+          watchOrder: 19,
           title: "Saving Private Ryan",
           type: "Movie",
           year: 1998,
@@ -460,10 +454,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.6,
         },
-
         {
-          id: 18,
-          watchOrder: 18,
+          id: 20,
+          watchOrder: 20,
           title: "A.I. Artificial Intelligence",
           type: "Movie",
           year: 2001,
@@ -472,10 +465,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
-          id: 19,
-          watchOrder: 19,
+          id: 21,
+          watchOrder: 21,
           title: "Minority Report",
           type: "Movie",
           year: 2002,
@@ -484,10 +476,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.6,
         },
-
         {
-          id: 20,
-          watchOrder: 20,
+          id: 22,
+          watchOrder: 22,
           title: "Catch Me If You Can",
           type: "Movie",
           year: 2002,
@@ -496,10 +487,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.1,
         },
-
         {
-          id: 21,
-          watchOrder: 21,
+          id: 23,
+          watchOrder: 23,
           title: "The Terminal",
           type: "Movie",
           year: 2004,
@@ -508,22 +498,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.4,
         },
-
         {
-          id: 22,
-          watchOrder: 22,
+          id: 24,
+          watchOrder: 24,
           title: "War of the Worlds",
           type: "Movie",
           year: 2005,
           director: "Steven Spielberg",
           actor: "Tom Cruise",
           country: "USA",
-          imdb: 6.5,
+          imdb: 6.6,
         },
-
         {
-          id: 23,
-          watchOrder: 23,
+          id: 25,
+          watchOrder: 25,
           title: "Munich",
           type: "Movie",
           year: 2005,
@@ -532,10 +520,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 24,
-          watchOrder: 24,
+          id: 26,
+          watchOrder: 26,
           title: "Indiana Jones and the Kingdom of the Crystal Skull",
           type: "Movie",
           year: 2008,
@@ -544,10 +531,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.2,
         },
-
         {
-          id: 25,
-          watchOrder: 25,
+          id: 27,
+          watchOrder: 27,
           title: "The Adventures of Tintin",
           type: "Movie",
           year: 2011,
@@ -556,10 +542,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
-          id: 26,
-          watchOrder: 26,
+          id: 28,
+          watchOrder: 28,
           title: "War Horse",
           type: "Movie",
           year: 2011,
@@ -568,10 +553,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
-          id: 27,
-          watchOrder: 27,
+          id: 29,
+          watchOrder: 29,
           title: "Lincoln",
           type: "Movie",
           year: 2012,
@@ -580,10 +564,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
-          id: 28,
-          watchOrder: 28,
+          id: 30,
+          watchOrder: 30,
           title: "Bridge of Spies",
           type: "Movie",
           year: 2015,
@@ -592,10 +575,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.6,
         },
-
         {
-          id: 29,
-          watchOrder: 29,
+          id: 31,
+          watchOrder: 31,
           title: "The BFG",
           type: "Movie",
           year: 2016,
@@ -604,10 +586,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.3,
         },
-
         {
-          id: 30,
-          watchOrder: 30,
+          id: 32,
+          watchOrder: 32,
           title: "The Post",
           type: "Movie",
           year: 2017,
@@ -616,10 +597,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
-          id: 31,
-          watchOrder: 31,
+          id: 33,
+          watchOrder: 33,
           title: "Ready Player One",
           type: "Movie",
           year: 2018,
@@ -628,10 +608,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.4,
         },
-
         {
-          id: 32,
-          watchOrder: 32,
+          id: 34,
+          watchOrder: 34,
           title: "West Side Story",
           type: "Movie",
           year: 2021,
@@ -640,10 +619,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.1,
         },
-
         {
-          id: 33,
-          watchOrder: 33,
+          id: 35,
+          watchOrder: 35,
           title: "The Fabelmans",
           type: "Movie",
           year: 2022,
@@ -652,17 +630,16 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 34,
-          watchOrder: 34,
-          title: "Untitled Steven Spielberg Event Film",
+          id: 36,
+          watchOrder: 36,
+          title: "Disclosure Day",
           type: "Movie",
           year: 2026,
           director: "Steven Spielberg",
-          actor: "",
+          actor: "Emily Blunt",
           country: "USA",
-          imdb: 0,
+          imdb: 6.4,
         },
       ],
     },
@@ -682,7 +659,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.7,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -694,7 +670,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.0,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -706,7 +681,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -718,7 +692,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -730,7 +703,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -742,7 +714,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -754,7 +725,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.1,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -766,7 +736,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -778,7 +747,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.6,
         },
-
         {
           id: 10,
           watchOrder: 10,
@@ -790,7 +758,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.0,
         },
-
         {
           id: 11,
           watchOrder: 11,
@@ -802,10 +769,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
           id: 12,
           watchOrder: 12,
+          title: "New York Stories",
+          type: "Movie",
+          year: 1989,
+          director: "Martin Scorsese",
+          actor: "Nick Nolte",
+          country: "USA",
+          imdb: 6.4,
+        },
+        {
+          id: 13,
+          watchOrder: 13,
           title: "Goodfellas",
           type: "Movie",
           year: 1990,
@@ -814,10 +791,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.7,
         },
-
         {
-          id: 13,
-          watchOrder: 13,
+          id: 14,
+          watchOrder: 14,
           title: "Cape Fear",
           type: "Movie",
           year: 1991,
@@ -826,10 +802,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
-          id: 14,
-          watchOrder: 14,
+          id: 15,
+          watchOrder: 15,
           title: "The Age of Innocence",
           type: "Movie",
           year: 1993,
@@ -838,10 +813,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
-          id: 15,
-          watchOrder: 15,
+          id: 16,
+          watchOrder: 16,
           title: "Casino",
           type: "Movie",
           year: 1995,
@@ -850,10 +824,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
-          id: 16,
-          watchOrder: 16,
+          id: 17,
+          watchOrder: 17,
           title: "Kundun",
           type: "Movie",
           year: 1997,
@@ -862,10 +835,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.0,
         },
-
         {
-          id: 17,
-          watchOrder: 17,
+          id: 18,
+          watchOrder: 18,
           title: "Bringing Out the Dead",
           type: "Movie",
           year: 1999,
@@ -874,10 +846,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
-          id: 18,
-          watchOrder: 18,
+          id: 19,
+          watchOrder: 19,
           title: "Gangs of New York",
           type: "Movie",
           year: 2002,
@@ -886,10 +857,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 19,
-          watchOrder: 19,
+          id: 20,
+          watchOrder: 20,
           title: "The Aviator",
           type: "Movie",
           year: 2004,
@@ -898,10 +868,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 20,
-          watchOrder: 20,
+          id: 21,
+          watchOrder: 21,
           title: "The Departed",
           type: "Movie",
           year: 2006,
@@ -910,10 +879,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.5,
         },
-
         {
-          id: 21,
-          watchOrder: 21,
+          id: 22,
+          watchOrder: 22,
           title: "Shutter Island",
           type: "Movie",
           year: 2010,
@@ -922,10 +890,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
-          id: 22,
-          watchOrder: 22,
+          id: 23,
+          watchOrder: 23,
           title: "Hugo",
           type: "Movie",
           year: 2011,
@@ -934,10 +901,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 23,
-          watchOrder: 23,
+          id: 24,
+          watchOrder: 24,
           title: "The Wolf of Wall Street",
           type: "Movie",
           year: 2013,
@@ -946,10 +912,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
-          id: 24,
-          watchOrder: 24,
+          id: 25,
+          watchOrder: 25,
           title: "Silence",
           type: "Movie",
           year: 2016,
@@ -958,10 +923,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
-          id: 25,
-          watchOrder: 25,
+          id: 26,
+          watchOrder: 26,
           title: "The Irishman",
           type: "Movie",
           year: 2019,
@@ -970,10 +934,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
-          id: 26,
-          watchOrder: 26,
+          id: 27,
+          watchOrder: 27,
           title: "Killers of the Flower Moon",
           type: "Movie",
           year: 2023,
@@ -1000,7 +963,6 @@ export const peopleData = {
           country: "USA",
           imdb: 5.8,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -1012,7 +974,6 @@ export const peopleData = {
           country: "USA",
           imdb: 3.8,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -1024,7 +985,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.1,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -1036,7 +996,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.4,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -1048,7 +1007,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -1060,7 +1018,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.6,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -1072,7 +1029,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -1084,7 +1040,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.9,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -1096,7 +1051,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
           id: 10,
           watchOrder: 10,
@@ -1106,9 +1060,8 @@ export const peopleData = {
           director: "James Cameron",
           actor: "James Cameron",
           country: "USA",
-          imdb: 6.4,
+          imdb: 6.3,
         },
-
         {
           id: 11,
           watchOrder: 11,
@@ -1120,7 +1073,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.9,
         },
-
         {
           id: 12,
           watchOrder: 12,
@@ -1132,7 +1084,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
           id: 13,
           watchOrder: 13,
@@ -1142,9 +1093,8 @@ export const peopleData = {
           director: "James Cameron",
           actor: "Sam Worthington",
           country: "USA",
-          imdb: 7.2,
+          imdb: 7.4,
         },
-
         {
           id: 14,
           watchOrder: 14,
@@ -1156,7 +1106,6 @@ export const peopleData = {
           country: "USA",
           imdb: 0,
         },
-
         {
           id: 15,
           watchOrder: 15,
@@ -1186,7 +1135,6 @@ export const peopleData = {
           country: "USA",
           imdb: 5.4,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -1196,9 +1144,8 @@ export const peopleData = {
           director: "Quentin Tarantino",
           actor: "Harvey Keitel",
           country: "USA",
-          imdb: 8.3,
+          imdb: 8.2,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -1208,9 +1155,8 @@ export const peopleData = {
           director: "Quentin Tarantino",
           actor: "John Travolta",
           country: "USA",
-          imdb: 8.9,
+          imdb: 8.8,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -1222,7 +1168,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -1234,7 +1179,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -1246,7 +1190,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.0,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -1258,7 +1201,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.0,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -1270,7 +1212,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.4,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -1282,7 +1223,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.5,
         },
-
         {
           id: 10,
           watchOrder: 10,
@@ -1294,7 +1234,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
           id: 11,
           watchOrder: 11,
@@ -1322,9 +1261,8 @@ export const peopleData = {
           director: "Ridley Scott",
           actor: "Keith Carradine",
           country: "UK",
-          imdb: 7.4,
+          imdb: 7.3,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -1336,7 +1274,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.5,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -1348,7 +1285,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.1,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -1360,7 +1296,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.3,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -1372,7 +1307,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.1,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -1384,7 +1318,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -1396,7 +1329,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.6,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -1408,7 +1340,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.4,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -1420,7 +1351,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
           id: 10,
           watchOrder: 10,
@@ -1432,7 +1362,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.0,
         },
-
         {
           id: 11,
           watchOrder: 11,
@@ -1444,7 +1373,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.5,
         },
-
         {
           id: 12,
           watchOrder: 12,
@@ -1456,7 +1384,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
           id: 13,
           watchOrder: 13,
@@ -1468,7 +1395,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
           id: 14,
           watchOrder: 14,
@@ -1480,7 +1406,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
           id: 15,
           watchOrder: 15,
@@ -1492,7 +1417,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
           id: 16,
           watchOrder: 16,
@@ -1504,7 +1428,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.9,
         },
-
         {
           id: 17,
           watchOrder: 17,
@@ -1516,7 +1439,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
           id: 18,
           watchOrder: 18,
@@ -1528,7 +1450,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.0,
         },
-
         {
           id: 19,
           watchOrder: 19,
@@ -1540,7 +1461,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
           id: 20,
           watchOrder: 20,
@@ -1552,7 +1472,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.0,
         },
-
         {
           id: 21,
           watchOrder: 21,
@@ -1564,7 +1483,6 @@ export const peopleData = {
           country: "USA",
           imdb: 5.4,
         },
-
         {
           id: 22,
           watchOrder: 22,
@@ -1576,7 +1494,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.0,
         },
-
         {
           id: 23,
           watchOrder: 23,
@@ -1588,7 +1505,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.0,
         },
-
         {
           id: 24,
           watchOrder: 24,
@@ -1600,7 +1516,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.4,
         },
-
         {
           id: 25,
           watchOrder: 25,
@@ -1612,7 +1527,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
           id: 26,
           watchOrder: 26,
@@ -1624,7 +1538,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.4,
         },
-
         {
           id: 27,
           watchOrder: 27,
@@ -1636,7 +1549,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
           id: 28,
           watchOrder: 28,
@@ -1648,7 +1560,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.4,
         },
-
         {
           id: 29,
           watchOrder: 29,
@@ -1658,9 +1569,8 @@ export const peopleData = {
           director: "Ridley Scott",
           actor: "Paul Mescal",
           country: "USA",
-          imdb: 6.7,
+          imdb: 6.4,
         },
-
         {
           id: 30,
           watchOrder: 30,
@@ -1670,7 +1580,7 @@ export const peopleData = {
           director: "Ridley Scott",
           actor: "Jacob Elordi",
           country: "USA",
-          imdb: null,
+          imdb: 6.5,
         },
       ],
     },
@@ -1690,7 +1600,6 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 6.5,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -1702,7 +1611,6 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 6.6,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -1714,7 +1622,6 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 7.5,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -1726,10 +1633,20 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 7.3,
         },
-
         {
           id: 5,
           watchOrder: 5,
+          title: "Forgotten Silver",
+          type: "Mockumentary",
+          year: 1995,
+          director: "Peter Jackson, Costa Botes",
+          actor: "Peter Jackson",
+          country: "New Zealand",
+          imdb: 7.4,
+        },
+        {
+          id: 6,
+          watchOrder: 6,
           title: "The Frighteners",
           type: "Movie",
           year: 1996,
@@ -1738,10 +1655,9 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 7.1,
         },
-
         {
-          id: 6,
-          watchOrder: 6,
+          id: 7,
+          watchOrder: 7,
           title: "The Lord of the Rings: The Fellowship of the Ring",
           type: "Movie",
           year: 2001,
@@ -1750,10 +1666,9 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 8.9,
         },
-
         {
-          id: 7,
-          watchOrder: 7,
+          id: 8,
+          watchOrder: 8,
           title: "The Lord of the Rings: The Two Towers",
           type: "Movie",
           year: 2002,
@@ -1762,10 +1677,9 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 8.8,
         },
-
         {
-          id: 8,
-          watchOrder: 8,
+          id: 9,
+          watchOrder: 9,
           title: "The Lord of the Rings: The Return of the King",
           type: "Movie",
           year: 2003,
@@ -1774,10 +1688,9 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 9.0,
         },
-
         {
-          id: 9,
-          watchOrder: 9,
+          id: 10,
+          watchOrder: 10,
           title: "King Kong",
           type: "Movie",
           year: 2005,
@@ -1786,10 +1699,9 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 7.2,
         },
-
         {
-          id: 10,
-          watchOrder: 10,
+          id: 11,
+          watchOrder: 11,
           title: "The Lovely Bones",
           type: "Movie",
           year: 2009,
@@ -1798,10 +1710,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
-          id: 11,
-          watchOrder: 11,
+          id: 12,
+          watchOrder: 12,
           title: "The Hobbit: An Unexpected Journey",
           type: "Movie",
           year: 2012,
@@ -1810,10 +1721,9 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 7.8,
         },
-
         {
-          id: 12,
-          watchOrder: 12,
+          id: 13,
+          watchOrder: 13,
           title: "The Hobbit: The Desolation of Smaug",
           type: "Movie",
           year: 2013,
@@ -1822,10 +1732,9 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 7.8,
         },
-
         {
-          id: 13,
-          watchOrder: 13,
+          id: 14,
+          watchOrder: 14,
           title: "The Hobbit: The Battle of the Five Armies",
           type: "Movie",
           year: 2014,
@@ -1834,22 +1743,20 @@ export const peopleData = {
           country: "New Zealand",
           imdb: 7.4,
         },
-
         {
-          id: 14,
-          watchOrder: 14,
+          id: 15,
+          watchOrder: 15,
           title: "They Shall Not Grow Old",
           type: "Documentary",
           year: 2018,
           director: "Peter Jackson",
           actor: "",
-          country: "New Zealand",
+          country: "UK",
           imdb: 8.2,
         },
-
         {
-          id: 15,
-          watchOrder: 15,
+          id: 16,
+          watchOrder: 16,
           title: "The Beatles: Get Back",
           type: "Documentary Miniseries",
           year: 2021,
@@ -1857,6 +1764,17 @@ export const peopleData = {
           actor: "The Beatles",
           country: "UK",
           imdb: 9.0,
+        },
+        {
+          id: 17,
+          watchOrder: 17,
+          title: "The Beatles: Get Back - The Rooftop Concert",
+          type: "Documentary",
+          year: 2022,
+          director: "Peter Jackson",
+          actor: "The Beatles",
+          country: "UK",
+          imdb: 8.9,
         },
       ],
     },
@@ -1874,9 +1792,8 @@ export const peopleData = {
           director: "Denis Villeneuve",
           actor: "Pascale Bussières",
           country: "Canada",
-          imdb: 6.5,
+          imdb: 6.4,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -1886,9 +1803,8 @@ export const peopleData = {
           director: "Denis Villeneuve",
           actor: "Marie-Josée Croze",
           country: "Canada",
-          imdb: 7.0,
+          imdb: 6.7,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -1900,7 +1816,6 @@ export const peopleData = {
           country: "Canada",
           imdb: 7.2,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -1910,9 +1825,8 @@ export const peopleData = {
           director: "Denis Villeneuve",
           actor: "Lubna Azabal",
           country: "Canada",
-          imdb: 8.2,
+          imdb: 8.3,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -1924,7 +1838,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.2,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -1934,9 +1847,8 @@ export const peopleData = {
           director: "Denis Villeneuve",
           actor: "Jake Gyllenhaal",
           country: "Canada",
-          imdb: 6.9,
+          imdb: 6.8,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -1948,7 +1860,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -1960,7 +1871,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.9,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -1972,7 +1882,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.0,
         },
-
         {
           id: 10,
           watchOrder: 10,
@@ -1984,7 +1893,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.0,
         },
-
         {
           id: 11,
           watchOrder: 11,
@@ -1996,17 +1904,16 @@ export const peopleData = {
           country: "USA",
           imdb: 8.5,
         },
-
         {
           id: 12,
           watchOrder: 12,
-          title: "Dune: Messiah",
-          type: "Movie",
+          title: "Dune: Part Three",
+          type: "Upcoming",
           year: 2026,
           director: "Denis Villeneuve",
           actor: "Timothée Chalamet",
           country: "USA",
-          imdb: 0,
+          imdb: null,
         },
       ],
     },
@@ -2026,11 +1933,10 @@ export const peopleData = {
           country: "USA",
           imdb: 6.4,
         },
-
         {
           id: 2,
           watchOrder: 2,
-          title: "Seven",
+          title: "Se7en",
           type: "Movie",
           year: 1995,
           director: "David Fincher",
@@ -2038,7 +1944,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.6,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -2050,7 +1955,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -2062,7 +1966,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.8,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -2074,7 +1977,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -2086,7 +1988,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -2098,7 +1999,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -2110,7 +2010,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -2122,7 +2021,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
           id: 10,
           watchOrder: 10,
@@ -2134,7 +2032,6 @@ export const peopleData = {
           country: "USA",
           imdb: 8.1,
         },
-
         {
           id: 11,
           watchOrder: 11,
@@ -2146,7 +2043,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
           id: 12,
           watchOrder: 12,
@@ -2158,12 +2054,11 @@ export const peopleData = {
           country: "USA",
           imdb: 6.7,
         },
-
         {
           id: 13,
           watchOrder: 13,
-          title: "The Adventures of Cliff Booth",
-          type: "Movie",
+          title: "The Further Mis-Adventures of Cliff Booth",
+          type: "Upcoming",
           year: 2026,
           director: "David Fincher",
           actor: "Brad Pitt",
@@ -2172,6 +2067,7 @@ export const peopleData = {
         },
       ],
     },
+
     francisfordcoppola: {
       id: 10,
       name: "Francis Ford Coppola",
@@ -2188,22 +2084,42 @@ export const peopleData = {
           country: "USA",
           imdb: 3.8,
         },
-
         {
           id: 2,
           watchOrder: 2,
+          title: "The Bellboy and the Playgirls",
+          type: "Movie",
+          year: 1962,
+          director: "Francis Ford Coppola",
+          actor: "June Wilkinson",
+          country: "USA",
+          imdb: null,
+        },
+        {
+          id: 3,
+          watchOrder: 3,
+          title: "The Terror",
+          type: "Movie",
+          year: 1963,
+          director: "Francis Ford Coppola",
+          actor: "Boris Karloff",
+          country: "USA",
+          imdb: 5.0,
+        },
+        {
+          id: 4,
+          watchOrder: 4,
           title: "Dementia 13",
           type: "Movie",
           year: 1963,
           director: "Francis Ford Coppola",
           actor: "William Campbell",
           country: "USA",
-          imdb: 6.0,
+          imdb: 5.7,
         },
-
         {
-          id: 3,
-          watchOrder: 3,
+          id: 5,
+          watchOrder: 5,
           title: "You're a Big Boy Now",
           type: "Movie",
           year: 1966,
@@ -2212,10 +2128,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.3,
         },
-
         {
-          id: 4,
-          watchOrder: 4,
+          id: 6,
+          watchOrder: 6,
           title: "Finian's Rainbow",
           type: "Movie",
           year: 1968,
@@ -2224,10 +2139,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.1,
         },
-
         {
-          id: 5,
-          watchOrder: 5,
+          id: 7,
+          watchOrder: 7,
           title: "The Rain People",
           type: "Movie",
           year: 1969,
@@ -2236,10 +2150,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.7,
         },
-
         {
-          id: 6,
-          watchOrder: 6,
+          id: 8,
+          watchOrder: 8,
           title: "The Godfather",
           type: "Movie",
           year: 1972,
@@ -2248,10 +2161,9 @@ export const peopleData = {
           country: "USA",
           imdb: 9.2,
         },
-
         {
-          id: 7,
-          watchOrder: 7,
+          id: 9,
+          watchOrder: 9,
           title: "The Conversation",
           type: "Movie",
           year: 1974,
@@ -2260,10 +2172,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
-          id: 8,
-          watchOrder: 8,
+          id: 10,
+          watchOrder: 10,
           title: "The Godfather Part II",
           type: "Movie",
           year: 1974,
@@ -2272,10 +2183,9 @@ export const peopleData = {
           country: "USA",
           imdb: 9.0,
         },
-
         {
-          id: 9,
-          watchOrder: 9,
+          id: 11,
+          watchOrder: 11,
           title: "Apocalypse Now",
           type: "Movie",
           year: 1979,
@@ -2284,10 +2194,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.4,
         },
-
         {
-          id: 10,
-          watchOrder: 10,
+          id: 12,
+          watchOrder: 12,
           title: "One from the Heart",
           type: "Movie",
           year: 1982,
@@ -2296,10 +2205,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.5,
         },
-
         {
-          id: 11,
-          watchOrder: 11,
+          id: 13,
+          watchOrder: 13,
           title: "The Outsiders",
           type: "Movie",
           year: 1983,
@@ -2308,10 +2216,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.0,
         },
-
         {
-          id: 12,
-          watchOrder: 12,
+          id: 14,
+          watchOrder: 14,
           title: "Rumble Fish",
           type: "Movie",
           year: 1983,
@@ -2320,10 +2227,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.1,
         },
-
         {
-          id: 13,
-          watchOrder: 13,
+          id: 15,
+          watchOrder: 15,
           title: "The Cotton Club",
           type: "Movie",
           year: 1984,
@@ -2332,10 +2238,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.5,
         },
-
         {
-          id: 14,
-          watchOrder: 14,
+          id: 16,
+          watchOrder: 16,
           title: "Captain EO",
           type: "Short Film",
           year: 1986,
@@ -2344,10 +2249,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.7,
         },
-
         {
-          id: 15,
-          watchOrder: 15,
+          id: 17,
+          watchOrder: 17,
           title: "Peggy Sue Got Married",
           type: "Movie",
           year: 1986,
@@ -2356,10 +2260,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.4,
         },
-
         {
-          id: 16,
-          watchOrder: 16,
+          id: 18,
+          watchOrder: 18,
           title: "Gardens of Stone",
           type: "Movie",
           year: 1987,
@@ -2368,10 +2271,20 @@ export const peopleData = {
           country: "USA",
           imdb: 6.4,
         },
-
         {
-          id: 17,
-          watchOrder: 17,
+          id: 19,
+          watchOrder: 19,
+          title: "Rip Van Winkle",
+          type: "TV Episode",
+          year: 1987,
+          director: "Francis Ford Coppola",
+          actor: "Harry Dean Stanton",
+          country: "USA",
+          imdb: 6.8,
+        },
+        {
+          id: 20,
+          watchOrder: 20,
           title: "Tucker: The Man and His Dream",
           type: "Movie",
           year: 1988,
@@ -2380,10 +2293,20 @@ export const peopleData = {
           country: "USA",
           imdb: 6.9,
         },
-
         {
-          id: 18,
-          watchOrder: 18,
+          id: 21,
+          watchOrder: 21,
+          title: "New York Stories",
+          type: "Movie",
+          year: 1989,
+          director: "Francis Ford Coppola",
+          actor: "Rosanna Arquette",
+          country: "USA",
+          imdb: 6.4,
+        },
+        {
+          id: 22,
+          watchOrder: 22,
           title: "The Godfather Part III",
           type: "Movie",
           year: 1990,
@@ -2392,10 +2315,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.6,
         },
-
         {
-          id: 19,
-          watchOrder: 19,
+          id: 23,
+          watchOrder: 23,
           title: "Bram Stoker's Dracula",
           type: "Movie",
           year: 1992,
@@ -2404,10 +2326,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.4,
         },
-
         {
-          id: 20,
-          watchOrder: 20,
+          id: 24,
+          watchOrder: 24,
+          title: "The Godfather Trilogy: 1901-1980",
+          type: "TV Movie",
+          year: 1992,
+          director: "Francis Ford Coppola",
+          actor: "Al Pacino",
+          country: "USA",
+          imdb: 9.3,
+        },
+        {
+          id: 25,
+          watchOrder: 25,
           title: "Jack",
           type: "Movie",
           year: 1996,
@@ -2416,10 +2348,9 @@ export const peopleData = {
           country: "USA",
           imdb: 5.8,
         },
-
         {
-          id: 21,
-          watchOrder: 21,
+          id: 26,
+          watchOrder: 26,
           title: "The Rainmaker",
           type: "Movie",
           year: 1997,
@@ -2428,10 +2359,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.2,
         },
-
         {
-          id: 22,
-          watchOrder: 22,
+          id: 27,
+          watchOrder: 27,
           title: "Youth Without Youth",
           type: "Movie",
           year: 2007,
@@ -2440,10 +2370,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.1,
         },
-
         {
-          id: 23,
-          watchOrder: 23,
+          id: 28,
+          watchOrder: 28,
           title: "Tetro",
           type: "Movie",
           year: 2009,
@@ -2452,10 +2381,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
-          id: 24,
-          watchOrder: 24,
+          id: 29,
+          watchOrder: 29,
           title: "Twixt",
           type: "Movie",
           year: 2011,
@@ -2464,20 +2392,42 @@ export const peopleData = {
           country: "USA",
           imdb: 4.8,
         },
-
         {
-          id: 25,
-          watchOrder: 25,
+          id: 30,
+          watchOrder: 30,
+          title: "Distant Vision",
+          type: "Experimental Film",
+          year: 2015,
+          director: "Francis Ford Coppola",
+          actor: "Francis Ford Coppola",
+          country: "USA",
+          imdb: 5.3,
+        },
+        {
+          id: 31,
+          watchOrder: 31,
           title: "Megalopolis",
           type: "Movie",
           year: 2024,
           director: "Francis Ford Coppola",
           actor: "Adam Driver",
           country: "USA",
-          imdb: 4.8,
+          imdb: 4.7,
+        },
+        {
+          id: 32,
+          watchOrder: 32,
+          title: "The Glimpses of the Moon",
+          type: "Upcoming",
+          year: null,
+          director: "Francis Ford Coppola",
+          actor: null,
+          country: "USA",
+          imdb: null,
         },
       ],
     },
+
     jonfavreau: {
       id: 11,
       name: "Jon Favreau",
@@ -2494,7 +2444,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
           id: 2,
           watchOrder: 2,
@@ -2506,7 +2455,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.1,
         },
-
         {
           id: 3,
           watchOrder: 3,
@@ -2518,7 +2466,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.3,
         },
-
         {
           id: 4,
           watchOrder: 4,
@@ -2530,7 +2477,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.9,
         },
-
         {
           id: 5,
           watchOrder: 5,
@@ -2542,7 +2488,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.9,
         },
-
         {
           id: 6,
           watchOrder: 6,
@@ -2554,7 +2499,6 @@ export const peopleData = {
           country: "USA",
           imdb: 6.0,
         },
-
         {
           id: 7,
           watchOrder: 7,
@@ -2566,7 +2510,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
           id: 8,
           watchOrder: 8,
@@ -2578,7 +2521,6 @@ export const peopleData = {
           country: "USA",
           imdb: 7.4,
         },
-
         {
           id: 9,
           watchOrder: 9,
@@ -2590,20 +2532,20 @@ export const peopleData = {
           country: "USA",
           imdb: 6.8,
         },
-
         {
           id: 10,
           watchOrder: 10,
-          title: "The Mandalorian & Grogu",
+          title: "The Mandalorian and Grogu",
           type: "Movie",
           year: 2026,
           director: "Jon Favreau",
           actor: "Pedro Pascal",
           country: "USA",
-          imdb: 0,
+          imdb: 6.7,
         },
       ],
     },
+
     guillermodeltoro: {
       id: 12,
       name: "Guillermo del Toro",
@@ -8753,10 +8695,31 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
           id: 2,
           watchOrder: 2,
+          title: "Lovely & Amazing",
+          type: "Movie",
+          year: 2001,
+          director: "Nicole Holofcener",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.7,
+        },
+        {
+          id: 3,
+          watchOrder: 3,
+          title: "Bubble Boy",
+          type: "Movie",
+          year: 2001,
+          director: "Blair Hayes",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 5.7,
+        },
+        {
+          id: 4,
+          watchOrder: 4,
           title: "Donnie Darko",
           type: "Movie",
           year: 2001,
@@ -8765,10 +8728,9 @@ export const peopleData = {
           country: "USA",
           imdb: 8.0,
         },
-
         {
-          id: 3,
-          watchOrder: 3,
+          id: 5,
+          watchOrder: 5,
           title: "The Good Girl",
           type: "Movie",
           year: 2002,
@@ -8777,22 +8739,53 @@ export const peopleData = {
           country: "USA",
           imdb: 6.4,
         },
-
         {
-          id: 4,
-          watchOrder: 4,
+          id: 6,
+          watchOrder: 6,
+          title: "Highway",
+          type: "Movie",
+          year: 2002,
+          director: "James Cox",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.1,
+        },
+        {
+          id: 7,
+          watchOrder: 7,
+          title: "Moonlight Mile",
+          type: "Movie",
+          year: 2002,
+          director: "Brad Silberling",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.6,
+        },
+        {
+          id: 8,
+          watchOrder: 8,
           title: "The Day After Tomorrow",
           type: "Movie",
           year: 2004,
           director: "Roland Emmerich",
           actor: "Jake Gyllenhaal",
           country: "USA",
-          imdb: 6.5,
+          imdb: 6.4,
         },
-
         {
-          id: 5,
-          watchOrder: 5,
+          id: 9,
+          watchOrder: 9,
+          title: "Proof",
+          type: "Movie",
+          year: 2005,
+          director: "John Madden",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.7,
+        },
+        {
+          id: 10,
+          watchOrder: 10,
           title: "Jarhead",
           type: "Movie",
           year: 2005,
@@ -8801,10 +8794,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.0,
         },
-
         {
-          id: 6,
-          watchOrder: 6,
+          id: 11,
+          watchOrder: 11,
           title: "Brokeback Mountain",
           type: "Movie",
           year: 2005,
@@ -8813,10 +8805,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
-          id: 7,
-          watchOrder: 7,
+          id: 12,
+          watchOrder: 12,
           title: "Zodiac",
           type: "Movie",
           year: 2007,
@@ -8825,10 +8816,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.7,
         },
-
         {
-          id: 8,
-          watchOrder: 8,
+          id: 13,
+          watchOrder: 13,
+          title: "Rendition",
+          type: "Movie",
+          year: 2007,
+          director: "Gavin Hood",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.8,
+        },
+        {
+          id: 14,
+          watchOrder: 14,
           title: "Brothers",
           type: "Movie",
           year: 2009,
@@ -8837,10 +8838,31 @@ export const peopleData = {
           country: "USA",
           imdb: 7.1,
         },
-
         {
-          id: 9,
-          watchOrder: 9,
+          id: 15,
+          watchOrder: 15,
+          title: "Prince of Persia: The Sands of Time",
+          type: "Movie",
+          year: 2010,
+          director: "Mike Newell",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.6,
+        },
+        {
+          id: 16,
+          watchOrder: 16,
+          title: "Love & Other Drugs",
+          type: "Movie",
+          year: 2010,
+          director: "Edward Zwick",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.7,
+        },
+        {
+          id: 17,
+          watchOrder: 17,
           title: "Source Code",
           type: "Movie",
           year: 2011,
@@ -8849,10 +8871,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 10,
-          watchOrder: 10,
+          id: 18,
+          watchOrder: 18,
           title: "End of Watch",
           type: "Movie",
           year: 2012,
@@ -8861,22 +8882,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.6,
         },
-
         {
-          id: 11,
-          watchOrder: 11,
+          id: 19,
+          watchOrder: 19,
           title: "Prisoners",
           type: "Movie",
           year: 2013,
           director: "Denis Villeneuve",
           actor: "Jake Gyllenhaal",
           country: "USA",
-          imdb: 8.2,
+          imdb: 8.1,
         },
-
         {
-          id: 12,
-          watchOrder: 12,
+          id: 20,
+          watchOrder: 20,
           title: "Enemy",
           type: "Movie",
           year: 2013,
@@ -8885,10 +8904,9 @@ export const peopleData = {
           country: "Canada",
           imdb: 6.9,
         },
-
         {
-          id: 13,
-          watchOrder: 13,
+          id: 21,
+          watchOrder: 21,
           title: "Nightcrawler",
           type: "Movie",
           year: 2014,
@@ -8897,10 +8915,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.8,
         },
-
         {
-          id: 14,
-          watchOrder: 14,
+          id: 22,
+          watchOrder: 22,
+          title: "Accidental Love",
+          type: "Movie",
+          year: 2015,
+          director: "David O. Russell",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 4.1,
+        },
+        {
+          id: 23,
+          watchOrder: 23,
           title: "Southpaw",
           type: "Movie",
           year: 2015,
@@ -8909,10 +8937,31 @@ export const peopleData = {
           country: "USA",
           imdb: 7.3,
         },
-
         {
-          id: 15,
-          watchOrder: 15,
+          id: 24,
+          watchOrder: 24,
+          title: "Everest",
+          type: "Movie",
+          year: 2015,
+          director: "Baltasar Kormákur",
+          actor: "Jake Gyllenhaal",
+          country: "UK",
+          imdb: 7.1,
+        },
+        {
+          id: 25,
+          watchOrder: 25,
+          title: "Demolition",
+          type: "Movie",
+          year: 2015,
+          director: "Jean-Marc Vallée",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 7.0,
+        },
+        {
+          id: 26,
+          watchOrder: 26,
           title: "Nocturnal Animals",
           type: "Movie",
           year: 2016,
@@ -8921,10 +8970,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 16,
-          watchOrder: 16,
+          id: 27,
+          watchOrder: 27,
           title: "Life",
           type: "Movie",
           year: 2017,
@@ -8933,10 +8981,20 @@ export const peopleData = {
           country: "USA",
           imdb: 6.6,
         },
-
         {
-          id: 17,
-          watchOrder: 17,
+          id: 28,
+          watchOrder: 28,
+          title: "Okja",
+          type: "Movie",
+          year: 2017,
+          director: "Bong Joon Ho",
+          actor: "Jake Gyllenhaal",
+          country: "South Korea",
+          imdb: 7.3,
+        },
+        {
+          id: 29,
+          watchOrder: 29,
           title: "Stronger",
           type: "Movie",
           year: 2017,
@@ -8945,10 +9003,42 @@ export const peopleData = {
           country: "USA",
           imdb: 6.9,
         },
-
         {
-          id: 18,
-          watchOrder: 18,
+          id: 30,
+          watchOrder: 30,
+          title: "The Sisters Brothers",
+          type: "Movie",
+          year: 2018,
+          director: "Jacques Audiard",
+          actor: "Jake Gyllenhaal",
+          country: "France",
+          imdb: 6.9,
+        },
+        {
+          id: 31,
+          watchOrder: 31,
+          title: "Wildlife",
+          type: "Movie",
+          year: 2018,
+          director: "Paul Dano",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 6.8,
+        },
+        {
+          id: 32,
+          watchOrder: 32,
+          title: "Velvet Buzzsaw",
+          type: "Movie",
+          year: 2019,
+          director: "Dan Gilroy",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 5.7,
+        },
+        {
+          id: 33,
+          watchOrder: 33,
           title: "Spider-Man: Far From Home",
           type: "Movie",
           year: 2019,
@@ -8957,10 +9047,20 @@ export const peopleData = {
           country: "USA",
           imdb: 7.4,
         },
-
         {
-          id: 19,
-          watchOrder: 19,
+          id: 34,
+          watchOrder: 34,
+          title: "Spirit Untamed",
+          type: "Movie",
+          year: 2021,
+          director: "Elaine Bogan",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 5.5,
+        },
+        {
+          id: 35,
+          watchOrder: 35,
           title: "The Guilty",
           type: "Movie",
           year: 2021,
@@ -8969,10 +9069,9 @@ export const peopleData = {
           country: "USA",
           imdb: 6.3,
         },
-
         {
-          id: 20,
-          watchOrder: 20,
+          id: 36,
+          watchOrder: 36,
           title: "Ambulance",
           type: "Movie",
           year: 2022,
@@ -8981,10 +9080,20 @@ export const peopleData = {
           country: "USA",
           imdb: 6.1,
         },
-
         {
-          id: 21,
-          watchOrder: 21,
+          id: 37,
+          watchOrder: 37,
+          title: "Strange World",
+          type: "Movie",
+          year: 2022,
+          director: "Don Hall",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 5.7,
+        },
+        {
+          id: 38,
+          watchOrder: 38,
           title: "Guy Ritchie's The Covenant",
           type: "Movie",
           year: 2023,
@@ -8993,10 +9102,9 @@ export const peopleData = {
           country: "USA",
           imdb: 7.5,
         },
-
         {
-          id: 22,
-          watchOrder: 22,
+          id: 39,
+          watchOrder: 39,
           title: "Road House",
           type: "Movie",
           year: 2024,
@@ -9004,6 +9112,39 @@ export const peopleData = {
           actor: "Jake Gyllenhaal",
           country: "USA",
           imdb: 6.2,
+        },
+        {
+          id: 40,
+          watchOrder: 40,
+          title: "Presumed Innocent",
+          type: "Series",
+          year: 2024,
+          director: "David E. Kelley",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 7.7,
+        },
+        {
+          id: 41,
+          watchOrder: 41,
+          title: "The Bride!",
+          type: "Movie",
+          year: 2026,
+          director: "Maggie Gyllenhaal",
+          actor: "Jake Gyllenhaal",
+          country: "USA",
+          imdb: 5.6,
+        },
+        {
+          id: 42,
+          watchOrder: 42,
+          title: "In the Grey",
+          type: "Movie",
+          year: 2026,
+          director: "Guy Ritchie",
+          actor: "Jake Gyllenhaal",
+          country: "UK",
+          imdb: 6.3,
         },
       ],
     },
@@ -13043,6 +13184,5 @@ export const peopleData = {
         },
       ],
     },
-    
   },
 };
